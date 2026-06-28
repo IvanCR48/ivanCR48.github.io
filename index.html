@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Ismael Cardozo | Portafolio de Ingeniería de Software</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Portafolio profesional de Iván Ismael Cardozo - Técnico en Programación especializado en arquitectura de software, seguridad OWASP y principios SOLID.">
+    <meta name="keywords" content="Iván Ismael Cardozo, portafolio, programación, SOLID, PHP, Clean Architecture, seguridad informática, SQL, OOP">
+    <meta name="author" content="Iván Ismael Cardozo">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Blueprint Grid Overlay (Static Background Decorative Grid) -->
+    <div class="blueprint-grid"></div>
+
+    <!-- HUD Control Bar Header -->
+    <header class="hud-header" id="main-header">
+        <div class="hud-left">
+            <span class="pulse-indicator"></span>
+            <span class="hud-console-label">SYS_STATUS: <span class="text-green">ACTIVE</span> // SECURE_CONN</span>
+        </div>
+        <div class="hud-center">
+            <span class="hud-title">I.I.C. // CORE_ENGINE v2.0.0</span>
+        </div>
+        <div class="hud-right">
+            <span class="hud-meta">LANG: <span class="text-cyan">ESP/ENG (B2-C1)</span></span>
+            <span class="hud-time" id="live-clock">13:30:00</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-grid">
+            <!-- Left Side: Profile & Spec Terminal -->
+            <div class="hero-left-col">
+                <div class="technical-eyebrow">
+                    <span class="cyan-badge">TÉCNICO EN PROGRAMACIÓN</span>
+                    <span class="hash-tag">// E.E.S.T N°2 "EDUCACIÓN Y TRABAJO"</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="text-glow">IVÁN ISMAEL CARDOZO</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Especializado en arquitectura orientada a objetos, bases de datos relacionales y el desarrollo de sistemas de alta seguridad.
+                </p>
+                
+                <!-- Terminal Log Preview -->
+                <div class="terminal-preview">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">system_boot.sh</span>
+                    </div>
+                    <div class="terminal-body monospace">
+                        <p class="log-line"><span class="log-timestamp">[13:30:12]</span> <span class="log-tag">[SYSTEM]</span> Initializing engineering console...</p>
+                        <p class="log-line"><span class="log-timestamp">[13:30:12]</span> <span class="log-tag">[SYSTEM]</span> Core loading: SOLID principles, Layered Architecture, Clean Code... <span class="text-green">OK</span></p>
+                        <p class="log-line"><span class="log-timestamp">[13:30:13]</span> <span class="log-tag">[SECURITY]</span> Active defenses loaded (21/21 vectors monitored) <span class="text-green">SECURE</span></p>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#sandbox" class="btn btn-primary" id="btn-enter-sandbox">
+                        <span class="btn-text">Ingresar al Sandbox</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary" id="btn-request-handshake">
+                        <span class="btn-text">Establecer Conexión</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Interactive Particle Canvas Console -->
+            <div class="hero-right-col">
+                <div class="console-window hero-canvas-window">
+                    <div class="window-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                        <span class="window-title monospace">secure_particles.exe</span>
+                        <span class="window-lang monospace">CANVAS</span>
+                    </div>
+                    <div class="window-body hero-canvas-body">
+                        <canvas id="canvas-mesh"></canvas>
+                        <div class="canvas-instruction-bar monospace">
+                            <span>[CLIC+ARRASTRAR] Erradicar partículas</span>
+                            <span>• Ciclo: 4s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroller">
+            <span class="scroller-label">SCROLL_TO_COMPILE</span>
+            <div class="scroller-mouse">
+                <span class="scroller-wheel"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="content-container">
+
+        <!-- Engineering Pillars Section -->
+        <section class="section-container" id="pilares">
+            <div class="section-header">
+                <div class="section-label monospace">/01 // SPECIFICATIONS</div>
+                <h2 class="section-title">Filosofía de Desarrollo</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon monospace">SOLID</div>
+                    <h3 class="pillar-title">Diseño de Arquitectura</h3>
+                    <p class="pillar-desc">
+                        Partidario del desacoplamiento de capas, inyección de dependencias y responsabilidad única para garantizar código escalable, testable y modular.
+                    </p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon monospace">OWASP</div>
+                    <h3 class="pillar-title">Seguridad por Diseño</h3>
+                    <p class="pillar-desc">
+                        Implementación sistemática de defensas frente a inyecciones SQL, ataques CSRF, XSS, secuestros de sesión y control de accesos por roles (RBAC).
+                    </p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon monospace">UML</div>
+                    <h3 class="pillar-title">Especificación Rigurosa</h3>
+                    <p class="pillar-desc">
+                        Estructuración de proyectos basada en documentación técnica detallada, diagramas de clases, flujos de datos y diseño de esquemas de bases de datos.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon monospace">LOGIC</div>
+                    <h3 class="pillar-title">Resolución de Problemas</h3>
+                    <p class="pillar-desc">
+                        Pensamiento analítico y creativo enfocado en el diagnóstico preciso, refactorización de sistemas legacy y optimización de rendimiento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Sandbox Section: Architecture & Security Sandbox -->
+        <section class="section-container" id="sandbox">
+            <div class="section-header">
+                <div class="section-label monospace">/02 // SIMULATION_ENVIRONMENT</div>
+                <h2 class="section-title">Interactive Layer Sandbox</h2>
+                <p class="section-subtitle">
+                    Explora de forma interactiva la arquitectura de capas limpia y la tubería de seguridad de mi proyecto principal: el <strong>Sistema Administrativo E.E.S.T N°2</strong>.
+                </p>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- The Interactive Dashboard -->
+            <div class="sandbox-dashboard">
+                
+                <!-- Sidebar Control Panel -->
+                <div class="dashboard-sidebar">
+                    <h3 class="panel-heading monospace">CONTROL_PANEL</h3>
+                    
+                    <div class="layer-selector">
+                        <button class="layer-btn active" data-layer="presentation" id="tab-presentation">
+                            <span class="layer-num">L1</span>
+                            <div class="layer-info">
+                                <span class="layer-name">Presentation Layer</span>
+                                <span class="layer-sub">Controllers & AJAX Handlers</span>
+                            </div>
+                        </button>
+                        
+                        <button class="layer-btn" data-layer="business" id="tab-business">
+                            <span class="layer-num">L2</span>
+                            <div class="layer-info">
+                                <span class="layer-name">Business / Service Layer</span>
+                                <span class="layer-sub">Domain Rules & Calculations</span>
+                            </div>
+                        </button>
+                        
+                        <button class="layer-btn" data-layer="persistence" id="tab-persistence">
+                            <span class="layer-num">L3</span>
+                            <div class="layer-info">
+                                <span class="layer-name">Persistence Layer</span>
+                                <span class="layer-sub">Mappers & Transaction Handlers</span>
+                            </div>
+                        </button>
+                        
+                        <button class="layer-btn" data-layer="data" id="tab-data">
+                            <span class="layer-num">L4</span>
+                            <div class="layer-info">
+                                <span class="layer-name">Data / DB Layer</span>
+                                <span class="layer-sub">MySQL Schemes & Domain Models</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="simulation-actions">
+                        <p class="simulation-desc">
+                            Inicia una petición simulada (ej. Registro de Asistencia) para ver cómo viajan los datos y qué defensas se activan.
+                        </p>
+                        <button class="btn btn-primary btn-full" id="btn-run-simulation">
+                            <span class="btn-text">Ejecutar Simulación (POST)</span>
+                            <span class="btn-icon">⚡</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main Console Panel -->
+                <div class="dashboard-main">
+                    
+                    <!-- Top Window: File Viewer / Code Inspector -->
+                    <div class="console-window code-viewer-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title monospace" id="code-file-title">src/middleware/SecurizarEntrada.php</span>
+                            <span class="window-lang monospace">PHP 8.0</span>
+                        </div>
+                        <div class="window-body">
+                            <pre class="code-output monospace" id="code-content">
+                            <!-- Code injected by Javascript -->
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Window: Request Terminal Log -->
+                    <div class="console-window terminal-window">
+                        <div class="window-header">
+                            <div class="terminal-status-indicator">
+                                <span class="status-dot pulsing"></span>
+                                <span class="monospace text-cyan" id="simulation-status">READY_FOR_INPUT</span>
+                            </div>
+                            <span class="window-title monospace">terminal_stream.log</span>
+                            <button class="clear-btn monospace" id="btn-clear-terminal">CLEAR</button>
+                        </div>
+                        <div class="window-body console-log-body monospace" id="terminal-log-output">
+                            <p class="log-line output"><span class="text-cyan">></span> Consola de traza inicializada. Presiona "Ejecutar Simulación" para enviar una carga útil de prueba.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Sandbox Flow Explanation Overlay -->
+            <div class="sandbox-diagram-bar">
+                <div class="diagram-step active" id="diagram-l1">
+                    <span class="step-badge">L1</span>
+                    <span class="step-label">Middleware & Sanitización</span>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="diagram-step" id="diagram-l2">
+                    <span class="step-badge">L2</span>
+                    <span class="step-label">Lógica e Inasistencias</span>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="diagram-step" id="diagram-l3">
+                    <span class="step-badge">L3</span>
+                    <span class="step-label">Mappers & Transacciones</span>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="diagram-step" id="diagram-l4">
+                    <span class="step-badge">L4</span>
+                    <span class="step-label">MySQL PDO Estricto</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 21 Protections Console Section -->
+        <section class="section-container" id="seguridad">
+            <div class="section-header">
+                <div class="section-label monospace">/03 // SECURITY_AUDIT</div>
+                <h2 class="section-title">Consola de Seguridad: 21 Protecciones Activas</h2>
+                <p class="section-subtitle">
+                    El sistema administrativo incorpora medidas de seguridad automatizadas basadas en OWASP Top 10 para garantizar la integridad académica y de datos.
+                </p>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="console-filters">
+                <button class="filter-btn active" data-filter="all" id="filter-all">TODAS</button>
+                <button class="filter-btn" data-filter="injection" id="filter-injection">INYECCIÓN & XSS</button>
+                <button class="filter-btn" data-filter="session" id="filter-session">SESIONES & ACCESOS</button>
+                <button class="filter-btn" data-filter="infrastructure" id="filter-infrastructure">INFRAESTRUCTURA & RESPALDOS</button>
+            </div>
+
+            <!-- Matrix Grid -->
+            <div class="security-grid" id="security-matrix">
+                <!-- Protection items injected dynamically via app.js -->
+            </div>
+            
+            <!-- Protection Details Modal -->
+            <div class="security-modal" id="security-detail-modal">
+                <div class="modal-card">
+                    <div class="modal-header">
+                        <span class="modal-index monospace" id="modal-idx">P-01</span>
+                        <h3 class="modal-title" id="modal-title">Prevención de Inyección SQL (SQLi)</h3>
+                        <button class="close-modal-btn" id="btn-close-modal">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-row">
+                            <span class="modal-label">Capa:</span>
+                            <span class="modal-value monospace" id="modal-layer">Persistence Layer</span>
+                        </div>
+                        <div class="modal-row">
+                            <span class="modal-label">Amenaza OWASP:</span>
+                            <span class="modal-value text-red monospace" id="modal-owasp">A03:2021-Injection</span>
+                        </div>
+                        <div class="modal-description" id="modal-desc">
+                            Uso de consultas preparadas nativas en el adaptador PDO con desactivación de la emulación de prepares (PDO::ATTR_EMULATE_PREPARES => false).
+                        </div>
+                        <div class="modal-references">
+                            <span class="modal-label">Archivos Relacionados:</span>
+                            <div class="code-ref-list" id="modal-files">
+                                <span class="code-ref-badge monospace">src/Database/PdoDatabase.php</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section class="section-container" id="stack">
+            <div class="section-header">
+                <div class="section-label monospace">/04 // DEPENDENCIES</div>
+                <h2 class="section-title">Ecosistema Tecnológico</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="stack-layout">
+                <!-- Left: Skill Summary Description -->
+                <div class="stack-description">
+                    <p>
+                        Mi stack principal está enfocado en el desarrollo de aplicaciones robustas en el backend, la gestión óptima de bases de datos y la estructuración modular del código.
+                    </p>
+                    <p>
+                        Constantemente incorporo herramientas nuevas y adopto estándares profesionales. Mi base teórica y práctica en diagramado UML, diseño de bases de datos y flujos de datos me permite visualizar sistemas complejos antes de escribir la primera línea de código.
+                    </p>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-val text-cyan monospace">B2-C1</div>
+                            <div class="metric-lbl">Nivel de Inglés</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-val text-green monospace">SOLID</div>
+                            <div class="metric-lbl">Buenas Prácticas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive JSON Manifest Viewer -->
+                <div class="stack-manifest-container">
+                    <div class="console-window manifest-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title monospace">package.json</span>
+                        </div>
+                        <div class="window-body monospace manifest-body">
+                            <p class="json-line"><span class="json-key">"nombre"</span>: <span class="json-val">"ivan-ismael-cardozo"</span>,</p>
+                            <p class="json-line"><span class="json-key">"edad"</span>: <span class="json-num">18</span>,</p>
+                            
+                            <p class="json-line json-node collapsed" id="node-languages">
+                                <span class="json-toggle">►</span>
+                                <span class="json-key">"lenguajes"</span>: [
+                                    <span class="json-preview">C++, PHP, Python, Node.js, TypeScript, JS, Lua, Dart...</span>
+                                    <span class="json-collapsed-content">
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"PHP"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"TypeScript"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"JavaScript"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"C++"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Python"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Node.js"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Lua"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Dart"</span>
+                                    <br>&nbsp;&nbsp;]</span>
+                                </p>
+                            
+                            <p class="json-line json-node collapsed" id="node-frameworks">
+                                <span class="json-toggle">►</span>
+                                <span class="json-key">"frameworks_librerias"</span>: [
+                                    <span class="json-preview">React...</span>
+                                    <span class="json-collapsed-content">
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"React"</span>
+                                    <br>&nbsp;&nbsp;]</span>
+                                </p>
+
+                            <p class="json-line json-node collapsed" id="node-databases">
+                                <span class="json-toggle">►</span>
+                                <span class="json-key">"bases_datos"</span>: [
+                                    <span class="json-preview">SQL, PostgreSQL...</span>
+                                    <span class="json-collapsed-content">
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"SQL"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"PostgreSQL"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"MySQL / MariaDB"</span>
+                                    <br>&nbsp;&nbsp;]</span>
+                                </p>
+                            
+                            <p class="json-line json-node collapsed" id="node-principles">
+                                <span class="json-toggle">►</span>
+                                <span class="json-key">"practicas_profesionales"</span>: [
+                                    <span class="json-preview">SOLID, OOP, UML, DataFlows...</span>
+                                    <span class="json-collapsed-content">
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Principios SOLID"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Programación Orientada a Objetos"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Diseño de Diagramas UML"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Diseño de Base de Datos y Flujos de Datos"</span>,
+                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-val">"Documentación Técnica Integral"</span>
+                                    <br>&nbsp;&nbsp;]</span>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-container" id="contacto">
+            <div class="section-header">
+                <div class="section-label monospace">/05 // HANDSHAKE</div>
+                <h2 class="section-title">Establecer Conexión</h2>
+                <p class="section-subtitle">
+                    Envía un mensaje seguro a través de mi pasarela y me pondré en contacto contigo de inmediato.
+                </p>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                
+                <!-- Profile snapshot & info -->
+                <div class="contact-profile-card">
+                    <div class="profile-avatar-container">
+                        <img src="assets/ivan.png" alt="Iván Ismael Cardozo" class="profile-avatar">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <div class="profile-details text-center">
+                        <h3 class="profile-name">Iván Ismael Cardozo</h3>
+                        <p class="profile-status monospace"><span class="pulse-indicator"></span> DISPONIBLE PARA TRABAJO</p>
+                        <p class="profile-edu">Escuela Secundaria Técnica N°2 "Educación y Trabajo"</p>
+                        <div class="profile-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn monospace">GitHub</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-btn monospace">LinkedIn</a>
+                            <a href="mailto:ivan.cardozo@example.com" class="link-btn monospace">Email</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive terminal connection request form -->
+                <div class="contact-form-container">
+                    <div class="console-window contact-window">
+                        <div class="window-header">
+                            <span class="window-title monospace">secure_handshake.exe</span>
+                            <span class="window-lang monospace">TLS v1.3</span>
+                        </div>
+                        <div class="window-body">
+                            <form id="secure-contact-form" class="monospace">
+                                <div class="form-group">
+                                    <label for="contact-name">> SENDER_NAME:</label>
+                                    <input type="text" id="contact-name" name="name" placeholder="Ingresa tu nombre..." required class="terminal-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">> SENDER_EMAIL:</label>
+                                    <input type="email" id="contact-email" name="email" placeholder="email@dominio.com" required class="terminal-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message">> HANDSHAKE_PAYLOAD:</label>
+                                    <textarea id="contact-message" name="message" rows="4" placeholder="Escribe tu mensaje o propuesta..." required class="terminal-input"></textarea>
+                                </div>
+                                <div class="form-group pt-4">
+                                    <button type="submit" class="btn btn-primary btn-full" id="btn-send-message">
+                                        <span class="btn-text">TRANSMIT_MESSAGE (POST)</span>
+                                        <span class="btn-icon">⤊</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="contact-success-overlay" id="contact-success-screen">
+                                <div class="text-center space-y-4">
+                                    <div class="success-icon monospace text-green">[ SUCCESS ]</div>
+                                    <h4 class="success-title">Paquete Transmitido Exitosamente</h4>
+                                    <p class="success-desc">
+                                        El mensaje ha sido empaquetado y cifrado. Iván responderá a la brevedad.
+                                    </p>
+                                    <button class="btn btn-secondary" id="btn-reset-form">Enviar Nuevo Mensaje</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="hud-footer">
+        <div class="footer-left">
+            <span class="monospace text-muted">© 2026 IVÁN ISMAEL CARDOZO. ALL SYSTEMS SECURE.</span>
+        </div>
+        <div class="footer-right">
+            <span class="monospace text-muted">BUILT WITH CLEAN CODE PRINCIPLES</span>
+        </div>
+    </footer>
+
+    <!-- Interactive JS scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
