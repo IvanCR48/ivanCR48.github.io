@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initSecurityConsole();
     initJsonViewer();
     initContactForm();
+    initProjectsSection();
+    initModals();
+    initScrollReveal();
 });
 
 /* ==========================================
@@ -376,108 +379,62 @@ function initCanvasParticles() {
 /* ==========================================
    Clean Architecture Interactive Sandbox
    ========================================== */
-const mockCodeFiles = {
+const mockLayerDetails = {
     presentation: {
-        title: "src/middleware/SecurizarEntrada.php",
-        lang: "PHP 8.0",
-        code: `<span class="code-keyword">namespace</span> App\\Middleware;
-
-<span class="code-keyword">class</span> <span class="code-class">SecurizarEntrada</span> {
-    <span class="code-comment">// Previene secuestro de sesión validando IP/UA de forma continua</span>
-    <span class="code-keyword">public function</span> <span class="code-method">validarSesion</span>(): <span class="code-keyword">bool</span> {
-        $ip = $_SERVER[<span class="code-string">'REMOTE_ADDR'</span>] ?? <span class="code-string">''</span>;
-        $agent = $_SERVER[<span class="code-string">'HTTP_USER_AGENT'</span>] ?? <span class="code-string">''</span>;
-        
-        <span class="code-keyword">if</span> ($_SESSION[<span class="code-string">'ip_original'</span>] !== $ip || $_SESSION[<span class="code-string">'ua_original'</span>] !== $agent) {
-            <span class="code-comment">// Anomalía detectada, destruir sesión</span>
-            session_destroy();
-            <span class="code-keyword">return false</span>;
-        }
-        <span class="code-keyword">return true</span>;
-    }
-    
-    <span class="code-comment">// Sanitización contra Cross-Site Scripting (XSS)</span>
-    <span class="code-keyword">public function</span> <span class="code-method">sanitizar</span>(<span class="code-keyword">string</span> <span class="code-variable">$data</span>): <span class="code-keyword">string</span> {
-        <span class="code-keyword">return</span> htmlspecialchars(<span class="code-variable">$data</span>, ENT_QUOTES | ENT_HTML5, <span class="code-string">'UTF-8'</span>);
-    }
-}`
+        title: "capa_de_presentacion.sys",
+        lang: "L1 // CONTROLADORES Y SEGURIDAD",
+        code: `
+            <div class="layer-details-card">
+                <h3>Capa de Presentación (Interfaz de Usuario)</h3>
+                <p>Es la primera línea de contacto con el visitante. Se encarga de mostrar la información en pantalla y recibir las interacciones de forma amigable.</p>
+                <ul class="layer-details-benefits">
+                    <li><strong>Beneficio Directo:</strong> Garantiza que la web funcione de forma rápida y se adapte automáticamente a teléfonos móviles, tablets y computadoras de escritorio.</li>
+                    <li><strong>Protección Activa:</strong> Limpia todo lo que el usuario escribe en los formularios, bloqueando intentos de ataques maliciosos (XSS) y asegurando que las sesiones activas no puedan ser robadas.</li>
+                </ul>
+            </div>
+        `
     },
     business: {
-        title: "src/Services/ServicioAsistencia.php",
-        lang: "PHP 8.0",
-        code: `<span class="code-keyword">namespace</span> App\\Services;
-
-<span class="code-keyword">class</span> <span class="code-class">ServicioAsistencia</span> {
-    <span class="code-comment">// Implementa normativa de inasistencias de la Provincia de Bs.As.</span>
-    <span class="code-keyword">public function</span> <span class="code-method">calcularPonderacion</span>(<span class="code-keyword">string</span> <span class="code-variable">$tipoFalta</span>): <span class="code-keyword">float</span> {
-        <span class="code-keyword">return match</span> (<span class="code-variable">$tipoFalta</span>) {
-            <span class="code-string">'ausente'</span> => <span class="code-num">1.00</span>,
-            <span class="code-string">'media_falta'</span> => <span class="code-num">0.50</span>,
-            <span class="code-string">'tardanza'</span> => <span class="code-num">0.25</span>,
-            <span class="code-keyword">default</span> => <span class="code-num">0.00</span>
-        };
-    }
-    
-    <span class="code-comment">// Alertas de asistencia en riesgo (límite menor al 75%)</span>
-    <span class="code-keyword">public function</span> <span class="code-method">evaluarRiesgoRepitencia</span>(<span class="code-keyword">int</span> <span class="code-variable">$diasCursados</span>, <span class="code-keyword">float</span> <span class="code-variable">$inasistencias</span>): <span class="code-keyword">bool</span> {
-        $porcentajeAsistencia = ((<span class="code-variable">$diasCursados</span> - <span class="code-variable">$inasistencias</span>) / <span class="code-variable">$diasCursados</span>) * <span class="code-num">100</span>;
-        <span class="code-keyword">return</span> $porcentajeAsistencia &lt; <span class="code-num">75.0</span>;
-    }
-}`
+        title: "capa_de_negocio.sys",
+        lang: "L2 // REGLAS Y PROCESOS",
+        code: `
+            <div class="layer-details-card">
+                <h3>Capa de Negocio (Reglas de Funcionamiento)</h3>
+                <p>Representa el "cerebro" del sistema, donde se aplican las reglas, fórmulas y lógica específicas del software administrativo escolar.</p>
+                <ul class="layer-details-benefits">
+                    <li><strong>Beneficio Directo:</strong> Automatiza la evaluación y cálculos de inasistencias acumuladas en base al reglamento escolar oficial, eliminando errores de contabilidad manual.</li>
+                    <li><strong>Protección Activa:</strong> Restringe los accesos según permisos detallados (ej. los preceptores solo cargan faltas, los directivos ven reportes generales, los alumnos no acceden).</li>
+                </ul>
+            </div>
+        `
     },
     persistence: {
-        title: "src/Mappers/EstudianteMapper.php",
-        lang: "PHP 8.0",
-        code: `<span class="code-keyword">namespace</span> App\\Mappers;
-
-<span class="code-keyword">class</span> <span class="code-class">EstudianteMapper</span> {
-    <span class="code-keyword">private</span> <span class="code-class">Database</span> <span class="code-variable">$db</span>;
-    
-    <span class="code-keyword">public function</span> <span class="code-method">save</span>(<span class="code-class">Estudiante</span> <span class="code-variable">$estudiante</span>): <span class="code-keyword">bool</span> {
-        <span class="code-comment">// Utiliza transacciones para operaciones multisitio seguras</span>
-        $this-><span class="code-variable">db</span>->beginTransaction();
-        
-        $sql = <span class="code-string">"INSERT INTO estudiantes (dni, nombre, apellido, curso_id)
-                VALUES (?, ?, ?, ?)"</span>;
-                
-        <span class="code-keyword">try</span> {
-            $this-><span class="code-variable">db</span>->query($sql, [
-                <span class="code-variable">$estudiante</span>->getDni(),
-                <span class="code-variable">$estudiante</span>->getNombre(),
-                <span class="code-variable">$estudiante</span>->getApellido(),
-                <span class="code-variable">$estudiante</span>->getCursoId()
-            ]);
-            $this-><span class="code-variable">db</span>->commit();
-            <span class="code-keyword">return true</span>;
-        } <span class="code-keyword">catch</span> (\\Exception $e) {
-            $this-><span class="code-variable">db</span>->rollBack();
-            <span class="code-keyword">return false</span>;
-        }
-    }
-}`
+        title: "capa_de_persistencia.sys",
+        lang: "L3 // TRANSACCIONES Y MAPEO",
+        code: `
+            <div class="layer-details-card">
+                <h3>Capa de Persistencia (Mapeador de Datos)</h3>
+                <p>Sirve como puente de comunicación blindado entre las reglas lógicas del cerebro del sistema y la base de datos física.</p>
+                <ul class="layer-details-benefits">
+                    <li><strong>Beneficio Directo:</strong> Empaqueta la información de forma estructurada para que la base de datos se mantenga organizada y responda con la máxima velocidad.</li>
+                    <li><strong>Protección Activa:</strong> Agrupa las operaciones críticas en transacciones aisladas. Si hay una falla de conexión en medio de un registro, el sistema deshace los cambios evitando que se corrompa la información.</li>
+                </ul>
+            </div>
+        `
     },
     data: {
-        title: "src/Database/PdoDatabase.php",
-        lang: "PHP 8.0",
-        code: `<span class="code-keyword">namespace</span> App\\Database;
-
-<span class="code-keyword">class</span> <span class="code-class">PdoDatabase</span> {
-    <span class="code-keyword">private</span> \\PDO <span class="code-variable">$pdo</span>;
-    
-    <span class="code-keyword">public function</span> <span class="code-method">__construct</span>(array <span class="code-variable">$config</span>) {
-        $dsn = <span class="code-string">"mysql:host={$config['host']};dbname={$config['name']};charset=utf8mb4"</span>;
-        
-        <span class="code-comment">// CONFIGURACIÓN DE CONEXIÓN CRÍTICA DE SEGURIDAD</span>
-        $options = [
-            \\PDO::ATTR_ERRMODE => \\PDO::ERRMODE_EXCEPTION,
-            <span class="code-comment">// Desactivación de prepares simulados contra ataques SQLi de segundo nivel</span>
-            \\PDO::ATTR_EMULATE_PREPARES => <span class="code-keyword">false</span>,
-            \\PDO::ATTR_DEFAULT_FETCH_MODE => \\PDO::FETCH_ASSOC
-        ];
-        
-        $this-><span class="code-variable">pdo</span> = <span class="code-keyword">new</span> \\PDO($dsn, <span class="code-variable">$config</span>[<span class="code-string">'user'</span>], <span class="code-variable">$config</span>[<span class="code-string">'pass'</span>], $options);
-    }
-}`
+        title: "capa_de_datos.sys",
+        lang: "L4 // BASE DE DATOS PROTEGIDA",
+        code: `
+            <div class="layer-details-card">
+                <h3>Capa de Datos (Base de Datos MySQL)</h3>
+                <p>El almacén permanente donde se resguarda el historial académico, notas, boletines y usuarios de toda la institución.</p>
+                <ul class="layer-details-benefits">
+                    <li><strong>Beneficio Directo:</strong> Ofrece consistencia e integridad referencial, asegurando que cada nota pertenezca exactamente a su respectivo alumno de por vida.</li>
+                    <li><strong>Protección Activa:</strong> Utiliza consultas preparadas nativas blindadas contra inyecciones SQL (la vulnerabilidad más común de robo de datos en internet), denegando accesos no autorizados.</li>
+                </ul>
+            </div>
+        `
     }
 };
 
@@ -512,8 +469,10 @@ function initSandbox() {
     });
     
     function updateCodeViewer(layer) {
-        const data = mockCodeFiles[layer];
+        const data = mockLayerDetails[layer];
         fileTitleEl.textContent = data.title;
+        const fileLangEl = document.getElementById("code-file-lang");
+        if (fileLangEl) fileLangEl.textContent = data.lang;
         codeContentEl.innerHTML = data.code;
     }
     
@@ -714,17 +673,16 @@ function initSecurityConsole() {
         });
         
         filtered.forEach(p => {
-            const card = document.createElement("div");
-            card.className = "security-card";
+            const card = document.createElement("button");
+            card.className = "security-card-compact";
             card.setAttribute("data-id", p.id);
             
             card.innerHTML = `
-                <div class="card-header-row">
-                    <span class="card-index monospace">${p.id}</span>
-                    <span class="layer-badge monospace">${p.layer.split(" ")[0]}</span>
+                <div class="security-card-compact-left">
+                    <span class="security-card-compact-idx monospace">${p.id}</span>
+                    <span class="security-card-compact-title">${p.title}</span>
                 </div>
-                <h4 class="card-title">${p.title}</h4>
-                <span class="card-tag monospace">${p.owasp.split(":")[0]}</span>
+                <span class="security-card-compact-tag monospace">${p.owasp.split(":")[0]}</span>
             `;
             
             card.addEventListener("click", () => openProtectionModal(p));
@@ -846,5 +804,360 @@ function initContactForm() {
         // Restore submit button
         btnSend.disabled = false;
         btnSend.querySelector(".btn-text").textContent = "TRANSMIT_MESSAGE (POST)";
+    });
+}
+
+/* ==========================================
+   Projects Section Registry & Inspector Lógica
+   ========================================== */
+
+const projectsData = [
+    {
+        id: "cuida_mdp",
+        name: "CuidaMDP",
+        fileName: "cuidamdp.sys",
+        status: "RUNNING",
+        statusText: "COMPLETED",
+        stack: ["React", "Leaflet", "Supabase", "PostgreSQL", "Vanilla CSS"],
+        desc: "Aplicación web interactiva de reporte ciudadano para Mar del Plata (Partido de General Pueyrredón). Permite a los vecinos geolocalizar y reportar problemas urbanos (baches, basura, luminarias rotas) de forma visual sobre un mapa interactivo. Cuenta con panel de administración moderado por Supabase Auth, triggers en PostgreSQL para prevención de spam, y carga dinámica de imágenes.",
+        metrics: [
+            "Autolocalización GPS (Geolocation API)",
+            "Geocodificación Inversa (Nominatim API)",
+            "Límite de spam por IP (Triggers en BD)",
+            "Supabase Storage & Canales Realtime"
+        ],
+        challenge: "Prevenir el spam de reportes falsos y duplicados manteniendo una experiencia fluida y rápida en dispositivos móviles.",
+        solution: "Se programó un límite en PostgreSQL que restringe la creación a un máximo de 3 reportes por 24 horas por dirección IP. Si se sobrepasa, un disparador BEFORE INSERT aborta la transacción devolviendo un error controlado al cliente, complementado con el panel de moderación municipal protegido por Supabase Auth.",
+        images: ["project/assets/CuidaMDP/DarkMode.png", "project/assets/CuidaMDP/LightMode.png"],
+        liveUrl: "https://github.com/IvanCR48/CuidaMDP",
+        repoUrl: "https://github.com/IvanCR48/CuidaMDP"
+    },
+    {
+        id: "rathon_ware",
+        name: "RathonWare",
+        fileName: "rathon_ware.exe",
+        status: "RUNNING",
+        statusText: "COMPLETED",
+        stack: ["C++20", "Qt 6 (QML)", "Windows API", "NVML Driver API"],
+        desc: "Suite de administración de tareas y diagnóstico de rendimiento para Windows. Proporciona visualización en tiempo real de la carga de CPU, RAM, GPU y temperaturas mediante gráficos QML animados por hardware y listado interactivo de procesos activos con capacidad de finalización forzada.",
+        metrics: [
+            "Telemetría en tiempo real (<100ms)",
+            "Consumo de CPU extremadamente bajo (<1%)",
+            "Mapeo de memoria por proceso (QML List)",
+            "Integración nativa con Windows APIs"
+        ],
+        challenge: "Obtener lecturas precisas de hardware gráfico dedicada de NVIDIA (temperaturas y VRAM) sin obligar a los usuarios a instalar el SDK pesado de CUDA o romper la compatibilidad en sistemas con gráficos integrados Intel/AMD.",
+        solution: "Se implementó la carga dinámica de librerías mediante las funciones de Windows API LoadLibrary y GetProcAddress para la DLL del controlador oficial de NVIDIA (nvml.dll). Si la DLL no está presente en la computadora del usuario, el sistema realiza un fallback graceful omitiendo las lecturas sin bloquear el hilo principal.",
+        images: [
+            "project/assets/RathonWare/One.png",
+            "project/assets/RathonWare/Twwo.png",
+            "project/assets/RathonWare/Three.png",
+            "project/assets/RathonWare/Four.png"
+        ],
+        liveUrl: "https://github.com/IvanCR48/RathonWare/releases",
+        repoUrl: "https://github.com/IvanCR48/RathonWare"
+    },
+    {
+        id: "monitor_pcs",
+        name: "MonitorPCs",
+        fileName: "monitor_pcs.py",
+        status: "RUNNING",
+        statusText: "COMPLETED",
+        stack: ["Python", "FastAPI", "SQLite", "psutil", "PowerShell", "React"],
+        desc: "Sistema autónomo y liviano diseñado para monitorizar el estado del hardware en tiempo real en los laboratorios de informática de la E.E.S.T. N°2. Alerta de forma visual si algún periférico (mouse/teclado) es desconectado por alumnos y reporta sobrecargas críticas de recursos.",
+        metrics: [
+            "Monitoreo asíncrono (FastAPI backend)",
+            "Consumo del agente Python <0.1% CPU",
+            "PowerShell WMI/CIM query binding",
+            "Bucle de actualización automatizado (5s)"
+        ],
+        challenge: "Detectar si un teclado o ratón ha sido físicamente desconectado del puerto USB de la computadora desde un script en segundo plano en Windows sin causar sobrecarga de CPU.",
+        solution: "Se estructuró el agente con psutil para métricas de sistema y consultas asíncronas CIM nativas a través de PowerShell ('Win32_Keyboard' y 'Win32_PointingDevice') para verificar el enlace de hardware, enviando la telemetría en formato JSON a la API REST del backend FastAPI en intervalos de 5 segundos.",
+        images: ["project/assets/MonitorPCs/Main.png", "project/assets/MonitorPCs/Pc.png"],
+        liveUrl: "https://github.com/IvanCR48/MonitorPCs",
+        repoUrl: "https://github.com/IvanCR48/MonitorPCs"
+    },
+    {
+        id: "sistema_admin",
+        name: "Sistema E.E.S.T N°2",
+        fileName: "sistema_admin.php",
+        status: "RUNNING",
+        statusText: "COMPLETED",
+        stack: ["PHP 8.1+", "MySQL", "Docker", "MFA (TOTP)", "OWASP Security"],
+        desc: "Plataforma integral de administración académica y disciplinaria diseñada a medida para la Escuela de Educación Secundaria Técnica N°2. Permite gestionar cursos, profesores, inasistencias acumuladas y notas ponderadas según regulaciones oficiales.",
+        metrics: [
+            "21 protecciones de seguridad activas",
+            "Autenticación doble factor (TOTP MFA)",
+            "Control de accesos granular (RBAC)",
+            "Contraseñas hasheadas con Argon2id"
+        ],
+        challenge: "Migrar la lógica legada a una arquitectura limpia orientada a objetos (SOLID) y garantizar seguridad absoluta contra inyecciones SQL y alteraciones de boletines por alumnos en servidores locales.",
+        solution: "Se estructuró el sistema bajo patrón MVC y PSR-4 con PDO en modo de sentencias preparadas estrictas (desactivando la emulación de prepares). Se implementaron middlewares de CSRF, honeypots, rate limiting y MFA por TOTP, auditando cada acción administrativa en logs firmados con HMAC.",
+        images: ["project/assets/SistemaAdmin/SystemExample.png"],
+        liveUrl: "https://github.com/IvanCR48/sistema-admin-eest2",
+        repoUrl: "https://github.com/IvanCR48/sistema-admin-eest2"
+    },
+    {
+        id: "advanced_monitor",
+        name: "NOC Enterprise Monitor",
+        fileName: "advanced_monitor.bin",
+        status: "wip",
+        statusText: "IN_DEVELOPMENT",
+        stack: ["Java 21", "Spring Boot", "PostgreSQL", "React", "TypeScript", "Recharts"],
+        desc: "Plataforma de visualización y monitoreo de red de nivel empresarial estilo NOC. Diseñado para registrar el inventario de telecomunicaciones (ONTs, routers, clientes) y realizar simulaciones asíncronas de estabilidad y latencia en tiempo real.",
+        metrics: [
+            "Spring Task Scheduling concurrente",
+            "Base de datos relacional PostgreSQL",
+            "Prevención de ciclos JSON (Jackson)",
+            "Gráficos interactivos en Recharts"
+        ],
+        challenge: "Monitorear e inspeccionar de forma periódica el estado de conectividad (uptime, latencia, pérdidas) de cientos de dispositivos sin congelar el hilo principal de la aplicación ni saturar las conexiones de base de datos.",
+        solution: "Se implementó un planificador (Spring Task Scheduler) que levanta tareas asíncronas concurrentes cada 30 segundos ejecutando un ping simulado a todos los dispositivos, almacenando transiciones de estado e histórico de logs en PostgreSQL mediante Spring Data JPA.",
+        images: ["project/assets/AdvancedMonitor/noc_dashboard.png"],
+        liveUrl: "https://github.com/IvanCR48/AdvancedMonitor",
+        repoUrl: "https://github.com/IvanCR48/AdvancedMonitor"
+    }
+];
+
+function initProjectsSection() {
+    const listContainer = document.getElementById("projects-list-container");
+    const fileTitleEl = document.getElementById("project-file-title");
+    const statusBadgeEl = document.getElementById("project-status-badge");
+    const nameEl = document.getElementById("project-detail-name");
+    const descEl = document.getElementById("project-detail-desc");
+    const techTagsContainer = document.getElementById("project-tech-tags");
+    const metricsListEl = document.getElementById("project-metrics-list");
+    const caseStudyEl = document.getElementById("project-case-study");
+    const activeImageEl = document.getElementById("project-active-image");
+    const imageTabsContainer = document.getElementById("project-image-tabs");
+    const btnLive = document.getElementById("btn-project-live");
+    const btnRepo = document.getElementById("btn-project-repo");
+
+    if (!listContainer || !nameEl) return;
+
+    if (activeImageEl) {
+        activeImageEl.style.cursor = "zoom-in";
+        activeImageEl.addEventListener("click", () => {
+            const lightboxModal = document.getElementById("lightbox-modal");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxCaption = document.getElementById("lightbox-caption");
+            
+            if (lightboxModal && lightboxImg) {
+                lightboxImg.src = activeProject.images[activeImageIndex];
+                if (lightboxCaption) {
+                    lightboxCaption.textContent = `${activeProject.name} - Vista del Software (Captura ${activeImageIndex + 1}/${activeProject.images.length})`;
+                }
+                lightboxModal.classList.add("open");
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }
+
+    let activeProject = projectsData[0];
+    let activeImageIndex = 0;
+
+    // Render registry tree list
+    listContainer.innerHTML = "";
+    projectsData.forEach((project, idx) => {
+        const item = document.createElement("button");
+        item.className = `project-item ${idx === 0 ? "active" : ""}`;
+        item.setAttribute("data-id", project.id);
+        
+        const statusClass = project.status.toLowerCase();
+        item.innerHTML = `
+            <span>> ${project.fileName}</span>
+            <span class="project-item-status ${statusClass}"></span>
+        `;
+
+        item.addEventListener("click", () => {
+            document.querySelectorAll(".project-item").forEach(btn => btn.classList.remove("active"));
+            item.classList.add("active");
+            activeProject = project;
+            activeImageIndex = 0;
+            updateProjectInspector();
+        });
+
+        listContainer.appendChild(item);
+    });
+
+    function updateProjectInspector() {
+        // Apply loading effect (simulate terminal decryption)
+        const viewerWindow = document.querySelector(".project-viewer-window");
+        viewerWindow.style.opacity = 0.6;
+        
+        setTimeout(() => {
+            fileTitleEl.textContent = activeProject.fileName;
+            
+            // Status badge class mapping
+            statusBadgeEl.textContent = activeProject.statusText;
+            statusBadgeEl.className = `window-lang monospace ${activeProject.status.toLowerCase()}`;
+            if (activeProject.status === "wip") {
+                statusBadgeEl.style.backgroundColor = "var(--accent-amber)";
+            } else {
+                statusBadgeEl.style.backgroundColor = "var(--accent-green)";
+            }
+
+            nameEl.textContent = activeProject.name;
+            descEl.textContent = activeProject.desc;
+            
+            // Render Tech Tags
+            techTagsContainer.innerHTML = "";
+            activeProject.stack.forEach(tech => {
+                const tag = document.createElement("span");
+                tag.className = "project-tag";
+                tag.textContent = tech;
+                techTagsContainer.appendChild(tag);
+            });
+
+            // Render Metrics
+            metricsListEl.innerHTML = "";
+            activeProject.metrics.forEach(metric => {
+                const li = document.createElement("li");
+                li.textContent = metric;
+                metricsListEl.appendChild(li);
+            });
+
+            // Case study
+            caseStudyEl.textContent = activeProject.solution;
+            // Challenge prefix in case study
+            const boldChallenge = document.createElement("p");
+            boldChallenge.innerHTML = `<strong>REQUISITO/DESAFÍO:</strong> ${activeProject.challenge}<br><br><strong>RESOLUCIÓN:</strong> `;
+            caseStudyEl.prepend(boldChallenge);
+
+            // Action links
+            btnLive.href = activeProject.liveUrl;
+            btnRepo.href = activeProject.repoUrl;
+
+            // Render Image controls & first image
+            renderImageConsole();
+
+            viewerWindow.style.opacity = 1;
+        }, 200);
+    }
+
+    function renderImageConsole() {
+        activeImageEl.style.opacity = 0;
+        
+        setTimeout(() => {
+            activeImageEl.src = activeProject.images[activeImageIndex];
+            activeImageEl.alt = `${activeProject.name} Capture ${activeImageIndex + 1}`;
+            activeImageEl.style.opacity = 1;
+        }, 150);
+
+        imageTabsContainer.innerHTML = "";
+        
+        // If there are multiple images, render tabs
+        if (activeProject.images.length > 1) {
+            activeProject.images.forEach((img, idx) => {
+                const tabBtn = document.createElement("button");
+                tabBtn.className = `img-tab-btn ${idx === activeImageIndex ? "active" : ""}`;
+                
+                // Customize tab labels for CuidaMDP modes if applicable
+                if (activeProject.id === "cuida_mdp") {
+                    tabBtn.textContent = idx === 0 ? "DARK_MODE" : "LIGHT_MODE";
+                } else {
+                    tabBtn.textContent = `IMG_0${idx + 1}`;
+                }
+
+                tabBtn.addEventListener("click", () => {
+                    activeImageIndex = idx;
+                    renderImageConsole();
+                });
+
+                imageTabsContainer.appendChild(tabBtn);
+            });
+            imageTabsContainer.style.display = "flex";
+        } else {
+            // Only one image, hide control bar or show single active label
+            const label = document.createElement("span");
+            label.className = "img-tab-btn active";
+            label.style.cursor = "default";
+            label.style.width = "100%";
+            label.textContent = "SINGLE_VIEW";
+            imageTabsContainer.appendChild(label);
+            imageTabsContainer.style.display = "flex";
+        }
+    }
+
+    // Initialize with first project
+    updateProjectInspector();
+}
+
+function initModals() {
+    // Lightbox Close Handlers
+    const lightboxModal = document.getElementById("lightbox-modal");
+    const lightboxClose = document.getElementById("lightbox-close");
+    
+    if (lightboxModal && lightboxClose) {
+        lightboxClose.addEventListener("click", () => {
+            lightboxModal.classList.remove("open");
+            document.body.style.overflow = "";
+        });
+        
+        lightboxModal.addEventListener("click", (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+        });
+    }
+
+    // Privacy Policy Modal Handlers
+    const privacyLink = document.getElementById("link-privacy");
+    const privacyModal = document.getElementById("privacy-modal");
+    const privacyClose = document.getElementById("privacy-close");
+
+    if (privacyLink && privacyModal && privacyClose) {
+        privacyLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            privacyModal.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+
+        privacyClose.addEventListener("click", () => {
+            privacyModal.classList.remove("open");
+            document.body.style.overflow = "";
+        });
+
+        privacyModal.addEventListener("click", (e) => {
+            if (e.target === privacyModal) {
+                privacyModal.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+        });
+    }
+    
+    // Close modals on Escape key
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            if (lightboxModal && lightboxModal.classList.contains("open")) {
+                lightboxModal.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+            if (privacyModal && privacyModal.classList.contains("open")) {
+                privacyModal.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+        }
+    });
+}
+
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // only reveal once
+            }
+        });
+    }, {
+        threshold: 0.1, // trigger when 10% of the element is visible
+        rootMargin: "0px 0px -50px 0px" // offset trigger slightly for better visual entry
+    });
+    
+    revealElements.forEach(el => {
+        observer.observe(el);
     });
 }

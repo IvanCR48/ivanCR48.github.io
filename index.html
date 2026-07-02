@@ -42,21 +42,21 @@
         <div class="hero-grid">
             <!-- Left Side: Profile & Spec Terminal -->
             <div class="hero-left-col">
-                <div class="technical-eyebrow">
+                <div class="technical-eyebrow animate-load delay-1">
                     <span class="cyan-badge">TÉCNICO EN PROGRAMACIÓN</span>
                     <span class="hash-tag">// E.E.S.T N°2 "EDUCACIÓN Y TRABAJO"</span>
                 </div>
                 
-                <h1 class="hero-title">
+                <h1 class="hero-title animate-load delay-2">
                     <span class="text-glow">IVÁN ISMAEL CARDOZO</span>
                 </h1>
                 
-                <p class="hero-subtitle">
+                <p class="hero-subtitle animate-load delay-3">
                     Especializado en arquitectura orientada a objetos, bases de datos relacionales y el desarrollo de sistemas de alta seguridad.
                 </p>
                 
                 <!-- Terminal Log Preview -->
-                <div class="terminal-preview">
+                <div class="terminal-preview animate-load delay-4">
                     <div class="terminal-header">
                         <span class="terminal-dot red"></span>
                         <span class="terminal-dot yellow"></span>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="hero-actions">
+                <div class="hero-actions animate-load delay-5">
                     <a href="#sandbox" class="btn btn-primary" id="btn-enter-sandbox">
                         <span class="btn-text">Ingresar al Sandbox</span>
                         <span class="btn-icon">→</span>
@@ -82,7 +82,7 @@
             </div>
 
             <!-- Right Side: Interactive Particle Canvas Console -->
-            <div class="hero-right-col">
+            <div class="hero-right-col animate-load-right">
                 <div class="console-window hero-canvas-window">
                     <div class="window-header">
                         <span class="window-dot red"></span>
@@ -113,53 +113,10 @@
     <!-- Main Container -->
     <main class="content-container">
 
-        <!-- Engineering Pillars Section -->
-        <section class="section-container" id="pilares">
-            <div class="section-header">
-                <div class="section-label monospace">/01 // SPECIFICATIONS</div>
-                <h2 class="section-title">Filosofía de Desarrollo</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon monospace">SOLID</div>
-                    <h3 class="pillar-title">Diseño de Arquitectura</h3>
-                    <p class="pillar-desc">
-                        Partidario del desacoplamiento de capas, inyección de dependencias y responsabilidad única para garantizar código escalable, testable y modular.
-                    </p>
-                </div>
-                
-                <div class="pillar-card">
-                    <div class="pillar-icon monospace">OWASP</div>
-                    <h3 class="pillar-title">Seguridad por Diseño</h3>
-                    <p class="pillar-desc">
-                        Implementación sistemática de defensas frente a inyecciones SQL, ataques CSRF, XSS, secuestros de sesión y control de accesos por roles (RBAC).
-                    </p>
-                </div>
-                
-                <div class="pillar-card">
-                    <div class="pillar-icon monospace">UML</div>
-                    <h3 class="pillar-title">Especificación Rigurosa</h3>
-                    <p class="pillar-desc">
-                        Estructuración de proyectos basada en documentación técnica detallada, diagramas de clases, flujos de datos y diseño de esquemas de bases de datos.
-                    </p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon monospace">LOGIC</div>
-                    <h3 class="pillar-title">Resolución de Problemas</h3>
-                    <p class="pillar-desc">
-                        Pensamiento analítico y creativo enfocado en el diagnóstico preciso, refactorización de sistemas legacy y optimización de rendimiento.
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <!-- Signature Sandbox Section: Architecture & Security Sandbox -->
-        <section class="section-container" id="sandbox">
+        <section class="section-container scroll-reveal" id="sandbox">
             <div class="section-header">
-                <div class="section-label monospace">/02 // SIMULATION_ENVIRONMENT</div>
+                <div class="section-label monospace">/01 // SIMULATION_ENVIRONMENT</div>
                 <h2 class="section-title">Interactive Layer Sandbox</h2>
                 <p class="section-subtitle">
                     Explora de forma interactiva la arquitectura de capas limpia y la tubería de seguridad de mi proyecto principal: el <strong>Sistema Administrativo E.E.S.T N°2</strong>.
@@ -222,19 +179,19 @@
                 <!-- Main Console Panel -->
                 <div class="dashboard-main">
                     
-                    <!-- Top Window: File Viewer / Code Inspector -->
+                    <!-- Top Window: Layer Information / Non-Technical Inspector -->
                     <div class="console-window code-viewer-window">
                         <div class="window-header">
                             <span class="window-dot red"></span>
                             <span class="window-dot yellow"></span>
                             <span class="window-dot green"></span>
-                            <span class="window-title monospace" id="code-file-title">src/middleware/SecurizarEntrada.php</span>
-                            <span class="window-lang monospace">PHP 8.0</span>
+                            <span class="window-title monospace" id="code-file-title">layer_information.sys</span>
+                            <span class="window-lang monospace" id="code-file-lang">INFO</span>
                         </div>
                         <div class="window-body">
-                            <pre class="code-output monospace" id="code-content">
-                            <!-- Code injected by Javascript -->
-                            </pre>
+                            <div class="layer-details-container" id="code-content">
+                                <!-- Layer details injected by Javascript -->
+                            </div>
                         </div>
                     </div>
 
@@ -280,31 +237,73 @@
             </div>
         </section>
 
-        <!-- 21 Protections Console Section -->
-        <section class="section-container" id="seguridad">
+        <!-- Unified Security & Systems Section -->
+        <section class="section-container scroll-reveal" id="seguridad">
             <div class="section-header">
-                <div class="section-label monospace">/03 // SECURITY_AUDIT</div>
-                <h2 class="section-title">Consola de Seguridad: 21 Protecciones Activas</h2>
+                <div class="section-label monospace">/02 // SECURITY_&_SYSTEMS</div>
+                <h2 class="section-title">Diseño de Software y Seguridad</h2>
                 <p class="section-subtitle">
-                    El sistema administrativo incorpora medidas de seguridad automatizadas basadas en OWASP Top 10 para garantizar la integridad académica y de datos.
+                    Estructuro sistemas robustos bajo principios SOLID y aplico las medidas de seguridad del estándar OWASP Top 10.
                 </p>
                 <div class="section-line"></div>
             </div>
-
-            <!-- Filter Controls -->
-            <div class="console-filters">
-                <button class="filter-btn active" data-filter="all" id="filter-all">TODAS</button>
-                <button class="filter-btn" data-filter="injection" id="filter-injection">INYECCIÓN & XSS</button>
-                <button class="filter-btn" data-filter="session" id="filter-session">SESIONES & ACCESOS</button>
-                <button class="filter-btn" data-filter="infrastructure" id="filter-infrastructure">INFRAESTRUCTURA & RESPALDOS</button>
-            </div>
-
-            <!-- Matrix Grid -->
-            <div class="security-grid" id="security-matrix">
-                <!-- Protection items injected dynamically via app.js -->
-            </div>
             
-            <!-- Protection Details Modal -->
+            <div class="security-systems-grid">
+                <!-- Left: 4 Pillars -->
+                <div class="pillars-compact-column">
+                    <h3 class="panel-heading monospace">FILOSOFÍA_DE_DESARROLLO</h3>
+                    <div class="pillars-compact-list">
+                        <div class="pillar-compact-item">
+                            <span class="pillar-badge-mono">SOLID</span>
+                            <div class="pillar-item-text">
+                                <strong>Arquitectura Modular</strong>
+                                <p>Código desacoplado, fácil de mantener, escalar y probar.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-compact-item">
+                            <span class="pillar-badge-mono">OWASP</span>
+                            <div class="pillar-item-text">
+                                <strong>Seguridad por Diseño</strong>
+                                <p>Protección activa contra robo de datos, inyecciones y accesos falsos.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-compact-item">
+                            <span class="pillar-badge-mono">UML</span>
+                            <div class="pillar-item-text">
+                                <strong>Planificación Técnica</strong>
+                                <p>Especificación de bases de datos y lógica antes de codificar.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-compact-item">
+                            <span class="pillar-badge-mono">LOGIC</span>
+                            <div class="pillar-item-text">
+                                <strong>Lógica Analítica</strong>
+                                <p>Resolución eficiente de problemas complejos y optimización.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Compact 21 Protections Console -->
+                <div class="security-console-column">
+                    <h3 class="panel-heading monospace">CONSOLA_DE_SEGURIDAD (21_MEDIDAS_ACTIVAS)</h3>
+                    <div class="security-console-container">
+                        <!-- Filters -->
+                        <div class="console-filters-compact">
+                            <button class="filter-btn active" data-filter="all" id="filter-all">TODAS</button>
+                            <button class="filter-btn" data-filter="injection" id="filter-injection">INYECCIÓN & XSS</button>
+                            <button class="filter-btn" data-filter="session" id="filter-session">ACCESOS</button>
+                            <button class="filter-btn" data-filter="infrastructure" id="filter-infrastructure">INFRAESTRUCTURA</button>
+                        </div>
+                        <!-- List container instead of massive cards grid -->
+                        <div class="security-compact-list" id="security-matrix">
+                            <!-- Injected dynamically by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Modal (reused) -->
             <div class="security-modal" id="security-detail-modal">
                 <div class="modal-card">
                     <div class="modal-header">
@@ -336,9 +335,9 @@
         </section>
 
         <!-- Technical Stack Section -->
-        <section class="section-container" id="stack">
+        <section class="section-container scroll-reveal" id="stack">
             <div class="section-header">
-                <div class="section-label monospace">/04 // DEPENDENCIES</div>
+                <div class="section-label monospace">/03 // DEPENDENCIES</div>
                 <h2 class="section-title">Ecosistema Tecnológico</h2>
                 <div class="section-line"></div>
             </div>
@@ -431,8 +430,100 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section class="section-container scroll-reveal" id="proyectos">
+            <div class="section-header">
+                <div class="section-label monospace">/04 // PROJECTS_REGISTRY</div>
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">
+                    Explora el registro de sistemas, suites de escritorio e infraestructura desarrolladas bajo estándares profesionales de ingeniería.
+                </p>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-dashboard">
+                <!-- Sidebar: Registry list -->
+                <div class="projects-sidebar">
+                    <h3 class="panel-heading monospace">REGISTRY_FILES</h3>
+                    <div class="projects-list" id="projects-list-container">
+                        <!-- Injected by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Main Project Display Terminal -->
+                <div class="projects-main">
+                    <div class="console-window project-viewer-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title monospace" id="project-file-title">cuidamdp.sys</span>
+                            <span class="window-lang monospace" id="project-status-badge">RUNNING</span>
+                        </div>
+                        <div class="window-body project-body">
+                            <!-- Project Details Split Layout -->
+                            <div class="project-details-grid">
+                                <!-- Left side of Details: Title, Stack, Description, Case Study -->
+                                <div class="project-info-pane">
+                                    <h3 class="project-detail-name" id="project-detail-name">CuidaMDP</h3>
+                                    <p class="project-detail-desc" id="project-detail-desc">
+                                        Cargando descripción...
+                                    </p>
+                                    
+                                    <div class="project-section-block">
+                                        <h4 class="block-title monospace">> TECH_STACK:</h4>
+                                        <div class="project-tags" id="project-tech-tags">
+                                            <!-- Injected by JS -->
+                                        </div>
+                                    </div>
+
+                                    <div class="project-section-block">
+                                        <h4 class="block-title monospace">> METRICS & SPECIFICATIONS:</h4>
+                                        <ul class="project-metrics" id="project-metrics-list">
+                                            <!-- Injected by JS -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="project-section-block">
+                                        <h4 class="block-title monospace">> CASE_STUDY // CHALLENGE & RESOLUTION:</h4>
+                                        <div class="case-study-box">
+                                            <p class="case-study-text" id="project-case-study">
+                                                Cargando caso de estudio...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right side of Details: Image Console & Control Actions -->
+                                <div class="project-media-pane">
+                                    <div class="media-console-window">
+                                        <div class="media-console-screen">
+                                            <img src="project/assets/CuidaMDP/DarkMode.png" alt="Project Screenshot" class="project-screenshot" id="project-active-image">
+                                        </div>
+                                        <div class="media-console-controls" id="project-image-tabs">
+                                            <!-- Image Tab buttons injected by JS -->
+                                        </div>
+                                    </div>
+
+                                    <div class="project-action-buttons">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" id="btn-project-live">
+                                            <span class="btn-text">INITIATE_DEMO (Live)</span>
+                                            <span class="btn-icon">⚡</span>
+                                        </a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full" id="btn-project-repo">
+                                            <span class="btn-text">FETCH_SOURCE (GitHub)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section class="section-container" id="contacto">
+        <section class="section-container scroll-reveal" id="contacto">
             <div class="section-header">
                 <div class="section-label monospace">/05 // HANDSHAKE</div>
                 <h2 class="section-title">Establecer Conexión</h2>
@@ -515,9 +606,49 @@
             <span class="monospace text-muted">© 2026 IVÁN ISMAEL CARDOZO. ALL SYSTEMS SECURE.</span>
         </div>
         <div class="footer-right">
-            <span class="monospace text-muted">BUILT WITH CLEAN CODE PRINCIPLES</span>
+            <span class="monospace text-muted">BUILT WITH CLEAN CODE PRINCIPLES | <a href="#" id="link-privacy" style="color: var(--accent-orange); text-decoration: underline;">Políticas de Privacidad</a></span>
         </div>
     </footer>
+
+    <!-- Lightbox Modal for Project screenshots -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+            <img src="" alt="Zoomed Screenshot" class="lightbox-image" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption">Captura de pantalla del proyecto</div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="privacy-modal-window" id="privacy-modal">
+        <div class="privacy-modal-card">
+            <div class="privacy-modal-header">
+                <span class="monospace text-cyan">> PRIVACY_POLICY.log</span>
+                <button class="privacy-close-btn" id="privacy-close">&times;</button>
+            </div>
+            <div class="privacy-modal-body">
+                <h3>Políticas de Privacidad</h3>
+                <p>Esta política de privacidad describe cómo se maneja la información de los visitantes en este portafolio profesional.</p>
+                
+                <h4>1. Recolección de Datos</h4>
+                <p>Este sitio web es de carácter estrictamente profesional e informativo. Solo recolectamos información personal que tú decides proporcionar de forma voluntaria a través del formulario de contacto (nombre, correo electrónico y mensaje).</p>
+                
+                <h4>2. Uso de la Información</h4>
+                <p>Los datos suministrados a través del formulario de contacto ("secure_handshake.exe") son transmitidos de forma segura y se utilizan única y exclusivamente para responder a tu propuesta laboral, consulta o mensaje de contacto. No vendemos, alquilamos ni compartimos tus datos con terceros.</p>
+                
+                <h4>3. Almacenamiento Local (Cookies y LocalStorage)</h4>
+                <p>Este sitio no utiliza cookies de seguimiento ni publicidad de terceros. Únicamente se utiliza el almacenamiento local del navegador (LocalStorage) para recordar tu preferencia en la simulación interactiva y garantizar el correcto funcionamiento del portafolio.</p>
+                
+                <h4>4. Seguridad</h4>
+                <p>Nos tomamos muy en serio la seguridad de los datos. Aunque este sitio es un portafolio estático, implementamos buenas prácticas de seguridad web recomendadas por OWASP, incluyendo el uso de HTTPS estricto y la sanitización de datos de entrada.</p>
+                
+                <h4>5. Derechos</h4>
+                <p>Puedes solicitar la eliminación de cualquier mensaje o dato que hayas enviado escribiendo directamente al correo de contacto: <strong>cardozoivanismael@gmail.com</strong>.</p>
+                
+                <p class="text-muted text-center monospace pt-4" style="font-size: 0.75rem;">SYS_STATUS: SECURE // LAST_UPDATED: JULY_2026</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Interactive JS scripts -->
     <script src="app.js"></script>
