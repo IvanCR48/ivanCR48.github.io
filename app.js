@@ -776,22 +776,52 @@ function initContactForm() {
         const origText = btnSend.querySelector(".btn-text").textContent;
         btnSend.querySelector(".btn-text").textContent = "CIPHERING_PACKETS...";
         
-        // Mock transmission time
-        setTimeout(() => {
-            // Show success screen overlay
-            successScreen.classList.add("show");
+        const formData = new FormData(form);
+        
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Show success screen overlay
+                successScreen.classList.add("show");
+                
+                // Log message sent status in sandbox terminal too if user is debugging
+                const terminalOutput = document.getElementById("terminal-log-output");
+                if (terminalOutput) {
+                    const line = document.createElement("p");
+                    line.className = "log-line sim-alert";
+                    const now = new Date();
+                    const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
+                    line.innerHTML = `<span class="log-timestamp">${timeStr}</span> <span class="text-amber">[HANDSHAKE] Transmisión exitosa de contacto de: ${document.getElementById("contact-name").value}.</span>`;
+                    terminalOutput.appendChild(line);
+                }
+            } else {
+                throw new Error(data.message || "Falla en el envío");
+            }
+        })
+        .catch(error => {
+            console.error("Error submitting form:", error);
             
-            // Log message sent status in sandbox terminal too if user is debugging
+            // Log error in sandbox terminal
             const terminalOutput = document.getElementById("terminal-log-output");
             if (terminalOutput) {
                 const line = document.createElement("p");
-                line.className = "log-line sim-alert";
+                line.className = "log-line sim-error"; // Assume styles exist or fallback
                 const now = new Date();
                 const timeStr = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
-                line.innerHTML = `<span class="log-timestamp">${timeStr}</span> <span class="text-amber">[HANDSHAKE] Recibida transmisión de contacto de: ${document.getElementById("contact-name").value}.</span>`;
+                line.innerHTML = `<span class="log-timestamp">${timeStr}</span> <span class="text-red" style="color: var(--accent-orange); font-weight: bold;">[ERROR] Falla al transmitir paquete: ${error.message}</span>`;
                 terminalOutput.appendChild(line);
+            } else {
+                alert("Error al enviar el mensaje. Por favor intente de nuevo o escriba directamente a cardozoivanismael@gmail.com.");
             }
-        }, 1200);
+            
+            // Restore submit button
+            btnSend.disabled = false;
+            btnSend.querySelector(".btn-text").textContent = origText;
+        });
     });
     
     btnReset.addEventListener("click", () => {
