@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ecuaciones lineales y transformables — Definicion, reglas de transformacion, clasificacion y problemas de aplicacion. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Ecuaciones | Study Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="index.html" class="navbar__btn">Home</a>
+      <a href="matematica.html" class="navbar__btn">Cap I</a>
+      <a href="valor_absoluto.html" class="navbar__btn">Secc 3</a>
+      <a href="#conceptos" class="navbar__btn">Conceptos</a>
+      <a href="#lineales" class="navbar__btn">Lineales</a>
+      <a href="#racionales" class="navbar__btn">Racionales</a>
+      <a href="#aplicaciones" class="navbar__btn">Problemas</a>
+      <a href="#clasificacion" class="navbar__btn">Clasificacion</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">ecuaciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo I &mdash; Seccion 4</p>
+          <h1 class="study__title">Ecuaciones</h1>
+          <p class="study__intro">
+            Ecuaciones lineales, ecuaciones racionales transformables, clasificacion y problemas aplicados.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#conceptos">Igualdad, Identidad y Ecuacion</a></li>
+              <li><a href="#reglas">Reglas de transformacion</a></li>
+              <li><a href="#lineales">Ecuaciones Lineales</a></li>
+              <li><a href="#racionales">Ecuaciones Racionales</a></li>
+              <li><a href="#clasificacion">Clasificacion y Parametros</a></li>
+              <li><a href="#aplicaciones">Problemas de aplicacion</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="valor_absoluto.html" class="nav-link nav-link--prev">&larr; Secc 3: Valor Absoluto y Distancia</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CONCEPTOS ===================== -->
+    <section class="study__section" id="conceptos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">conceptos_igualdad.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Igualdad, Identidad y Ecuacion</h2>
+            <span class="section__symbol">=</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            El uso del signo "igual" es fundamental en matematica. Sin embargo, segun como se plantee, 
+            estamos expresando cosas completamente diferentes:
+          </p>
+
+          <div class="comparison-cols">
+            <div class="comparison-col comparison-col--left">
+              <h4>Identidad</h4>
+              <p class="comparison-col__formula">(x - 5)(x + 5) = x<sup>2</sup> - 25</p>
+              <p>
+                Es una <strong>afirmacion</strong>. La igualdad es verdadera para <strong>cualquier</strong> 
+                valor real que tome la variable x.
+              </p>
+              <span class="comparison-verdict comparison-verdict--yes" style="background:#e0eef7; color:#1a4a6a; border-color:#a0c4d8;">Siempre verdadera</span>
+            </div>
+            <div class="comparison-col comparison-col--right">
+              <h4>Ecuacion</h4>
+              <p class="comparison-col__formula">x<sup>2</sup> - 25 = 0</p>
+              <p>
+                Es una <strong>pregunta</strong>. Sola es verdadera para determinados valores específicos 
+                de la variable x (en este caso, x = 5 y x = -5).
+              </p>
+              <span class="comparison-verdict comparison-verdict--yes">Condicional</span>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Axiomas de Euclides (Elementos, ~300 a.C.)</p>
+            <p style="font-family:var(--font-terminal); font-size:1.05rem; line-height:1.5;">
+              1. Dos cosas iguales a una tercera cosa, son iguales entre si.
+              <br>2. Si cantidades iguales se suman a numeros iguales, los totales resultan ser iguales.
+              <br>3. Si cantidades iguales se restan de numeros iguales, los residuos son iguales.
+              <br>4. Cosas que coinciden con otra, son iguales entre si.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REGLAS ===================== -->
+    <section class="study__section" id="reglas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">reglas_despeje.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Reglas para modificar ecuaciones</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Para resolver una ecuacion, la modificamos paso a paso hasta dejar la variable sola. 
+            Para asegurar que no alteramos las soluciones originales, aplicamos las siguientes reglas equivalentes:
+          </p>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Regla 1: Suma / Resta</h4>
+              <p class="property-card__formula">Si a = b &rArr; a + c = b + c</p>
+              <p class="property-card__example">Se puede sumar o restar la misma cantidad a ambos miembros sin alterar la solucion.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Regla 2: Multiplicacion / Division</h4>
+              <p class="property-card__formula">Si a = b &rArr; a &middot; c = b &middot; c &nbsp; (c &ne; 0)</p>
+              <p class="property-card__example">Se puede multiplicar o dividir ambos miembros por una cantidad no nula sin alterar la solucion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LINEALES ===================== -->
+    <section class="study__section" id="lineales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ecuaciones_lineales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Ecuaciones Lineales</h2>
+            <span class="section__symbol section__symbol--blue">ax+b</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              Una ecuacion de primer grado o <strong>ecuacion lineal</strong> es aquella de la forma:
+            </p>
+            <p class="math-display">ax + b = 0 &nbsp;&nbsp; (a &ne; 0)</p>
+            <p>Donde la variable x aparece elevada unicamente a la primera potencia. Su solucion unica es:</p>
+            <p class="math-display">x = -b / a</p>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Resolucion paso a paso (Ejemplo 1)</h3>
+            <p class="math-display">12x - 9 = 5x + 5</p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">Sumamos 9 a ambos miembros: 12x = 5x + 14</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">Restamos 5x a ambos miembros: 7x = 14</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">Dividimos ambos miembros por 7: x = 2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-box">
+            <p class="callout-box__label">Verificacion de la solucion</p>
+            <p>Reemplazamos x = 2 en la ecuacion original para verificar que la igualdad sea verdadera:</p>
+            <p class="math-display">
+              12(2) - 9 = 5(2) + 5 <br>
+              24 - 9 = 10 + 5 <br>
+              15 = 15 &nbsp;&nbsp; (Afirmacion Verdadera)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RACIONALES ===================== -->
+    <section class="study__section" id="racionales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">ecuaciones_racionales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Ecuaciones Racionales transformables</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Muchas ecuaciones con la variable en el denominador se pueden resolver transformandolas en lineales, 
+            siempre teniendo cuidado de excluir los valores que anulan los denominadores (restricciones de dominio).
+          </p>
+
+          <!-- Ejemplo 2 con solucion -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep)">Ejemplo 2 (Con Solucion)</h3>
+            <p class="math-display">
+              <svg viewBox="0 0 240 50" style="width:240px; height:50px; display:inline-block; vertical-align:middle;">
+                <text x="10" y="32" font-family="'Share Tech Mono', monospace" font-size="18">=</text>
+                
+                <!-- 3 / (2x - 2) -->
+                <text x="35" y="20" font-family="'Share Tech Mono', monospace" font-size="16" text-anchor="middle">3</text>
+                <line x1="15" y1="26" x2="55" y2="26" stroke="#333" stroke-width="1.5"/>
+                <text x="35" y="42" font-family="'Share Tech Mono', monospace" font-size="14" text-anchor="middle">2x - 2</text>
+                
+                <!-- 2 / (x + 1) -->
+                <text x="95" y="20" font-family="'Share Tech Mono', monospace" font-size="16" text-anchor="middle">2</text>
+                <line x1="80" y1="26" x2="110" y2="26" stroke="#333" stroke-width="1.5"/>
+                <text x="95" y="42" font-family="'Share Tech Mono', monospace" font-size="14" text-anchor="middle">x + 1</text>
+              </svg>
+            </p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">Establecemos restricciones: 2x - 2 &ne; 0 &rArr; x &ne; 1; &nbsp;&nbsp; x + 1 &ne; 0 &rArr; x &ne; -1</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">Multiplicamos cruzado (o por el comun denominador): 3(x + 1) = 2(2x - 2)</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">Distribuimos: 3x + 3 = 4x - 4</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">4</span>
+                <span class="construction-step__val">Despejamos x: 3 + 4 = 4x - 3x &rArr; x = 7</span>
+              </div>
+            </div>
+            <p class="construction-note">
+              Verificando en la original: 3 / (2(7) - 2) = 3/12 = 1/4; &nbsp;&nbsp; 2 / (7 + 1) = 2/8 = 1/4. 
+              Como x = 7 no viola ninguna restriccion, <strong>x = 7 es la solucion</strong>.
+            </p>
+          </div>
+
+          <!-- Ejemplo 3 sin solucion -->
+          <div class="key-concept" style="border-color:#e0b8b8; background:#faf5f5;">
+            <h3 class="key-concept__title" style="color:#c0392b">Ejemplo 3 (Sin Solucion / Solucion Extranea)</h3>
+            <p class="math-display">
+              <svg viewBox="0 0 260 50" style="width:260px; height:50px; display:inline-block; vertical-align:middle;">
+                <!-- 3x / (x - 3) -->
+                <text x="35" y="20" font-family="'Share Tech Mono', monospace" font-size="16" text-anchor="middle">3x</text>
+                <line x1="15" y1="26" x2="55" y2="26" stroke="#333" stroke-width="1.5"/>
+                <text x="35" y="42" font-family="'Share Tech Mono', monospace" font-size="14" text-anchor="middle">x - 3</text>
+                
+                <text x="70" y="32" font-family="'Share Tech Mono', monospace" font-size="18">+</text>
+                <text x="90" y="32" font-family="'Share Tech Mono', monospace" font-size="18">1</text>
+                <text x="115" y="32" font-family="'Share Tech Mono', monospace" font-size="18">=</text>
+
+                <!-- 9 / (x - 3) -->
+                <text x="145" y="20" font-family="'Share Tech Mono', monospace" font-size="16" text-anchor="middle">9</text>
+                <line x1="130" y1="26" x2="160" y2="26" stroke="#333" stroke-width="1.5"/>
+                <text x="145" y="42" font-family="'Share Tech Mono', monospace" font-size="14" text-anchor="middle">x - 3</text>
+              </svg>
+            </p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num" style="background:#f7e0e0; border-color:#d8a0a0; color:#c0392b;">1</span>
+                <span class="construction-step__val">Restriccion inicial: x - 3 &ne; 0 &rArr; x &ne; 3</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num" style="background:#f7e0e0; border-color:#d8a0a0; color:#c0392b;">2</span>
+                <span class="construction-step__val">Multiplicamos toda la ecuacion por (x - 3): 3x + 1(x - 3) = 9</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num" style="background:#f7e0e0; border-color:#d8a0a0; color:#c0392b;">3</span>
+                <span class="construction-step__val">Simplificamos: 3x + x - 3 = 9 &rArr; 4x - 3 = 9</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num" style="background:#f7e0e0; border-color:#d8a0a0; color:#c0392b;">4</span>
+                <span class="construction-step__val">Despejamos x: 4x = 12 &rArr; x = 3</span>
+              </div>
+            </div>
+            <p class="construction-note" style="color:#c0392b">
+              ¡Cuidado! Obtuvimos x = 3, pero teniamos la restriccion x &ne; 3 (ya que provocaria division por cero). 
+              Por lo tanto, la solucion es extranea y concluimos que <strong>la ecuacion no tiene solucion</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CLASIFICACION ===================== -->
+    <section class="study__section" id="clasificacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">clasificacion_ecuaciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Clasificacion de Ecuaciones segun sus soluciones</h2>
+          
+          <div class="examples-table">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Subtipo</th>
+                  <th>Cantidad de Soluciones</th>
+                  <th>Ejemplo algebraico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2"><strong>Compatibles</strong> (Tienen solucion)</td>
+                  <td>Determinada</td>
+                  <td>Exactamente 1 solucion</td>
+                  <td>2x + 4 = 10 &rArr; x = 3</td>
+                </tr>
+                <tr>
+                  <td>Indeterminada (Identidades)</td>
+                  <td>Infinitas soluciones</td>
+                  <td>2(x + 1) = 2x + 2 &rArr; 2x + 2 = 2x + 2</td>
+                </tr>
+                <tr>
+                  <td><strong>Incompatibles</strong></td>
+                  <td>Sin solucion</td>
+                  <td>Ninguna solucion (0)</td>
+                  <td>x + 1 = x + 3 &rArr; 1 = 3 (Falso)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Ecuaciones lineales con parametros (k)</h3>
+            <p>
+              Consiste en analizar para que valores del parametro k la ecuacion es compatible o incompatible.
+            </p>
+            <div class="precaution-card" style="margin-top:10px;">
+              <div class="precaution-card__header">Caso de estudio: -2kx + 1 = x + 2k</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  Agrupamos las x de un lado y las constantes del otro:
+                  <br><br>
+                  -2kx - x = 2k - 1
+                  <br>
+                  x(-2k - 1) = 2k - 1
+                  <br>
+                  x(2k + 1) = 1 - 2k
+                  <br><br>
+                  Ahora analizamos el coeficiente de x, que es <strong>(2k + 1)</strong>:
+                </p>
+                <div class="properties-grid" style="margin-top:15px; margin-bottom:0;">
+                  <div class="property-card">
+                    <h4 class="property-card__title" style="color:var(--teal-deep);">Si 2k + 1 &ne; 0 (k &ne; -1/2)</h4>
+                    <p class="property-card__formula">Compatible Determinada</p>
+                    <p class="property-card__example">Tiene solucion unica: x = (1 - 2k)/(2k + 1)</p>
+                  </div>
+                  <div class="property-card property-card--warning">
+                    <h4 class="property-card__title" style="color:#c0392b;">Si 2k + 1 = 0 (k = -1/2)</h4>
+                    <p class="property-card__formula">Incompatible</p>
+                    <p class="property-card__example">Queda x(0) = 1 - 2(-1/2) &rArr; 0 = 2 (Absurdo, no tiene solucion)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== APLICACIONES ===================== -->
+    <section class="study__section" id="aplicaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">problemas_verbales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Problemas de aplicacion (Palabras a ecuaciones)</h2>
+            <span class="section__symbol section__symbol--orange">v&middot;t</span>
+          </div>
+
+          <!-- Problema de Juan -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Ejemplo A: El dinero de Juan</h3>
+            <p class="construction-note" style="margin-top:0; margin-bottom:15px;">
+              Juan dice: "Si tuviera $12 mas de lo que tengo y despues duplicara esa cantidad, tendria $60 mas de lo que tengo".
+            </p>
+            <div class="examples-table" style="margin-bottom:15px;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Frase textual</th>
+                    <th>Traduccion algebraica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>El dinero que tiene Juan</td>
+                    <td><strong>x</strong></td>
+                  </tr>
+                  <tr>
+                    <td>$12 mas de lo que tiene</td>
+                    <td>x + 12</td>
+                  </tr>
+                  <tr>
+                    <td>El doble de esa cantidad</td>
+                    <td>2(x + 12)</td>
+                  </tr>
+                  <tr>
+                    <td>$60 mas de lo que tiene</td>
+                    <td>x + 60</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="math-display">
+              2(x + 12) = x + 60 <br>
+              2x + 24 = x + 60 &rArr; x = 36
+            </p>
+            <p class="construction-note">Conclusion: Juan tiene $36.</p>
+          </div>
+
+          <!-- Problema de Don Lentón y Don Veloz -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Ejemplo B: Problema de Velocidad y Distancia</h3>
+            <p class="construction-note" style="margin-top:0;">
+              A las 2:00 pm Don Lenton viaja al este a 45 km/h. Una hora mas tarde (3:00 pm), Don Veloz sale detras de el a 60 km/h. 
+              ¿A que hora lo alcanzara?
+            </p>
+
+            <!-- SVG Diagram for distance and time -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">Esquema del movimiento</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 600 180" class="number-line-svg">
+                  <!-- Road line -->
+                  <line x1="30" y1="90" x2="570" y2="90" stroke="#7b2d8e" stroke-width="2"/>
+                  <polygon points="570,85 580,90 570,95" fill="#7b2d8e"/>
+                  
+                  <!-- Kansas City -->
+                  <circle cx="60" cy="90" r="6" fill="#333"/>
+                  <text x="60" y="115" text-anchor="middle" class="svg-label" font-weight="bold">Kansas City</text>
+                  
+                  <!-- Don Lenton (starts at 2:00 PM) -->
+                  <line x1="60" y1="60" x2="420" y2="60" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,2"/>
+                  <text x="240" y="52" text-anchor="middle" class="svg-label svg-label--small" fill="#c0392b">Don Lenton: v = 45 km/h, tiempo = t</text>
+                  <circle cx="420" cy="90" r="5" fill="#c0392b"/>
+                  
+                  <!-- Don Veloz (starts at 3:00 PM) -->
+                  <line x1="60" y1="140" x2="420" y2="140" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="4,2"/>
+                  <text x="240" y="155" text-anchor="middle" class="svg-label svg-label--small" fill="#0a7b8f">Don Veloz: v = 60 km/h, tiempo = t - 1</text>
+                  <circle cx="420" cy="90" r="5" fill="#0a7b8f"/>
+
+                  <!-- Point of meeting -->
+                  <line x1="420" y1="40" x2="420" y2="160" stroke="#555" stroke-width="1" stroke-dasharray="2,2"/>
+                  <text x="420" y="30" text-anchor="middle" class="svg-label" font-weight="bold">Punto de encuentro</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="properties-grid" style="margin-bottom:15px;">
+              <div class="property-card">
+                <h4 class="property-card__title">Analisis del tiempo</h4>
+                <p class="property-card__example">
+                  Sea <strong>t</strong> el tiempo (en horas) desde las 2:00 pm.
+                  <br>Don Lenton maneja <strong>t</strong> horas.
+                  <br>Don Veloz sale 1 hora despues, asi que maneja <strong>t - 1</strong> horas.
+                </p>
+              </div>
+              <div class="property-card">
+                <h4 class="property-card__title">Analisis de distancia</h4>
+                <p class="property-card__example">
+                  La distancia recorrida por ambos al encontrarse es la misma.
+                  <br>d = v &middot; t
+                  <br>Don Lenton: 45t
+                  <br>Don Veloz: 60(t - 1)
+                </p>
+              </div>
+            </div>
+
+            <p class="math-display">
+              45t = 60(t - 1) <br>
+              45t = 60t - 60 &rArr; 60 = 15t &rArr; t = 4
+            </p>
+            <p class="construction-note">
+              Conclusion: Se encuentran 4 horas despues de las 2:00 pm, es decir, a las <strong>6:00 pm</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
