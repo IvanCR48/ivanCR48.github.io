@@ -482,49 +482,107 @@ body::after {
   letter-spacing: 4px;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-  .hero__title {
-    font-size: 1rem;
+/* --- GLOBAL RESPONSIVE ADJUSTMENTS --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow from elements */
+* {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 24px;
+    --space-2xl: 36px;
   }
 
-  .hero__subtitle {
-    font-size: 1.1rem;
+  .main-content {
+    padding: var(--space-md) var(--space-sm);
   }
 
   .window__body {
     padding: var(--space-lg) var(--space-md);
   }
 
-  .navbar__title {
-    font-size: 0.5rem;
+  .hero__title {
+    font-size: 1.1rem;
+    line-height: 1.4;
     letter-spacing: 1px;
   }
 
+  .hero__subtitle {
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero__divider {
+    margin-bottom: var(--space-lg);
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .navbar__title {
+    margin: 0;
+    font-size: 0.6rem;
+  }
+
+  .navbar__links {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
   .navbar__btn {
-    font-size: 0.4rem;
+    font-size: 0.45rem;
     padding: 4px 8px;
+    text-align: center;
   }
 
   .badges {
-    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    gap: 6px;
   }
 
   .badge {
     font-size: 0.35rem;
+    padding: 3px 6px;
+  }
+
+  .footer {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .footer__name {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+  }
+
+  .footer__year {
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .hero__title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 
-  .navbar {
-    justify-content: center;
+  .navbar__btn {
+    font-size: 0.4rem;
+    padding: 3px 6px;
   }
 
-  .navbar__links {
-    margin-left: 0;
+  .study-card {
+    padding: var(--space-md);
   }
 }

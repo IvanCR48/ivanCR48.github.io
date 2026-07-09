@@ -93,6 +93,9 @@
   border: 2px solid;
   border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .section__content {
@@ -471,6 +474,8 @@
 /* --- Data Table --- */
 .examples-table {
   margin: var(--space-lg) 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .examples-table__label {
@@ -917,67 +922,6 @@
   line-height: 1.4;
 }
 
-/* --- Responsive --- */
-@media (max-width: 700px) {
-  .study {
-    padding: var(--space-md) var(--space-sm);
-  }
-
-  .section__content {
-    padding: var(--space-md);
-  }
-
-  .properties-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .concept-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .comparison-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .prop-special__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .equality-prop {
-    grid-template-columns: 1fr;
-  }
-
-  .study__title {
-    font-size: 1rem;
-  }
-
-  .chain-item {
-    width: 48px;
-    height: 48px;
-    font-size: 0.9rem;
-  }
-
-  .construction-steps {
-    flex-direction: column;
-  }
-
-  .notable-products {
-    grid-template-columns: 1fr;
-  }
-
-  .precaution-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .concept-columns--2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================
-   POTENCIACION & RADICACION — Extra Styles
-   ============================================ */
-
 /* --- Navigation Links --- */
 .study__nav-links {
   display: flex;
@@ -1015,7 +959,9 @@
 
 /* --- 2-Column Concept Grid --- */
 .concept-columns--2 {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
 }
 
 /* --- Math Display Large --- */
@@ -1036,7 +982,7 @@
 /* --- Notable Products Cards --- */
 .notable-products {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-lg);
 }
 
@@ -1113,7 +1059,7 @@
 /* --- Precaution Cards --- */
 .precaution-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
 }
 
@@ -1174,4 +1120,104 @@
   margin-top: var(--space-sm);
   padding-top: var(--space-sm);
   border-top: 1px dashed #e0ddd0;
+}
+
+/* ============================================
+   RESPONSIVE OVERRIDES
+   ============================================ */
+@media (max-width: 768px) {
+  .study {
+    padding: var(--space-md) var(--space-sm);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section__content {
+    padding: var(--space-md);
+  }
+
+  .study__title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .study__intro {
+    font-size: 1rem;
+  }
+
+  /* Section Header Responsive Sizing and Wrap */
+  .section__header-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .section__title {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+
+  .window__titlebar-text {
+    font-size: 0.45rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+  }
+
+  /* Grid Layouts to 1 Column */
+  .properties-grid,
+  .concept-columns,
+  .concept-columns--2,
+  .comparison-cols,
+  .prop-special__grid,
+  .equality-prop,
+  .notable-products,
+  .precaution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chain-display {
+    gap: var(--space-sm);
+  }
+
+  .chain-item {
+    width: 48px;
+    height: 48px;
+    font-size: 0.9rem;
+  }
+
+  .construction-steps {
+    flex-direction: column;
+  }
+
+  .construction-step {
+    width: 100%;
+  }
+
+  /* SVG / Diagram adjustments */
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Navbar Adjustments */
+  .navbar {
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  .navbar__links {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar__btn {
+    font-size: 0.45rem;
+    padding: 4px 8px;
+  }
 }

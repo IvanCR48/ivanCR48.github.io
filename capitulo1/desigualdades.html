@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desigualdades, intervalos, conjuntos e inecuaciones — Definiciones, propiedades, inecuaciones lineales y con valor absoluto. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Desigualdades e Inecuaciones | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="matematica.html" class="navbar__btn">Cap I</a>
+      <a href="ecuaciones.html" class="navbar__btn">Secc 4</a>
+      <a href="#conceptos" class="navbar__btn">Propiedades</a>
+      <a href="#intervalos" class="navbar__btn">Intervalos</a>
+      <a href="#operaciones" class="navbar__btn">Operaciones</a>
+      <a href="#inecuaciones" class="navbar__btn">Inecuaciones</a>
+      <a href="#modulo" class="navbar__btn">Modulo</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">desigualdades.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo I &mdash; Seccion 5</p>
+          <h1 class="study__title">Desigualdades e Inecuaciones</h1>
+          <p class="study__intro">
+            Orden en los reales, notacion de intervalos, conjuntos e inecuaciones con valor absoluto.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#conceptos">Desigualdades: Definicion y Tricotomia</a></li>
+              <li><a href="#propiedades">Propiedades de las Desigualdades</a></li>
+              <li><a href="#intervalos">Intervalos acotados y no acotados</a></li>
+              <li><a href="#operaciones">Operaciones entre conjuntos e intervalos</a></li>
+              <li><a href="#inecuaciones">Inecuaciones Lineales</a></li>
+              <li><a href="#modulo">Inecuaciones con Valor Absoluto</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="ecuaciones.html" class="nav-link nav-link--prev">&larr; Secc 4: Ecuaciones</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CONCEPTOS ===================== -->
+    <section class="study__section" id="conceptos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">desigualdades_R.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Desigualdades en los Reales</h2>
+            <span class="section__symbol">&lt;</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            El conjunto de los numeros reales R es un conjunto ordenado. Podemos describir este orden de dos maneras complementarias:
+          </p>
+
+          <div class="comparison-cols">
+            <div class="comparison-col comparison-col--left">
+              <h4>Descripcion Geometrica</h4>
+              <p class="comparison-col__formula">a &lt; b</p>
+              <p>Significa que el punto <strong>a</strong> esta a la <strong>izquierda</strong> del punto <strong>b</strong> en la recta numerica.</p>
+            </div>
+            <div class="comparison-col comparison-col--right">
+              <h4>Descripcion Algebraica</h4>
+              <p class="comparison-col__formula">a &lt; b &nbsp;&rArr;&nbsp; b - a &gt; 0</p>
+              <p>Significa que la diferencia <strong>b - a</strong> es un numero estrictamente <strong>positivo</strong>.</p>
+            </div>
+          </div>
+
+          <!-- Strict vs weak inequalities -->
+          <div class="properties-grid" style="margin-top:15px;">
+            <div class="property-card">
+              <h4 class="property-card__title">Desigualdades Estrictas</h4>
+              <p class="property-card__formula">&lt; &nbsp; (menor que) &nbsp; o &nbsp; &gt; &nbsp; (mayor que)</p>
+              <p class="property-card__example">Ejemplo: 3 &lt; &pi; &nbsp; ya que &pi; - 3 &asymp; 0.14159 es positivo.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Desigualdades Debiles</h4>
+              <p class="property-card__formula">&le; &nbsp; (menor o igual) &nbsp; o &nbsp; &ge; &nbsp; (mayor o igual)</p>
+              <p class="property-card__example">Ejemplo: 6 &le; 6 &nbsp; (es verdadera ya que 6 = 6).</p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Propiedad de Tricotomia</p>
+            <p style="font-family:var(--font-terminal);font-size:1.05rem;line-height:1.5;">
+              Para cualesquiera numeros reales <strong>a</strong> y <strong>b</strong>, se cumple una y solo una de las siguientes afirmaciones:
+              <br><br>
+              <strong>a &lt; b</strong> &nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp; <strong>a = b</strong> &nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp; <strong>a &gt; b</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPIEDADES ===================== -->
+    <section class="study__section" id="propiedades">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">propiedades_desigualdades.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Propiedades fundamentales</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);">
+            Sean a, b, c numeros reales:
+          </p>
+
+          <div class="prop-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Propiedad</th>
+                  <th>Condicion</th>
+                  <th>Efecto algebraico</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Transitividad</strong></td>
+                  <td>Si a &lt; b y b &lt; c</td>
+                  <td>a &lt; c</td>
+                  <td>Si 2 &lt; 5 y 5 &lt; 9 &rArr; 2 &lt; 9</td>
+                </tr>
+                <tr>
+                  <td><strong>Suma / Resta</strong></td>
+                  <td>Cualquier c &isin; R</td>
+                  <td>a + c &lt; b + c</td>
+                  <td>Si 3 &lt; 7 &rArr; 3 + 2 &lt; 7 + 2 &rArr; 5 &lt; 9</td>
+                </tr>
+                <tr>
+                  <td><strong>Producto Positivo</strong></td>
+                  <td>c &gt; 0 (positivo)</td>
+                  <td>a &middot; c &lt; b &middot; c</td>
+                  <td>Si 2 &lt; 3 &rArr; 2(4) &lt; 3(4) &rArr; 8 &lt; 12</td>
+                </tr>
+                <tr style="background:#faf5f5; color:#c0392b;">
+                  <td><strong>Producto Negativo</strong></td>
+                  <td>c &lt; 0 (negativo)</td>
+                  <td><strong>a &middot; c &gt; b &middot; c</strong></td>
+                  <td>Si 2 &lt; 3 &rArr; 2(-4) &gt; 3(-4) &rArr; <strong>-8 &gt; -12</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Alert for negative multiplication -->
+          <div class="callout-box callout-box--danger">
+            <p class="callout-box__label">Importante: Multiplicacion por numeros negativos</p>
+            <p>
+              Al multiplicar o dividir ambos miembros de una desigualdad por un numero <strong>negativo</strong>, 
+              el sentido de la desigualdad <strong>se invierte</strong>. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERVALOS ===================== -->
+    <section class="study__section" id="intervalos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">intervalos_y_conjuntos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Intervalos reales</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Los intervalos son subconjuntos de R descritos por desigualdades. Usamos <strong>corchetes</strong> [ ] 
+            para incluir el extremo, y <strong>parentesis</strong> ( ) para excluirlo.
+          </p>
+
+          <!-- Bounded Intervals -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Intervalos Acotados (con dos extremos)</h3>
+            <div class="examples-table">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Notacion</th>
+                    <th>Tipo</th>
+                    <th>Definicion de conjunto</th>
+                    <th>Representacion Grafica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>[a; b]</td>
+                    <td>Cerrado</td>
+                    <td>{ x &isin; R / a &le; x &le; b }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <circle cx="50" cy="15" r="4" fill="#7b2d8e"/>
+                        <circle cx="150" cy="15" r="4" fill="#7b2d8e"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">b</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>(a; b)</td>
+                    <td>Abierto</td>
+                    <td>{ x &isin; R / a &lt; x &lt; b }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <circle cx="50" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <circle cx="150" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">b</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>[a; b)</td>
+                    <td>Semiabierto (izq)</td>
+                    <td>{ x &isin; R / a &le; x &lt; b }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <circle cx="50" cy="15" r="4" fill="#7b2d8e"/>
+                        <circle cx="150" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">b</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>(a; b]</td>
+                    <td>Semiabierto (der)</td>
+                    <td>{ x &isin; R / a &lt; x &le; b }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <circle cx="50" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <circle cx="150" cy="15" r="4" fill="#7b2d8e"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">b</text>
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Unbounded Intervals -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Intervalos No Acotados (semirrectas)</h3>
+            <p class="construction-note" style="margin-top:0; margin-bottom:15px;">
+              Usamos el simbolo de infinito &infin; o -&infin; para indicar que el intervalo continua por siempre. 
+              <strong>Siempre</strong> se escribe parentesis junto a &infin;.
+            </p>
+            <div class="examples-table">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Notacion</th>
+                    <th>Definicion de conjunto</th>
+                    <th>Representacion Grafica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>[a; &infin;)</td>
+                    <td>{ x &isin; R / x &ge; a }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="190" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <polygon points="190,12 196,15 190,18" fill="#7b2d8e"/>
+                        <circle cx="50" cy="15" r="4" fill="#7b2d8e"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>(a; &infin;)</td>
+                    <td>{ x &isin; R / x &gt; a }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="50" y1="15" x2="190" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <polygon points="190,12 196,15 190,18" fill="#7b2d8e"/>
+                        <circle cx="50" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <text x="50" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>(-&infin;; a]</td>
+                    <td>{ x &isin; R / x &le; a }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="10" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <polygon points="10,12 4,15 10,18" fill="#7b2d8e"/>
+                        <circle cx="150" cy="15" r="4" fill="#7b2d8e"/>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>(-&infin;; a)</td>
+                    <td>{ x &isin; R / x &lt; a }</td>
+                    <td>
+                      <svg viewBox="0 0 200 30" style="width:200px; height:30px; display:block;">
+                        <line x1="10" y1="15" x2="190" y2="15" stroke="#ccc" stroke-width="1.5"/>
+                        <line x1="10" y1="15" x2="150" y2="15" stroke="#7b2d8e" stroke-width="3"/>
+                        <polygon points="10,12 4,15 10,18" fill="#7b2d8e"/>
+                        <circle cx="150" cy="15" r="4" fill="#fff" stroke="#7b2d8e" stroke-width="2"/>
+                        <text x="150" y="27" text-anchor="middle" font-size="8" font-family="monospace">a</text>
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OPERACIONES ===================== -->
+    <section class="study__section" id="operaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">operaciones_intervalos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Operaciones entre conjuntos e intervalos</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Dado que los intervalos son conjuntos, podemos aplicarles las operaciones de conjuntos:
+          </p>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Union (A &cup; B)</h4>
+              <p class="property-card__formula">{ x / x &isin; A &nbsp;o&nbsp; x &isin; B }</p>
+              <p class="property-card__example">Elementos que pertenecen a cualquiera de los dos conjuntos.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Interseccion (A &cap; B)</h4>
+              <p class="property-card__formula">{ x / x &isin; A &nbsp;y&nbsp; x &isin; B }</p>
+              <p class="property-card__example">Elementos comunes a ambos conjuntos.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Diferencia (A - B)</h4>
+              <p class="property-card__formula">{ x / x &isin; A &nbsp;y&nbsp; x &notin; B }</p>
+              <p class="property-card__example">Elementos de A que NO pertenecen a B.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Complemento (A')</h4>
+              <p class="property-card__formula">{ x / x &isin; U &nbsp;y&nbsp; x &notin; A }</p>
+              <p class="property-card__example">Elementos que no estan en A (con U = R).</p>
+            </div>
+          </div>
+
+          <!-- Practical Example from the PDF -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Caso de estudio practico (PDF)</h3>
+            <p class="construction-note" style="margin-top:0;">
+              Sean: <br>
+              <strong>A = { x &isin; R / x &lt; 0 } = (-&infin;; 0)</strong><br>
+              <strong>B = { x &isin; R / -3 &le; x &lt; 2 } = [-3; 2)</strong>
+            </p>
+
+            <div class="examples-table">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Operacion</th>
+                    <th>Desarrollo en Intervalos</th>
+                    <th>Representacion en la recta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>A &cup; B</strong></td>
+                    <td>(-&infin;; 2)</td>
+                    <td>
+                      <svg viewBox="0 0 200 20" style="width:200px; height:20px; display:block;">
+                        <line x1="10" y1="10" x2="190" y2="10" stroke="#ccc" stroke-width="1"/>
+                        <line x1="10" y1="10" x2="140" y2="10" stroke="#0a7b8f" stroke-width="3"/>
+                        <polygon points="10,8 4,10 10,12" fill="#0a7b8f"/>
+                        <circle cx="140" cy="10" r="3" fill="#fff" stroke="#0a7b8f" stroke-width="1.5"/>
+                        <text x="140" y="19" text-anchor="middle" font-size="7" font-family="monospace">2</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>A &cap; B</strong></td>
+                    <td>[-3; 0)</td>
+                    <td>
+                      <svg viewBox="0 0 200 20" style="width:200px; height:20px; display:block;">
+                        <line x1="10" y1="10" x2="190" y2="10" stroke="#ccc" stroke-width="1"/>
+                        <line x1="50" y1="10" x2="100" y2="10" stroke="#7b2d8e" stroke-width="3"/>
+                        <circle cx="50" cy="10" r="3" fill="#7b2d8e"/>
+                        <circle cx="100" cy="10" r="3" fill="#fff" stroke="#7b2d8e" stroke-width="1.5"/>
+                        <text x="50" y="19" text-anchor="middle" font-size="7" font-family="monospace">-3</text>
+                        <text x="100" y="19" text-anchor="middle" font-size="7" font-family="monospace">0</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>A - B</strong></td>
+                    <td>(-&infin;; -3)</td>
+                    <td>
+                      <svg viewBox="0 0 200 20" style="width:200px; height:20px; display:block;">
+                        <line x1="10" y1="10" x2="190" y2="10" stroke="#ccc" stroke-width="1"/>
+                        <line x1="10" y1="10" x2="50" y2="10" stroke="#c0392b" stroke-width="3"/>
+                        <polygon points="10,8 4,10 10,12" fill="#c0392b"/>
+                        <circle cx="50" cy="10" r="3" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+                        <text x="50" y="19" text-anchor="middle" font-size="7" font-family="monospace">-3</text>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>B - A</strong></td>
+                    <td>[0; 2)</td>
+                    <td>
+                      <svg viewBox="0 0 200 20" style="width:200px; height:20px; display:block;">
+                        <line x1="10" y1="10" x2="190" y2="10" stroke="#ccc" stroke-width="1"/>
+                        <line x1="100" y1="10" x2="140" y2="10" stroke="#2a6eb5" stroke-width="3"/>
+                        <circle cx="100" cy="10" r="3" fill="#2a6eb5"/>
+                        <circle cx="140" cy="10" r="3" fill="#fff" stroke="#2a6eb5" stroke-width="1.5"/>
+                        <text x="100" y="19" text-anchor="middle" font-size="7" font-family="monospace">0</text>
+                        <text x="140" y="19" text-anchor="middle" font-size="7" font-family="monospace">2</text>
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INECUACIONES ===================== -->
+    <section class="study__section" id="inecuaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">inecuaciones_lineales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Inecuaciones Lineales</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Una inecuacion es una desigualdad condicional que involucra una o mas variables. Resolverla significa encontrar 
+            el conjunto de valores que la hacen verdadera.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Resolucion de Inecuacion Lineal (Ejemplo 1)</h3>
+            <p class="math-display">
+              x/2 + 1 &lt; 15 + 3x
+            </p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">Restamos 1 a ambos miembros: x/2 &lt; 14 + 3x</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">Multiplicamos por 2 ambos miembros (positivo, no cambia el sentido): x &lt; 2(14 + 3x)</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">Distribuimos: x &lt; 28 + 6x</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">4</span>
+                <span class="construction-step__val">Restamos 6x en ambos miembros: -5x &lt; 28</span>
+              </div>
+              <div class="construction-step" style="border-color:#e0b8b8; background:#faf5f5;">
+                <span class="construction-step__num" style="background:#f7e0e0; border-color:#d8a0a0; color:#c0392b;">5</span>
+                <span class="construction-step__val" style="color:#c0392b;">Dividimos por -5: <strong>Invertimos el sentido!</strong> &rArr; x &gt; -28/5</span>
+              </div>
+            </div>
+            <p class="construction-note">
+              La solucion expresada como intervalo es: <strong>(-28/5; &infin;)</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INECUACIONES MODULO ===================== -->
+    <section class="study__section" id="modulo">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">inecuaciones_valor_absoluto.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Inecuaciones con Valor Absoluto</h2>
+            <span class="section__symbol">|x|&le;a</span>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Reglas generales de equivalencia (con a &gt; 0)</h3>
+            <div class="comparison-cols">
+              <div class="comparison-col comparison-col--left">
+                <h4>Caso A: Modulo menor o igual</h4>
+                <p class="comparison-col__formula">|x| &le; a</p>
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  Es equivalente a una doble desigualdad:
+                  <br><br>
+                  <strong>-a &le; x &le; a</strong>
+                  <br><br>
+                  Representa los puntos cuya distancia al origen es menor o igual a <strong>a</strong>.
+                </p>
+              </div>
+              <div class="comparison-col comparison-col--right">
+                <h4>Caso B: Modulo mayor o igual</h4>
+                <p class="comparison-col__formula">|x| &ge; a</p>
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  Es equivalente a la union de dos semirrectas:
+                  <br><br>
+                  <strong>x &le; -a &nbsp;&nbsp; o &nbsp;&nbsp; x &ge; a</strong>
+                  <br><br>
+                  Representa los puntos cuya distancia al origen es mayor o igual a <strong>a</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Examples step-by-step -->
+          <div class="precaution-grid">
+            <!-- Ejemplo 2a -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo A: |x| &le; 3</div>
+              <div class="precaution-card__body">
+                <p class="math-display">|x| &le; 3 &nbsp;&rArr;&nbsp; -3 &le; x &le; 3</p>
+                <p class="precaution-explain">
+                  El conjunto solucion es el intervalo cerrado: <strong>[-3; 3]</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 2b -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo B: |x| &ge; 3</div>
+              <div class="precaution-card__body">
+                <p class="math-display">|x| &ge; 3 &nbsp;&rArr;&nbsp; x &le; -3 &nbsp;&nbsp; o &nbsp;&nbsp; x &ge; 3</p>
+                <p class="precaution-explain">
+                  El conjunto solucion es la union de dos intervalos: <strong>(-&infin;; -3] &cup; [3; &infin;)</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 2c -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo C: |x - 2| &lt; 3</div>
+              <div class="precaution-card__body">
+                <p class="math-display">
+                  -3 &lt; x - 2 &lt; 3 <br>
+                  -3 + 2 &lt; x &lt; 3 + 2 &rArr; -1 &lt; x &lt; 5
+                </p>
+                <p class="precaution-explain">
+                  Sumamos 2 a todos los miembros de la desigualdad. El intervalo solucion es: <strong>(-1; 5)</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 2d -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo D: |x - 4| &ge; 2</div>
+              <div class="precaution-card__body">
+                <p class="math-display">
+                  x - 4 &le; -2 &nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp; x - 4 &ge; 2 <br>
+                  x &le; 2 &nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp; x &ge; 6
+                </p>
+                <p class="precaution-explain">
+                  La distancia entre x y 4 es mayor o igual a 2. La solucion es la union de dos intervalos: <strong>(-&infin;; 2] &cup; [6; &infin;)</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Precaution -->
+          <div class="callout-box callout-box--danger">
+            <p class="callout-box__label">Precaucion: Separar en las dos ramas correctas</p>
+            <p>
+              Es muy comun cometer el error de plantear una inecuacion como <span class="math-inline">|x - 4| &ge; 2</span> 
+              omitiendo la rama negativa, lo que provoca la perdida de la mitad de las soluciones. 
+              Recuerda siempre separar la desigualdad con &ge; en sus dos partes disjuntas:
+              <br><br>
+              <strong>(rama negativa)</strong> x - 4 &le; -2 &nbsp;&nbsp;&nbsp; y &nbsp;&nbsp;&nbsp; <strong>(rama positiva)</strong> x - 4 &ge; 2.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
