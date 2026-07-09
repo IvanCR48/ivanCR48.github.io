@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Potenciacion y Radicacion — Definiciones, propiedades y exponente racional. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Potenciacion y Radicacion | Study Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="index.html" class="navbar__btn">Home</a>
+      <a href="matematica.html" class="navbar__btn">Cap I</a>
+      <a href="#potenciacion" class="navbar__btn">a^n</a>
+      <a href="#radicacion" class="navbar__btn">n-root</a>
+      <a href="#exp-racional" class="navbar__btn">a^(m/n)</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">potenciacion_radicacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo I &mdash; Seccion 2</p>
+          <h1 class="study__title">Potenciacion y Radicacion</h1>
+          <p class="study__intro">
+            Definiciones, propiedades y potencia de exponente racional.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#potenciacion">Potenciacion &mdash; Definicion y propiedades</a></li>
+              <li><a href="#notables">Productos notables</a></li>
+              <li><a href="#precauciones">Precauciones comunes</a></li>
+              <li><a href="#radicacion">Radicacion &mdash; Definicion y propiedades</a></li>
+              <li><a href="#exp-racional">Potencia de exponente racional</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="matematica.html" class="nav-link nav-link--prev">&larr; Cap I: Numeros Reales</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== POTENCIACION ===================== -->
+    <section class="study__section" id="potenciacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">potenciacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Potenciacion</h2>
+            <span class="section__symbol">a<sup>n</sup></span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              Si <strong>a</strong> es un numero real (a &ne; 0) y <strong>n</strong> 
+              es un numero natural, entonces:
+            </p>
+            <p class="math-display">
+              a<sup>n</sup> = a &middot; a &middot; a &middot; ... &middot; a &nbsp;&nbsp; (n veces)
+            </p>
+            <p>
+              Se lee <em>"a elevado a la n"</em>. El numero <strong>a</strong> se llama 
+              <strong>base</strong> y <strong>n</strong> se llama <strong>exponente</strong>.
+            </p>
+          </div>
+
+          <!-- Visual diagram of exponentiation -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Anatomia de una potencia</p>
+            <div class="power-anatomy-container">
+              <svg viewBox="0 0 500 160" class="power-anatomy-svg">
+                <!-- Main expression -->
+                <text x="250" y="90" text-anchor="middle" font-family="'Share Tech Mono', monospace" font-size="60" fill="#1a1a2e">a<tspan font-size="36" dy="-24">n</tspan></text>
+                <!-- Labels -->
+                <line x1="220" y1="100" x2="170" y2="140" stroke="#0a7b8f" stroke-width="1.5"/>
+                <text x="130" y="150" text-anchor="middle" class="svg-label" fill="#0a7b8f">base</text>
+                <line x1="280" y1="50" x2="340" y2="30" stroke="#c0392b" stroke-width="1.5"/>
+                <text x="380" y="35" text-anchor="middle" class="svg-label" fill="#c0392b">exponente</text>
+                <!-- Example -->
+                <text x="250" y="18" text-anchor="middle" class="svg-label svg-label--small" fill="#888">Ejemplo: 2&sup3; = 2 &middot; 2 &middot; 2 = 8</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Conventions -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Convenciones importantes</h3>
+            <div class="concept-columns concept-columns--2">
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--a">Exponente 1</div>
+                <p class="concept-col__example">a<sup>1</sup> = a</p>
+                <p class="concept-col__desc">Cualquier numero elevado a 1 es el mismo numero.</p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--b">Exponente 0</div>
+                <p class="concept-col__example">a<sup>0</sup> = 1 &nbsp; (a &ne; 0)</p>
+                <p class="concept-col__desc">Todo numero no nulo elevado a 0 es igual a 1.</p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--c">Exponente negativo</div>
+                <p class="concept-col__example">a<sup>-n</sup> = 1 / a<sup>n</sup></p>
+                <p class="concept-col__desc">Un exponente negativo equivale al reciproco de la potencia positiva.</p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--a">Ejemplo concreto</div>
+                <p class="concept-col__example">3<sup>-2</sup> = 1/3<sup>2</sup> = 1/9</p>
+                <p class="concept-col__desc">Se invierte la base y se usa el exponente positivo.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Properties Table -->
+          <div class="examples-table">
+            <p class="examples-table__label">Propiedades de la potenciacion</p>
+            <p class="table-prereq">Sean a, b numeros reales no nulos, m y n numeros enteros.</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Propiedad</th>
+                  <th>Formula</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Producto de igual base</td>
+                  <td>a<sup>n</sup> &middot; a<sup>m</sup> = a<sup>n+m</sup></td>
+                  <td>2<sup>3</sup> &middot; 2<sup>4</sup> = 2<sup>7</sup> = 128</td>
+                </tr>
+                <tr>
+                  <td>Potencia de potencia</td>
+                  <td>(a<sup>n</sup>)<sup>m</sup> = a<sup>n&middot;m</sup></td>
+                  <td>(5<sup>2</sup>)<sup>3</sup> = 5<sup>6</sup> = 15625</td>
+                </tr>
+                <tr>
+                  <td>Cociente de igual base</td>
+                  <td>a<sup>n</sup> / a<sup>m</sup> = a<sup>n-m</sup></td>
+                  <td>7<sup>5</sup> / 7<sup>2</sup> = 7<sup>3</sup> = 343</td>
+                </tr>
+                <tr>
+                  <td>Potencia de un producto</td>
+                  <td>(a &middot; b)<sup>n</sup> = a<sup>n</sup> &middot; b<sup>n</sup></td>
+                  <td>(2 &middot; 3)<sup>2</sup> = 4 &middot; 9 = 36</td>
+                </tr>
+                <tr>
+                  <td>Potencia de un cociente</td>
+                  <td>(a/b)<sup>n</sup> = a<sup>n</sup> / b<sup>n</sup></td>
+                  <td>(3/2)<sup>2</sup> = 9/4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Visual diagram for property 1 -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Visualizacion: producto de potencias de igual base</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 120" class="number-line-svg">
+                <!-- Braces for a^2 -->
+                <rect x="30" y="20" width="120" height="40" rx="4" fill="rgba(10,123,143,0.1)" stroke="#0a7b8f" stroke-width="1.5"/>
+                <text x="90" y="46" text-anchor="middle" class="svg-label" fill="#0a7b8f">a &middot; a</text>
+                <text x="90" y="80" text-anchor="middle" class="svg-label svg-label--small" fill="#0a7b8f">a&sup2;</text>
+                <!-- Multiplication sign -->
+                <text x="170" y="46" text-anchor="middle" font-size="20" fill="#555">&middot;</text>
+                <!-- Braces for a^3 -->
+                <rect x="190" y="20" width="180" height="40" rx="4" fill="rgba(42,110,181,0.1)" stroke="#2a6eb5" stroke-width="1.5"/>
+                <text x="280" y="46" text-anchor="middle" class="svg-label" fill="#2a6eb5">a &middot; a &middot; a</text>
+                <text x="280" y="80" text-anchor="middle" class="svg-label svg-label--small" fill="#2a6eb5">a&sup3;</text>
+                <!-- Equals -->
+                <text x="395" y="46" text-anchor="middle" font-size="20" fill="#555">=</text>
+                <!-- Result a^5 -->
+                <rect x="420" y="20" width="250" height="40" rx="4" fill="rgba(90,26,106,0.08)" stroke="#7b2d8e" stroke-width="1.5"/>
+                <text x="545" y="46" text-anchor="middle" class="svg-label" fill="#7b2d8e">a &middot; a &middot; a &middot; a &middot; a</text>
+                <text x="545" y="80" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">a&#8309; = a&sup2;&#8314;&sup3;</text>
+                <!-- Bottom label -->
+                <text x="350" y="110" text-anchor="middle" class="svg-label svg-label--small" fill="#888">Los exponentes se suman: a&sup2; &middot; a&sup3; = a&sup2;&#8314;&sup3; = a&#8309;</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Distributivity warning -->
+          <div class="callout-box callout-box--danger">
+            <p class="callout-box__label">Error comun: la potencia NO distribuye sobre la suma</p>
+            <div class="comparison-cols">
+              <div class="comparison-col comparison-col--right">
+                <h4>INCORRECTO</h4>
+                <p class="comparison-col__formula">(a + b)<sup>n</sup> &ne; a<sup>n</sup> + b<sup>n</sup></p>
+                <p class="comparison-col__formula">(a - b)<sup>n</sup> &ne; a<sup>n</sup> - b<sup>n</sup></p>
+              </div>
+              <div class="comparison-col comparison-col--left">
+                <h4>Ejemplo numerico</h4>
+                <p class="comparison-col__formula">(1 + 2)<sup>2</sup> = 3<sup>2</sup> = 9</p>
+                <p class="comparison-col__formula">1<sup>2</sup> + 2<sup>2</sup> = 1 + 4 = 5</p>
+                <p style="margin-top:8px; font-family: var(--font-terminal); font-size: 1rem; color: #c0392b;">9 &ne; 5</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTOS NOTABLES ===================== -->
+    <section class="study__section" id="notables">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">productos_notables.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Tres productos notables para recordar</h2>
+
+          <div class="notable-products">
+            <!-- Binomio al cuadrado (a+b)^2 -->
+            <div class="notable-card">
+              <div class="notable-card__header">Cuadrado de una suma</div>
+              <p class="math-display math-display--lg">
+                (a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup>
+              </p>
+              <div class="notable-card__proof">
+                <p class="notable-card__step">(a + b)(a + b)</p>
+                <p class="notable-card__step">= a<sup>2</sup> + ab + ba + b<sup>2</sup></p>
+                <p class="notable-card__step">= a<sup>2</sup> + 2ab + b<sup>2</sup></p>
+              </div>
+              <!-- Visual: square area model -->
+              <div class="square-area-container">
+                <svg viewBox="0 0 260 260" class="square-area-svg">
+                  <!-- a^2 block -->
+                  <rect x="10" y="10" width="140" height="140" fill="rgba(10,123,143,0.15)" stroke="#0a7b8f" stroke-width="2"/>
+                  <text x="80" y="85" text-anchor="middle" class="svg-label svg-label--big" fill="#0a7b8f">a&sup2;</text>
+                  <!-- ab block top-right -->
+                  <rect x="150" y="10" width="100" height="140" fill="rgba(123,45,142,0.1)" stroke="#7b2d8e" stroke-width="1.5"/>
+                  <text x="200" y="85" text-anchor="middle" class="svg-label" fill="#7b2d8e">ab</text>
+                  <!-- ab block bottom-left -->
+                  <rect x="10" y="150" width="140" height="100" fill="rgba(123,45,142,0.1)" stroke="#7b2d8e" stroke-width="1.5"/>
+                  <text x="80" y="205" text-anchor="middle" class="svg-label" fill="#7b2d8e">ab</text>
+                  <!-- b^2 block -->
+                  <rect x="150" y="150" width="100" height="100" fill="rgba(181,101,42,0.12)" stroke="#b5652a" stroke-width="2"/>
+                  <text x="200" y="205" text-anchor="middle" class="svg-label svg-label--big" fill="#b5652a">b&sup2;</text>
+                  <!-- Side labels -->
+                  <text x="80" y="258" text-anchor="middle" class="svg-label svg-label--small" fill="#0a7b8f">a</text>
+                  <text x="200" y="258" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">b</text>
+                  <text x="5" y="85" text-anchor="end" class="svg-label svg-label--small" fill="#0a7b8f">a</text>
+                  <text x="5" y="205" text-anchor="end" class="svg-label svg-label--small" fill="#b5652a">b</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Binomio al cuadrado (a-b)^2 -->
+            <div class="notable-card">
+              <div class="notable-card__header">Cuadrado de una diferencia</div>
+              <p class="math-display math-display--lg">
+                (a - b)<sup>2</sup> = a<sup>2</sup> - 2ab + b<sup>2</sup>
+              </p>
+              <div class="notable-card__proof">
+                <p class="notable-card__step">(a - b)(a - b)</p>
+                <p class="notable-card__step">= a<sup>2</sup> - ab - ba + b<sup>2</sup></p>
+                <p class="notable-card__step">= a<sup>2</sup> - 2ab + b<sup>2</sup></p>
+              </div>
+              <div class="note-box note-box--inline">
+                <p class="note-box__label">Comparacion</p>
+                <p>
+                  Misma estructura que (a+b)<sup>2</sup> pero con el 
+                  termino central <strong>negativo</strong>: -2ab en lugar de +2ab.
+                  El termino b<sup>2</sup> siempre es positivo.
+                </p>
+              </div>
+            </div>
+
+            <!-- Diferencia de cuadrados -->
+            <div class="notable-card">
+              <div class="notable-card__header">Diferencia de cuadrados</div>
+              <p class="math-display math-display--lg">
+                (a - b)(a + b) = a<sup>2</sup> - b<sup>2</sup>
+              </p>
+              <div class="notable-card__proof">
+                <p class="notable-card__step">(a - b)(a + b)</p>
+                <p class="notable-card__step">= a<sup>2</sup> + ab - ba - b<sup>2</sup></p>
+                <p class="notable-card__step">= a<sup>2</sup> - b<sup>2</sup></p>
+                <p class="notable-card__explain">Los terminos ab y -ba se cancelan.</p>
+              </div>
+              <div class="diagram-box" style="margin-bottom:0">
+                <p class="diagram-box__label">Visualizacion geometrica</p>
+                <div class="square-area-container">
+                  <svg viewBox="0 0 300 180" class="square-area-svg">
+                    <!-- Full a^2 square outline -->
+                    <rect x="10" y="10" width="150" height="150" fill="rgba(10,123,143,0.08)" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="5,3"/>
+                    <text x="85" y="85" text-anchor="middle" class="svg-label svg-label--big" fill="#0a7b8f" opacity="0.4">a&sup2;</text>
+                    <!-- b^2 square removed -->
+                    <rect x="110" y="110" width="50" height="50" fill="rgba(192,57,43,0.12)" stroke="#c0392b" stroke-width="2"/>
+                    <text x="135" y="140" text-anchor="middle" class="svg-label svg-label--small" fill="#c0392b">b&sup2;</text>
+                    <!-- Arrow and result -->
+                    <text x="185" y="90" text-anchor="start" class="svg-label" fill="#555">=</text>
+                    <rect x="205" y="10" width="80" height="150" fill="rgba(42,110,181,0.1)" stroke="#2a6eb5" stroke-width="1.5"/>
+                    <text x="245" y="90" text-anchor="middle" class="svg-label svg-label--small" fill="#2a6eb5">a&sup2; - b&sup2;</text>
+                    <!-- labels -->
+                    <text x="85" y="175" text-anchor="middle" class="svg-label svg-label--small" fill="#0a7b8f">a</text>
+                    <text x="135" y="175" text-anchor="middle" class="svg-label svg-label--small" fill="#c0392b">b</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRECAUCIONES ===================== -->
+    <section class="study__section" id="precauciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">precauciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Precauciones comunes</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);">
+            Errores frecuentes que hay que evitar al trabajar con potencias.
+          </p>
+
+          <div class="precaution-grid">
+            <!-- Precaution 1: sign -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Signo y parentesis</div>
+              <div class="precaution-card__body">
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--yes">Correcto</span>
+                  <span class="math-inline">(-2)<sup>4</sup> = (-2)&middot;(-2)&middot;(-2)&middot;(-2) = <strong>16</strong></span>
+                </div>
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--no">Distinto</span>
+                  <span class="math-inline">-2<sup>4</sup> = -(2<sup>4</sup>) = <strong>-16</strong></span>
+                </div>
+                <p class="precaution-explain">
+                  Sin parentesis, el signo negativo <strong>no</strong> forma parte de la base. 
+                  Solo se eleva el 2 y luego se aplica el signo negativo.
+                </p>
+              </div>
+            </div>
+
+            <!-- Precaution 2: product of powers -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Potencia de potencia vs. Producto de potencias</div>
+              <div class="precaution-card__body">
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--yes">(b<sup>4</sup>)<sup>2</sup></span>
+                  <span class="math-inline">= b<sup>4&middot;2</sup> = b<sup>8</sup></span>
+                </div>
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--yes">b<sup>4</sup> &middot; b<sup>2</sup></span>
+                  <span class="math-inline">= b<sup>4+2</sup> = b<sup>6</sup></span>
+                </div>
+                <p class="precaution-explain">
+                  Potencia de potencia: se <strong>multiplican</strong> los exponentes.<br>
+                  Producto de igual base: se <strong>suman</strong> los exponentes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Precaution 3: inverse sum -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Inverso de una suma</div>
+              <div class="precaution-card__body">
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--no">Incorrecto</span>
+                  <span class="math-inline">(a<sup>-1</sup> + b<sup>-1</sup>)<sup>-1</sup> = a + b</span>
+                </div>
+                <div class="precaution-row">
+                  <span class="precaution-label precaution-label--yes">Correcto</span>
+                  <span class="math-inline">(a<sup>-1</sup> + b<sup>-1</sup>)<sup>-1</sup> = (1/a + 1/b)<sup>-1</sup> = ab/(a+b)</span>
+                </div>
+                <p class="precaution-explain">
+                  El exponente -1 <strong>no</strong> se distribuye sobre la suma. 
+                  Primero hay que operar dentro del parentesis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RADICACION ===================== -->
+    <section class="study__section" id="radicacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">radicacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Radicacion</h2>
+            <span class="section__symbol section__symbol--purple">&radic;</span>
+          </div>
+
+          <!-- Raiz cuadrada -->
+          <div class="definition-box">
+            <p class="definition-box__label">Raiz cuadrada</p>
+            <p>
+              Si <strong>a</strong> es un numero real positivo, &radic;a es 
+              el numero real positivo <strong>b</strong> tal que:
+            </p>
+            <p class="math-display">
+              &radic;a = b &nbsp;&nbsp; si y solo si &nbsp;&nbsp; b<sup>2</sup> = a &nbsp;&nbsp; (b &ge; 0)
+            </p>
+          </div>
+
+          <!-- Raiz cubica -->
+          <div class="definition-box" style="border-left-color:#2a6eb5">
+            <p class="definition-box__label" style="color:#2a6eb5">Raiz cubica</p>
+            <p>
+              La raiz cubica esta definida para <strong>cualquier</strong> numero real 
+              (positivo o negativo):
+            </p>
+            <p class="math-display">
+              <sup>3</sup>&radic;a = b &nbsp;&nbsp; si y solo si &nbsp;&nbsp; b<sup>3</sup> = a
+            </p>
+          </div>
+
+          <!-- General definition -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Raiz enesima: regla general</h3>
+            <div class="concept-columns concept-columns--2">
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--a">n PAR</div>
+                <p class="concept-col__example"><sup>n</sup>&radic;a = b &nbsp; con a &ge; 0, b &ge; 0</p>
+                <p class="concept-col__desc">
+                  Solo definida para numeros <strong>positivos</strong> (o cero). 
+                  El resultado siempre es positivo.
+                </p>
+                <p class="concept-col__desc" style="margin-top:4px; color:#c0392b;">
+                  <sup>4</sup>&radic;(-16) no existe en R
+                </p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--b">n IMPAR</div>
+                <p class="concept-col__example"><sup>n</sup>&radic;a = b &nbsp; para todo a &isin; R</p>
+                <p class="concept-col__desc">
+                  Definida para <strong>cualquier</strong> real, tanto positivo como negativo.
+                </p>
+                <p class="concept-col__desc" style="margin-top:4px; color:#1a6a3a;">
+                  <sup>3</sup>&radic;(-27) = -3
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Examples -->
+          <div class="examples-table">
+            <p class="examples-table__label">Ejemplos de radicacion</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Expresion</th>
+                  <th>Resultado</th>
+                  <th>Verificacion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&radic;9</td>
+                  <td>3</td>
+                  <td>3<sup>2</sup> = 9</td>
+                </tr>
+                <tr>
+                  <td>&radic;16</td>
+                  <td>4 &nbsp;(no &plusmn;4)</td>
+                  <td>4<sup>2</sup> = 16</td>
+                </tr>
+                <tr>
+                  <td><sup>3</sup>&radic;64</td>
+                  <td>4</td>
+                  <td>4<sup>3</sup> = 64</td>
+                </tr>
+                <tr>
+                  <td>&radic;1</td>
+                  <td>1</td>
+                  <td>1<sup>2</sup> = 1</td>
+                </tr>
+                <tr>
+                  <td><sup>3</sup>&radic;(-27)</td>
+                  <td>-3</td>
+                  <td>(-3)<sup>3</sup> = -27</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Properties -->
+          <div class="examples-table">
+            <p class="examples-table__label">Propiedades de la radicacion</p>
+            <p class="table-prereq">Sean a, b numeros reales, n y m numeros naturales. Todas las operaciones deben estar definidas.</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Propiedad</th>
+                  <th>Formula</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Raiz de un producto</td>
+                  <td><sup>n</sup>&radic;(a&middot;b) = <sup>n</sup>&radic;a &middot; <sup>n</sup>&radic;b</td>
+                  <td>&radic;(4&middot;9) = &radic;4 &middot; &radic;9 = 2 &middot; 3 = 6</td>
+                </tr>
+                <tr>
+                  <td>Raiz de un cociente</td>
+                  <td><sup>n</sup>&radic;(a/b) = <sup>n</sup>&radic;a / <sup>n</sup>&radic;b</td>
+                  <td>&radic;(25/4) = &radic;25 / &radic;4 = 5/2</td>
+                </tr>
+                <tr>
+                  <td>Raiz de raiz</td>
+                  <td><sup>m</sup>&radic;(<sup>n</sup>&radic;a) = <sup>m&middot;n</sup>&radic;a</td>
+                  <td>&radic;(&radic;16) = <sup>4</sup>&radic;16 = 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Visual: relationship between power and root -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Relacion entre potenciacion y radicacion</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 600 130" class="number-line-svg">
+                <!-- Power box -->
+                <rect x="30" y="20" width="200" height="80" rx="6" fill="rgba(10,123,143,0.08)" stroke="#0a7b8f" stroke-width="2"/>
+                <text x="130" y="55" text-anchor="middle" class="svg-label svg-label--big" fill="#0a7b8f">Potenciacion</text>
+                <text x="130" y="80" text-anchor="middle" class="svg-label" fill="#0a7b8f">3&sup2; = 9</text>
+
+                <!-- Root box -->
+                <rect x="370" y="20" width="200" height="80" rx="6" fill="rgba(123,45,142,0.08)" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="470" y="55" text-anchor="middle" class="svg-label svg-label--big" fill="#7b2d8e">Radicacion</text>
+                <text x="470" y="80" text-anchor="middle" class="svg-label" fill="#7b2d8e">&radic;9 = 3</text>
+
+                <!-- Arrows -->
+                <line x1="235" y1="45" x2="365" y2="45" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-gen)"/>
+                <text x="300" y="38" text-anchor="middle" class="svg-label svg-label--small" fill="#555">operacion directa</text>
+                <line x1="365" y1="75" x2="235" y2="75" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-gen-left)"/>
+                <text x="300" y="95" text-anchor="middle" class="svg-label svg-label--small" fill="#555">operacion inversa</text>
+
+                <defs>
+                  <marker id="arrow-gen" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+                  </marker>
+                  <marker id="arrow-gen-left" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 10 0 L 0 5 L 10 10 z" fill="#555"/>
+                  </marker>
+                </defs>
+
+                <!-- Bottom label -->
+                <text x="300" y="125" text-anchor="middle" class="svg-label svg-label--small" fill="#888">Son operaciones inversas entre si</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPONENTE RACIONAL ===================== -->
+    <section class="study__section" id="exp-racional">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">exponente_racional.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Potencia de exponente racional</h2>
+            <span class="section__symbol section__symbol--dark">a<sup style="font-size:0.6em">m/n</sup></span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Hasta ahora definimos a<sup>n</sup> para exponentes enteros. 
+            Ahora extendemos la definicion para cuando el exponente es un 
+            <strong>numero racional</strong> (una fraccion m/n).
+          </p>
+
+          <!-- Step 1: a^(1/n) -->
+          <div class="definition-box">
+            <p class="definition-box__label">Paso 1: Exponente 1/n</p>
+            <p>
+              Sea a &ge; 0 y n un entero mayor que 1. Definimos:
+            </p>
+            <p class="math-display math-display--lg">
+              a<sup>1/n</sup> = <sup>n</sup>&radic;a
+            </p>
+            <p class="definition-box__note">
+              El exponente 1/n equivale a tomar la raiz enesima.
+            </p>
+          </div>
+
+          <div class="examples-table">
+            <p class="examples-table__label">Ejemplos de a^(1/n)</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Expresion exponencial</th>
+                  <th>Como raiz</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4<sup>1/2</sup></td>
+                  <td>&radic;4</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>27<sup>1/3</sup></td>
+                  <td><sup>3</sup>&radic;27</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>16<sup>1/4</sup></td>
+                  <td><sup>4</sup>&radic;16</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Step 2: a^(m/n) -->
+          <div class="definition-box" style="border-left-color:#2a6eb5">
+            <p class="definition-box__label" style="color:#2a6eb5">Paso 2: Exponente m/n</p>
+            <p>
+              Si m y n son enteros positivos y n > 1, definimos:
+            </p>
+            <p class="math-display math-display--lg">
+              a<sup>m/n</sup> = <sup>n</sup>&radic;(a<sup>m</sup>) = (<sup>n</sup>&radic;a)<sup>m</sup>
+            </p>
+            <p class="definition-box__note">
+              Se puede primero elevar y luego extraer raiz, o al reves. Ambos caminos dan el mismo resultado.
+            </p>
+          </div>
+
+          <!-- Visual: two paths -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Dos caminos equivalentes para calcular a^(m/n)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 600 200" class="number-line-svg">
+                <!-- Start -->
+                <rect x="220" y="10" width="160" height="40" rx="5" fill="rgba(10,123,143,0.1)" stroke="#0a7b8f" stroke-width="2"/>
+                <text x="300" y="36" text-anchor="middle" class="svg-label svg-label--big" fill="#0a7b8f">a<tspan font-size="10" dy="-6">m/n</tspan></text>
+
+                <!-- Path 1: top - primero potencia -->
+                <line x1="220" y1="50" x2="80" y2="90" stroke="#7b2d8e" stroke-width="1.5" marker-end="url(#arrow-gen)"/>
+                <text x="130" y="65" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">1. Elevar a m</text>
+                <rect x="10" y="90" width="140" height="35" rx="4" fill="rgba(123,45,142,0.06)" stroke="#7b2d8e" stroke-width="1"/>
+                <text x="80" y="113" text-anchor="middle" class="svg-label" fill="#7b2d8e">a<tspan font-size="10" dy="-6">m</tspan></text>
+                <line x1="80" y1="125" x2="260" y2="165" stroke="#7b2d8e" stroke-width="1.5" marker-end="url(#arrow-gen)"/>
+                <text x="150" y="155" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">2. Raiz n-esima</text>
+
+                <!-- Path 2: bottom - primero raiz -->
+                <line x1="380" y1="50" x2="520" y2="90" stroke="#b5652a" stroke-width="1.5" marker-end="url(#arrow-gen)"/>
+                <text x="470" y="65" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">1. Raiz n-esima</text>
+                <rect x="450" y="90" width="140" height="35" rx="4" fill="rgba(181,101,42,0.06)" stroke="#b5652a" stroke-width="1"/>
+                <text x="520" y="113" text-anchor="middle" class="svg-label" fill="#b5652a"><tspan font-size="10" dy="-1">n</tspan>&radic;a</text>
+                <line x1="520" y1="125" x2="340" y2="165" stroke="#b5652a" stroke-width="1.5" marker-end="url(#arrow-gen)"/>
+                <text x="450" y="155" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">2. Elevar a m</text>
+
+                <!-- Result -->
+                <rect x="220" y="155" width="160" height="40" rx="5" fill="rgba(26,138,90,0.1)" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="300" y="180" text-anchor="middle" class="svg-label svg-label--big" fill="#1a8a5a">Resultado</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Examples -->
+          <div class="examples-table">
+            <p class="examples-table__label">Ejemplos de a^(m/n)</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Expresion</th>
+                  <th>Camino 1: elevar, luego raiz</th>
+                  <th>Camino 2: raiz, luego elevar</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8<sup>2/3</sup></td>
+                  <td><sup>3</sup>&radic;(8<sup>2</sup>) = <sup>3</sup>&radic;64</td>
+                  <td>(<sup>3</sup>&radic;8)<sup>2</sup> = 2<sup>2</sup></td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>27<sup>2/3</sup></td>
+                  <td><sup>3</sup>&radic;(27<sup>2</sup>) = <sup>3</sup>&radic;729</td>
+                  <td>(<sup>3</sup>&radic;27)<sup>2</sup> = 3<sup>2</sup></td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>4<sup>3/2</sup></td>
+                  <td>&radic;(4<sup>3</sup>) = &radic;64</td>
+                  <td>(&radic;4)<sup>3</sup> = 2<sup>3</sup></td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Step 3: negative rational exponent -->
+          <div class="definition-box" style="border-left-color:#b5652a">
+            <p class="definition-box__label" style="color:#b5652a">Paso 3: Exponente racional negativo</p>
+            <p>Combinando con la regla del exponente negativo:</p>
+            <p class="math-display math-display--lg">
+              a<sup>-m/n</sup> = 1 / a<sup>m/n</sup>
+            </p>
+          </div>
+
+          <div class="examples-table">
+            <p class="examples-table__label">Ejemplos de exponente racional negativo</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Expresion</th>
+                  <th>Desarrollo</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4<sup>-1/2</sup></td>
+                  <td>1 / 4<sup>1/2</sup> = 1 / &radic;4</td>
+                  <td>1/2</td>
+                </tr>
+                <tr>
+                  <td>8<sup>-2/3</sup></td>
+                  <td>1 / 8<sup>2/3</sup> = 1 / (<sup>3</sup>&radic;8)<sup>2</sup> = 1 / 4</td>
+                  <td>1/4</td>
+                </tr>
+                <tr>
+                  <td>(-27)<sup>2/3</sup></td>
+                  <td>(<sup>3</sup>&radic;(-27))<sup>2</sup> = (-3)<sup>2</sup></td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Note about negative base -->
+          <div class="note-box">
+            <p class="note-box__label">Base negativa con exponente racional</p>
+            <p>
+              La definicion de a<sup>m/n</sup> con a negativa solo funciona si 
+              <strong>n es impar</strong>. Por ejemplo:<br><br>
+              (-27)<sup>2/3</sup> = (<sup>3</sup>&radic;(-27))<sup>2</sup> = (-3)<sup>2</sup> = 9 &nbsp; (n=3 impar, valido)<br><br>
+              (-4)<sup>1/2</sup> = &radic;(-4) &nbsp; no existe en R &nbsp; (n=2 par, no valido)
+            </p>
+          </div>
+
+          <!-- Summary chain -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Resumen: extension progresiva del exponente</h3>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">a<sup>n</sup> &nbsp; exponente natural (n &isin; N)</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">a<sup>0</sup> = 1, &nbsp; a<sup>-n</sup> = 1/a<sup>n</sup> &nbsp; exponente entero (n &isin; Z)</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">a<sup>m/n</sup> = <sup>n</sup>&radic;(a<sup>m</sup>) &nbsp; exponente racional (m/n &isin; Q)</span>
+              </div>
+            </div>
+            <p class="construction-note">
+              En cada extension, las propiedades de la potenciacion 
+              (producto de igual base, potencia de potencia, etc.) 
+              <strong>siguen funcionando</strong>. Esa es la razon de estas definiciones.
+            </p>
+          </div>
+
+          <!-- Attention box -->
+          <div class="callout-box callout-box--danger">
+            <p class="callout-box__label">Atencion: &radic;(a&sup2;) no siempre es a</p>
+            <p>Si a = -5, entonces:</p>
+            <p class="math-display">
+              (-5)<sup>2</sup> = 25 &nbsp;&rArr;&nbsp; &radic;((-5)<sup>2</sup>) = &radic;25 = 5 &ne; -5
+            </p>
+            <p>
+              La raiz cuadrada siempre da resultado <strong>positivo</strong>. 
+              Por eso &radic;(a<sup>2</sup>) = |a| (valor absoluto), no simplemente a.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="valor_absoluto.html" class="nav-link">Siguiente: Valor Absoluto y Distancia &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Ivan Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

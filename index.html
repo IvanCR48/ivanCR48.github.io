@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de estudio para la Facultad de Ingeniería — Mar del Plata. Case of Study por Iván Ismael Cardozo.">
+  <title>Study Portal — Iván Ismael Cardozo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="#" class="navbar__btn">Home</a>
+      <a href="#about" class="navbar__btn">About</a>
+    </div>
+  </nav>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker" aria-hidden="true">
+    <span class="ticker__inner">
+      ★ Welcome to the Study Portal ★ Facultad de Ingeniería — Mar del Plata ★ Matemática ★ Preparing for the future ★ Hand-coded with love ★ Y2K vibes ★ Keep studying ★
+    </span>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main-content">
+
+    <!-- Portal Window -->
+    <div class="window">
+      <div class="window__titlebar">
+        <span class="window__titlebar-text">study_portal.exe</span>
+        <div class="window__titlebar-buttons">
+          <span class="window__titlebar-btn">─</span>
+          <span class="window__titlebar-btn">□</span>
+          <span class="window__titlebar-btn">✕</span>
+        </div>
+      </div>
+
+      <div class="window__body">
+        <span class="hero__badge">📡 Portal Activo</span>
+
+        <h1 class="hero__title">Case of Study</h1>
+
+        <p class="hero__subtitle">
+          Material interactivo para preparar el ingreso a la<br>
+          Facultad de Ingeniería — Mar del Plata
+        </p>
+
+        <div class="hero__divider"></div>
+
+        <!-- Study Link Card -->
+        <a href="matematica.html" class="study-card" id="math-link" title="Ir a Matemática">
+          <span class="study-card__icon">📐</span>
+          <span class="study-card__title">Matemática</span>
+          <p class="study-card__desc">
+            Apuntes, ejercicios y material de estudio interactivo
+          </p>
+          <span class="study-card__arrow">→ Entrar</span>
+        </a>
+      </div>
+
+      <div class="window__statusbar">
+        <div class="statusbar__section">
+          <span class="statusbar__indicator"></span>
+          <span>Online</span>
+        </div>
+        <span id="clock">--:--:--</span>
+      </div>
+    </div>
+
+    <!-- Retro Badges -->
+    <div class="badges">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">GitHub Pages</span>
+      <span class="badge">800×600</span>
+      <span class="badge">Best viewed in any browser</span>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="about">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">© <span id="year"></span></p>
+    <p class="footer__decoration">· · · ☆ · · ·</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

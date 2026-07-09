@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Valor absoluto y distancia — Definicion, interpretacion geometrica, propiedades y ejemplos. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Valor Absoluto y Distancia | Study Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="index.html" class="navbar__btn">Home</a>
+      <a href="matematica.html" class="navbar__btn">Cap I</a>
+      <a href="potenciacion.html" class="navbar__btn">Secc 2</a>
+      <a href="#definicion" class="navbar__btn">|a|</a>
+      <a href="#distancia" class="navbar__btn">d[a,b]</a>
+      <a href="#propiedades" class="navbar__btn">Propiedades</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">valor_absoluto.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo I &mdash; Seccion 3</p>
+          <h1 class="study__title">Valor Absoluto y Distancia</h1>
+          <p class="study__intro">
+            Definicion algebraica, interpretacion geometrica, distancia entre puntos y propiedades.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">Definicion algebraica</a></li>
+              <li><a href="#interpretacion">Interpretacion geometrica</a></li>
+              <li><a href="#distancia">Distancia entre dos puntos</a></li>
+              <li><a href="#propiedades">Propiedades del valor absoluto</a></li>
+              <li><a href="#ejemplos">Ejemplos de simplificacion</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="potenciacion.html" class="nav-link nav-link--prev">&larr; Secc 2: Potenciacion y Radicacion</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">definicion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Definicion Algebraica</h2>
+            <span class="section__symbol">|a|</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Muchas veces deseamos describir el tamaño de un numero sin importar si es positivo o negativo. 
+            Para hacerlo, introducimos el concepto de <strong>valor absoluto</strong> (o modulo).
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion formal</p>
+            <p>
+              Sea <strong>a</strong> un numero real, su valor absoluto se denota por <strong>|a|</strong> y se define como:
+            </p>
+            <!-- SVG math piecewise expression -->
+            <div style="display:flex; justify-content:center; margin: 15px 0;">
+              <svg viewBox="0 0 280 90" style="width:280px; height:90px; display:block;">
+                <!-- |a| = -->
+                <text x="20" y="50" font-family="'Share Tech Mono', monospace" font-size="24" fill="#1a1a2e">|a| =</text>
+                <!-- Large brace { -->
+                <path d="M 90 15 C 80 15, 80 40, 75 45 C 80 50, 80 75, 90 75" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+                <!-- Pieces -->
+                <text x="105" y="35" font-family="'Share Tech Mono', monospace" font-size="20" fill="#1a6a3a">a</text>
+                <text x="160" y="35" font-family="'Share Tech Mono', monospace" font-size="16" fill="#555">si a &ge; 0</text>
+                
+                <text x="105" y="65" font-family="'Share Tech Mono', monospace" font-size="20" fill="#c0392b">-a</text>
+                <text x="160" y="65" font-family="'Share Tech Mono', monospace" font-size="16" fill="#555">si a &lt; 0</text>
+              </svg>
+            </div>
+            <p class="definition-box__note">
+              Esta definicion en dos partes significa que: si el numero es positivo o cero, queda igual; si es negativo, se toma su opuesto (inverso aditivo), lo que da un resultado positivo.
+            </p>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Ejemplo: Base positiva</h4>
+              <p class="property-card__formula">|7| = 7</p>
+              <p class="property-card__example">Como a=7 es &ge; 0, el valor absoluto es el mismo numero.</p>
+            </div>
+            <div class="property-card property-card--warning">
+              <h4 class="property-card__title">Ejemplo: Base negativa</h4>
+              <p class="property-card__formula">|-7| = -(-7) = 7</p>
+              <p class="property-card__example">Como a=-7 es &lt; 0, se le antepone un signo menos para hacerlo positivo.</p>
+            </div>
+          </div>
+          
+          <div class="note-box">
+            <p class="note-box__label">Modulo de cero</p>
+            <p>El valor absoluto de cero es siempre cero: <span class="math-inline">|0| = 0</span>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERPRETACION ===================== -->
+    <section class="study__section" id="interpretacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">interpretacion_geometrica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Interpretacion Geometrica</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">El modulo como distancia al origen</h3>
+            <p>
+              Geometricamente, la expresion <strong>|x|</strong> representa la <strong>distancia</strong> desde el punto <strong>x</strong> hasta el <strong>0</strong> (origen) en la recta real.
+            </p>
+          </div>
+
+          <!-- SVG number line showing distance from -7 and 7 to 0 -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Recta real: Distancia al origen</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 160" class="number-line-svg">
+                <!-- Line -->
+                <line x1="40" y1="90" x2="660" y2="90" stroke="#1a8a8a" stroke-width="2"/>
+                <polygon points="660,85 670,90 660,95" fill="#1a8a8a"/>
+                <polygon points="40,85 30,90 40,95" fill="#1a8a8a"/>
+                
+                <!-- Zero point -->
+                <circle cx="350" cy="90" r="6" fill="#333"/>
+                <text x="350" y="120" text-anchor="middle" class="svg-label" font-weight="bold">0</text>
+                
+                <!-- Point -7 -->
+                <circle cx="150" cy="90" r="5" fill="#c0392b"/>
+                <text x="150" y="120" text-anchor="middle" class="svg-label">-7</text>
+                
+                <!-- Point 7 -->
+                <circle cx="550" cy="90" r="5" fill="#0a7b8f"/>
+                <text x="550" y="120" text-anchor="middle" class="svg-label">7</text>
+                
+                <!-- Distance arch to the left -->
+                <path d="M 150 75 Q 250 30 350 75" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,4"/>
+                <text x="250" y="45" text-anchor="middle" class="svg-label" fill="#c0392b">distancia = |-7| = 7</text>
+                
+                <!-- Distance arch to the right -->
+                <path d="M 350 75 Q 450 30 550 75" fill="none" stroke="#0a7b8f" stroke-width="2" stroke-dasharray="4,4"/>
+                <text x="450" y="45" text-anchor="middle" class="svg-label" fill="#0a7b8f">distancia = |7| = 7</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-box">
+            <p class="callout-box__label">Ecuaciones sencillas con valor absoluto</p>
+            <p>
+              La ecuacion <span class="math-inline">|x| = 4</span> representa todos los numeros reales cuya distancia al origen es exactamente 4. 
+              Por lo tanto, tiene dos soluciones:
+            </p>
+            <p class="math-display">x = 4 &nbsp;&nbsp;&nbsp; o &nbsp;&nbsp;&nbsp; x = -4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DISTANCIA ===================== -->
+    <section class="study__section" id="distancia">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">distancia_entre_puntos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Distancia entre dos puntos</h2>
+            <span class="section__symbol section__symbol--purple">d[a,b]</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion general de distancia</p>
+            <p>
+              Dados dos numeros reales <strong>a</strong> y <strong>b</strong>, la distancia 
+              entre ellos en la recta numerica se denota por <strong>d[a;b]</strong> y coincide con el modulo de su diferencia:
+            </p>
+            <p class="math-display math-display--lg">
+              d[a;b] = |a - b|
+            </p>
+          </div>
+
+          <!-- Geometric illustration of d[a,b] -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Distancia entre dos puntos cualesquiera</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 130" class="number-line-svg">
+                <!-- Line -->
+                <line x1="40" y1="80" x2="660" y2="80" stroke="#7b2d8e" stroke-width="2"/>
+                <polygon points="660,75 670,80 660,85" fill="#7b2d8e"/>
+                <polygon points="40,75 30,80 40,85" fill="#7b2d8e"/>
+                
+                <!-- Point a -->
+                <circle cx="200" cy="80" r="6" fill="#7b2d8e"/>
+                <text x="200" y="110" text-anchor="middle" class="svg-label" font-weight="bold">a</text>
+                
+                <!-- Point b -->
+                <circle cx="500" cy="80" r="6" fill="#7b2d8e"/>
+                <text x="500" y="110" text-anchor="middle" class="svg-label" font-weight="bold">b</text>
+                
+                <!-- Distance indicator line -->
+                <line x1="200" y1="50" x2="500" y2="50" stroke="#7b2d8e" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <line x1="200" y1="45" x2="200" y2="55" stroke="#7b2d8e" stroke-width="1.5"/>
+                <line x1="500" y1="45" x2="500" y2="55" stroke="#7b2d8e" stroke-width="1.5"/>
+                
+                <!-- Label -->
+                <text x="350" y="40" text-anchor="middle" class="svg-label" fill="#7b2d8e">distancia = |a - b|</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Si a &lt; b</h4>
+              <p class="property-card__formula">d[a;b] = b - a</p>
+              <p class="property-card__example">Ejemplo: distancia entre 3 y 8.<br>d[3;8] = 8 - 3 = 5</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Si a &gt; b</h4>
+              <p class="property-card__formula">d[a;b] = a - b</p>
+              <p class="property-card__example">Ejemplo: distancia entre 8 y 3.<br>d[8;3] = 8 - 3 = 5</p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Curiosidad sobre el orden</p>
+            <p>
+              Como la distancia es una magnitud positiva, no importa el orden en que restemos dentro del modulo:
+              <br><br>
+              <strong>|a - b| = |b - a|</strong>
+              <br><br>
+              Por ejemplo, la distancia entre 7 y -3 es:
+              <br>
+              <span class="math-inline">d[7;-3] = |7 - (-3)| = |7 + 3| = |10| = 10</span>
+              <br>
+              O bien:
+              <br>
+              <span class="math-inline">d[-3;7] = |-3 - 7| = |-10| = 10</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPIEDADES ===================== -->
+    <section class="study__section" id="propiedades">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">propiedades_modulo.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Propiedades del Valor Absoluto</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);">
+            Sean a y b numeros reales. Se cumplen las siguientes propiedades fundamentales:
+          </p>
+
+          <div class="prop-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>N°</th>
+                  <th>Propiedad</th>
+                  <th>Formula</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Modulo del producto</td>
+                  <td>|a &middot; b| = |a| &middot; |b|</td>
+                  <td>|(-3) &middot; 4| = |-3| &middot; |4| = 3 &middot; 4 = 12</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Modulo del cociente</td>
+                  <td>|a / b| = |a| / |b| &nbsp; (b &ne; 0)</td>
+                  <td>|(-15) / 5| = |-15| / |5| = 15 / 5 = 3</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Desigualdad triangular</td>
+                  <td>|a + b| &le; |a| + |b|</td>
+                  <td>|(-3) + 5| = |2| = 2 &le; |-3| + |5| = 3 + 5 = 8</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Modulo del opuesto</td>
+                  <td>|-a| = |a|</td>
+                  <td>|-5| = |5| = 5</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Cuadrado del modulo</td>
+                  <td>|a|<sup>2</sup> = a<sup>2</sup></td>
+                  <td>|-3|<sup>2</sup> = 3<sup>2</sup> = 9 &nbsp;&nbsp; y &nbsp;&nbsp; (-3)<sup>2</sup> = 9</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Conexion con la raiz cuadrada</h3>
+            <p>
+              Existe una relacion sumamente importante entre el valor absoluto y la raiz cuadrada de un cuadrado:
+            </p>
+            <p class="math-display math-display--lg">
+              &radic;(a<sup>2</sup>) = |a|
+            </p>
+            <p class="construction-note">
+              Esto garantiza que el resultado de la raiz cuadrada sea siempre no negativo.
+              <br>Ejemplo: &radic;(6<sup>2</sup>) = |6| = 6 &nbsp;&nbsp; y &nbsp;&nbsp; &radic;((-6)<sup>2</sup>) = |-6| = 6.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLOS ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">ejemplos_resueltos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Ejemplos de Simplificacion</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);">
+            Escribir las siguientes expresiones sin los simbolos de valor absoluto:
+          </p>
+
+          <div class="precaution-grid">
+            <!-- Ejemplo 1 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo A: |&pi; - 3|</div>
+              <div class="precaution-card__body">
+                <p class="math-display">|&pi; - 3| = &pi; - 3</p>
+                <p class="precaution-explain">
+                  Como &pi; &asymp; 3.14159... es mayor que 3, la expresion interior <span class="math-inline">&pi; - 3</span> es positiva (&ge; 0). 
+                  Por lo tanto, sale del modulo sin cambios.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 2 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo B: |3 - &pi;|</div>
+              <div class="precaution-card__body">
+                <p class="math-display">|3 - &pi;| = - (3 - &pi;) = &pi; - 3</p>
+                <p class="precaution-explain">
+                  Como 3 es menor que &pi;, la expresion interior <span class="math-inline">3 - &pi;</span> es negativa. 
+                  Por definicion, debemos cambiarle el signo anteponiendo un menos, obteniendo <span class="math-inline">&pi; - 3</span> (que es positivo).
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 3 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo C: |x<sup>6</sup> + 1|</div>
+              <div class="precaution-card__body">
+                <p class="math-display">|x<sup>6</sup> + 1| = x<sup>6</sup> + 1</p>
+                <p class="precaution-explain">
+                  Cualquier numero real elevado a una potencia par es no negativo (<span class="math-inline">x<sup>6</sup> &ge; 0</span>). 
+                  Al sumarle 1, la expresion <span class="math-inline">x<sup>6</sup> + 1</span> es estrictamente positiva para cualquier x. 
+                  Por lo tanto, se eliminan las barras directamente.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 4 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo D: |y - 3|</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border-top:none; padding-top:0; margin-top:0;">
+                  Dado que no conocemos el valor de y, no sabemos si <span class="math-inline">y - 3</span> es positivo o negativo. 
+                  Debemos reescribirla por tramos utilizando la definicion:
+                </p>
+                <div style="display:flex; justify-content:center; margin: 15px 0;">
+                  <svg viewBox="0 0 320 90" style="width:320px; height:90px; display:block;">
+                    <text x="10" y="50" font-family="'Share Tech Mono', monospace" font-size="20" fill="#1a1a2e">|y - 3| =</text>
+                    <path d="M 110 15 C 100 15, 100 40, 95 45 C 100 50, 100 75, 110 75" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+                    <text x="125" y="35" font-family="'Share Tech Mono', monospace" font-size="18" fill="#1a6a3a">y - 3</text>
+                    <text x="200" y="35" font-family="'Share Tech Mono', monospace" font-size="15" fill="#555">si y &ge; 3</text>
+                    
+                    <text x="125" y="65" font-family="'Share Tech Mono', monospace" font-size="18" fill="#c0392b">3 - y</text>
+                    <text x="200" y="65" font-family="'Share Tech Mono', monospace" font-size="15" fill="#555">si y &lt; 3</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Números Naturales, Enteros, Racionales e Irracionales — Material de estudio para la Facultad de Ingeniería, Universidad Nacional de Mar del Plata.">
+  <title>Matemática — Números Reales | Study Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="index.html" class="navbar__btn">Home</a>
+      <a href="#naturales" class="navbar__btn">N</a>
+      <a href="#enteros" class="navbar__btn">Z</a>
+      <a href="#racionales" class="navbar__btn">Q</a>
+      <a href="#irracionales" class="navbar__btn">I</a>
+      <a href="#reales" class="navbar__btn">R</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">matematica_cap1.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo I</p>
+          <h1 class="study__title">Numeros Reales</h1>
+          <p class="study__intro">
+            Numeros Naturales, Enteros, Racionales e Irracionales.<br>
+            Facultad de Ingenieria — Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#historia">Breve historia del numero</a></li>
+              <li><a href="#naturales">Numeros Naturales (N)</a></li>
+              <li><a href="#enteros">Numeros Enteros (Z)</a></li>
+              <li><a href="#racionales">Numeros Racionales (Q)</a></li>
+              <li><a href="#irracionales">Numeros Irracionales (I)</a></li>
+              <li><a href="#reales">Numeros Reales (R)</a></li>
+              <li><a href="#propiedades">Propiedades de los Reales</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== HISTORY ===================== -->
+    <section class="study__section" id="historia">
+      <div class="section__window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">historia.txt</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Breve historia del numero</h2>
+          <p>
+            La nocion de numero es tan antigua como el hombre mismo. Las tribus 
+            mas primitivas disponian de simbolos para distinguir entre uno, dos, tres...
+          </p>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <h3 class="timeline__period">Prehistoria</h3>
+                <p class="timeline__label">El numero natural</p>
+                <p>El hombre primitivo poseia la idea del numero natural (1, 2, 3, 4...). 
+                Hasta la Edad de Bronce no aparecen sistemas de numeracion potentes.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <h3 class="timeline__period">~2000 a.C. — Egipto</h3>
+                <p class="timeline__label">El numero fraccionario</p>
+                <p>Los egipcios comienzan a manejar fracciones sencillas: 1/2, 1/3, 2/3, 6/7... 
+                Los griegos elevan estas manipulaciones a la categoria de Ciencia.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <h3 class="timeline__period">Siglo V a.C. — Grecia</h3>
+                <p class="timeline__label">Aparicion del irracional</p>
+                <p>Los pitagoricos descubren que la diagonal y el lado de un cuadrado 
+                tienen un cociente que <strong>no</strong> es una fraccion. Llamaron a este tipo 
+                de numero <em>alogos</em> (irracional).</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <h3 class="timeline__period">Siglo XVI-XVII — Europa</h3>
+                <p class="timeline__label">El numero negativo</p>
+                <p>La resolucion de ecuaciones algebraicas conduce a los numeros negativos. 
+                En geometria: lo negativo indica retroceso, lo positivo avance. 
+                Los chinos ya los usaban desde el siglo IV a.C. con bolas de abaco.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__card">
+                <h3 class="timeline__period">Siglo XIX</h3>
+                <p class="timeline__label">Los complejos</p>
+                <p>Al resolver ecuaciones como x&sup2; - 2x + 26 = 0 aparecen expresiones 
+                como &radic;(-25). Su fundamentacion moderna no llego hasta mediados del siglo XIX.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NATURALES ===================== -->
+    <section class="study__section" id="naturales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">naturales_N.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Numeros Naturales</h2>
+            <span class="section__symbol">N</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>Son los numeros que utilizamos para <strong>contar</strong>:</p>
+            <p class="math-display">N = { 1, 2, 3, 4, 5, 6, 7, ... }</p>
+            <p class="definition-box__note">
+              Si incluimos el cero, se escribe N<sub>0</sub> = { 0, 1, 2, 3, 4, ... }
+            </p>
+          </div>
+
+          <!-- Number line SVG -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Recta numerica de los Naturales</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 80" class="number-line-svg">
+                <!-- Line -->
+                <line x1="30" y1="40" x2="670" y2="40" stroke="#1a8a8a" stroke-width="2"/>
+                <polygon points="670,35 680,40 670,45" fill="#1a8a8a"/>
+                <!-- Points -->
+                <circle cx="80" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="80" y="70" text-anchor="middle" class="svg-label">0</text>
+                <circle cx="160" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="160" y="70" text-anchor="middle" class="svg-label">1</text>
+                <circle cx="240" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="240" y="70" text-anchor="middle" class="svg-label">2</text>
+                <circle cx="320" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="320" y="70" text-anchor="middle" class="svg-label">3</text>
+                <circle cx="400" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="400" y="70" text-anchor="middle" class="svg-label">4</text>
+                <circle cx="480" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="480" y="70" text-anchor="middle" class="svg-label">5</text>
+                <circle cx="560" cy="40" r="6" fill="#0a7b8f"/>
+                <text x="560" y="70" text-anchor="middle" class="svg-label">6</text>
+                <!-- Label -->
+                <text x="640" y="25" class="svg-label svg-label--set">N</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Cerrado bajo la suma</h4>
+              <p class="property-card__formula">a + b &isin; N</p>
+              <p class="property-card__example">3 + 5 = 8 &isin; N</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Cerrado bajo el producto</h4>
+              <p class="property-card__formula">a &middot; b &isin; N</p>
+              <p class="property-card__example">4 &middot; 7 = 28 &isin; N</p>
+            </div>
+            <div class="property-card property-card--warning">
+              <h4 class="property-card__title">NO cerrado bajo la resta</h4>
+              <p class="property-card__formula">a - b &notin; N (si a &lt; b)</p>
+              <p class="property-card__example">3 - 9 = -6 &notin; N</p>
+            </div>
+            <div class="property-card property-card--warning">
+              <h4 class="property-card__title">NO cerrado bajo la division</h4>
+              <p class="property-card__formula">a / b &notin; N (en general)</p>
+              <p class="property-card__example">7 / 2 = 3.5 &notin; N</p>
+            </div>
+          </div>
+
+          <div class="callout-box">
+            <p class="callout-box__label">Problema motivador</p>
+            <p>
+              La ecuacion <span class="math-inline">x + 9 = 3</span> tiene coeficientes 
+              naturales, pero <strong>no tiene solucion</strong> en N. Para resolverla necesitamos 
+              restar 9 en ambos miembros:
+            </p>
+            <p class="math-display">
+              x + 9 - 9 = 3 - 9<br>
+              x = -6
+            </p>
+            <p>Necesitamos un conjunto mas grande: los <strong>numeros enteros</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ENTEROS ===================== -->
+    <section class="study__section" id="enteros">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">enteros_Z.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Numeros Enteros</h2>
+            <span class="section__symbol section__symbol--blue">Z</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              Son los numeros naturales, sus opuestos (negativos) y el cero:
+            </p>
+            <p class="math-display">Z = { ..., -3, -2, -1, 0, 1, 2, 3, ... }</p>
+            <p class="definition-box__note">La letra Z proviene del aleman <em>Zahlen</em> (numeros).</p>
+          </div>
+
+          <div class="diagram-box">
+            <p class="diagram-box__label">Recta numerica de los Enteros</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 80" class="number-line-svg">
+                <defs>
+                  <marker id="arrow-z" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a6eb5"/>
+                  </marker>
+                  <marker id="arrow-z-left" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 10 0 L 0 5 L 10 10 z" fill="#2a6eb5"/>
+                  </marker>
+                </defs>
+                <line x1="30" y1="40" x2="670" y2="40" stroke="#2a6eb5" stroke-width="2" marker-end="url(#arrow-z)" marker-start="url(#arrow-z-left)"/>
+                <!-- Negative -->
+                <circle cx="110" cy="40" r="5" fill="#c0392b"/>
+                <text x="110" y="70" text-anchor="middle" class="svg-label">-3</text>
+                <circle cx="190" cy="40" r="5" fill="#c0392b"/>
+                <text x="190" y="70" text-anchor="middle" class="svg-label">-2</text>
+                <circle cx="270" cy="40" r="5" fill="#c0392b"/>
+                <text x="270" y="70" text-anchor="middle" class="svg-label">-1</text>
+                <!-- Zero -->
+                <circle cx="350" cy="40" r="7" fill="#555" stroke="#333" stroke-width="1"/>
+                <text x="350" y="70" text-anchor="middle" class="svg-label" font-weight="bold">0</text>
+                <!-- Positive -->
+                <circle cx="430" cy="40" r="5" fill="#0a7b8f"/>
+                <text x="430" y="70" text-anchor="middle" class="svg-label">1</text>
+                <circle cx="510" cy="40" r="5" fill="#0a7b8f"/>
+                <text x="510" y="70" text-anchor="middle" class="svg-label">2</text>
+                <circle cx="590" cy="40" r="5" fill="#0a7b8f"/>
+                <text x="590" y="70" text-anchor="middle" class="svg-label">3</text>
+                <!-- Labels -->
+                <text x="110" y="20" text-anchor="middle" class="svg-label svg-label--small" fill="#c0392b">negativos</text>
+                <text x="510" y="20" text-anchor="middle" class="svg-label svg-label--small" fill="#0a7b8f">positivos</text>
+                <text x="640" y="25" class="svg-label svg-label--set" fill="#2a6eb5">Z</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="relation-box">
+            <p class="relation-box__label">Relacion de contenencia</p>
+            <div class="relation-box__diagram">
+              <svg viewBox="0 0 400 120" class="venn-svg">
+                <rect x="10" y="10" width="380" height="100" rx="8" fill="none" stroke="#2a6eb5" stroke-width="2" stroke-dasharray="6,3"/>
+                <text x="370" y="30" text-anchor="end" class="svg-label svg-label--set" fill="#2a6eb5">Z</text>
+                <rect x="120" y="25" width="260" height="70" rx="6" fill="rgba(10,123,143,0.1)" stroke="#0a7b8f" stroke-width="2"/>
+                <text x="360" y="45" text-anchor="end" class="svg-label svg-label--set" fill="#0a7b8f">N</text>
+                <text x="60" y="65" text-anchor="middle" class="svg-label" fill="#c0392b">-3, -2, -1</text>
+                <text x="150" y="65" text-anchor="middle" class="svg-label" fill="#555">0</text>
+                <text x="280" y="65" text-anchor="middle" class="svg-label" fill="#0a7b8f">1, 2, 3, ...</text>
+              </svg>
+            </div>
+            <p class="math-display">N &sub; Z</p>
+            <p>Todo numero natural es tambien un numero entero.</p>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Cerrado bajo la suma</h4>
+              <p class="property-card__formula">a + b &isin; Z</p>
+              <p class="property-card__example">(-3) + 5 = 2 &isin; Z</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Cerrado bajo la resta</h4>
+              <p class="property-card__formula">a - b &isin; Z</p>
+              <p class="property-card__example">2 - 7 = -5 &isin; Z</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Cerrado bajo el producto</h4>
+              <p class="property-card__formula">a &middot; b &isin; Z</p>
+              <p class="property-card__example">(-3) &middot; 4 = -12 &isin; Z</p>
+            </div>
+            <div class="property-card property-card--warning">
+              <h4 class="property-card__title">NO cerrado bajo la division</h4>
+              <p class="property-card__formula">a / b &notin; Z (en general)</p>
+              <p class="property-card__example">5 / 3 &notin; Z</p>
+            </div>
+          </div>
+
+          <div class="callout-box">
+            <p class="callout-box__label">Problema motivador</p>
+            <p>La ecuacion <span class="math-inline">2x + 5 = 6</span> no tiene solucion entera:</p>
+            <p class="math-display">
+              2x = 6 - 5 = 1<br>
+              x = 1/2
+            </p>
+            <p>Necesitamos un conjunto mas grande: los <strong>numeros racionales</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RACIONALES ===================== -->
+    <section class="study__section" id="racionales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">racionales_Q.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Numeros Racionales</h2>
+            <span class="section__symbol section__symbol--purple">Q</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              La palabra <em>"racional"</em> viene de <strong>razon</strong> o proporcion. 
+              Un numero racional es el resultado de la razon entre dos enteros:
+            </p>
+            <p class="math-display">
+              Q = { p/q | p &isin; Z, q &isin; Z, q &ne; 0 }
+            </p>
+            <p class="definition-box__note">
+              Donde <strong>p</strong> es el numerador y <strong>q</strong> el denominador.
+            </p>
+          </div>
+
+          <div class="examples-table">
+            <p class="examples-table__label">Ejemplos y su representacion decimal</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Fraccion</th>
+                  <th>Decimal</th>
+                  <th>Tipo de decimal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1/2</td>
+                  <td>0,5</td>
+                  <td>Exacto (finito)</td>
+                </tr>
+                <tr>
+                  <td>-3/5</td>
+                  <td>-0,6</td>
+                  <td>Exacto (finito)</td>
+                </tr>
+                <tr>
+                  <td>2/4</td>
+                  <td>0,5</td>
+                  <td>Exacto (igual a 1/2)</td>
+                </tr>
+                <tr>
+                  <td>22/3</td>
+                  <td>7,333...</td>
+                  <td>Periodico (periodo: 3)</td>
+                </tr>
+                <tr>
+                  <td>1821/7</td>
+                  <td>260,142857...</td>
+                  <td>Periodico (periodo: 142857)</td>
+                </tr>
+                <tr>
+                  <td>13/6</td>
+                  <td>2,1666...</td>
+                  <td>Semiperiodico (periodo: 6)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="diagram-box">
+            <p class="diagram-box__label">Recta numerica: los racionales llenan los "huecos"</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 700 100" class="number-line-svg">
+                <defs>
+                  <marker id="arrow-q" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#7b2d8e"/>
+                  </marker>
+                  <marker id="arrow-q-left" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                    <path d="M 10 0 L 0 5 L 10 10 z" fill="#7b2d8e"/>
+                  </marker>
+                </defs>
+                <line x1="30" y1="50" x2="670" y2="50" stroke="#7b2d8e" stroke-width="2" marker-end="url(#arrow-q)" marker-start="url(#arrow-q-left)"/>
+                <!-- Integer points -->
+                <line x1="110" y1="42" x2="110" y2="58" stroke="#888" stroke-width="1"/>
+                <text x="110" y="78" text-anchor="middle" class="svg-label" fill="#888">-2</text>
+                <line x1="230" y1="42" x2="230" y2="58" stroke="#888" stroke-width="1"/>
+                <text x="230" y="78" text-anchor="middle" class="svg-label" fill="#888">-1</text>
+                <line x1="350" y1="42" x2="350" y2="58" stroke="#888" stroke-width="1"/>
+                <text x="350" y="78" text-anchor="middle" class="svg-label" fill="#888">0</text>
+                <line x1="470" y1="42" x2="470" y2="58" stroke="#888" stroke-width="1"/>
+                <text x="470" y="78" text-anchor="middle" class="svg-label" fill="#888">1</text>
+                <line x1="590" y1="42" x2="590" y2="58" stroke="#888" stroke-width="1"/>
+                <text x="590" y="78" text-anchor="middle" class="svg-label" fill="#888">2</text>
+                <!-- Rational points -->
+                <circle cx="290" cy="50" r="5" fill="#7b2d8e"/>
+                <text x="290" y="28" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">-1/2</text>
+                <circle cx="410" cy="50" r="5" fill="#7b2d8e"/>
+                <text x="410" y="28" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">1/2</text>
+                <circle cx="510" cy="50" r="5" fill="#7b2d8e"/>
+                <text x="510" y="28" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">3/4</text>
+                <circle cx="190" cy="50" r="4" fill="#7b2d8e" opacity="0.6"/>
+                <text x="190" y="28" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">-4/3</text>
+                <circle cx="430" cy="50" r="4" fill="#7b2d8e" opacity="0.6"/>
+                <circle cx="450" cy="50" r="3" fill="#7b2d8e" opacity="0.4"/>
+                <circle cx="390" cy="50" r="3" fill="#7b2d8e" opacity="0.4"/>
+                <circle cx="370" cy="50" r="3" fill="#7b2d8e" opacity="0.3"/>
+                <circle cx="330" cy="50" r="3" fill="#7b2d8e" opacity="0.3"/>
+                <!-- Set label -->
+                <text x="640" y="30" class="svg-label svg-label--set" fill="#7b2d8e">Q</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Propiedad clave de los racionales</h3>
+            <p>Todo numero racional tiene una expansion decimal que es:</p>
+            <div class="concept-columns">
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--a">Decimal exacto (finito)</div>
+                <p class="concept-col__example">1/4 = 0,25</p>
+                <p class="concept-col__desc">Cantidad finita de digitos despues de la coma.</p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--b">Decimal periodico</div>
+                <p class="concept-col__example">22/3 = 7,333...</p>
+                <p class="concept-col__desc">Un grupo finito de digitos (el <strong>periodo</strong>) se repite infinitamente.</p>
+              </div>
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--c">Decimal semiperiodico</div>
+                <p class="concept-col__example">13/6 = 2,1666...</p>
+                <p class="concept-col__desc">Comienza con digitos no repetitivos (anteperiodo) y luego se repite un periodo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Nota importante</p>
+            <p>
+              Distintas fracciones pueden representar el mismo numero racional. 
+              Por ejemplo: <span class="math-inline">1/2 = 2/4 = 3/6 = 50/100</span>. 
+              Se llaman <strong>fracciones equivalentes</strong>.
+            </p>
+          </div>
+
+          <div class="callout-box">
+            <p class="callout-box__label">Problema motivador</p>
+            <p>La ecuacion <span class="math-inline">x&sup2; - 2 = 0</span> no tiene solucion racional:</p>
+            <p class="math-display">x&sup2; = 2 &rArr; x = &radic;2 = 1,41421356...</p>
+            <p>
+              Este decimal es infinito y <strong>no tiene periodo</strong>. 
+              No se puede expresar como fraccion p/q. 
+              Necesitamos los <strong>numeros irracionales</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IRRACIONALES ===================== -->
+    <section class="study__section" id="irracionales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">irracionales_I.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Numeros Irracionales</h2>
+            <span class="section__symbol section__symbol--orange">I</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              Son aquellos cuya expresion decimal es <strong>infinita</strong> y 
+              <strong>no tiene periodo</strong>. No pueden expresarse como fraccion p/q.
+            </p>
+            <p class="math-display">I = { x &isin; R | x &notin; Q }</p>
+          </div>
+
+          <div class="examples-table">
+            <p class="examples-table__label">Irracionales famosos</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Simbolo</th>
+                  <th>Nombre</th>
+                  <th>Valor aproximado</th>
+                  <th>Descripcion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&pi;</td>
+                  <td>Pi</td>
+                  <td>3,14159265358...</td>
+                  <td>Razon entre la circunferencia y su diametro</td>
+                </tr>
+                <tr>
+                  <td>e</td>
+                  <td>Numero de Euler</td>
+                  <td>2,71828182845...</td>
+                  <td>Base del logaritmo natural</td>
+                </tr>
+                <tr>
+                  <td>&radic;2</td>
+                  <td>Raiz de 2</td>
+                  <td>1,41421356237...</td>
+                  <td>Diagonal de un cuadrado de lado 1</td>
+                </tr>
+                <tr>
+                  <td>&radic;3</td>
+                  <td>Raiz de 3</td>
+                  <td>1,73205080756...</td>
+                  <td>Diagonal de un rectangulo 1x&radic;2</td>
+                </tr>
+                <tr>
+                  <td>&radic;p</td>
+                  <td>Raiz de primo</td>
+                  <td>---</td>
+                  <td>&radic;p es irracional para todo primo p</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Como construir un irracional</h3>
+            <p>Podemos generar un irracional no famoso construyendo un decimal infinito sin periodo:</p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">1,1</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">1,101</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">1,101001</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">4</span>
+                <span class="construction-step__val">1,1010010001</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">...</span>
+                <span class="construction-step__val">1,101001000100001...</span>
+              </div>
+            </div>
+            <p class="construction-note">
+              Cada vez agregamos un "1" separado por una cantidad creciente de ceros. 
+              No hay forma de encontrar un grupo de digitos que se repita, 
+              por lo tanto es <strong>irracional</strong>.
+            </p>
+          </div>
+
+          <div class="diagram-box">
+            <p class="diagram-box__label">El cuadrado de Pitagoras: origen de &radic;2</p>
+            <div class="square-diagram-container">
+              <svg viewBox="0 0 300 260" class="square-svg">
+                <!-- Square -->
+                <rect x="60" y="30" width="150" height="150" fill="rgba(10,123,143,0.05)" stroke="#0a7b8f" stroke-width="2"/>
+                <!-- Diagonal -->
+                <line x1="60" y1="180" x2="210" y2="30" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="8,4"/>
+                <!-- Labels -->
+                <text x="30" y="110" text-anchor="middle" class="svg-label" fill="#0a7b8f">1</text>
+                <text x="135" y="200" text-anchor="middle" class="svg-label" fill="#0a7b8f">1</text>
+                <text x="160" y="95" text-anchor="middle" class="svg-label svg-label--big" fill="#c0392b" transform="rotate(-45,160,95)">&radic;2</text>
+                <!-- Right angle marker -->
+                <polyline points="60,165 75,165 75,180" fill="none" stroke="#0a7b8f" stroke-width="1.5"/>
+                <!-- Caption -->
+                <text x="135" y="235" text-anchor="middle" class="svg-label svg-label--small" fill="#555">diagonal = &radic;(1&sup2; + 1&sup2;) = &radic;2</text>
+                <text x="135" y="255" text-anchor="middle" class="svg-label svg-label--small" fill="#555">Teorema de Pitagoras</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="comparison-box">
+            <h3 class="comparison-box__title">Racional vs Irracional: la diferencia clave</h3>
+            <div class="comparison-cols">
+              <div class="comparison-col comparison-col--left">
+                <h4>Racional (Q)</h4>
+                <p class="comparison-col__formula">22/7 = 3,<span class="period-mark">142857</span><span class="period-mark">142857</span>...</p>
+                <p>El bloque <span class="period-mark">142857</span> se repite para siempre.</p>
+                <p class="comparison-verdict comparison-verdict--yes">Se puede escribir como fraccion p/q</p>
+              </div>
+              <div class="comparison-col comparison-col--right">
+                <h4>Irracional (I)</h4>
+                <p class="comparison-col__formula">&pi; = 3,14159265358979323846...</p>
+                <p>Los digitos continuan sin repetir ningun patron.</p>
+                <p class="comparison-verdict comparison-verdict--no">NO se puede escribir como fraccion p/q</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REALES ===================== -->
+    <section class="study__section" id="reales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">reales_R.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Numeros Reales</h2>
+            <span class="section__symbol section__symbol--dark">R</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion</p>
+            <p>
+              La <strong>union</strong> de los numeros racionales y los irracionales 
+              forman el conjunto de los numeros reales:
+            </p>
+            <p class="math-display">R = Q &cup; I</p>
+            <p class="definition-box__note">
+              Cada punto de la recta numerica corresponde a exactamente un numero real, 
+              y cada numero real corresponde a un punto de la recta.
+            </p>
+          </div>
+
+          <!-- Nested sets diagram -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Diagrama de conjuntos anidados</p>
+            <div class="nested-sets-container">
+              <svg viewBox="0 0 600 320" class="nested-svg">
+                <!-- R - outermost -->
+                <rect x="10" y="10" width="580" height="300" rx="12" fill="rgba(40,40,60,0.04)" stroke="#333" stroke-width="2.5"/>
+                <text x="30" y="40" class="svg-label svg-label--set svg-label--big" fill="#333">R (Reales)</text>
+
+                <!-- I - right side -->
+                <rect x="370" y="50" width="200" height="240" rx="8" fill="rgba(180,100,40,0.08)" stroke="#b5652a" stroke-width="1.5" stroke-dasharray="6,3"/>
+                <text x="470" y="80" text-anchor="middle" class="svg-label svg-label--set" fill="#b5652a">I (Irracionales)</text>
+                <text x="470" y="130" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">&pi;</text>
+                <text x="470" y="160" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">e</text>
+                <text x="470" y="190" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">&radic;2</text>
+                <text x="470" y="220" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">&radic;3</text>
+                <text x="470" y="250" text-anchor="middle" class="svg-label svg-label--small" fill="#b5652a">&radic;5</text>
+
+                <!-- Q -->
+                <rect x="30" y="50" width="320" height="240" rx="8" fill="rgba(123,45,142,0.06)" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="50" y="80" class="svg-label svg-label--set" fill="#7b2d8e">Q (Racionales)</text>
+
+                <!-- Z -->
+                <rect x="50" y="95" width="280" height="180" rx="6" fill="rgba(42,110,181,0.06)" stroke="#2a6eb5" stroke-width="1.5"/>
+                <text x="70" y="120" class="svg-label svg-label--set" fill="#2a6eb5">Z (Enteros)</text>
+
+                <!-- N -->
+                <rect x="130" y="135" width="180" height="120" rx="5" fill="rgba(10,123,143,0.1)" stroke="#0a7b8f" stroke-width="1.5"/>
+                <text x="150" y="158" class="svg-label svg-label--set" fill="#0a7b8f">N (Naturales)</text>
+                <text x="220" y="195" text-anchor="middle" class="svg-label" fill="#0a7b8f">1, 2, 3, 4, ...</text>
+
+                <!-- Z extras -->
+                <text x="90" y="195" text-anchor="middle" class="svg-label svg-label--small" fill="#2a6eb5">..., -2, -1, 0</text>
+
+                <!-- Q extras -->
+                <text x="170" y="90" text-anchor="middle" class="svg-label svg-label--small" fill="#7b2d8e">1/2, -3/5, 7/3, 0.25, ...</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Cadena de contenencia</h3>
+            <div class="chain-display">
+              <span class="chain-item chain-item--n">N</span>
+              <span class="chain-arrow">&sub;</span>
+              <span class="chain-item chain-item--z">Z</span>
+              <span class="chain-arrow">&sub;</span>
+              <span class="chain-item chain-item--q">Q</span>
+              <span class="chain-arrow">&sub;</span>
+              <span class="chain-item chain-item--r">R</span>
+            </div>
+            <p class="chain-explanation">
+              Todo natural es entero, todo entero es racional, y todo racional es real.
+              <br>Los irracionales son reales que <strong>no</strong> son racionales: I = R &setminus; Q.
+            </p>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Limite del campo real</p>
+            <p>
+              Los reales tampoco resuelven todas las ecuaciones. La ecuacion 
+              <span class="math-inline">x&sup2; + 1 = 0</span> no tiene solucion en R, 
+              ya que requiere <span class="math-inline">x = &radic;(-1)</span>. 
+              Para eso existen los numeros <strong>complejos</strong> (tema posterior).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPIEDADES ===================== -->
+    <section class="study__section" id="propiedades">
+      <div class="section__window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">propiedades_R.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Propiedades de los Numeros Reales</h2>
+          <p>Sean a, b, c numeros reales.</p>
+
+          <div class="prop-table-container">
+            <table class="data-table data-table--props">
+              <thead>
+                <tr>
+                  <th>Propiedad</th>
+                  <th>Suma (+)</th>
+                  <th>Producto (&middot;)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Conmutativa</strong></td>
+                  <td>a + b = b + a</td>
+                  <td>a &middot; b = b &middot; a</td>
+                </tr>
+                <tr>
+                  <td><strong>Asociativa</strong></td>
+                  <td>(a + b) + c = a + (b + c)</td>
+                  <td>(a &middot; b) &middot; c = a &middot; (b &middot; c)</td>
+                </tr>
+                <tr>
+                  <td><strong>Elemento neutro</strong></td>
+                  <td>a + 0 = a</td>
+                  <td>a &middot; 1 = a</td>
+                </tr>
+                <tr>
+                  <td><strong>Elemento inverso</strong></td>
+                  <td>a + (-a) = 0</td>
+                  <td>a &middot; (1/a) = 1 &nbsp;(a &ne; 0)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="prop-special">
+            <h3 class="prop-special__title">Distributividad</h3>
+            <div class="prop-special__grid">
+              <div class="prop-special__card prop-special__card--yes">
+                <p class="prop-special__label">Valida</p>
+                <p class="prop-special__formula">a &middot; (b + c) = a&middot;b + a&middot;c</p>
+                <p class="prop-special__desc">
+                  El producto distribuye sobre la suma.
+                </p>
+              </div>
+              <div class="prop-special__card prop-special__card--yes">
+                <p class="prop-special__label">Valida</p>
+                <p class="prop-special__formula">(a + b) / c = a/c + b/c</p>
+                <p class="prop-special__desc">
+                  El cociente distribuye sobre la suma <strong>si la suma esta en el numerador</strong> (c &ne; 0).
+                </p>
+              </div>
+              <div class="prop-special__card prop-special__card--no">
+                <p class="prop-special__label">NO valida</p>
+                <p class="prop-special__formula">a / (b + c) &ne; a/b + a/c</p>
+                <p class="prop-special__desc">
+                  La suma en el <strong>denominador</strong> no se puede distribuir.
+                </p>
+                <p class="prop-special__example">
+                  Ejemplo: 12/(3+2) = 12/5 = 2,4 &nbsp; pero &nbsp; 12/3 + 12/2 = 4 + 6 = 10
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prop-special">
+            <h3 class="prop-special__title">Propiedades sobre igualdades</h3>
+            <div class="equality-props">
+              <div class="equality-prop">
+                <p class="equality-prop__rule">Si a = b, entonces a + c = b + c</p>
+                <p class="equality-prop__desc">Se puede sumar (o restar) lo mismo a ambos miembros.</p>
+              </div>
+              <div class="equality-prop">
+                <p class="equality-prop__rule">Si a = b, entonces a &middot; c = b &middot; c</p>
+                <p class="equality-prop__desc">Se puede multiplicar ambos miembros por lo mismo.</p>
+              </div>
+              <div class="equality-prop">
+                <p class="equality-prop__rule">Si a = b y c &ne; 0, entonces a/c = b/c</p>
+                <p class="equality-prop__desc">Se puede dividir ambos miembros por lo mismo (no nulo).</p>
+              </div>
+              <div class="equality-prop">
+                <p class="equality-prop__rule">Si a &middot; b = 0, entonces a = 0 o b = 0</p>
+                <p class="equality-prop__desc">Propiedad del producto nulo: si un producto es cero, al menos uno de los factores es cero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="potenciacion.html" class="nav-link">Siguiente: Potenciacion y Radicacion &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Ivan Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
