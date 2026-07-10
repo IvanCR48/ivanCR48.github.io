@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion polinomica, grado y ceros. Funcion potencial, algoritmo de la division, regla de Ruffini, teorema del resto, teorema de Gauss y casos de factoreo. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Funcion Polinomica | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="funciones.html" class="navbar__btn">Funciones</a>
+      <a href="funcion_lineal.html" class="navbar__btn">Funcion Lineal</a>
+      <a href="funcion_cuadratica.html" class="navbar__btn">Funcion Cuadratica</a>
+      <a href="#definicion" class="navbar__btn">Definicion</a>
+      <a href="#potencial" class="navbar__btn">Funcion Potencial</a>
+      <a href="#division" class="navbar__btn">Division</a>
+      <a href="#factorizacion" class="navbar__btn">Factorizacion</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funcion_polinomica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 5</p>
+          <h1 class="study__title">Función Polinómica</h1>
+          <p class="study__intro">
+            Estudio de polinomios en variable real, grado, ceros, funcion potencial, algoritmo de la division de polinomios, Regla de Ruffini, Teorema de Gauss y factorizacion.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">4.1 Definicion, Grado y Ceros</a></li>
+              <li><a href="#potencial">4.2 Funcion Potencial (Exponentes pares e impares)</a></li>
+              <li><a href="#division">4.3 Division de Polinomios (Ruffini y Teorema del Resto)</a></li>
+              <li><a href="#factorizacion">4.4 Raices, Factorizacion y Teorema de Gauss</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="funcion_cuadratica.html" class="nav-link nav-link--prev">&larr; Secc 4: Funcion Cuadratica</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">definicion_polinomica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">4.1 Definicion, Grado y Ceros</h2>
+            <span class="section__symbol">P(x) = a<sub>n</sub>x<sup>n</sup> + ... + a<sub>0</sub></span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Una funcion polinómica es aquella definida por una suma de terminos formados por productos de coeficientes reales y potencias enteras no negativas de la variable independiente.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>
+              Una funcion <strong>f: R &rarr; R</strong> es polinómica si es de la forma:
+            </p>
+            <p class="math-display">f(x) = a<sub>n</sub>x<sup>n</sup> + a<sub>n-1</sub>x<sup>n-1</sup> + ... + a<sub>1</sub>x + a<sub>0</sub></p>
+            <p>
+              Donde los coeficientes <strong>a<sub>i</sub></strong> son numeros reales, <strong>n</strong> es un entero no negativo (n &isin; N<sub>0</sub>), y <strong>a<sub>n</sub> &ne; 0</strong> (siendo el coeficiente principal).
+            </p>
+            <p class="definition-box__note" style="margin-top:10px;">
+              El dominio de cualquier funcion polinómica es <strong>Dom f = R</strong>.
+              <br>El exponente <strong>n</strong> mas alto cuyo coeficiente es distinto de cero define el <strong>grado</strong> del polinomio (gr P).
+            </p>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Grado y Ceros</h3>
+            <p>
+              &bull; <strong>Termino Independiente (a<sub>0</sub>):</strong> Es el termino de grado cero. Graficamente, representa la ordenada al origen: f(0) = a<sub>0</sub>.
+              <br>&bull; <strong>Polinomio Nulo:</strong> P(x) = 0 es el unico polinomio que <strong>no tiene grado</strong> asignado.
+              <br>&bull; <strong>Cero o Raiz:</strong> Un numero real <strong>r</strong> es un cero de la funcion polinómica si y solo si <strong>f(r) = 0</strong>.
+            </p>
+            <p class="construction-note" style="border-left-color:#c0392b; background:#fcf8f8;">
+              <strong>¡Cuidado!</strong> Las constantes reales no nulas (ej. P(x) = 4) son polinomios de <strong>grado cero</strong> y no admiten raices en R.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUNCION POTENCIAL ===================== -->
+    <section class="study__section" id="potencial">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">funcion_potencial.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.2 Funcion Potencial</h2>
+          
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Las funciones polinómicas mas elementales son las de la forma <strong>f(x) = a &middot; x<sup>n</sup></strong>, conocidas como <strong>funciones potenciales</strong>. Sus caracteristicas graficas dependen de la paridad de n.
+          </p>
+
+          <div class="comparison-cols">
+            <!-- Exponente Par -->
+            <div class="comparison-col comparison-col--left">
+              <h4 style="color:#1a8a5a;">Exponente n Par (a &gt; 0)</h4>
+              <p>&bull; Graficas similares a una parabola (U-shape), pero mas chatas cerca del origen y mas empinadas fuera de [-1, 1].</p>
+              <p>&bull; Simetria respecto al <strong>eje y</strong> (funcion par: f(-x) = f(x)).</p>
+              <p>&bull; Imagen: <strong>Im f = [0; &infin;)</strong>.</p>
+              <p>&bull; Raices: El unico cero es <strong>x = 0</strong>.</p>
+            </div>
+
+            <!-- Exponente Impar -->
+            <div class="comparison-col comparison-col--right" style="background:#fafafa; border-color:#e0e0e0;">
+              <h4 style="color:#0a7b8f;">Exponente n Impar (a &gt; 0)</h4>
+              <p>&bull; Graficas con aspecto de silla (S-shape) que pasan por el origen.</p>
+              <p>&bull; Simetria respecto al <strong>origen de coordenadas</strong> (funcion impar: f(-x) = -f(x)).</p>
+              <p>&bull; Imagen: <strong>Im f = R</strong>.</p>
+              <p>&bull; Raices: El unico cero es <strong>x = 0</strong>.</p>
+            </div>
+          </div>
+
+          <!-- SVG Graphs for Potential Functions -->
+          <div class="properties-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:var(--space-md); margin-top:var(--space-md);">
+            <!-- Even Powers Graph -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">Funciones potenciales de exponente par</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:250px;">
+                  <!-- Grid -->
+                  <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                  <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                  <!-- Axes -->
+                  <line x1="20" y1="150" x2="280" y2="150" stroke="#777" stroke-width="1.5"/>
+                  <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/>
+                  
+                  <!-- y = x^2 (Green) -->
+                  <path d="M 70 30 Q 150 270 230 30" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                  <text x="235" y="40" font-size="7" font-family="monospace" fill="#1a8a5a">y = x^2</text>
+
+                  <!-- y = x^4 (Teal) -->
+                  <path d="M 98 64 C 110 135 130 150 150 150 C 170 150 190 135 202 64" fill="none" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="3,1"/>
+                  <text x="210" y="70" font-size="7" font-family="monospace" fill="#0a7b8f">y = x^4</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Odd Powers Graph -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">Funciones potenciales de exponente impar</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:250px;">
+                  <!-- Grid -->
+                  <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                  <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                  <!-- Axes -->
+                  <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/>
+                  <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/>
+                  
+                  <!-- y = x^3 (Green) -->
+                  <path d="M 90 211 C 110 160 130 110 150 110 C 170 110 190 60 210 9" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                  <text x="215" y="15" font-size="7" font-family="monospace" fill="#1a8a5a">y = x^3</text>
+
+                  <!-- y = x^5 (Teal) -->
+                  <path d="M 98 221 C 115 130 135 110 150 110 C 165 110 185 90 202 -1" fill="none" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="3,1"/>
+                  <text x="185" y="25" font-size="7" font-family="monospace" fill="#0a7b8f">y = x^5</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIVISION DE POLINOMIOS ===================== -->
+    <section class="study__section" id="division">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">division_polinomios.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.3 Division de Polinomios</h2>
+          
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Al igual que en los numeros enteros, la division de dos polinomios P(x) y Q(x) &ne; 0 produce un cociente C(x) y un resto R(x) que cumplen con el algoritmo de la division.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Algoritmo de la Division</p>
+            <p>
+              Existen y son unicos dos polinomios <strong>C(x)</strong> y <strong>R(x)</strong> tales que:
+            </p>
+            <p class="math-display">P(x) = Q(x) &middot; C(x) + R(x)</p>
+            <p>
+              Donde <strong>R(x) = 0</strong> o bien <strong>gr R(x) &lt; gr Q(x)</strong>.
+            </p>
+          </div>
+
+          <!-- Regla de Ruffini -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">La Regla de Ruffini</h3>
+            <p>
+              Es un metodo simplificado para calcular el cociente y el resto cuando el divisor es de la forma <strong>Q(x) = x - a</strong>.
+            </p>
+            
+            <p class="construction-note" style="background:#fcfaf5; border-left:3px solid #b5652a;">
+              <strong>Ejemplo (PDF):</strong> Dividir &nbsp;<span class="math-inline">P(x) = 3x<sup>3</sup> - 3x - 8x<sup>2</sup> - 10</span>&nbsp; por &nbsp;<span class="math-inline">Q(x) = x - 2</span>.
+              <br>1. Completamos y ordenamos P(x): &nbsp;<span class="math-inline">3x<sup>3</sup> - 8x<sup>2</sup> - 3x - 10</span>. Coeficientes: 3, -8, -3, -10.
+              <br>2. El opuesto de -2 en el divisor es 2.
+            </p>
+
+            <!-- Ruffini Table Scheme -->
+            <div class="table-container" style="max-width:280px; margin: 15px auto;">
+              <table style="border-collapse:collapse; font-family:monospace; font-size:1.1rem; width:100%; text-align:center;">
+                <tr style="border-bottom:2px solid #777;">
+                  <td style="border-right:2px solid #777; width:20%; color:#888;">a = 2</td>
+                  <td style="width:20%;">3</td>
+                  <td style="width:20%;">-8</td>
+                  <td style="width:20%;">-3</td>
+                  <td style="width:20%;">-10</td>
+                </tr>
+                <tr>
+                  <td style="border-right:2px solid #777; color:#888;"></td>
+                  <td></td>
+                  <td style="color:#2a6eb5;">6</td>
+                  <td style="color:#2a6eb5;">-4</td>
+                  <td style="color:#2a6eb5;">-14</td>
+                </tr>
+                <tr style="border-top:2px solid #777; font-weight:bold;">
+                  <td style="border-right:2px solid #777; color:#888;"></td>
+                  <td>3</td>
+                  <td>-2</td>
+                  <td>-7</td>
+                  <td style="background:#fde8e8; color:#c0392b; border:1px dashed #c0392b;">-24</td>
+                </tr>
+              </table>
+            </div>
+
+            <p>
+              El cociente resultante es de un grado menor: &nbsp;<strong>C(x) = 3x<sup>2</sup> - 2x - 7</strong>
+              <br>El resto obtenido es: &nbsp;<strong>R = -24</strong>.
+            </p>
+          </div>
+
+          <!-- Teorema del Resto -->
+          <div class="key-concept" style="border-color:#dcd0e8; background:#fbfafc;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Teorema del Resto y Divisibilidad</h3>
+            <p>
+              <strong>Teorema:</strong> El resto de dividir un polinomio P(x) por un binomio de la forma (x - a) es igual a especializar el polinomio en x = a. Es decir:
+              <br><span class="math-display">R = P(a)</span>
+            </p>
+            <p>
+              <strong>Consecuencia (Divisibilidad):</strong> Un polinomio P(x) es divisible por (x - a) si y solo si <strong>P(a) = 0</strong> (es decir, si y solo si <strong>a</strong> es raiz de P(x)).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FACTORIZACION Y GAUSS ===================== -->
+    <section class="study__section" id="factorizacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">factorizacion_gauss.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.4 Raices, Factorizacion y Teorema de Gauss</h2>
+          
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La factorizacion consiste en expresar un polinomio de grado n como un producto de su coeficiente principal a<sub>n</sub> y polinomios primos monicos.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Teorema de Gauss (Raices Racionales)</h3>
+            <p>
+              Sea P(x) un polinomio con <strong>coeficientes enteros</strong>. Si la fraccion irreducible <strong>r = p / q</strong> es una raiz racional de P(x), entonces:
+              <br>&bull; El numerador <strong>p</strong> es divisor del termino independiente <strong>a<sub>0</sub></strong>.
+              <br>&bull; El denominador <strong>q</strong> es divisor del coeficiente principal <strong>a<sub>n</sub></strong>.
+            </p>
+          </div>
+
+          <!-- Solved Example of Gauss -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo de Gauss y Factorizacion (PDF)</h3>
+            <p>
+              Factorizar completamente el polinomio: &nbsp;<strong>P(x) = 2x<sup>3</sup> - 5x<sup>2</sup> - 4x + 3</strong>.
+            </p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">
+                  <strong>Identificar divisores:</strong>
+                  <br>Divisores de a<sub>0</sub> = 3 (p): &nbsp; &plusmn;1, &plusmn;3.
+                  <br>Divisores de a<sub>n</sub> = 2 (q): &nbsp; &plusmn;1, &plusmn;2.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">
+                  <strong>Armar candidatos (p / q):</strong>
+                  <br>Candidatos: &nbsp; &plusmn;1, &nbsp; &plusmn;3, &nbsp; &plusmn;1/2, &nbsp; &plusmn;3/2.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">
+                  <strong>Evaluar candidatos (Teorema del Resto):</strong>
+                  <br>&bull; P(1) = 2(1)<sup>3</sup> - 5(1)<sup>2</sup> - 4(1) + 3 = -4 &ne; 0 (no es raiz).
+                  <br>&bull; P(-1) = 2(-1)<sup>3</sup> - 5(-1)<sup>2</sup> - 4(-1) + 3 = -2 - 5 + 4 + 3 = <strong>0</strong> &rArr; <strong>x<sub>1</sub> = -1</strong> es raiz.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">4</span>
+                <span class="construction-step__val">
+                  <strong>Dividir por Ruffini para reducir grado:</strong>
+                  <br>Dividimos P(x) por (x + 1) usando los coeficientes [2, -5, -4, 3] y el valor -1:
+                  <br>Obtenemos el cociente: &nbsp;<strong>C(x) = 2x<sup>2</sup> - 7x + 3</strong>.
+                  <br>Asi, P(x) = (x + 1)(2x<sup>2</sup> - 7x + 3).
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">5</span>
+                <span class="construction-step__val">
+                  <strong>Hallar raices del polinomio de grado 2 restante:</strong>
+                  <br>Resolvemos &nbsp;2x<sup>2</sup> - 7x + 3 = 0&nbsp; con la resolvente cuadratica:
+                  <br>x = [7 &plusmn; &radic;((-7)<sup>2</sup> - 4 &middot; 2 &middot; 3)] / (2 &middot; 2) = [7 &plusmn; &radic;(49 - 24)] / 4 = [7 &plusmn; 5] / 4.
+                  <br>Obtenemos: &nbsp;<strong>x<sub>2</sub> = 3</strong> &nbsp; y &nbsp; <strong>x<sub>3</sub> = 1/2</strong>.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">6</span>
+                <span class="construction-step__val">
+                  <strong>Escribir la forma factorizada final:</strong>
+                  <br>Multiplicamos el coeficiente principal por cada binomio monico:
+                  <br><strong>P(x) = 2(x + 1)(x - 3)(x - 1/2)</strong>.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cubic function graph -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de P(x) = 2x<sup>3</sup> - 5x<sup>2</sup> - 4x + 3</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 240" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180 M 0 210 L 300 210" stroke="#f5f5f5" stroke-width="1"/>
+                <path d="M 20 0 L 20 240 M 50 0 L 50 240 M 80 0 L 80 240 M 110 0 L 110 240 M 140 0 L 140 240 M 170 0 L 170 240 M 200 0 L 200 240 M 230 0 L 230 240 M 260 0 L 260 240" stroke="#f5f5f5" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (110, 110), scale x:30px/u, y:10px/u -->
+                <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="282" y="114" font-size="9" font-family="monospace">x</text>
+                <line x1="110" y1="10" x2="110" y2="230" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="104" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- Roots points -->
+                <!-- x = -1 -> (80, 110) -->
+                <circle cx="80" cy="110" r="3.5" fill="#c0392b"/>
+                <text x="80" y="123" font-size="7" font-family="monospace" fill="#c0392b" text-anchor="middle">-1</text>
+
+                <!-- x = 1/2 -> (125, 110) -->
+                <circle cx="125" cy="110" r="3.5" fill="#c0392b"/>
+                <text x="125" y="123" font-size="7" font-family="monospace" fill="#c0392b" text-anchor="middle">1/2</text>
+
+                <!-- x = 3 -> (200, 110) -->
+                <circle cx="200" cy="110" r="3.5" fill="#c0392b"/>
+                <text x="200" y="123" font-size="7" font-family="monospace" fill="#c0392b" text-anchor="middle">3</text>
+
+                <!-- Cubic curve path -->
+                <path d="M 65 200 C 80 120 90 73 100 73 C 115 73 150 200 170 200 C 190 200 200 50 215 -10" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center;">
+              La curva cruza el eje X exactamente en sus tres raices reales: <strong>-1</strong>, <strong>1/2</strong> y <strong>3</strong>.
+            </p>
+          </div>
+
+          <!-- Casos de Factoreo -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Casos Clasicos de Factoreo</h3>
+            <div class="table-container">
+              <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                <thead>
+                  <tr style="background:var(--color-header); border-bottom:2px solid var(--color-border-dark);">
+                    <th style="padding:8px; border:1px solid var(--color-border-light); text-align:left;">Caso de Factoreo</th>
+                    <th style="padding:8px; border:1px solid var(--color-border-light); text-align:left;">Formula Algebraica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-weight:bold;">1. Factor Comun</td>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-family:monospace;">ax + ay + az = a(x + y + z)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-weight:bold;">2. Diferencia de Cuadrados</td>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-family:monospace;">x<sup>2</sup> - y<sup>2</sup> = (x - y)(x + y)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-weight:bold;">3. Trinomio Cuadrado Perfecto</td>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-family:monospace;">x<sup>2</sup> &plusmn; 2xy + y<sup>2</sup> = (x &plusmn; y)<sup>2</sup></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-weight:bold;">4. Cuatrinomio Cubo Perfecto</td>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-family:monospace;">x<sup>3</sup> &plusmn; 3x<sup>2</sup>y + 3xy<sup>2</sup> &plusmn; y<sup>3</sup> = (x &plusmn; y)<sup>3</sup></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-weight:bold;">5. Suma/Resta Potencias Igual Grado</td>
+                    <td style="padding:8px; border:1px solid var(--color-border-light); font-family:monospace;">x<sup>n</sup> &plusmn; y<sup>n</sup> = (x &mp; y)(x<sup>n-1</sup> &plusmn; ...)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="funcion_racional_irracional.html" class="nav-link">Siguiente: Funciones Racionales e Irracionales &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

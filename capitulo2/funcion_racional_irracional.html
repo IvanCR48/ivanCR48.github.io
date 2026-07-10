@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion racional, asintotas, ceros, funciones irracionales y resolucion de ecuaciones racionales e irracionales con raices extranas. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Funciones Racionales e Irracionales | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="funciones.html" class="navbar__btn">Funciones</a>
+      <a href="funcion_lineal.html" class="navbar__btn">Funcion Lineal</a>
+      <a href="funcion_cuadratica.html" class="navbar__btn">Funcion Cuadratica</a>
+      <a href="funcion_polinomica.html" class="navbar__btn">Funcion Polinomica</a>
+      <a href="#racional" class="navbar__btn">Racionales</a>
+      <a href="#irracional" class="navbar__btn">Irracionales</a>
+      <a href="#ecuaciones" class="navbar__btn">Ecuaciones</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">racionales_irracionales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 6</p>
+          <h1 class="study__title">Funciones Racionales e Irracionales</h1>
+          <p class="study__intro">
+            Estudio de funciones racionales y fraccionarias, asintotas horizontales y verticales, discontinuidades (puntos vacios), funciones irracionales de indice par o impar, y analisis de ecuaciones con raices extranas.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#racional">5. Funcion Racional (Concepto, Asintotas y Ceros)</a></li>
+              <li><a href="#irracional">6. Funcion Irracional (Definicion, Dominio y Ceros)</a></li>
+              <li><a href="#ecuaciones">7. Ecuaciones Racionales e Irracionales</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="funcion_polinomica.html" class="nav-link nav-link--prev">&larr; Secc 5: Funcion Polinomica</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== FUNCION RACIONAL ===================== -->
+    <section class="study__section" id="racional">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">funcion_racional.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">5. Funcion Racional</h2>
+            <span class="section__symbol">f(x) = P(x) / Q(x)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Llamamos funcion racional al cociente de dos polinomios reales. Su dominio esta restringido por los valores que anulan al denominador.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>
+              Una funcion <strong>f: A &rarr; R</strong> es racional si es de la forma:
+            </p>
+            <p class="math-display">f(x) = P(x) / Q(x)</p>
+            <p>
+              Donde <strong>P(x)</strong> y <strong>Q(x)</strong> son polinomios con <strong>Q(x) &ne; 0</strong>.
+              <br>El dominio de definicion es:
+            </p>
+            <p class="math-display">Dom f = { x &isin; R &nbsp;|&nbsp; Q(x) &ne; 0 }</p>
+          </div>
+
+          <!-- Asintotas -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Analisis de Asintotas</h3>
+            <p>
+              Las asintotas son rectas a las cuales la grafica de la funcion se aproxima indefinidamente a medida que la variable tiende a un determinado valor o al infinito.
+            </p>
+            <div class="properties-grid">
+              <div class="property-card">
+                <h4 class="property-card__title">Asintota Vertical (A.V.)</h4>
+                <p class="property-card__formula">x = a</p>
+                <p class="property-card__example">
+                  Si <strong>a</strong> es una raiz del denominador Q(x) y no anula al numerador P(x) (P(a) &ne; 0), entonces la recta vertical <strong>x = a</strong> es una A.V.
+                </p>
+              </div>
+              <div class="property-card">
+                <h4 class="property-card__title">Asintota Horizontal (A.H.)</h4>
+                <p class="property-card__formula">y = k</p>
+                <p class="property-card__example">
+                  &bull; Si gr P &lt; gr Q &rArr; A.H. es <strong>y = 0</strong>.
+                  <br>&bull; Si gr P = gr Q &rArr; A.H. es <strong>y = a<sub>n</sub> / b<sub>m</sub></strong> (cociente de coeficientes principales).
+                  <br>&bull; Si gr P &gt; gr Q &rArr; <strong>No tiene A.H.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graph of y = 1/x -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de la funcion racional elemental y = 1/x</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (150, 110), scale 30px per unit -->
+                <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+
+                <!-- Asymptotes (dashed) -->
+                <!-- x=0 and y=0 are the axes. No additional lines needed since they overlap, but we highlight A.V. / A.H. -->
+                <text x="270" y="105" font-size="7" font-family="monospace" fill="#c0392b">A.H. y = 0</text>
+                <text x="155" y="25" font-size="7" font-family="monospace" fill="#c0392b">A.V. x = 0</text>
+
+                <!-- Left Branch: y = 1/x, x < 0 -->
+                <!-- x = -0.33 -> y = -3 (140, 200). x = -1 -> y = -1 (120, 140). x = -3 -> y = -0.33 (60, 120) -->
+                <path d="M 60 120 Q 120 120 120 140 Q 120 200 140 200" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+
+                <!-- Right Branch: y = 1/x, x > 0 -->
+                <!-- x = 0.33 -> y = 3 (160, 20). x = 1 -> y = 1 (180, 80). x = 3 -> y = 0.33 (240, 100) -->
+                <path d="M 160 20 Q 180 80 180 80 Q 180 100 240 100" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Discontinuidad y Agujero -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ceros de la funcion y Puntos Vacios ("Agujeros")</h3>
+            <p>
+              &bull; <strong>Ceros:</strong> Son las raices del numerador P(x) que <strong>pertenecen</strong> al Dom f.
+              <br>&bull; <strong>Puntos vacios:</strong> Si un valor <strong>x = a</strong> anula simultaneamente a P(x) y Q(x), al simplificar la fraccion el factor (x - a) se elimina. La grafica sera identica a la simplificada, pero con un <strong>punto vacio o agujero</strong> en x = a.
+            </p>
+            <p class="construction-note" style="background:#fff; border-left-color:#2a6eb5;">
+              <strong>Ejemplo (PDF):</strong> &nbsp;<span class="math-inline">g(x) = (x<sup>2</sup> - 9) / (x - 3)</span>.
+              <br>Dominio: Dom g = R &setminus; {3}.
+              <br>Factorizando: &nbsp;<span class="math-inline">g(x) = [(x - 3)(x + 3)] / (x - 3) = x + 3</span> &nbsp;(si x &ne; 3).
+              <br>La grafica es la recta &nbsp;<span class="math-inline">y = x + 3</span>&nbsp; con un "agujero" en el punto <strong>(3, 6)</strong>.
+            </p>
+          </div>
+
+          <!-- SVG graph for a function with a hole -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Recta y = x + 3 con punto vacio en (3,6)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (90, 180), scale 20px per unit -->
+                <line x1="20" y1="180" x2="280" y2="180" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <line x1="90" y1="10" x2="90" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+
+                <!-- y = x + 3 -> passes through (0,3)->(90, 120), (-3,0)->(30,180), (3,6)->(150, 60) -->
+                <line x1="20" y1="190" x2="146" y2="64" stroke="#1a8a5a" stroke-width="2"/>
+                <line x1="154" y1="56" x2="260" y2="-50" stroke="#1a8a5a" stroke-width="2"/>
+
+                <!-- Open circle at (3,6) -> (150, 60) -->
+                <circle cx="150" cy="60" r="4.5" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+                <text x="160" y="64" font-size="8" font-family="monospace" fill="#c0392b">(3, 6) Agujero</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUNCION IRRACIONAL ===================== -->
+    <section class="study__section" id="irracional">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">funcion_irracional.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">6. Funcion Irracional</h2>
+            <span class="section__symbol section__symbol--blue">y = <sup>n</sup>&radic;R(x)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Una funcion es irracional cuando la variable independiente esta afectada por la operacion de radicacion.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Dominio segun el Indice n</p>
+            <p>
+              Dada la funcion &nbsp;<strong>y = <sup>n</sup>&radic;P(x)</strong>:
+            </p>
+            <p>
+              &bull; <strong>Si n es par:</strong> La raiz real existe solo si el radicando es positivo o nulo:
+              <br><span class="math-display">Dom f = { x &isin; Dom P &nbsp;|&nbsp; P(x) &ge; 0 }</span>
+              <br>&bull; <strong>Si n es impar:</strong> La raiz real existe para cualquier valor real, conservando el signo del radicando:
+              <br><span class="math-display">Dom f = Dom P</span>
+            </p>
+          </div>
+
+          <!-- SVG Graphs of Irrational Functions -->
+          <div class="properties-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:var(--space-md); margin-top:var(--space-md);">
+            <!-- Even Index: Root of x -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">y = &radic;x  y  y = -&radic;x (Ramas de Parabola)</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:250px;">
+                  <!-- Grid -->
+                  <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                  <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                  <!-- Axes: Origin (60, 110), scale 20px/u -->
+                  <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/>
+                  <line x1="60" y1="10" x2="60" y2="210" stroke="#777" stroke-width="1.5"/>
+                  
+                  <!-- y = sqrt(x) (Green) -->
+                  <!-- points: (0,0), (1,1)->(80,90), (4,2)->(140,70), (9,3)->(240,50) -->
+                  <path d="M 60 110 Q 100 70 240 50" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                  <text x="210" y="42" font-size="7" font-family="monospace" fill="#1a8a5a">y = &radic;x</text>
+
+                  <!-- y = -sqrt(x) (Red, dashed) -->
+                  <path d="M 60 110 Q 100 150 240 170" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,1"/>
+                  <text x="210" y="185" font-size="7" font-family="monospace" fill="#c0392b">y = -&radic;x</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Odd Index: Cubic root of x -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">y = <sup>3</sup>&radic;x (Definida en R)</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:250px;">
+                  <!-- Grid -->
+                  <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                  <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                  <!-- Axes: Origin (150, 110), scale 15px/u -->
+                  <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/>
+                  <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/>
+                  
+                  <!-- y = x^(1/3) -->
+                  <!-- points: (0,0), (1,1)->(165,95), (8,2)->(270,80), (-1,-1)->(135,125), (-8,-2)->(30,140) -->
+                  <path d="M 30 140 C 90 125 135 125 150 110 C 165 95 210 95 270 80" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+                  <text x="215" y="73" font-size="7" font-family="monospace" fill="#2a6eb5">y = <sup>3</sup>&radic;x</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECUACIONES RACIONALES E IRRACIONALES ===================== -->
+    <section class="study__section" id="ecuaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ecuaciones_asociadas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">7. Ecuaciones Racionales e Irracionales</h2>
+          
+          <!-- Ecuaciones Racionales -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ecuaciones Racionales</h3>
+            <p>
+              Una ecuacion racional tiene la forma <span class="math-inline">P(x) / Q(x) = 0</span>. Su resolucion consiste en buscar las raices del numerador P(x) que <strong>pertenezcan al dominio de la funcion</strong> (es decir, que no anulen a Q(x)).
+            </p>
+            <p class="construction-note" style="background:#fcfaf5; border-left:3px solid #b5652a;">
+              <strong>Ejemplo (PDF):</strong> Resolver &nbsp;<span class="math-inline">(x<sup>2</sup> - x - 2) / (x<sup>2</sup> + 4x + 3) = 0</span>.
+              <br>1. <strong>Dominio:</strong> x<sup>2</sup> + 4x + 3 = 0 &rArr; (x + 1)(x + 3) = 0 &rArr; Dom = R &setminus; {-1, -3}.
+              <br>2. <strong>Ceros del Numerador:</strong> x<sup>2</sup> - x - 2 = 0 &rArr; (x - 2)(x + 1) = 0 &rArr; x = 2 &nbsp;&oacute;&nbsp; x = -1.
+              <br>3. <strong>Filtro de Dominio:</strong> El valor x = -1 no pertenece al dominio. La unica solucion es <strong>S = {2}</strong>.
+            </p>
+          </div>
+
+          <!-- Ecuaciones Irracionales -->
+          <div class="key-concept" style="border-color:#dcd0e8; background:#fbfafc;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Ecuaciones Irracionales y Raices Extranas</h3>
+            <p>
+              Para eliminar las raices de una ecuacion irracional, elevamos ambos miembros de la ecuacion a la potencia del indice.
+            </p>
+            
+            <div class="properties-grid" style="grid-template-columns:1fr; margin-bottom:15px;">
+              <div class="property-card" style="border-color:#e0b8b8; background:#faf5f5; color:#c0392b;">
+                <h4 class="property-card__title" style="color:#c0392b;">&iexcl;IMPORTANTE! Raices Extranas</h4>
+                <p>
+                  Al elevar ambos miembros a un exponente par, <strong>no siempre se obtiene una ecuacion equivalente</strong>. Pueden aparecer soluciones ficticias llamadas <strong>raices extranas</strong>. 
+                  <br>Es obligatorio <strong>verificar todas las soluciones</strong> en la ecuacion original.
+                </p>
+              </div>
+            </div>
+
+            <div class="note-box" style="background:#fff;">
+              <strong>Ejemplo algebraico (PDF):</strong> Considere la ecuacion simple:
+              <p class="math-display">x + 3 = 5 &nbsp;&nbsp;(Solucion: x = 2)</p>
+              Si elevamos al cuadrado ambos miembros:
+              <p class="math-display">(x + 3)<sup>2</sup> = 25 &nbsp;&rArr;&nbsp; x<sup>2</sup> + 6x + 9 = 25 &nbsp;&rArr;&nbsp; x<sup>2</sup> + 6x - 16 = 0</p>
+              Resolviendo la cuadratica obtenemos:
+              <p class="math-display">x<sub>1</sub> = 2 &nbsp;&nbsp;y&nbsp;&nbsp; x<sub>2</sub> = -8</p>
+              El valor <strong>x = -8</strong> es una <strong>raiz extrana</strong>, pues no verifica la ecuacion original (-8 + 3 &ne; 5).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
