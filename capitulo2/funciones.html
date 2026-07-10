@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Concepto de funcion, dominio e imagen — Definicion de funcion, variables independientes y dependientes, calculo de dominios e imagenes. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Funciones | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="#definicion" class="navbar__btn">Definicion</a>
+      <a href="#mapeo" class="navbar__btn">Mapeo</a>
+      <a href="#dominio" class="navbar__btn">Dominio</a>
+      <a href="#imagen" class="navbar__btn">Imagen</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funciones_algebraicas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 1</p>
+          <h1 class="study__title">Funciones</h1>
+          <p class="study__intro">
+            Concepto de funcion, definicion de dominio, codominio e imagen, variables y evaluacion de funciones.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">Definicion de funcion</a></li>
+              <li><a href="#mapeo">Representacion grafica (Mapeo)</a></li>
+              <li><a href="#dominio">Dominio de una funcion</a></li>
+              <li><a href="#imagen">Imagen de una funcion</a></li>
+              <li><a href="#evaluacion">Ejemplos de evaluacion y descarte</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="../capitulo1/desigualdades.html" class="nav-link nav-link--prev">&larr; Cap I: Desigualdades</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">definicion_funcion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Definicion de Funcion</h2>
+            <span class="section__symbol">f: A&rarr;B</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            En la practica, el valor de una variable suele depender del de otra (ej. la distancia recorrida depende del tiempo). 
+            Representamos esta relacion a traves de una funcion.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>
+              Una funcion <strong>f: A &rarr; B</strong> es una correspondencia que a 
+              <strong>cada</strong> elemento <strong>x</strong> que pertenece al conjunto <strong>A</strong> 
+              le asigna un <strong>unico</strong> elemento <strong>y</strong> que pertenece al conjunto <strong>B</strong>.
+            </p>
+            <p class="definition-box__note" style="margin-top:10px;">
+              Se lee: <em>"f de A en B"</em>. 
+              <br>El conjunto <strong>A</strong> se denomina <strong>dominio</strong>.
+              <br>El conjunto <strong>B</strong> se denomina <strong>codominio</strong>.
+            </p>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Variable Independiente (x)</h4>
+              <p class="property-card__formula">x &isin; A</p>
+              <p class="property-card__example">Es la variable a la que se le asignan valores libremente del dominio.</p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Variable Dependiente (y)</h4>
+              <p class="property-card__formula">y = f(x) &isin; B</p>
+              <p class="property-card__example">Representa el valor particular que corresponde al valor elegido de x.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MAPEO ===================== -->
+    <section class="study__section" id="mapeo">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">diagrama_mapeo.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Representacion Grafica: Mapeo de Conjuntos</h2>
+          
+          <div class="comparison-cols">
+            <!-- Es Funcion -->
+            <div class="comparison-col comparison-col--left">
+              <h4>Es una Funcion</h4>
+              <div class="diagram-box" style="margin: 10px 0; background:transparent; border:none; padding:0;">
+                <svg viewBox="0 0 250 150" class="square-svg" style="max-width:220px; display:block; margin:0 auto;">
+                  <!-- Set A -->
+                  <ellipse cx="60" cy="75" rx="35" ry="55" fill="rgba(10,123,143,0.06)" stroke="#0a7b8f" stroke-width="1.5"/>
+                  <text x="60" y="35" text-anchor="middle" class="svg-label" font-weight="bold" fill="#0a7b8f">A (Dom)</text>
+                  <!-- Elements in A -->
+                  <circle cx="60" cy="60" r="3" fill="#333"/><text x="50" y="63" font-size="10" font-family="monospace">x1</text>
+                  <circle cx="60" cy="90" r="3" fill="#333"/><text x="50" y="93" font-size="10" font-family="monospace">x2</text>
+                  
+                  <!-- Set B -->
+                  <ellipse cx="190" cy="75" rx="35" ry="55" fill="rgba(123,45,142,0.06)" stroke="#7b2d8e" stroke-width="1.5"/>
+                  <text x="190" y="35" text-anchor="middle" class="svg-label" font-weight="bold" fill="#7b2d8e">B (Cod)</text>
+                  <!-- Elements in B -->
+                  <circle cx="190" cy="60" r="3" fill="#333"/><text x="200" y="63" font-size="10" font-family="monospace">y1</text>
+                  <circle cx="190" cy="90" r="3" fill="#333"/><text x="200" y="93" font-size="10" font-family="monospace">y2</text>
+
+                  <!-- Arrows -->
+                  <path d="M 65 60 L 180 60" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+                  <path d="M 65 90 L 180 90" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+                  <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                      <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="#555"/>
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+              <p style="font-family:var(--font-terminal); font-size:0.95rem; text-align:center;">
+                Cada elemento de <strong>A</strong> tiene una y solo una flecha apuntando a un elemento de <strong>B</strong>.
+              </p>
+            </div>
+
+            <!-- No es Funcion -->
+            <div class="comparison-col comparison-col--right" style="background:#faf5f5; border-color:#e0b8b8;">
+              <h4 style="color:#c0392b;">NO es una Funcion</h4>
+              <div class="diagram-box" style="margin: 10px 0; background:transparent; border:none; padding:0;">
+                <svg viewBox="0 0 250 150" class="square-svg" style="max-width:220px; display:block; margin:0 auto;">
+                  <!-- Set A -->
+                  <ellipse cx="60" cy="75" rx="35" ry="55" fill="rgba(192,57,43,0.06)" stroke="#c0392b" stroke-width="1.5"/>
+                  <text x="60" y="35" text-anchor="middle" class="svg-label" font-weight="bold" fill="#c0392b">A (Dom)</text>
+                  <!-- Elements in A -->
+                  <circle cx="60" cy="60" r="3" fill="#333"/><text x="50" y="63" font-size="10" font-family="monospace">x1</text>
+                  <circle cx="60" cy="90" r="3" fill="#333"/><text x="50" y="93" font-size="10" font-family="monospace">x2</text>
+                  
+                  <!-- Set B -->
+                  <ellipse cx="190" cy="75" rx="35" ry="55" fill="rgba(123,45,142,0.06)" stroke="#7b2d8e" stroke-width="1.5"/>
+                  <text x="190" y="35" text-anchor="middle" class="svg-label" font-weight="bold" fill="#7b2d8e">B (Cod)</text>
+                  <!-- Elements in B -->
+                  <circle cx="190" cy="50" r="3" fill="#333"/><text x="200" y="53" font-size="10" font-family="monospace">y1</text>
+                  <circle cx="190" cy="75" r="3" fill="#333"/><text x="200" y="78" font-size="10" font-family="monospace">y2</text>
+                  <circle cx="190" cy="100" r="3" fill="#333"/><text x="200" y="103" font-size="10" font-family="monospace">y3</text>
+
+                  <!-- Arrows (x1 maps to two targets) -->
+                  <path d="M 65 60 L 180 50" stroke="#c0392b" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+                  <path d="M 65 60 L 180 75" stroke="#c0392b" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+                  <path d="M 65 90 L 180 100" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+                  <defs>
+                    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                      <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="#c0392b"/>
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+              <p style="font-family:var(--font-terminal); font-size:0.95rem; text-align:center; color:#c0392b;">
+                El elemento <strong>x1</strong> se asocia con dos valores distintos (y1 e y2). Esto rompe la condicion de unicidad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOMINIO ===================== -->
+    <section class="study__section" id="dominio">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">dominio_definicion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Dominio de una funcion</h2>
+            <span class="section__symbol section__symbol--purple">Dom f</span>
+          </div>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion de Dominio</p>
+            <p>
+              El <strong>Dominio</strong> (denotado Dom f) es el conjunto de todos los valores admisibles de la variable 
+              independiente <strong>x</strong> para los cuales la formula de la funcion tiene sentido matematico en R.
+            </p>
+          </div>
+
+          <!-- Dos restricciones clasicas -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Las dos restricciones fundamentales del Dominio</h3>
+            <div class="concept-columns concept-columns--2">
+              <!-- Fraccion -->
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--b">Denominador no nulo</div>
+                <p class="concept-col__example">f(x) = 1 / (x - 2)</p>
+                <p class="concept-col__desc">
+                  La division por cero no existe. Por tanto, el denominador debe ser distinto de cero:
+                  <br><br>
+                  <strong>x - 2 &ne; 0 &rArr; x &ne; 2</strong>
+                  <br><br>
+                  Dom f = R - {2} &nbsp; o &nbsp; (-&infin;; 2) &cup; (2; &infin;)
+                </p>
+              </div>
+
+              <!-- Radicacion Par -->
+              <div class="concept-col">
+                <div class="concept-col__header concept-col__header--a">Raiz de indice par</div>
+                <p class="concept-col__example">f(x) = &radic;(x - 2)</p>
+                <p class="concept-col__desc">
+                  No existen raices pares de numeros negativos en el campo real. El radicando debe ser mayor o igual a cero:
+                  <br><br>
+                  <strong>x - 2 &ge; 0 &rArr; x &ge; 2</strong>
+                  <br><br>
+                  Dom f = [2; &infin;) &nbsp; o &nbsp; { x &isin; R / x &ge; 2 }
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IMAGEN ===================== -->
+    <section class="study__section" id="imagen">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">imagen_conjunto.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Imagen de una funcion</h2>
+            <span class="section__symbol section__symbol--orange">Im f</span>
+          </div>
+
+          <div class="definition-box" style="border-left-color:#b5652a">
+            <p class="definition-box__label" style="color:#b5652a">Definicion de Imagen</p>
+            <p>
+              La <strong>Imagen</strong> (denotado Im f) es el conjunto de todos los valores resultantes de la variable 
+              dependiente <strong>y</strong>. Es un subconjunto del codominio B que contiene los valores que la funcion realmente toma.
+            </p>
+            <p class="math-display">
+              Im f = { y &isin; B / &exist; x &isin; A &and; f(x) = y }
+            </p>
+            <p class="definition-box__note">
+              Donde &exist; significa "existe" y &and; significa "y".
+            </p>
+          </div>
+
+          <!-- Mapeo grafico completo con dominio, codominio e imagen -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Diagrama de conjuntos completo: Relacion de conjuntos</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 500 200" class="number-line-svg" style="max-width:450px;">
+                <!-- Set A (Dominio) -->
+                <ellipse cx="100" cy="100" rx="60" ry="80" fill="rgba(10,123,143,0.06)" stroke="#0a7b8f" stroke-width="2"/>
+                <text x="100" y="40" text-anchor="middle" class="svg-label" font-weight="bold" fill="#0a7b8f">A (Dominio)</text>
+                <!-- Elements -->
+                <circle cx="100" cy="80" r="4" fill="#333"/><text x="85" y="84" font-size="12" font-family="monospace">a</text>
+                <circle cx="100" cy="120" r="4" fill="#333"/><text x="85" y="124" font-size="12" font-family="monospace">b</text>
+
+                <!-- Set B (Codominio) -->
+                <ellipse cx="380" cy="100" rx="70" ry="80" fill="rgba(123,45,142,0.04)" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="380" y="40" text-anchor="middle" class="svg-label" font-weight="bold" fill="#7b2d8e">B (Codominio)</text>
+
+                <!-- Image Sub-Set (Im f) -->
+                <ellipse cx="360" cy="110" rx="40" ry="50" fill="rgba(26,138,90,0.1)" stroke="#1a8a5a" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <text x="360" y="80" text-anchor="middle" font-size="10" font-family="monospace" fill="#1a8a5a" font-weight="bold">Im f</text>
+                <!-- Elements in Im f -->
+                <circle cx="360" cy="105" r="4" fill="#333"/><text x="375" y="109" font-size="12" font-family="monospace">f(a)</text>
+                <circle cx="360" cy="135" r="4" fill="#333"/><text x="375" y="139" font-size="12" font-family="monospace">f(b)</text>
+
+                <!-- Element outside Im f but inside Codominio -->
+                <circle cx="420" cy="110" r="4" fill="#666"/><text x="430" y="114" font-size="12" font-family="monospace" fill="#666">y_unused</text>
+
+                <!-- Arrows -->
+                <path d="M 110 80 Q 235 60 345 100" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+                <path d="M 110 120 Q 235 140 345 135" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center;">
+              La <strong>Imagen (Im f)</strong> contiene solo los elementos de B que son alcanzados por flechas desde A.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EVALUACION ===================== -->
+    <section class="study__section" id="evaluacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">ejemplos_funciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Ejemplos Practicos de Evaluacion</h2>
+          
+          <div class="precaution-grid">
+            <!-- Ejemplo 1 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo A: Evaluar f(x) = 1 / (x - 2)</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  Para evaluar la funcion en <strong>x = 3</strong>, reemplazamos el valor en la formula:
+                </p>
+                <p class="math-display">
+                  f(3) = 1 / (3 - 2) = 1 / 1 = 1
+                </p>
+                <p class="precaution-explain">
+                  El resultado es <strong>1</strong>. Por lo tanto, el punto (3, 1) pertenece a la grafica de la funcion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ejemplo 2 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejemplo B: Simbologia variable</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  El nombre de la variable independiente no cambia el significado de la correspondencia. 
+                  Las siguientes tres expresiones representan la misma relacion de dependencia:
+                </p>
+                <p class="math-display">
+                  f(x) = 1 / (x - 2) <br>
+                  g(t) = 1 / (t - 2) <br>
+                  h(s) = 1 / (s - 2)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
