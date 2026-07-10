@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistemas de ecuaciones lineales, funciones por tramos y funcion valor absoluto. Interpretacion geometrica, clasificacion y ejemplos resueltos. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Otras Funciones Lineales | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="funciones.html" class="navbar__btn">Funciones</a>
+      <a href="funcion_lineal.html" class="navbar__btn">Funcion Lineal</a>
+      <a href="#sistemas" class="navbar__btn">Sistemas</a>
+      <a href="#problemas" class="navbar__btn">Problemas</a>
+      <a href="#tramos" class="navbar__btn">Tramos</a>
+      <a href="#valor-absoluto" class="navbar__btn">Val. Absoluto</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">otras_funciones_lineales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 3</p>
+          <h1 class="study__title">Sistemas y Otras Funciones</h1>
+          <p class="study__intro">
+            Sistemas de ecuaciones lineales, clasificacion geometrica, resolucion de problemas, funciones definidas por tramos y la funcion valor absoluto.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#sistemas">Sistemas de Ecuaciones Lineales</a></li>
+              <li><a href="#problemas">Problemas de Aplicacion Analitica</a></li>
+              <li><a href="#tramos">Funciones por Tramos (Definidas por Partes)</a></li>
+              <li><a href="#valor-absoluto">Funcion Valor Absoluto</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="funcion_lineal.html" class="nav-link nav-link--prev">&larr; Secc 2: Funcion Lineal</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== SISTEMAS DE ECUACIONES ===================== -->
+    <section class="study__section" id="sistemas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">sistemas_lineales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.8 Sistemas de Ecuaciones Lineales</h2>
+            <span class="section__symbol">ax + by = c</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Un sistema de dos ecuaciones lineales con dos incognitas representa geometricamente dos rectas en el plano cartesiano. Su resolucion consiste en encontrar los puntos en comun.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>Un sistema de dos ecuaciones con dos incognitas tiene la forma:</p>
+            <p class="math-display">
+              &mdash; ax + by = c <br>
+              &mdash; dx + ey = f
+            </p>
+            <p>Donde <strong>a, b, c, d, e, f</strong> son coeficientes reales, y <strong>x, y</strong> son las incognitas.</p>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Clasificacion de Sistemas (Geometria de Rectas)</h3>
+            <div class="comparison-cols">
+              
+              <!-- SCD -->
+              <div class="comparison-col comparison-col--left">
+                <h4 style="color:var(--teal-deep);">Compatible Determinado (SCD)</h4>
+                <p><strong>Rectas Oblicuas (se cortan):</strong> Tienen una pendiente diferente (<span class="math-inline">m<sub>1</sub> &ne; m<sub>2</sub></span>).
+                <br>Existe una <strong>solucion unica</strong> (el punto de interseccion).</p>
+                <div class="diagram-box" style="margin-top:10px; border:none; background:transparent; padding:0;">
+                  <svg viewBox="0 0 100 80" style="width:100px; height:80px; display:block; margin:0 auto;">
+                    <line x1="10" y1="70" x2="90" y2="70" stroke="#777" stroke-width="1"/>
+                    <line x1="20" y1="10" x2="20" y2="75" stroke="#777" stroke-width="1"/>
+                    <!-- Rectas -->
+                    <line x1="25" y1="65" x2="85" y2="15" stroke="#1a8a5a" stroke-width="1.5"/>
+                    <line x1="25" y1="15" x2="85" y2="55" stroke="#7b2d8e" stroke-width="1.5"/>
+                    <!-- Interseccion -->
+                    <circle cx="59.3" cy="36.4" r="3" fill="#c0392b"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- SI -->
+              <div class="comparison-col comparison-col--right" style="background:#faf5f5; border-color:#e0b8b8;">
+                <h4 style="color:#c0392b;">Incompatible (SI)</h4>
+                <p><strong>Rectas Paralelas no Coincidentes:</strong> Tienen igual pendiente (<span class="math-inline">m<sub>1</sub> = m<sub>2</sub></span>) pero distinta ordenada (<span class="math-inline">b<sub>1</sub> &ne; b<sub>2</sub></span>).
+                <br>El sistema <strong>no tiene solucion</strong>.</p>
+                <div class="diagram-box" style="margin-top:10px; border:none; background:transparent; padding:0;">
+                  <svg viewBox="0 0 100 80" style="width:100px; height:80px; display:block; margin:0 auto;">
+                    <line x1="10" y1="70" x2="90" y2="70" stroke="#777" stroke-width="1"/>
+                    <line x1="20" y1="10" x2="20" y2="75" stroke="#777" stroke-width="1"/>
+                    <!-- Rectas paralelas -->
+                    <line x1="25" y1="45" x2="85" y2="15" stroke="#1a8a5a" stroke-width="1.5"/>
+                    <line x1="25" y1="65" x2="85" y2="35" stroke="#0a7b8f" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="note-box" style="margin-top:var(--space-md);">
+              <p class="note-box__label">Compatible Indeterminado (SCI)</p>
+              <p>
+                <strong>Rectas Paralelas Coincidentes:</strong> Tienen igual pendiente (<span class="math-inline">m<sub>1</sub> = m<sub>2</sub></span>) e igual ordenada (<span class="math-inline">b<sub>1</sub> = b<sub>2</sub></span>). 
+                Las dos ecuaciones representan la misma recta. Admite <strong>infinitas soluciones</strong> (todos los puntos de la recta).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEMAS ===================== -->
+    <section class="study__section" id="problemas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">resolucion_problemas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Problemas de Aplicacion Analitica</h2>
+
+          <div class="precaution-grid">
+            <!-- Problema 1 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Problema A: Ferrocarriles de Carga (PDF)</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  El ferrocarril <strong>F</strong> cobra un fijo de $30 y $8 por tm/km. El ferrocarril <strong>F'</strong> cobra un fijo de $24 y $8.5 por tm/km. 
+                  Determinar cual es la zona mas economica para cada uno.
+                </p>
+                <div class="note-box" style="margin-top:10px; margin-bottom:10px; background:#fff;">
+                  <strong>Modelado algebraico:</strong>
+                  <br>C<sub>F</sub>(x) = 8x + 30
+                  <br>C<sub>F'</sub>(x) = 8.5x + 24
+                  <br><br>
+                  <strong>Igualando tarifas:</strong>
+                  <br>8x + 30 = 8.5x + 24 &rArr; 6 = 0.5x &rArr; <strong>x = 12 km</strong>
+                </div>
+                <p class="precaution-explain">
+                  <strong>Conclusion:</strong>
+                  <br>&bull; A los <strong>12 km</strong> ambos cobran lo mismo ($126).
+                  <br>&bull; Si la distancia es <strong>menor a 12 km</strong>, es mas economico <strong>F'</strong>.
+                  <br>&bull; Si la distancia es <strong>mayor a 12 km</strong>, es mas economico <strong>F</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Problema 2 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Problema B: Dias de Trabajo de Jose (PDF)</div>
+              <div class="precaution-card__body">
+                <p class="precaution-explain" style="border:none; margin:0; padding:0;">
+                  Jose recibe $45 por cada dia trabajado y se le descuentan $27 por cada dia de falta. 
+                  Luego de 64 dias, recibio $0. ¿Cuantos dias falto?
+                </p>
+                <div class="note-box" style="margin-top:10px; margin-bottom:10px; background:#fff;">
+                  <strong>Sistema de ecuaciones:</strong>
+                  <br>x: dias trabajados, &nbsp; y: dias faltados.
+                  <br>1) &nbsp; x + y = 64
+                  <br>2) &nbsp; 45x - 27y = 0
+                  <br><br>
+                  <strong>Resolucion por sustitucion:</strong>
+                  <br>De (2): 45x = 27y &rArr; x = (27/45)y = (3/5)y
+                  <br>En (1): (3/5)y + y = 64 &rArr; (8/5)y = 64 &rArr; y = 40
+                </div>
+                <p class="precaution-explain">
+                  <strong>Conclusion:</strong> Jose falto <strong>40 dias</strong> (y trabajo 24 dias).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUNCIONES POR TRAMOS ===================== -->
+    <section class="study__section" id="tramos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">funciones_tramos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.9 Funciones Lineales por Tramos</h2>
+            <span class="section__symbol section__symbol--purple">f(x) = tramos</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Llamamos funcion definida por tramos (o partes) a aquella que requiere mas de una formula de asignacion segun el intervalo del dominio en el que se encuentre el valor de entrada x.
+          </p>
+
+          <!-- Definicion y evaluacion -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Caso de estudio analizado</h3>
+            <p>Dada la funcion definida por partes:</p>
+            <p class="math-display">
+              f(x) = -x + 2 &nbsp;&nbsp; si &nbsp; -3 &le; x &lt; 2 <br>
+              f(x) = -x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; si &nbsp; x &ge; 2
+            </p>
+            <div class="note-box" style="margin-top:15px;">
+              <strong>Evaluaciones de ejemplo:</strong>
+              <br>&bull; <strong>f(-1):</strong> Como <span class="math-inline">-1 &isin; [-3; 2)</span>, usamos la regla superior: &nbsp;<span class="math-inline">f(-1) = -(-1) + 2 = 3</span>.
+              <br>&bull; <strong>f(2):</strong> Como <span class="math-inline">2 &ge; 2</span>, usamos la regla inferior: &nbsp;<span class="math-inline">f(2) = -(2) = -2</span>.
+              <br>&bull; <strong>f(-4):</strong> Como <span class="math-inline">-4 &lt; -3</span>, no hay ninguna regla definida para este valor. Por lo tanto, <strong>f(-4) no existe</strong> (<span class="math-inline">-4 &notin; Dom f</span>).
+            </div>
+            <p class="construction-note">
+              <strong>Dominio:</strong> Dom f = <strong>[-3; &infin;)</strong>
+              <br><strong>Imagen:</strong> Analizando el rango de cada tramo:
+              <br>&mdash; Para [-3; 2): -x + 2 varia en <strong>(0; 5]</strong>.
+              <br>&mdash; Para [2; &infin;): -x varia en <strong>(-&infin;; -2]</strong>.
+              <br>Union de las imagenes: Im f = <strong>(-&infin;; -2] &cup; (0; 5]</strong>.
+            </p>
+          </div>
+
+          <!-- Piecewise Graph SVG -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de la funcion definida por tramos</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (120, 120), scale 20px per unit -->
+                <line x1="20" y1="120" x2="280" y2="120" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="285" y="124" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="114" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- Tramo 1: y = -x + 2 for x in [-3; 2) -->
+                <!-- x=-3 -> y=5 (120 - 3*20 = 60, 120 - 5*20 = 20) -> (60, 20) [Closed Point] -->
+                <!-- x=2 -> y=0 (120 + 2*20 = 160, 120) -> (160, 120) [Open Point] -->
+                <line x1="60" y1="20" x2="160" y2="120" stroke="#1a8a5a" stroke-width="2"/>
+                <circle cx="60" cy="20" r="4" fill="#1a8a5a"/> <!-- Closed end -->
+                <circle cx="160" cy="120" r="4" fill="#fff" stroke="#1a8a5a" stroke-width="2"/> <!-- Open end -->
+
+                <!-- Tramo 2: y = -x for x in [2; inf) -->
+                <!-- x=2 -> y=-2 (120 + 2*20 = 160, 120 - (-2)*20 = 160) -> (160, 160) [Closed Point] -->
+                <!-- x=5 -> y=-5 (120 + 5*20 = 220, 120 + 100 = 220) -> (220, 220) -->
+                <line x1="160" y1="160" x2="220" y2="220" stroke="#7b2d8e" stroke-width="2"/>
+                <circle cx="160" cy="160" r="4" fill="#7b2d8e"/> <!-- Closed end -->
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center;">
+              Los circulos llenos denotan inclusion del extremo en el intervalo, mientras que los circulos vacios representan exclusion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VALOR ABSOLUTO ===================== -->
+    <section class="study__section" id="valor-absoluto">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">funcion_valor_absoluto.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Funcion Valor Absoluto</h2>
+            <span class="section__symbol section__symbol--orange">y = |x|</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La funcion valor absoluto se define por tramos basandose en la definicion algebraica de modulo:
+          </p>
+
+          <div class="definition-box" style="border-left-color:#b5652a">
+            <p class="definition-box__label" style="color:#b5652a">Definicion Matematica</p>
+            <p class="math-display">
+              f(x) = |x| = &nbsp; x &nbsp;&nbsp;&nbsp; si &nbsp; x &ge; 0 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -x &nbsp;&nbsp; si &nbsp; x &lt; 0
+            </p>
+            <p class="definition-box__note">
+              Dominio: <strong>R</strong> &nbsp;|&nbsp; Imagen: <strong>[0; &infin;)</strong>
+            </p>
+          </div>
+
+          <!-- Modulo trasladado -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Modulo Trasladado: f(x) = |x - 3|</h3>
+            <p>
+              Aplicando la definicion de modulo a la expresion interior, obtenemos la siguiente representacion por partes:
+            </p>
+            <p class="math-display">
+              f(x) = x - 3 &nbsp;&nbsp;&nbsp; si &nbsp; x - 3 &ge; 0 &rArr; x &ge; 3 <br>
+              f(x) = -x + 3 &nbsp;&nbsp; si &nbsp; x - 3 &lt; 0 &rArr; x &lt; 3
+            </p>
+            <p class="construction-note">
+              Geometricamente, esto traslada la grafica "V" clasica del valor absoluto <strong>3 unidades hacia la derecha</strong>, 
+              teniendo su vertice en el punto <strong>(3, 0)</strong>.
+            </p>
+          </div>
+
+          <!-- SVG Graph of |x-3| -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de la funcion trasladada f(x) = |x - 3|</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (90, 150), scale 25px per unit -->
+                <line x1="20" y1="150" x2="280" y2="150" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="285" y="154" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="90" y1="10" x2="90" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="84" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- Vertex at (3, 0) -> x = 90 + 3*25 = 165, y = 150 -->
+                <circle cx="165" cy="150" r="4" fill="#c0392b"/>
+                <text x="165" y="165" font-size="8" font-family="monospace" fill="#c0392b" text-anchor="middle">(3, 0)</text>
+
+                <!-- Left branch: y = -x + 3 -> passes through (0, 3) -> (90, 150 - 3*25) = (90, 75) -->
+                <line x1="65" y1="50" x2="165" y2="150" stroke="#7b2d8e" stroke-width="2"/>
+
+                <!-- Right branch: y = x - 3 -> passes through (6, 3) -> (90 + 6*25, 75) = (240, 75) -->
+                <line x1="165" y1="150" x2="265" y2="50" stroke="#7b2d8e" stroke-width="2"/>
+
+                <text x="220" y="45" font-size="8" font-family="monospace" fill="#7b2d8e">y = |x - 3|</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="funcion_cuadratica.html" class="nav-link">Siguiente: Función Cuadrática &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

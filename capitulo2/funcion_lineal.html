@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion lineal y ecuacion de la recta — Dominio, imagen, pendiente, ordenada al origen y graficacion paso a paso. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Funcion Lineal | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="funciones.html" class="navbar__btn">Funciones</a>
+      <a href="#definicion" class="navbar__btn">Definicion</a>
+      <a href="#pendiente" class="navbar__btn">Pendiente</a>
+      <a href="#especiales" class="navbar__btn">Especiales</a>
+      <a href="#relaciones" class="navbar__btn">Relaciones</a>
+      <a href="#ecuaciones-recta" class="navbar__btn">Ec. Recta</a>
+      <a href="#segmentaria-general" class="navbar__btn">Ec. Formas</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funcion_lineal.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 2</p>
+          <h1 class="study__title">Función Lineal</h1>
+          <p class="study__intro">
+            Definición, dominio, imagen, interpretación de la pendiente, ordenada al origen y graficación.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">Definicion y Ecuacion Explicita</a></li>
+              <li><a href="#dominio">Dominio e Imagen</a></li>
+              <li><a href="#pendiente">Pendiente y Ordenada al Origen</a></li>
+              <li><a href="#graficos">Metodo de Graficacion Paso a Paso</a></li>
+              <li><a href="#especiales">Rectas Especiales (Horizontales y Verticales)</a></li>
+              <li><a href="#relaciones">Rectas Paralelas y Perpendiculares</a></li>
+              <li><a href="#ecuaciones-recta">2.6 Ecuaciones de la Recta (Punto-Pendiente / Dos Puntos)</a></li>
+              <li><a href="#segmentaria-general">2.7 Ecuacion Segmentaria y General de la Recta</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="funciones.html" class="nav-link nav-link--prev">&larr; Secc 1: Concepto de Funcion</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">definicion_lineal.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Definicion y Ecuacion</h2>
+            <span class="section__symbol">y=mx+b</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Una funcion real se dice que es una <strong>funcion lineal</strong> si su representacion grafica es una linea recta.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion formal</p>
+            <p>
+              Una funcion <strong>f: R &rarr; R</strong> es lineal si es de la forma:
+            </p>
+            <p class="math-display">f(x) = mx + b</p>
+            <p>
+              Para cada <strong>x &isin; R</strong>, donde <strong>m</strong> y <strong>b</strong> son numeros reales constantes.
+            </p>
+            <p class="definition-box__note" style="margin-top:10px;">
+              La ecuacion <span class="math-inline">y = mx + b</span> se denomina la <strong>ecuacion explicita</strong> de la recta.
+            </p>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Raiz de una funcion lineal</h3>
+            <p class="construction-note" style="margin-top:0;">
+              Se llama <strong>raiz</strong> (o cero) de la funcion lineal a aquel valor <strong>r</strong> tal que <span class="math-inline">f(r) = 0</span>. 
+              Si m &ne; 0:
+            </p>
+            <p class="math-display">mr + b = 0 &nbsp;&rArr;&nbsp; r = -b / m</p>
+            <p class="construction-note">
+              Geometricamente, la raiz representa el punto de interseccion de la recta con el <strong>eje x</strong>: (r, 0).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOMINIO ===================== -->
+    <section class="study__section" id="dominio">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">dominio_imagen.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.1 Dominio e Imagen</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            El analisis de los conjuntos de definicion y llegada para una funcion lineal es directo:
+          </p>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title">Dominio</h4>
+              <p class="property-card__formula">Dom f = R</p>
+              <p class="property-card__example">
+                Cualquier numero real puede ser evaluado en la formula <span class="math-inline">mx + b</span> sin restricciones.
+              </p>
+            </div>
+            <div class="property-card">
+              <h4 class="property-card__title">Imagen</h4>
+              <p class="property-card__formula">Im f = R &nbsp; (si m &ne; 0)</p>
+              <p class="property-card__example">
+                Si la recta no es horizontal, cubre todo el conjunto de los reales en el eje y. 
+                <br>Si m = 0, la imagen es el conjunto unitario <strong>{b}</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PENDIENTE ===================== -->
+    <section class="study__section" id="pendiente">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">analisis_coeficientes.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.2 Pendiente y Ordenada al origen</h2>
+            <span class="section__symbol section__symbol--purple">m / b</span>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">La Pendiente (m)</h3>
+            <p>
+              Es el numero de unidades que la recta sube o baja por cada unidad de cambio horizontal de izquierda a derecha. 
+              Dados dos puntos (x<sub>1</sub>, y<sub>1</sub>) y (x<sub>2</sub>, y<sub>2</sub>) en la recta:
+            </p>
+            <p class="math-display">
+              m = &Delta;y / &Delta;x = (y<sub>2</sub> - y<sub>1</sub>) / (x<sub>2</sub> - x<sub>1</sub>)
+            </p>
+          </div>
+
+          <!-- SVG explaining slope rise/run -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Pendiente como delta y / delta x</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 400 240" class="number-line-svg" style="max-width:320px;">
+                <!-- Grid lines -->
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#eee" stroke-width="1"/>
+                <line x1="50" y1="150" x2="350" y2="150" stroke="#eee" stroke-width="1"/>
+                <line x1="50" y1="100" x2="350" y2="100" stroke="#eee" stroke-width="1"/>
+                <line x1="50" y1="50" x2="350" y2="50" stroke="#eee" stroke-width="1"/>
+                
+                <line x1="100" y1="40" x2="100" y2="210" stroke="#eee" stroke-width="1"/>
+                <line x1="200" y1="40" x2="200" y2="210" stroke="#eee" stroke-width="1"/>
+                <line x1="300" y1="40" x2="300" y2="210" stroke="#eee" stroke-width="1"/>
+
+                <!-- Coordinate axes -->
+                <line x1="50" y1="180" x2="350" y2="180" stroke="#777" stroke-width="1.5"/>
+                <polygon points="350,177 356,180 350,183" fill="#777"/>
+                <text x="345" y="195" font-size="10" font-family="monospace">x</text>
+
+                <line x1="80" y1="210" x2="80" y2="40" stroke="#777" stroke-width="1.5"/>
+                <polygon points="77,40 80,34 83,40" fill="#777"/>
+                <text x="70" y="48" font-size="10" font-family="monospace">y</text>
+
+                <!-- Line y = 0.5x + 50 -->
+                <line x1="60" y1="160" x2="320" y2="82" stroke="#7b2d8e" stroke-width="2"/>
+
+                <!-- Point 1 (100, 140) -->
+                <circle cx="140" cy="136" r="4" fill="#333"/>
+                <text x="110" y="130" font-size="9" font-family="monospace">(x1, y1)</text>
+
+                <!-- Point 2 (280, 94) -->
+                <circle cx="280" cy="94" r="4" fill="#333"/>
+                <text x="280" y="85" font-size="9" font-family="monospace">(x2, y2)</text>
+
+                <!-- Rise and Run triangle -->
+                <line x1="140" y1="136" x2="280" y2="136" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="210" y="148" font-size="10" font-family="monospace" fill="#c0392b" text-anchor="middle">&Delta;x = x2 - x1</text>
+
+                <line x1="280" y1="136" x2="280" y2="94" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="290" y="120" font-size="10" font-family="monospace" fill="#0a7b8f" alignment-baseline="middle">&Delta;y = y2 - y1</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p class="note-box__label">Relacion con el angulo de inclinacion</p>
+            <p>
+              La pendiente m equivale a la tangente del angulo &alpha; que forma la recta con el eje x positivo:
+              <br><br>
+              <strong>m = tg(&alpha;)</strong> &nbsp; (por lo que tambien se la llama <em>coeficiente angular</em>).
+            </p>
+            <div class="comparison-cols" style="margin-top:15px;">
+              <div class="comparison-col comparison-col--left">
+                <h4>m &gt; 0</h4>
+                <p>Creciente (&alpha; es agudo).</p>
+              </div>
+              <div class="comparison-col comparison-col--right" style="background:#faf5f0; border-color:#e0d0c0;">
+                <h4 style="color:#b5652a;">m &lt; 0</h4>
+                <p style="color:#b5652a;">Decreciente (&alpha; es obtuso).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">La Ordenada al Origen (b)</h3>
+            <p>
+              Es la imagen de la funcion evaluada en <strong>x = 0</strong>:
+            </p>
+            <p class="math-display">f(0) = m(0) + b = b</p>
+            <p class="construction-note">
+              Representa el punto donde la recta corta al <strong>eje y</strong>: (0, b).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GRAFICOS ===================== -->
+    <section class="study__section" id="graficos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--orange">
+          <span class="window__titlebar-text">metodo_graficacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.3 Metodo de Graficacion Paso a Paso</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);">
+            Conociendo la ordenada al origen y la pendiente, podemos graficar de forma sencilla sin armar tablas de valores.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ejemplo: Graficar f(x) = (2/3)x - 1</h3>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val"><strong>Marcar la ordenada al origen:</strong> En (0, -1) ya que b = -1.</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val"><strong>Aplicar la pendiente (m = 2/3):</strong> Desde (0, -1) nos movemos &Delta;x = 3 unidades a la derecha y &Delta;y = 2 unidades hacia arriba. Marcamos el punto de llegada (3, 1).</span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val"><strong>Trazar la recta:</strong> Dibujamos la linea continua que atraviesa ambos puntos marcados.</span>
+              </div>
+            </div>
+
+            <!-- SVG illustrating the 3 steps -->
+            <div class="diagram-box">
+              <p class="diagram-box__label">Paso a paso de graficacion para f(x) = 2/3 x - 1</p>
+              <div class="number-line-container">
+                <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                  <!-- Grid -->
+                  <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                  <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                  
+                  <!-- Axes -->
+                  <line x1="20" y1="120" x2="280" y2="120" stroke="#555" stroke-width="1.5"/> <!-- X Axis (y=0 is at 120) -->
+                  <text x="285" y="124" font-size="9" font-family="monospace">x</text>
+                  
+                  <line x1="120" y1="10" x2="120" y2="210" stroke="#555" stroke-width="1.5"/> <!-- Y Axis (x=0 is at 120) -->
+                  <text x="114" y="20" font-size="9" font-family="monospace">y</text>
+                  
+                  <!-- Step 1 Point (0, -1) -> (120, 150) because grid size is 30px -->
+                  <circle cx="120" cy="150" r="5" fill="#c0392b"/>
+                  <text x="130" y="155" font-size="8" font-family="monospace" fill="#c0392b">1) (0, -1)</text>
+
+                  <!-- Step 2 movement paths: delta x = +3 (90px) -> cx=210. delta y = +2 (60px) -> cy=90 -->
+                  <path d="M 120 150 L 210 150" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="3,2"/>
+                  <text x="165" y="162" font-size="7" font-family="monospace" fill="#0a7b8f" text-anchor="middle">&Delta;x = +3</text>
+                  
+                  <path d="M 210 150 L 210 90" stroke="#0a7b8f" stroke-width="1.5" stroke-dasharray="3,2"/>
+                  <text x="220" y="125" font-size="7" font-family="monospace" fill="#0a7b8f">&Delta;y = +2</text>
+                  
+                  <!-- Step 2 Point (3, 1) -> (210, 90) -->
+                  <circle cx="210" cy="90" r="5" fill="#1a8a5a"/>
+                  <text x="218" y="85" font-size="8" font-family="monospace" fill="#1a8a5a">2) (3, 1)</text>
+                  
+                  <!-- Step 3: Draw Line passing through both points -->
+                  <line x1="30" y1="210" x2="270" y2="50" stroke="#7b2d8e" stroke-width="2"/>
+                  <text x="250" y="45" font-size="8" font-family="monospace" fill="#7b2d8e">y = 2/3 x - 1</text>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="construction-note">
+              <strong>Nota:</strong> Si la pendiente hubiese sido negativa, por ejemplo <span class="math-inline">m = -2/3</span>, 
+              nos habriamos movido &Delta;x = 3 hacia la derecha y &Delta;y = 2 hacia <strong>abajo</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RECTAS ESPECIALES ===================== -->
+    <section class="study__section" id="especiales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">rectas_especiales.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.4 Rectas Especiales</h2>
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Existen tres configuraciones particulares de rectas en el plano cartesiano que conviene analizar debido a sus caracteristicas geometricas y algebraicas:
+          </p>
+
+          <!-- 2.4.1 Rectas que pasan por el origen -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">2.4.1 Rectas que pasan por el origen</h3>
+            <p>
+              Son aquellas donde la ordenada al origen es nula (<strong>b = 0</strong>). Su ecuacion es de la forma:
+            </p>
+            <p class="math-display">f(x) = mx</p>
+            <p class="construction-note">
+              Pasan obligatoriamente por el punto (0,0). Representan funciones de <strong>proporcionalidad directa</strong>, 
+              donde la pendiente <strong>m</strong> actua como la constante de proporcionalidad.
+              <br>Ejemplos: <span class="math-inline">f(x) = 2x</span>, &nbsp; <span class="math-inline">f(x) = -x</span>, &nbsp; <span class="math-inline">f(x) = (1/3)x</span>.
+            </p>
+          </div>
+
+          <!-- 2.4.2 Rectas horizontales -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">2.4.2 Rectas horizontales (Funcion Constante)</h3>
+            <p>
+              Son aquellas cuya pendiente es nula (<strong>m = 0</strong>). Su ecuacion se reduce a:
+            </p>
+            <p class="math-display">f(x) = b</p>
+            <p class="construction-note">
+              Todos los valores del dominio tienen exactamente la misma imagen <strong>b</strong>. 
+              El caso particular <span class="math-inline">f(x) = 0</span> representa el <strong>eje x</strong>.
+              <br>Ejemplos: <span class="math-inline">f(x) = 2</span>, &nbsp; <span class="math-inline">f(x) = -3/2</span>.
+            </p>
+          </div>
+
+          <!-- 2.4.3 Rectas verticales -->
+          <div class="key-concept" style="border-color:#e0b8b8; background:#faf5f5;">
+            <h3 class="key-concept__title" style="color:#c0392b;">2.4.3 Rectas verticales</h3>
+            <p>
+              Tienen la particularidad de que todos sus puntos comparten la misma abscisa <strong>k</strong>. Su ecuacion es:
+            </p>
+            <p class="math-display">x = k</p>
+            <div class="callout-box callout-box--danger" style="margin-top:10px; margin-bottom:10px;">
+              <p class="callout-box__label">Importante: No representan funciones</p>
+              <p>
+                Las rectas verticales <strong>NO representan una funcion lineal</strong>, 
+                ya que a un unico valor de x (en este caso x = k) le corresponden infinitos valores de y. 
+                Esto viola la definicion de funcion. 
+                El caso particular <span class="math-inline">x = 0</span> representa el <strong>eje y</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- SVG comparing all three -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Comparativa geometrica de rectas especiales</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes -->
+                <line x1="20" y1="120" x2="280" y2="120" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="285" y="124" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="114" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- 1. y = 2x (passes through origin) -> (60, 0) to (180, 240) which is (90, 180) to (150, 60) -->
+                <line x1="75" y1="210" x2="165" y2="30" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="170" y="38" font-size="8" font-family="monospace" fill="#1a8a5a">y = 2x</text>
+
+                <!-- 2. y = 2 (horizontal line) -> y = 60px -> (120 - 60) = 60 -->
+                <line x1="20" y1="60" x2="280" y2="60" stroke="#2a6eb5" stroke-width="2"/>
+                <text x="25" y="52" font-size="8" font-family="monospace" fill="#2a6eb5">y = 2</text>
+
+                <!-- 3. x = 3 (vertical line) -> x = 90px -> (120 + 90) = 210 -->
+                <line x1="210" y1="20" x2="210" y2="200" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,2"/>
+                <text x="215" y="25" font-size="8" font-family="monospace" fill="#c0392b">x = 3</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARALELAS Y PERPENDICULARES ===================== -->
+    <section class="study__section" id="relaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">paralelas_perpendiculares.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.5 Rectas Paralelas y Perpendiculares</h2>
+            <span class="section__symbol section__symbol--purple">L1 || L2</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La relacion geometrica entre dos rectas en el plano cartesiano queda totalmente determinada por la comparacion de sus pendientes.
+          </p>
+
+          <!-- 2.5.1 Rectas paralelas -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">2.5.1 Rectas paralelas (||)</h3>
+            <p>
+              Si dos rectas son paralelas, forman exactamente el mismo angulo con el eje x positivo y, por lo tanto, 
+              <strong>tienen la misma pendiente</strong>. 
+            </p>
+            <p class="math-display">
+              L<sub>1</sub> || L<sub>2</sub> &nbsp;&nbsp;&rArr;&nbsp;&nbsp; m<sub>1</sub> = m<sub>2</sub>
+            </p>
+            <p class="construction-note">
+              Si ademas las ordenadas al origen coinciden (<span class="math-inline">b<sub>1</sub> = b<sub>2</sub></span>), 
+              se trata de rectas paralelas coincidentes (la misma recta).
+            </p>
+            <p class="construction-note" style="background:#f4faf8; padding:var(--space-sm); border-left:3px solid #1a8a5a;">
+              <strong>Ejemplo:</strong> Hallar la recta paralela a <span class="math-inline">y = -2x - 3</span> que pasa por el origen.
+              <br><em>Solucion:</em> La pendiente debe ser <span class="math-inline">m = -2</span>. Al pasar por (0,0), la ordenada es <span class="math-inline">b = 0</span>. 
+              <br>La ecuacion buscada es: <strong>y = -2x</strong>.
+            </p>
+          </div>
+
+          <!-- 2.5.2 Rectas perpendiculares -->
+          <div class="key-concept" style="border-color:#dcd0e8; background:#fbfafc;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">2.5.2 Rectas perpendiculares (&perp;)</h3>
+            <p>
+              Dos rectas son perpendiculares si se cortan formando cuatro angulos rectos (90&deg;). 
+              La condicion es que sus pendientes sean <strong>inversas y opuestas</strong>:
+            </p>
+            <p class="math-display">
+              m<sub>1</sub> &middot; m<sub>2</sub> = -1 &nbsp;&nbsp;&rArr;&nbsp;&nbsp; m<sub>2</sub> = -1 / m<sub>1</sub>
+            </p>
+            <p class="construction-note" style="background:#faf8fc; padding:var(--space-sm); border-left:3px solid #7b2d8e;">
+              <strong>Ejemplo:</strong> Hallar la recta perpendicular a <span class="math-inline">y = (2/3)x</span> con ordenada al origen igual a 2.
+              <br><em>Solucion:</em> La pendiente perpendicular es la opuesta inversa de 2/3, es decir, <span class="math-inline">m = -3/2</span>. 
+              Como la ordenada es 2, &nbsp;<span class="math-inline">b = 2</span>.
+              <br>La ecuacion buscada es: <strong>y = -3/2 x + 2</strong>.
+            </p>
+          </div>
+
+          <!-- SVG representation of Parallel and Perpendicular lines -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Visualizacion de rectas paralelas y perpendiculares</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes -->
+                <line x1="20" y1="120" x2="280" y2="120" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="285" y="124" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="114" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- L1: y = 2x + 1 -> passes through (120, 90) because b=+1 (30px up) and (150, 30) because m=2 -->
+                <!-- points: x=0 (120), y=1 (90). x=1 (150), y=3 (30). x=-1 (90), y=-1 (150). x=-2 (60), y=-3 (210). -->
+                <line x1="60" y1="210" x2="165" y2="0" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="155" y="15" font-size="7" font-family="monospace" fill="#1a8a5a">L1: y = 2x + 1</text>
+
+                <!-- L2: y = 2x - 2 -> passes through x=0 (120), y=-2 (180). x=1 (150), y=0 (120). x=2 (180), y=2 (60). -->
+                <line x1="105" y1="210" x2="195" y2="30" stroke="#0a7b8f" stroke-width="2"/>
+                <text x="195" y="45" font-size="7" font-family="monospace" fill="#0a7b8f">L2: y = 2x - 2 (|| L1)</text>
+
+                <!-- L3: y = -0.5x + 1 (perpendicular to L1, intersecting L1 at (0,1) -> (120,90)) -->
+                <!-- slope -0.5: delta x=2 (60px), delta y=-1 (30px). points: (120,90), x=2 (180), y=0 (120). x=-2 (60), y=2 (60). -->
+                <line x1="40" y1="50" x2="260" y2="160" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="220" y="170" font-size="7" font-family="monospace" fill="#7b2d8e">L3: y = -0.5x + 1 (&perp; L1)</text>
+
+                <!-- 90 degree angle indicator at (120, 90) -->
+                <!-- We draw a small perpendicular corner: relative from (120,90) -->
+                <path d="M 129 86 L 133 94 L 124 98" fill="none" stroke="#7b2d8e" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECUACIONES DE LA RECTA ===================== -->
+    <section class="study__section" id="ecuaciones-recta">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ecuaciones_recta_formas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.6 Ecuaciones de una Recta</h2>
+            <span class="section__symbol">y - y1 = m(x - x1)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Dependiendo de los datos de partida (un punto y la pendiente, o bien dos puntos), podemos deducir la ecuacion de una recta de la siguiente manera:
+          </p>
+
+          <!-- 2.6.1 Pendiente y un Punto -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Forma Punto-Pendiente</h3>
+            <p>
+              Una recta con pendiente <strong>m</strong> que pasa por un punto dado <strong>(x<sub>1</sub>, y<sub>1</sub>)</strong> responde a la relacion:
+            </p>
+            <p class="math-display">y - y<sub>1</sub> = m(x - x<sub>1</sub>)</p>
+            <p class="construction-note" style="background:#f4faf8; padding:var(--space-sm); border-left:3px solid #1a8a5a;">
+              <strong>Ejemplo (PDF):</strong> Recta con pendiente <span class="math-inline">m = 2/3</span> que pasa por el punto <span class="math-inline">(-2, 5)</span>.
+              <br><em>Sustitucion:</em> <span class="math-inline">y - 5 = (2/3)(x - (-2)) &rArr; y - 5 = (2/3)(x + 2)</span>
+              <br><em>Ecuacion Explicita:</em> Despejando y obtenemos &nbsp;<strong>y = 2/3 x + 19/3</strong>.
+            </p>
+          </div>
+
+          <!-- 2.6.2 Dados Dos Puntos -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Dados dos Puntos</h3>
+            <p>
+              Si conocemos dos puntos de la recta <strong>(x<sub>1</sub>, y<sub>1</sub>)</strong> y <strong>(x<sub>2</sub>, y<sub>2</sub>)</strong>, 
+              primero debemos calcular la pendiente <strong>m</strong>:
+            </p>
+            <p class="math-display">m = (y<sub>2</sub> - y<sub>1</sub>) / (x<sub>2</sub> - x<sub>1</sub>)</p>
+            <p>
+              Luego, podemos aplicar la ecuacion punto-pendiente usando cualquiera de los dos puntos indistintamente, o resolver para <strong>b</strong> en la ecuacion explicta.
+            </p>
+            <p class="construction-note" style="background:#f0f5fa; padding:var(--space-sm); border-left:3px solid #2a6eb5;">
+              <strong>Ejemplo (PDF):</strong> Recta que pasa por <span class="math-inline">(1, 2)</span> y <span class="math-inline">(3, -5)</span>.
+              <br>1. Calculo de la pendiente: &nbsp;<span class="math-inline">m = (-5 - 2) / (3 - 1) = -7/2</span>.
+              <br>2. Metodo Punto-Pendiente con (1,2): &nbsp;<span class="math-inline">y - 2 = -7/2 (x - 1) &rArr; y = -7/2 x + 11/2</span>.
+              <br>3. Metodo Explicito (despejando b): &nbsp;<span class="math-inline">2 = -7/2 (1) + b &rArr; b = 2 + 7/2 = 11/2</span>.
+              <br>La ecuacion final es: <strong>y = -7/2 x + 11/2</strong>.
+            </p>
+          </div>
+
+          <!-- SVG illustrating the two-point example line -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de la recta determinada por (1,2) y (3,-5)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes -->
+                <line x1="20" y1="90" x2="280" y2="90" stroke="#777" stroke-width="1.5"/> <!-- X Axis (y=0 is at 90) -->
+                <text x="285" y="94" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="90" y1="10" x2="90" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis (x=0 is at 90) -->
+                <text x="84" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- Points: grid size is 30px -->
+                <!-- P1 (1, 2) -> x = 90 + 30 = 120; y = 90 - 60 = 30 -->
+                <circle cx="120" cy="30" r="5" fill="#2a6eb5"/>
+                <text x="130" y="32" font-size="8" font-family="monospace" fill="#2a6eb5">(1, 2)</text>
+
+                <!-- P2 (3, -5) -> x = 90 + 90 = 180; y = 90 + 150 = 240. Let's make view range wider or plot visible part -->
+                <!-- Let's map coordinates with origin at (90, 90) and scale 25px per unit -->
+                <!-- Let's adjust to fit nicely: origin (90, 90) -->
+                <!-- P1 (1, 2) -> (90+25, 90-50) = (115, 40) -->
+                <!-- P2 (3, -5) -> (90+75, 90+125) = (165, 215) -->
+                <!-- Using these new coords for plotting: -->
+                <circle cx="115" cy="40" r="4" fill="#2a6eb5"/>
+                <circle cx="165" cy="215" r="4" fill="#c0392b"/>
+                <text x="173" y="215" font-size="8" font-family="monospace" fill="#c0392b">(3, -5)</text>
+
+                <!-- Line: passes through (115, 40) and (165, 215) -->
+                <!-- Equation: y = -3.5x + 5.5 in terms of units. -->
+                <line x1="100" y1="-12.5" x2="175" y2="250" stroke="#7b2d8e" stroke-width="2"/>
+                
+                <!-- Y-intercept (0, 5.5) -> (90, 90 - 5.5*25) = (90, 90-137.5) = (90, -47.5). Outside view, that's fine. -->
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SEGMENTARIA Y GENERAL ===================== -->
+    <section class="study__section" id="segmentaria-general">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ecuacion_segmentaria_general.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.7 Ecuacion Segmentaria y General</h2>
+            <span class="section__symbol">Ax + By + C = 0</span>
+          </div>
+
+          <!-- Ecuacion Segmentaria -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ecuacion Segmentaria</h3>
+            <p>
+              Expresa la recta en funcion de sus intersecciones con los ejes coordenados. Tiene la forma:
+            </p>
+            <p class="math-display">x / p + y / q = 1</p>
+            <p>
+              Con <strong>p, q &ne; 0</strong>. 
+              <br>&bull; <strong>p</strong> representa la interseccion con el <strong>eje x</strong> (punto <strong>(p, 0)</strong>).
+              <br>&bull; <strong>q</strong> representa la interseccion con el <strong>eje y</strong> (punto <strong>(0, q)</strong>).
+            </p>
+            
+            <div class="callout-box callout-box--danger" style="margin-top:10px;">
+              <p class="callout-box__label">Excepcion importante (PDF)</p>
+              <p>
+                Las rectas <strong>horizontales, verticales</strong> y aquellas que <strong>pasan por el origen</strong> 
+                <strong>NO tienen ecuacion segmentaria</strong>, ya que no cortan a ambos ejes en puntos distintos del origen o su denominador seria cero.
+              </p>
+            </div>
+            
+            <p class="construction-note" style="background:#fafdfb; padding:var(--space-sm); border-left:3px solid #1a8a5a; margin-top:10px;">
+              <strong>Ejemplo (PDF):</strong> Dada la ecuacion segmentaria &nbsp;<span class="math-inline">x / 4 - y / 5 = 1</span>.
+              <br>Reescribimos como suma: &nbsp;<span class="math-inline">x / 4 + y / (-5) = 1</span>.
+              <br>Por lo tanto: &nbsp;<span class="math-inline">p = 4</span>, &nbsp;<span class="math-inline">q = -5</span>.
+              <br>La recta intersecta al eje x en <strong>(4,0)</strong> y al eje y en <strong>(0,-5)</strong>.
+            </p>
+          </div>
+
+          <!-- SVG illustrating the segmentary intersections -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica e intersecciones de la recta segmentaria x/4 + y/(-5) = 1</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes -->
+                <line x1="20" y1="90" x2="280" y2="90" stroke="#777" stroke-width="1.5"/> <!-- X Axis (y=0 is at 90) -->
+                <text x="285" y="94" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="90" y1="10" x2="90" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis (x=0 is at 90) -->
+                <text x="84" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- Points (scale: 20px per unit) -->
+                <!-- Origin is at (90, 90) -->
+                <!-- p = 4 -> x = 90 + 4*20 = 170. Point: (170, 90) -->
+                <circle cx="170" cy="90" r="5" fill="#1a8a5a"/>
+                <text x="175" y="85" font-size="8" font-family="monospace" fill="#1a8a5a">p=4 (4, 0)</text>
+
+                <!-- q = -5 -> y = 90 - (-5)*20 = 90 + 100 = 190. Point: (90, 190) -->
+                <circle cx="90" cy="190" r="5" fill="#c0392b"/>
+                <text x="98" y="195" font-size="8" font-family="monospace" fill="#c0392b">q=-5 (0, -5)</text>
+
+                <!-- Line passing through both points -->
+                <line x1="58" y1="150" x2="202" y2="50" stroke="#7b2d8e" stroke-width="2" style="display:none;"/>
+                <!-- Correct line coordinates to pass through (90, 190) and (170, 90) -->
+                <!-- Slope is -100/80 = -1.25. Equation: y - 90 = -1.25(x - 170) -> y = -1.25x + 212.5 + 90... -->
+                <line x1="50" y1="240" x2="210" y2="40" stroke="#7b2d8e" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Ecuacion General o Implicita -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ecuacion General (Forma Implicita)</h3>
+            <p>
+              Cualquier recta en el plano cartesiano se puede expresar bajo la forma:
+            </p>
+            <p class="math-display">Ax + By + C = 0</p>
+            <p>
+              Donde <strong>A, B y C</strong> son constantes reales, con <strong>A</strong> y <strong>B</strong> no simultaneamente nulos.
+              <br>Si B &ne; 0, podemos despejar y para recuperar la forma explicita: &nbsp;<span class="math-inline">y = -A/B x - C/B</span> &nbsp;(donde la pendiente es <span class="math-inline">-A/B</span> y la ordenada es <span class="math-inline">-C/B</span>).
+            </p>
+          </div>
+
+          <!-- Conversiones Ejemplificadas -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Conversiones entre Formas (Ejemplo PDF)</h3>
+            <p>
+              Dada una recta con pendiente <strong>m = 2</strong> y corte con el eje y en <strong>(0,6)</strong> (ordenada al origen b = 6):
+            </p>
+            <div class="examples-table">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Forma</th>
+                    <th>Ecuacion</th>
+                    <th>Procedimiento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Explicita</strong></td>
+                    <td>y = 2x + 6</td>
+                    <td>Aplicacion directa de m y b en <span class="math-inline">y = mx + b</span>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>General (Implicita)</strong></td>
+                    <td>2x - y + 6 = 0</td>
+                    <td>Agrupar todos los terminos de un lado: <span class="math-inline">y - 2x - 6 = 0 &rArr; 2x - y + 6 = 0</span>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Segmentaria</strong></td>
+                    <td>x / (-3) + y / 6 = 1</td>
+                    <td>
+                      1. Partir de la implicta: <span class="math-inline">2x - y = -6</span>.
+                      <br>2. Dividir por -6 en ambos miembros: <span class="math-inline">(2x) / (-6) - y / (-6) = (-6) / (-6)</span>.
+                      <br>3. Simplificar: <span class="math-inline">x / (-3) + y / 6 = 1</span>.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="otras_funciones.html" class="nav-link">Siguiente: Otras Funciones Lineales &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

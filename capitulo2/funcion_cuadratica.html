@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion cuadratica y ecuacion de la parabola — Caracterizacion de parametros, concavidad, aberturas y traslaciones, y forma canonica del vertice. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Funcion Cuadratica | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="funciones.html" class="navbar__btn">Funciones</a>
+      <a href="funcion_lineal.html" class="navbar__btn">Funcion Lineal</a>
+      <a href="otras_funciones.html" class="navbar__btn">Otras Funciones</a>
+      <a href="#definicion" class="navbar__btn">Definicion</a>
+      <a href="#parametros" class="navbar__btn">Parametros</a>
+      <a href="#canonica" class="navbar__btn">Forma Canonica</a>
+      <a href="#ceros" class="navbar__btn">Ceros</a>
+      <a href="#sistemas" class="navbar__btn">Sistemas</a>
+      <a href="#tramos" class="navbar__btn">Tramos</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funcion_cuadratica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo II &mdash; Seccion 4</p>
+          <h1 class="study__title">Función Cuadrática</h1>
+          <p class="study__intro">
+            Estudio de la parábola, análisis del coeficiente cuadrático, traslaciones horizontales y verticales, y la forma canónica del vértice.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">Definicion de Funcion Cuadratica</a></li>
+              <li><a href="#parametros">Caracterizacion de los Parametros (a, h, k)</a></li>
+              <li><a href="#canonica">Forma Canonica del Vertice</a></li>
+              <li><a href="#ceros">3.3 Ceros de la Funcion Cuadratica (Raices)</a></li>
+              <li><a href="#sistemas">3.4 Sistemas Mixtos (Recta y Parabola)</a></li>
+              <li><a href="#tramos">3.5 Funciones por Tramos (Cuadraticas)</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="otras_funciones.html" class="nav-link nav-link--prev">&larr; Secc 3: Otras Funciones Lineales</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">definicion_cuadratica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">Definicion de la Parabola</h2>
+            <span class="section__symbol">y = ax<sup>2</sup> + bx + c</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La funcion real de segundo grado se conoce como <strong>funcion cuadratica</strong> y su representacion grafica es una curva simetrica llamada <strong>parabola</strong>.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>
+              Una funcion <strong>f: R &rarr; R</strong> es cuadratica si es de la forma:
+            </p>
+            <p class="math-display">f(x) = ax<sup>2</sup> + bx + c</p>
+            <p>
+              Donde los coeficientes <strong>a, b, c</strong> son numeros reales constantes, con <strong>a &ne; 0</strong>.
+            </p>
+            <p class="definition-box__note" style="margin-top:10px;">
+              El dominio de esta funcion es siempre el conjunto de los numeros reales: <strong>Dom f = R</strong>.
+              <br>La grafica es una parabola de <strong>eje de simetria vertical</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARAMETROS ===================== -->
+    <section class="study__section" id="parametros">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">analisis_parametros.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3.1 Caracterizacion de los Parametros</h2>
+          
+          <!-- Parametro a -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">El coeficiente cuadratico (a): Concavidad y Abertura</h3>
+            <p>
+              El coeficiente <strong>a</strong> determina la direccion de apertura y la "abertura" de las ramas de la parabola:
+              <br>&bull; Si <strong>a &gt; 0</strong>, la parabola abre hacia <strong>arriba</strong> (ramas hacia arriba, vertice es un punto minimo).
+              <br>&bull; Si <strong>a &lt; 0</strong>, la parabola abre hacia <strong>abajo</strong> (ramas hacia abajo, vertice es un punto maximo).
+              <br>&bull; El valor absoluto <strong>|a|</strong> controla la velocidad de crecimiento: cuanto mayor sea |a|, mas cerrada o angosta sera la parabola; cuanto menor sea |a|, mas abierta o ancha sera.
+            </p>
+          </div>
+
+          <!-- SVG graph showing effects of 'a' -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Efecto del coeficiente 'a' en y = ax<sup>2</sup></p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (150, 110), scale 20px per unit -->
+                <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <text x="285" y="114" font-size="9" font-family="monospace">x</text>
+                
+                <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+                <text x="144" y="20" font-size="9" font-family="monospace">y</text>
+
+                <!-- y = x^2 (a=1) -> green -->
+                <path d="M 106 13 Q 150 207 194 13" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="200" y="25" font-size="7" font-family="monospace" fill="#1a8a5a">y = x^2</text>
+
+                <!-- y = 2x^2 (a=2, narrower) -> teal -->
+                <path d="M 120 20 Q 150 200 180 20" fill="none" stroke="#0a7b8f" stroke-width="1.5"/>
+                <text x="185" y="15" font-size="7" font-family="monospace" fill="#0a7b8f">y = 2x^2</text>
+
+                <!-- y = -x^2 (a=-1, downwards) -> red -->
+                <path d="M 106 207 Q 150 13 194 207" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,1"/>
+                <text x="200" y="195" font-size="7" font-family="monospace" fill="#c0392b">y = -x^2</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Traslaciones -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Traslacion de la Parabola Madre (y = x<sup>2</sup>)</h3>
+            <p>
+              Podemos dibujar cualquier parabola desplazando la grafica de la parabola base <span class="math-inline">y = x<sup>2</sup></span>:
+            </p>
+            <div class="properties-grid">
+              <div class="property-card">
+                <h4 class="property-card__title">Traslacion Vertical</h4>
+                <p class="property-card__formula">y = x<sup>2</sup> + k</p>
+                <p class="property-card__example">
+                  Desplaza la grafica verticalmente <strong>|k|</strong> unidades. 
+                  Hacia <strong>arriba</strong> si k &gt; 0, y hacia <strong>abajo</strong> si k &lt; 0.
+                  El vertice queda en <strong>(0, k)</strong>.
+                </p>
+              </div>
+              <div class="property-card">
+                <h4 class="property-card__title">Traslacion Horizontal</h4>
+                <p class="property-card__formula">y = (x - h)<sup>2</sup></p>
+                <p class="property-card__example">
+                  Desplaza la grafica horizontalmente <strong>|h|</strong> unidades. 
+                  Hacia la <strong>derecha</strong> si h &gt; 0, y hacia la <strong>izquierda</strong> si h &lt; 0.
+                  El vertice queda en <strong>(h, 0)</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SVG graph showing translations -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Ejemplos de traslacion sobre la cuadricula</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (120, 150), scale 20px per unit -->
+                <line x1="20" y1="150" x2="280" y2="150" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+
+                <!-- y = x^2 (Origin at 120,150) -> green -->
+                <path d="M 80 70 Q 100 130 120 150 Q 140 130 160 70" fill="none" stroke="#1a8a5a" stroke-width="1.5"/>
+                <text x="75" y="65" font-size="7" font-family="monospace" fill="#1a8a5a">y=x^2</text>
+
+                <!-- y = (x-3)^2 (h=3, right by 60px -> vertex at 180, 150) -> blue -->
+                <path d="M 140 70 Q 160 130 180 150 Q 200 130 220 70" fill="none" stroke="#2a6eb5" stroke-width="1.5"/>
+                <text x="210" y="65" font-size="7" font-family="monospace" fill="#2a6eb5">y=(x-3)^2</text>
+
+                <!-- y = x^2 + 2 (k=2, up by 40px -> vertex at 120, 110) -> purple -->
+                <path d="M 80 30 Q 100 90 120 110 Q 140 90 160 30" fill="none" stroke="#7b2d8e" stroke-width="1.5"/>
+                <text x="125" y="105" font-size="7" font-family="monospace" fill="#7b2d8e">y=x^2+2</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMA CANONICA ===================== -->
+    <section class="study__section" id="canonica">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">forma_canonica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.2 Forma Canonica</h2>
+            <span class="section__symbol section__symbol--purple">f(x) = a(x-h)<sup>2</sup> + k</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La forma canonica de la funcion cuadratica expresa la ecuacion en funcion directa de las coordenadas de su vertice.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Ecuacion Canonica</p>
+            <p class="math-display">f(x) = a(x - h)<sup>2</sup> + k</p>
+            <p>
+              Donde el punto <strong>V(h, k)</strong> (tambien denotado como <span class="math-inline">V(x<sub>v</sub>, y<sub>v</sub>)</span>) es el <strong>vertice</strong> de la parabola.
+              <br>La recta vertical <strong>x = h</strong> es el <strong>eje de simetria</strong>.
+            </p>
+          </div>
+
+          <!-- Como obtener h y k -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Obtencion del Vertice desde la Forma General (ax<sup>2</sup> + bx + c)</h3>
+            <p>
+              Para calcular las coordenadas del vertice sin desarrollar el binomio, usamos las formulas:
+            </p>
+            <p class="math-display">
+              h = -b / (2a) <br>
+              k = f(h) = a(h)<sup>2</sup> + b(h) + c
+            </p>
+          </div>
+
+          <!-- Ejemplo Practico -->
+          <div class="key-concept" style="border-color:#dcd0e8; background:#fbfafc;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Ejemplo Paso a Paso (PDF)</h3>
+            <p>
+              Expresar en forma canonica la funcion cuadratica: &nbsp;<strong>f(x) = x<sup>2</sup> + 6x + 5</strong>.
+            </p>
+            <div class="construction-steps">
+              <div class="construction-step">
+                <span class="construction-step__num">1</span>
+                <span class="construction-step__val">
+                  <strong>Identificar coeficientes:</strong> 
+                  <br>a = 1, &nbsp; b = 6, &nbsp; c = 5.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">2</span>
+                <span class="construction-step__val">
+                  <strong>Calcular la abscisa del vertice (h):</strong>
+                  <br>h = -b / (2a) = -6 / (2 &middot; 1) = <strong>-3</strong>.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">3</span>
+                <span class="construction-step__val">
+                  <strong>Calcular la ordenada del vertice (k):</strong>
+                  <br>k = f(-3) = (-3)<sup>2</sup> + 6(-3) + 5 = 9 - 18 + 5 = <strong>-4</strong>.
+                  <br>Por lo tanto, el vertice es <strong>V(-3, -4)</strong> y el eje de simetria es <strong>x = -3</strong>.
+                </span>
+              </div>
+              <div class="construction-step">
+                <span class="construction-step__num">4</span>
+                <span class="construction-step__val">
+                  <strong>Escribir la forma canonica:</strong>
+                  <br>f(x) = a(x - h)<sup>2</sup> + k &rArr; <strong>f(x) = (x + 3)<sup>2</sup> - 4</strong>.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CEROS DE LA FUNCION ===================== -->
+    <section class="study__section" id="ceros">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--dark">
+          <span class="window__titlebar-text">ceros_cuadratica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.3 Ceros de la Funcion Cuadratica (Raices)</h2>
+            <span class="section__symbol">f(r) = 0</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Llamamos raices o ceros de la funcion cuadratica a aquellos valores reales <strong>r</strong> para los cuales la funcion vale cero. 
+            Geometricamente, representan las abscisas de los puntos de interseccion de la parabola con el <strong>eje x</strong>.
+          </p>
+
+          <!-- Tipos de Ecuaciones -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Resolucion de Ecuaciones Incompletas</h3>
+            <div class="comparison-cols">
+              <!-- Incompleta 1 -->
+              <div class="comparison-col comparison-col--left">
+                <h4>Sin termino lineal (b = 0)</h4>
+                <p class="math-display">ax<sup>2</sup> + c = 0</p>
+                <p>Despejamos directamente la variable cuadratica:</p>
+                <p class="math-display">x<sup>2</sup> = -c / a &nbsp;&rArr;&nbsp; x = &plusmn;&radic;(-c / a)</p>
+                <p class="construction-note" style="border-left-color:#1a8a5a; background:#f4faf8; padding:5px 10px;">
+                  <strong>Ejemplo:</strong> 4x<sup>2</sup> - 1/4 = 0
+                  <br>x<sup>2</sup> = 1/16 &rArr; x = &plusmn;1/4
+                </p>
+              </div>
+
+              <!-- Incompleta 2 -->
+              <div class="comparison-col comparison-col--right" style="background:#faf5f5; border-color:#e0b8b8;">
+                <h4 style="color:#c0392b;">Sin termino independiente (c = 0)</h4>
+                <p class="math-display">ax<sup>2</sup> + bx = 0</p>
+                <p>Extraemos factor comun x de la expresion:</p>
+                <p class="math-display">x(ax + b) = 0 &nbsp;&rArr;&nbsp; x<sub>1</sub> = 0, &nbsp; x<sub>2</sub> = -b / a</p>
+                <p class="construction-note" style="border-left-color:#c0392b; background:#fcf8f8; padding:5px 10px;">
+                  <strong>Ejemplo:</strong> 25x<sup>2</sup> + 5x = 0
+                  <br>5x(5x + 1) = 0 &rArr; x<sub>1</sub> = 0, &nbsp; x<sub>2</sub> = -1/5
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Resolvente -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ecuacion Completa y Formula Resolvente</h3>
+            <p>
+              Para una ecuacion completa de la forma <span class="math-inline">ax<sup>2</sup> + bx + c = 0</span> (con a, b, c &ne; 0), 
+              utilizamos la <strong>formula resolvente</strong> (Bhaskara):
+            </p>
+            <p class="math-display">
+              x<sub>1,2</sub> = [-b &plusmn; &radic;(b<sup>2</sup> - 4ac)] / (2a)
+            </p>
+            <p>
+              El radicando <span class="math-inline">&Delta; = b<sup>2</sup> - 4ac</span> se denomina <strong>discriminante</strong> y determina el numero de soluciones reales:
+            </p>
+            <div class="properties-grid">
+              <div class="property-card">
+                <h4 class="property-card__title">Discriminante &Delta; &gt; 0</h4>
+                <p class="property-card__formula">Dos raices reales distintas</p>
+                <p class="property-card__example">La parabola cruza el eje x en dos puntos distintos.</p>
+              </div>
+              <div class="property-card">
+                <h4 class="property-card__title">Discriminante &Delta; = 0</h4>
+                <p class="property-card__formula">Una raiz real doble</p>
+                <p class="property-card__example">El vertice de la parabola esta apoyado sobre el eje x.</p>
+              </div>
+              <div class="property-card" style="background:#faf5f5; border-color:#e0b8b8;">
+                <h4 class="property-card__title" style="color:#c0392b;">Discriminante &Delta; &lt; 0</h4>
+                <p class="property-card__formula" style="color:#c0392b;">Sin raices reales</p>
+                <p class="property-card__example" style="color:#c0392b;">La parabola flota sobre el eje x o esta enteramente por debajo (ej. x<sup>2</sup> + 1 = 0).</p>
+              </div>
+            </div>
+
+            <!-- Solved Example -->
+            <p class="construction-note" style="background:#fcfaf5; border-left:3px solid #b5652a; padding:var(--space-sm); margin-top:var(--space-md);">
+              <strong>Ejemplo completo (PDF):</strong> Ceros de &nbsp;<span class="math-inline">f(x) = x<sup>2</sup> + 2x - 3</span>.
+              <br>Coeficientes: a = 1, &nbsp; b = 2, &nbsp; c = -3.
+              <br>Sustitucion: &nbsp;<span class="math-inline">x = [-2 &plusmn; &radic;(2<sup>2</sup> - 4 &middot; 1 &middot; (-3))] / (2 &middot; 1) = [-2 &plusmn; &radic;(4 + 12)] / 2 = [-2 &plusmn; 4] / 2</span>.
+              <br>Las raices resultan: <strong>x<sub>1</sub> = 1</strong> &nbsp; y &nbsp; <strong>x<sub>2</sub> = -3</strong>.
+            </p>
+          </div>
+
+          <!-- SVG representation of Discriminant cases -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Comportamiento de la parabola segun su discriminante (&Delta;)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 160" class="number-line-svg" style="max-width:260px;">
+                <!-- Axis X -->
+                <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/>
+                <text x="282" y="114" font-size="9" font-family="monospace">x</text>
+
+                <!-- Case 1: Delta > 0 (intersects 2 times) -> Green -->
+                <path d="M 30 50 Q 55 210 80 50" fill="none" stroke="#1a8a5a" stroke-width="1.5"/>
+                <circle cx="42" cy="110" r="3" fill="#1a8a5a"/>
+                <circle cx="68" cy="110" r="3" fill="#1a8a5a"/>
+                <text x="55" y="40" font-size="7" font-family="monospace" fill="#1a8a5a" text-anchor="middle">&Delta; &gt; 0</text>
+
+                <!-- Case 2: Delta = 0 (vertex on x axis) -> Blue -->
+                <path d="M 115 50 Q 140 170 165 50" fill="none" stroke="#2a6eb5" stroke-width="1.5"/>
+                <circle cx="140" cy="110" r="3" fill="#2a6eb5"/>
+                <text x="140" y="40" font-size="7" font-family="monospace" fill="#2a6eb5" text-anchor="middle">&Delta; = 0</text>
+
+                <!-- Case 3: Delta < 0 (no intersection) -> Red -->
+                <path d="M 200 20 Q 225 110 250 20" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,1"/>
+                <text x="225" y="15" font-size="7" font-family="monospace" fill="#c0392b" text-anchor="middle">&Delta; &lt; 0</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SISTEMAS MIXTOS ===================== -->
+    <section class="study__section" id="sistemas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">sistemas_mixtos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.4 Sistemas Mixtos (Recta y Parabola)</h2>
+            <span class="section__symbol">y = mx + b || y = ax^2...</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Un sistema mixto esta compuesto por una ecuacion lineal (recta) y una ecuacion cuadratica (parabola). 
+            La resolucion analitica se efectua igualando ambas formulas, lo que genera una nueva ecuacion cuadratica.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title">Clasificacion Geometria (Intersecciones)</h3>
+            <div class="properties-grid">
+              <div class="property-card">
+                <h4 class="property-card__title">Recta Secante</h4>
+                <p class="property-card__formula">Dos puntos de contacto</p>
+                <p class="property-card__example">La ecuacion igualada tiene discriminante &Delta; &gt; 0. Hay dos soluciones.</p>
+              </div>
+              <div class="property-card">
+                <h4 class="property-card__title">Recta Tangente</h4>
+                <p class="property-card__formula">Un punto de contacto</p>
+                <p class="property-card__example">La ecuacion igualada tiene discriminante &Delta; = 0. Toca a la parabola en un solo punto.</p>
+              </div>
+              <div class="property-card" style="background:#faf5f5; border-color:#e0b8b8;">
+                <h4 class="property-card__title" style="color:#c0392b;">Recta Exterior</h4>
+                <p class="property-card__formula" style="color:#c0392b;">Sin puntos de contacto</p>
+                <p class="property-card__example" style="color:#c0392b;">La ecuacion igualada tiene discriminante &Delta; &lt; 0. La recta no toca a la parabola.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solved example of mixed system -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo Resuelto (PDF)</h3>
+            <p>
+              Determinar la interseccion entre la parabola &nbsp;<strong>y = x<sup>2</sup></strong>&nbsp; y la recta &nbsp;<strong>y = x + 2</strong>.
+            </p>
+            <div class="note-box" style="background:#fff; margin-bottom:10px;">
+              <strong>Resolucion analitica (Igualacion):</strong>
+              <br>x<sup>2</sup> = x + 2 &nbsp;&rArr;&nbsp; x<sup>2</sup> - x - 2 = 0
+              <br>Factorizando el trinomio: &nbsp;(x - 2)(x + 1) = 0
+              <br>Obtenemos dos valores de x: &nbsp;<strong>x<sub>1</sub> = 2</strong> &nbsp; y &nbsp; <strong>x<sub>2</sub> = -1</strong>.
+              <br><br>
+              <strong>Sustituyendo en la recta para hallar las ordenadas y:</strong>
+              <br>&bull; Para x<sub>1</sub> = 2: &nbsp; y<sub>1</sub> = 2 + 2 = 4 &rArr; Punto <strong>P<sub>1</sub>(2, 4)</strong>.
+              <br>&bull; Para x<sub>2</sub> = -1: &nbsp; y<sub>2</sub> = -1 + 2 = 1 &rArr; Punto <strong>P<sub>2</sub>(-1, 1)</strong>.
+            </div>
+            <p class="construction-note">
+              La recta es <strong>secante</strong> y corta a la parabola en los puntos <strong>(2,4)</strong> y <strong>(-1,1)</strong>.
+            </p>
+          </div>
+
+          <!-- Mixed System SVG diagram -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Esquema geometrico de la interseccion de y = x<sup>2</sup> e y = x + 2</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (120, 150), scale 20px per unit -->
+                <line x1="20" y1="150" x2="280" y2="150" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+
+                <!-- Parabola y = x^2 -->
+                <path d="M 76 53 Q 120 247 164 53" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="180" y="45" font-size="7" font-family="monospace" fill="#1a8a5a">y = x^2</text>
+
+                <!-- Secant Line y = x + 2 -->
+                <!-- passes through (-1, 1) -> (100, 130) and (2, 4) -> (160, 70) -->
+                <!-- x=-3 -> y=-1 (60, 170). x=4 -> y=6 (200, 30) -->
+                <line x1="60" y1="170" x2="200" y2="30" stroke="#2a6eb5" stroke-width="2"/>
+                <text x="205" y="35" font-size="7" font-family="monospace" fill="#2a6eb5">y = x + 2</text>
+
+                <!-- Intersection Points -->
+                <circle cx="160" cy="70" r="4" fill="#c0392b"/>
+                <text x="168" y="74" font-size="7" font-family="monospace" fill="#c0392b">(2, 4)</text>
+
+                <circle cx="100" cy="130" r="4" fill="#c0392b"/>
+                <text x="75" y="132" font-size="7" font-family="monospace" fill="#c0392b">(-1, 1)</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUNCIONES POR TRAMOS ===================== -->
+    <section class="study__section" id="tramos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">tramos_cuadraticos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.5 Funciones por Tramos (Cuadraticas)</h2>
+            <span class="section__symbol section__symbol--purple">f(x) = tramos</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Las funciones definidas por tramos tambien pueden contener expresiones cuadraticas en sus reglas de correspondencia. Su analisis de continuidad se evalua en las uniones de los intervalos.
+          </p>
+
+          <!-- Piecewise Example 66b -->
+          <div class="key-concept">
+            <h3 class="key-concept__title">Caso de estudio practico (Ejercicio 66b del PDF)</h3>
+            <p>Dada la funcion real definida por partes:</p>
+            <p class="math-display">
+              f(x) = 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; si &nbsp; x &lt; -2 <br>
+              f(x) = x<sup>2</sup> - 1 &nbsp;&nbsp;&nbsp; si &nbsp; -2 &le; x &le; 2 <br>
+              f(x) = 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; si &nbsp; x &gt; 2
+            </p>
+            <div class="note-box" style="margin-top:15px;">
+              <strong>Analisis de Dominio e Imagen:</strong>
+              <br>&bull; <strong>Dominio:</strong> Los tres intervalos abarcan la totalidad de la recta real. Por tanto, <strong>Dom f = R</strong>.
+              <br>&bull; <strong>Imagen:</strong>
+              <br>&mdash; Para x &lt; -2: la funcion es constante e igual a <strong>4</strong>.
+              <br>&mdash; Para -2 &le; x &le; 2: la parabola <span class="math-inline">x<sup>2</sup> - 1</span> tiene su vertice en (0, -1) y sus extremos en f(&plusmn;2) = 3. Varia en el intervalo <strong>[-1; 3]</strong>.
+              <br>&mdash; Para x &gt; 2: la funcion es constante e igual a <strong>3</strong>.
+              <br>Union de las imagenes: Im f = [-1; 3] &cup; {4} &rArr; <strong>[-1; 4]</strong> (excluyendo el tramo intermedio (3; 4)).
+            </div>
+          </div>
+
+          <!-- SVG graph for Piecewise Quadratic function -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Grafica de la funcion cuadratica por tramos</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (150, 150), scale 20px per unit -->
+                <line x1="20" y1="150" x2="280" y2="150" stroke="#777" stroke-width="1.5"/> <!-- X Axis -->
+                <line x1="150" y1="10" x2="150" y2="210" stroke="#777" stroke-width="1.5"/> <!-- Y Axis -->
+
+                <!-- Tramo 1: y = 4 for x < -2 (x_coord < 110). (150 - 2*20 = 110). y = 150 - 4*20 = 70 -->
+                <line x1="20" y1="70" x2="110" y2="70" stroke="#1a8a5a" stroke-width="2"/>
+                <circle cx="110" cy="70" r="4" fill="#fff" stroke="#1a8a5a" stroke-width="2"/> <!-- Open circle at (-2,4) -->
+
+                <!-- Tramo 2: y = x^2 - 1 for x in [-2; 2] (x_coord between 110 and 190). -->
+                <!-- x=-2 -> y=3 (110, 90). x=0 -> y=-1 (150, 170). x=2 -> y=3 (190, 90) -->
+                <path d="M 110 90 Q 150 250 190 90" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+                <circle cx="110" cy="90" r="4" fill="#2a6eb5"/> <!-- Closed circle at (-2,3) -->
+                <circle cx="190" cy="90" r="4" fill="#2a6eb5"/> <!-- Closed circle at (2,3) -->
+
+                <!-- Tramo 3: y = 3 for x > 2 (x_coord > 190). y = 150 - 3*20 = 90 -->
+                <line x1="190" y1="90" x2="280" y2="90" stroke="#7b2d8e" stroke-width="2"/>
+                <!-- Note: The open circle at (2,3) for this tramo is filled by the closed circle from Tramo 2 (continuity) -->
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center;">
+              En <strong>x = -2</strong> hay un salto discontinuo de 4 a 3. En <strong>x = 2</strong>, el tramo cuadratico y el constante se acoplan continuamente en y = 3.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
