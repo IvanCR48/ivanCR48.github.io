@@ -114,26 +114,68 @@
               <span class="win-panel__titlebar-text">soberania_nacional.sys</span>
             </div>
             <div class="win-panel__body">
-              <!-- Malvinas SVG Map -->
-              <svg viewBox="0 0 200 100" class="malvinas-svg">
-                <!-- Gran Malvina (Left/West Island) -->
-                <path d="M 52 24 C 60 24, 64 21, 70 24 C 76 27, 76 34, 82 40 C 85 45, 81 50, 76 56 C 73 60, 75 66, 78 72 C 81 78, 77 82, 70 82 C 64 82, 60 76, 56 75 C 50 74, 46 78, 41 76 C 36 74, 38 68, 42 64 C 46 60, 47 54, 42 50 C 37 46, 38 41, 41 38 C 45 35, 48 35, 49 32 C 50 29, 49 26, 52 24 Z" fill="#74acdf" stroke="#2a6eb5" stroke-width="1.2"/>
-                <!-- Isla Soledad (Right/East Island) -->
-                <path d="M 124 51 C 120 48, 118 44, 116 40 C 114 36, 112 30, 115 26 C 118 22, 124 22, 128 24 C 132 26, 134 32, 136 36 C 138 32, 142 24, 148 24 C 154 24, 158 28, 162 30 C 166 32, 172 32, 174 36 C 176 40, 168 43, 164 42 C 160 41, 156 46, 150 48 C 144 50, 136 50, 130 51 C 135 53, 142 54, 150 55 C 158 56, 164 58, 166 62 C 168 66, 162 70, 158 72 C 154 74, 150 78, 144 80 C 138 82, 130 81, 124 78 C 118 75, 114 70, 116 64 C 118 58, 122 56, 124 51 Z" fill="#74acdf" stroke="#2a6eb5" stroke-width="1.2"/>
-                <!-- Small surrounding islands -->
-                <!-- Pebble Island (Isla Borbon) at top of Gran Malvina -->
-                <path d="M 50 18 C 55 18, 62 17, 65 19 C 62 21, 54 21, 50 18 Z" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <!-- Saunders Island (Isla Trinidad) at top-left of Gran Malvina -->
-                <circle cx="40" cy="22" r="2.5" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <!-- Weddell Island (Isla San Jose) at bottom-left of Gran Malvina -->
-                <circle cx="28" cy="68" r="4" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <!-- Speedwell Island (Isla Aguila) at bottom-left of Lafonia -->
-                <circle cx="108" cy="80" r="3.2" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <!-- Lively Island (Isla Bougainville) at east of Lafonia -->
-                <circle cx="168" cy="60" r="2" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <!-- George Island (Isla Jorge) and Barren Island (Isla Pelada) at south of Lafonia -->
-                <circle cx="122" cy="90" r="1.8" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
-                <circle cx="128" cy="92" r="1.5" fill="#74acdf" stroke="#2a6eb5" stroke-width="0.8"/>
+              <!-- Malvinas SVG Map (geographically detailed) -->
+              <svg viewBox="0 0 300 150" class="malvinas-svg" style="height: 150px;">
+                <!-- Subtle ocean background -->
+                <rect width="300" height="150" fill="rgba(200,230,245,0.3)" rx="2"/>
+
+                <!-- Gran Malvina (West Falkland) - irregular coastline with east-side fjords -->
+                <path d="
+                  M 50 22 C 55 19, 62 17, 70 16 C 76 15, 82 16, 88 18
+                  C 92 19, 96 22, 100 26 C 103 30, 105 34, 104 38
+                  C 103 42, 105 46, 108 48 C 110 50, 108 54, 105 57
+                  C 102 60, 100 62, 102 66 C 104 70, 107 74, 105 78
+                  C 103 82, 99 86, 94 90 C 89 94, 84 97, 78 99
+                  C 72 101, 66 100, 60 98 C 56 96, 52 92, 48 87
+                  C 44 82, 42 76, 40 70 C 38 64, 36 58, 38 52
+                  C 40 46, 42 42, 40 38 C 38 34, 40 28, 44 24
+                  C 47 21, 48 22, 50 22 Z
+                " fill="#74acdf" stroke="#1a5c8a" stroke-width="1.2" stroke-linejoin="round"/>
+
+                <!-- Isla Soledad (East Falkland) - single continuous path showing narrow Darwin isthmus -->
+                <path d="
+                  M 148 52
+                  C 146 46, 143 40, 145 34 C 147 28, 152 23, 160 19
+                  C 168 15, 178 13, 188 14 C 196 15, 204 18, 210 24
+                  C 214 28, 218 34, 216 38 C 214 42, 210 44, 206 42
+                  C 202 40, 199 37, 196 35 C 193 33, 190 34, 192 38
+                  C 194 42, 198 44, 204 46 C 210 48, 216 54, 218 60
+                  C 220 66, 218 70, 214 74 C 210 78, 204 80, 198 80
+                  C 192 80, 186 78, 180 79
+                  C 176 80, 174 82, 176 84
+                  C 180 88, 186 92, 194 96
+                  C 202 100, 210 106, 214 112
+                  C 218 118, 214 124, 208 128
+                  C 202 132, 194 134, 186 132
+                  C 178 130, 170 126, 164 120
+                  C 158 114, 152 108, 148 102
+                  C 144 96, 142 90, 144 86
+                  C 146 82, 150 80, 148 78
+                  C 144 74, 140 68, 142 62
+                  C 144 56, 146 54, 148 52 Z
+                " fill="#74acdf" stroke="#1a5c8a" stroke-width="1.2" stroke-linejoin="round"/>
+
+                <!-- Surrounding Islands -->
+                <!-- Isla Borbon (Pebble Island) - elongated, north of Gran Malvina -->
+                <path d="M 52 12 C 58 10, 68 10, 74 12 C 70 15, 56 15, 52 12 Z" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.8"/>
+                <!-- Isla Trinidad (Saunders) - NW of Gran Malvina -->
+                <ellipse cx="34" cy="20" rx="5" ry="3.5" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.8"/>
+                <!-- Isla San Jose (Weddell) - SW of Gran Malvina -->
+                <path d="M 20 72 C 24 68, 32 68, 36 72 C 34 78, 24 78, 20 72 Z" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.8"/>
+                <!-- Isla del Pasaje (Passage) -->
+                <ellipse cx="42" cy="80" rx="3" ry="2" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.7"/>
+                <!-- Isla Aguila (Speedwell) - south of isthmus -->
+                <ellipse cx="134" cy="96" rx="5" ry="3.5" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.8"/>
+                <!-- Isla Bougainville (Lively) - east of Lafonia -->
+                <ellipse cx="226" cy="84" rx="4" ry="2.5" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.8"/>
+                <!-- Islas Jorge y Pelada (George and Barren) -->
+                <circle cx="148" cy="116" r="2.5" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.7"/>
+                <circle cx="156" cy="120" r="2" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.7"/>
+                <!-- Isla Beauchene (southernmost) -->
+                <circle cx="186" cy="146" r="2" fill="#74acdf" stroke="#1a5c8a" stroke-width="0.7"/>
+
+                <!-- Label -->
+                <text x="150" y="148" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a5c8a" letter-spacing="3">ISLAS MALVINAS</text>
               </svg>
               
               <div class="patriotic-phrase">
