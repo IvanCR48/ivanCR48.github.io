@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Operaciones con funciones: suma, diferencia, producto y cociente. Definiciones y analisis riguroso del dominio de la funcion resultante. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Operaciones con Funciones | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="#definicion" class="navbar__btn">Definicion</a>
+      <a href="#dominios" class="navbar__btn">Dominios</a>
+      <a href="#ejemplos" class="navbar__btn">Ejemplos</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">operaciones_funciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo III &mdash; Seccion 1</p>
+          <h1 class="study__title">Operaciones con Funciones</h1>
+          <p class="study__intro">
+            Definición de las operaciones aritméticas elementales con funciones (suma, diferencia, producto y cociente) y cálculo analítico de sus respectivos dominios de definición.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__nav-links">
+            <a href="../capitulo2/funcion_racional_irracional.html" class="nav-link nav-link--prev">&larr; Cap II: Racionales e Irracionales</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">algebra_funciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">1. Operaciones y Definicion</h2>
+            <span class="section__symbol">(f + g)(x)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Del mismo modo que podemos realizar operaciones basicas con numeros reales, es posible combinar dos o mas funciones para obtener nuevas funciones a traves del algebra de funciones.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definicion Matematica</p>
+            <p>
+              Sean <strong>f</strong> y <strong>g</strong> dos funciones reales. Se definen las funciones resultantes como:
+            </p>
+            <ul style="list-style:none; padding-left:10px; line-height:1.8; margin: 15px 0;">
+              <li>&bull; <strong>Suma:</strong> &nbsp;<span class="math-inline">(f + g)(x) = f(x) + g(x)</span></li>
+              <li>&bull; <strong>Diferencia:</strong> &nbsp;<span class="math-inline">(f &minus; g)(x) = f(x) &minus; g(x)</span></li>
+              <li>&bull; <strong>Producto:</strong> &nbsp;<span class="math-inline">(f &middot; g)(x) = f(x) &middot; g(x)</span></li>
+              <li>&bull; <strong>Cociente:</strong> &nbsp;<span class="math-inline">(f / g)(x) = f(x) / g(x)</span> &nbsp;(siempre que <span class="math-inline">g(x) &ne; 0</span>)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOMINIOS RESULTANTES ===================== -->
+    <section class="study__section" id="dominios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">dominios_operaciones.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Dominio de la Funcion Resultante</h2>
+          
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Para que la operacion tenga sentido, la variable independiente x debe pertenecer simultaneamente al dominio de f y al dominio de g.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">La Regla de la Interseccion</h3>
+            <p>
+              El dominio de la <strong>suma</strong>, <strong>diferencia</strong> y <strong>producto</strong> es la interseccion de los dominios individuales:
+            </p>
+            <p class="math-display">
+              Dom(f + g) = Dom(f &minus; g) = Dom(f &middot; g) = Dom f &cap; Dom g
+            </p>
+            <p>
+              Para el <strong>cociente</strong>, debemos excluir ademas todos los valores de x que anulan al denominador g(x):
+            </p>
+            <p class="math-display">
+              Dom(f / g) = (Dom f &cap; Dom g) &setminus; { x &isin; R &nbsp;|&nbsp; g(x) = 0 }
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLOS ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ejemplos_resueltos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Ejemplos de Aplicacion Analitica</h2>
+
+          <!-- Ejemplo 1 -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ejemplo 1 (Polinómicas)</h3>
+            <p>
+              Sean &nbsp;<span class="math-inline">f(x) = 3x<sup>2</sup> + 2</span>&nbsp; y &nbsp;<span class="math-inline">g(x) = 5x &minus; 4</span>.
+              <br>Ambas son funciones polinomicas, por lo que: &nbsp;<span class="math-inline">Dom f = R</span>&nbsp; y &nbsp;<span class="math-inline">Dom g = R</span>.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1) Suma:</strong>
+              <br>(f + g)(x) = (3x<sup>2</sup> + 2) + (5x &minus; 4) = <strong>3x<sup>2</sup> + 5x &minus; 2</strong>
+              <br>Dom(f + g) = R &cap; R = <strong>R</strong>
+              <br><br>
+              <strong>2) Diferencia:</strong>
+              <br>(f &minus; g)(x) = (3x<sup>2</sup> + 2) &minus; (5x &minus; 4) = <strong>3x<sup>2</sup> &minus; 5x + 6</strong>
+              <br>Dom(f &minus; g) = <strong>R</strong>
+              <br><br>
+              <strong>3) Producto:</strong>
+              <br>(f &middot; g)(x) = (3x<sup>2</sup> + 2)(5x &minus; 4) = <strong>15x<sup>3</sup> &minus; 12x<sup>2</sup> + 10x &minus; 8</strong>
+              <br>Dom(f &middot; g) = <strong>R</strong>
+              <br><br>
+              <strong>4) Cociente:</strong>
+              <br>(f / g)(x) = <strong>(3x<sup>2</sup> + 2) / (5x &minus; 4)</strong>
+              <br>El denominador se anula si: &nbsp; 5x &minus; 4 = 0 &rArr; x = 4/5.
+              <br>Dom(f / g) = R &setminus; <strong>{4/5}</strong>
+            </div>
+          </div>
+
+          <!-- Ejemplo 2 -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo 2 (Radical y Racional)</h3>
+            <p>
+              Sean &nbsp;<span class="math-inline">f(x) = &radic;x</span>&nbsp; y &nbsp;<span class="math-inline">g(x) = 1 / (x<sup>2</sup> &minus; 5x + 6)</span>.
+              <br>Analicemos el producto &nbsp;<span class="math-inline">(f &middot; g)(x)</span>&nbsp; y su dominio resultante.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1. Dominios individuales:</strong>
+              <br>&bull; f(x) tiene indice par (raiz cuadrada) &rArr; radicando &ge; 0 &rArr; <strong>Dom f = [0; &infin;)</strong>.
+              <br>&bull; g(x) tiene denominador &rArr; x<sup>2</sup> &minus; 5x + 6 &ne; 0 &rArr; (x &minus; 2)(x &minus; 3) &ne; 0 &rArr; <strong>Dom g = R &setminus; {2, 3}</strong>.
+              <br><br>
+              <strong>2. Interseccion:</strong>
+              <br>Dom(f &middot; g) = Dom f &cap; Dom g = [0; &infin;) &cap; (R &setminus; {2, 3})
+              <br>Dom(f &middot; g) = <strong>[0; 2) &cup; (2; 3) &cup; (3; &infin;)</strong>
+            </div>
+          </div>
+
+          <!-- Interval Intersection SVG -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Visualizacion de la interseccion de Dominios</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 120" class="number-line-svg" style="max-width:280px;">
+                <!-- Axis lines -->
+                <line x1="20" y1="30" x2="280" y2="30" stroke="#777" stroke-width="1"/>
+                <line x1="20" y1="60" x2="280" y2="60" stroke="#777" stroke-width="1"/>
+                <line x1="20" y1="90" x2="280" y2="90" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Labels -->
+                <text x="25" y="22" font-size="7" font-family="monospace" fill="#1a8a5a">Dom f: [0, +inf)</text>
+                <text x="25" y="52" font-size="7" font-family="monospace" fill="#7b2d8e">Dom g: R \ {2, 3}</text>
+                <text x="25" y="82" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">Dom f &cap; g</text>
+
+                <!-- Points labels -->
+                <!-- x=0: 60px, x=2: 120px, x=3: 150px -->
+                <text x="60" y="112" font-size="8" font-family="monospace" text-anchor="middle">0</text>
+                <text x="120" y="112" font-size="8" font-family="monospace" text-anchor="middle">2</text>
+                <text x="150" y="112" font-size="8" font-family="monospace" text-anchor="middle">3</text>
+
+                <!-- Dom f: Solid line from 60 to right -->
+                <line x1="60" y1="30" x2="280" y2="30" stroke="#1a8a5a" stroke-width="2.5"/>
+                <circle cx="60" cy="30" r="3" fill="#1a8a5a"/>
+
+                <!-- Dom g: Line with holes at 120 and 150 -->
+                <line x1="20" y1="60" x2="117" y2="60" stroke="#7b2d8e" stroke-width="2.5"/>
+                <line x1="123" y1="60" x2="147" y2="60" stroke="#7b2d8e" stroke-width="2.5"/>
+                <line x1="153" y1="60" x2="280" y2="60" stroke="#7b2d8e" stroke-width="2.5"/>
+                <circle cx="120" cy="60" r="3" fill="#fff" stroke="#7b2d8e" stroke-width="1.5"/>
+                <circle cx="150" cy="60" r="3" fill="#fff" stroke="#7b2d8e" stroke-width="1.5"/>
+
+                <!-- Intersection: Solid dot at 60, holes at 120 and 150 -->
+                <line x1="60" y1="90" x2="117" y2="90" stroke="#c0392b" stroke-width="2.5"/>
+                <line x1="123" y1="90" x2="147" y2="90" stroke="#c0392b" stroke-width="2.5"/>
+                <line x1="153" y1="90" x2="280" y2="90" stroke="#c0392b" stroke-width="2.5"/>
+                <circle cx="60" cy="90" r="3.5" fill="#c0392b"/>
+                <circle cx="120" cy="90" r="3" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+                <circle cx="150" cy="90" r="3" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_154_155.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">Ejercicios de Autoevaluacion</h2>
+          
+          <div class="note-box" style="background:#f9f9fb; margin-bottom:var(--space-md);">
+            <strong>Dadas las siguientes funciones del modulo:</strong>
+            <ul style="list-style:none; padding-left:10px; line-height:1.7; margin-top:5px;">
+              <li>&bull; <strong>f(x) = x / (x<sup>2</sup> &minus; 2x &minus; 3)</strong> &nbsp;&rArr;&nbsp; Dom f = R &setminus; {&minus;1, 3}</li>
+              <li>&bull; <strong>g(x) = x / (x &minus; 2)</strong> &nbsp;&rArr;&nbsp; Dom g = R &setminus; {2}</li>
+              <li>&bull; <strong>h(x) = 5</strong> &nbsp;&rArr;&nbsp; Dom h = R</li>
+              <li>&bull; <strong>s(x) = 1 / x</strong> &nbsp;&rArr;&nbsp; Dom s = R &setminus; {0}</li>
+              <li>&bull; <strong>r(x) = &radic;(x &minus; 3)</strong> &nbsp;&rArr;&nbsp; Dom r = [3; &infin;)</li>
+              <li>&bull; <strong>t(x) = &radic;(x + 2)</strong> &nbsp;&rArr;&nbsp; Dom t = [&minus;2; &infin;)</li>
+            </ul>
+          </div>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio A -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 154-a: Calcular (r + g)(2)</div>
+              <div class="precaution-card__body">
+                <p>¿Existe el resultado de sumar las funciones en el valor x = 2?</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolucion</summary>
+                  <p style="margin-top:5px;">
+                    Para evaluar (r + g)(2), x = 2 debe pertenecer al dominio resultante:
+                    <br><strong>Dom(r + g) = Dom r &cap; Dom g</strong>.
+                    <br>&bull; Dom r = [3; &infin;) &rArr; 2 &notin; Dom r.
+                    <br>&bull; Dom g = R &setminus; {2} &rArr; 2 &notin; Dom g.
+                    <br>Como el valor x = 2 no pertenece a ninguno de los dominios individuales (ni a su interseccion), la operacion <strong>no existe</strong> para este valor.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio B -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 154-b: Calcular (h &middot; s)(&minus;6)</div>
+              <div class="precaution-card__body">
+                <p>Evaluar el producto de las funciones en el valor x = &minus;6.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolucion</summary>
+                  <p style="margin-top:5px;">
+                    Verificamos el dominio: &minus;6 &isin; (Dom h &cap; Dom s) = R &setminus; {0}. Es un punto valido.
+                    <br>Calculamos individualmente:
+                    <br>&bull; h(&minus;6) = 5
+                    <br>&bull; s(&minus;6) = 1/(&minus;6) = &minus;1/6
+                    <br>Operamos:
+                    <br>(h &middot; s)(&minus;6) = 5 &middot; (&minus;1/6) = <strong>&minus;5/6</strong>
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio C -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 154-c: Calcular (g / f)(4)</div>
+              <div class="precaution-card__body">
+                <p>Evaluar el cociente de las funciones en el valor x = 4.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolucion</summary>
+                  <p style="margin-top:5px;">
+                    Verificamos el dominio: 4 &isin; (Dom g &cap; Dom f) = R &setminus; {&minus;1, 2, 3}.
+                    <br>Calculamos individualmente:
+                    <br>&bull; g(4) = 4 / (4 &minus; 2) = 4/2 = 2
+                    <br>&bull; f(4) = 4 / (4<sup>2</sup> &minus; 2&middot;4 &minus; 3) = 4 / (16 &minus; 8 &minus; 3) = 4/5
+                    <br>Operamos:
+                    <br>(g / f)(4) = g(4) / f(4) = 2 / (4/5) = 10/4 = <strong>5/2</strong> (ó 2.5)
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio D -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 154-d: Calcular (h / r)(&minus;1)</div>
+              <div class="precaution-card__body">
+                <p>Evaluar el cociente de las funciones en el valor x = &minus;1.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolucion</summary>
+                  <p style="margin-top:5px;">
+                    Verificamos si x = &minus;1 pertenece al Dom(h/r):
+                    <br>Dom(h/r) = (Dom h &cap; Dom r) &setminus; {x | r(x) = 0}
+                    <br>&bull; Dom h = R
+                    <br>&bull; Dom r = [3; &infin;) &rArr; &minus;1 &notin; Dom r.
+                    <br>Dado que &minus;1 no pertenece al dominio de r, la division <strong>no existe</strong> para este valor.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
