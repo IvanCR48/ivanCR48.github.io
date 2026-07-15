@@ -177,6 +177,55 @@
             </div>
           </div>
 
+          <!-- Grafico Ejemplo 1 (Suma Grafica) -->
+          <div class="diagram-box" style="margin-bottom:var(--space-md);">
+            <p class="diagram-box__label">Grafica de la Suma: f(x) [azul] + g(x) [verde] = (f+g)(x) [violeta]</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 240" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 20 L 300 20 M 0 40 L 300 40 M 0 60 L 300 60 M 0 80 L 300 80 M 0 100 L 300 100 M 0 120 L 300 120 M 0 140 L 300 140 M 0 160 L 300 160 M 0 180 L 300 180 M 0 200 L 300 200 M 0 220 L 300 220" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 20 0 L 20 240 M 40 0 L 40 240 M 60 0 L 60 240 M 80 0 L 80 240 M 100 0 L 100 240 M 120 0 L 120 240 M 140 0 L 140 240 M 160 0 L 160 240 M 180 0 L 180 240 M 200 0 L 200 240 M 220 0 L 220 240 M 240 0 L 240 240 M 260 0 L 260 240 M 280 0 L 280 240" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (120, 140), scale 20px/u -->
+                <line x1="20" y1="140" x2="280" y2="140" stroke="#777" stroke-width="1.5"/>
+                <line x1="120" y1="10" x2="120" y2="230" stroke="#777" stroke-width="1.5"/>
+
+                <!-- f(x) = 3x^2 + 2 [Parabola, blue] -->
+                <!-- Path points: x=-1.5=>y=8.75=>(90,-35) to x=1.5=>y=8.75=>(150,-35) with vertex at (120,100) -->
+                <path d="M 90 -35 Q 120 235 150 -35" fill="none" stroke="#2a6eb5" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="75" y="60" font-size="7" font-family="monospace" fill="#2a6eb5">f(x)=3x<sup>2</sup>+2</text>
+
+                <!-- g(x) = 5x - 4 [Line, green] -->
+                <!-- Points: x=0=>y=-4=>(120,220), x=1=>y=1=>(140,120), x=2=>y=6=>(160,20) -->
+                <line x1="100" y1="320" x2="165" y2="-5" stroke="#1a8a5a" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="165" y="165" font-size="7" font-family="monospace" fill="#1a8a5a">g(x)=5x-4</text>
+
+                <!-- (f+g)(x) = 3x^2 + 5x - 2 [Parabola, thick violet] -->
+                <!-- Points: x=-3=>y=10=>(60,-60) to x=1=>y=6=>(140,20) with vertex at x=-5/6=>y=-4.08=>(103.3,221.6) -->
+                <path d="M 60 -60 Q 100 460 140 20" fill="none" stroke="#7b2d8e" stroke-width="2.5"/>
+                <text x="45" y="105" font-size="7" font-family="monospace" fill="#7b2d8e">(f+g)(x)</text>
+
+                <!-- Sum Demonstration at x = 1 (140px on screen) -->
+                <line x1="140" y1="20" x2="140" y2="140" stroke="#777" stroke-dasharray="1.5,1.5"/>
+                
+                <!-- f(1) = 5 => (140, 40) -->
+                <circle cx="140" cy="40" r="3.5" fill="#2a6eb5"/>
+                <text x="146" y="44" font-size="7" font-family="monospace" fill="#2a6eb5">f(1)=5</text>
+
+                <!-- g(1) = 1 => (140, 120) -->
+                <circle cx="140" cy="120" r="3.5" fill="#1a8a5a"/>
+                <text x="146" y="124" font-size="7" font-family="monospace" fill="#1a8a5a">g(1)=1</text>
+
+                <!-- (f+g)(1) = 6 => (140, 20) -->
+                <circle cx="140" cy="20" r="4.5" fill="#7b2d8e"/>
+                <text x="146" y="24" font-size="7" font-family="monospace" fill="#7b2d8e" font-weight="bold">(f+g)(1)=6</text>
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center; font-size:0.8rem; margin:5px 0 0 0;">
+              En cada coordenada x, la ordenada de la curva violeta es la suma de las ordenadas azul y verde: <strong>y<sub>suma</sub> = y<sub>f</sub> + y<sub>g</sub></strong> (en x=1: <strong>5 + 1 = 6</strong>).
+            </p>
+          </div>
+
           <!-- Ejemplo 2 -->
           <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc;">
             <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo 2 (Radical y Racional)</h3>
@@ -193,6 +242,49 @@
               <br>Dom(f &middot; g) = Dom f &cap; Dom g = [0; &infin;) &cap; (R &setminus; {2, 3})
               <br>Dom(f &middot; g) = <strong>[0; 2) &cup; (2; 3) &cup; (3; &infin;)</strong>
             </div>
+          </div>
+
+          <!-- Grafico Ejemplo 2 (Producto y Asintotas) -->
+          <div class="diagram-box" style="margin-bottom:var(--space-md);">
+            <p class="diagram-box__label">Grafica del Producto: f&middot;g con Asintotas en x=2 y x=3</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 180" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 20 0 L 20 180 M 40 0 L 40 180 M 60 0 L 60 180 M 80 0 L 80 180 M 100 0 L 100 180 M 120 0 L 120 180 M 140 0 L 140 180 M 160 0 L 160 180 M 180 0 L 180 180 M 200 0 L 200 180 M 220 0 L 220 180 M 240 0 L 240 180 M 260 0 L 260 180 M 280 0 L 280 180" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin at (60, 110), scale 40px per unit -->
+                <!-- x=0 => 60px, x=2 => 140px, x=3 => 180px, x=4 => 220px -->
+                <line x1="20" y1="110" x2="280" y2="110" stroke="#777" stroke-width="1.5"/>
+                <line x1="60" y1="10" x2="60" y2="170" stroke="#777" stroke-width="1.5"/>
+                <text x="65" y="178" font-size="8" font-family="monospace">0</text>
+
+                <!-- Vertical Asymptote x=2 (140px) -->
+                <line x1="140" y1="10" x2="140" y2="170" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="135" y="178" font-size="8" font-family="monospace" fill="#c0392b">2</text>
+
+                <!-- Vertical Asymptote x=3 (180px) -->
+                <line x1="180" y1="10" x2="180" y2="170" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="175" y="178" font-size="8" font-family="monospace" fill="#c0392b">3</text>
+
+                <!-- Left side shading (x < 0) to represent restricted domain -->
+                <rect x="20" y="10" width="40" height="150" fill="rgba(0,0,0,0.06)" stroke="none"/>
+                <text x="25" y="80" font-size="6" font-family="monospace" fill="#aaa" transform="rotate(-90 25 80)">No definido</text>
+
+                <!-- Branch 1: x in [0, 2). y = sqrt(x)/(x^2-5x+6) -->
+                <!-- Starts at (60, 110) [solid dot], goes up to +inf near 140 -->
+                <path d="M 60 110 Q 100 90 132 10" fill="none" stroke="#2a6eb5" stroke-width="2.2"/>
+                <circle cx="60" cy="110" r="3.5" fill="#2a6eb5"/>
+
+                <!-- Branch 2: x in (3, +inf). y = sqrt(x)/(x^2-5x+6) -->
+                <!-- Starts high near 180, decreases towards 0 -->
+                <!-- at x=4 (220px) => y=1.0 (70px). at x=6 (300px) => y=0.2 (102px) -->
+                <path d="M 190 10 Q 200 80 280 105" fill="none" stroke="#2a6eb5" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center; font-size:0.8rem; margin:5px 0 0 0;">
+              La zona sombreada (<span class="math-inline">x &lt; 0</span>) está excluida debido a la raíz cuadrada. Los puntos <span class="math-inline">x=2</span> y <span class="math-inline">x=3</span> son asíntotas verticales (excluidos por división por cero).
+            </p>
           </div>
 
           <!-- Interval Intersection SVG -->
