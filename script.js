@@ -29,9 +29,9 @@ document.querySelectorAll('.window__titlebar-btn').forEach(btn => {
   });
 });
 
-// --- Argentina vs England Countdown Timer ---
+// --- Argentina vs Spain Countdown Timer ---
 function updateCountdown() {
-  const targetDate = new Date("2026-07-15T16:00:00-03:00");
+  const targetDate = new Date("2026-07-19T16:00:00-03:00");
   const now = new Date();
   const diff = targetDate - now;
 
