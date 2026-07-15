@@ -142,6 +142,120 @@
               </p>
             </div>
           </div>
+
+          <!-- Metodos Analiticos de Resolucion -->
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:var(--cyan-soft); background:#fcfdfd;">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Metodos Analiticos de Resolucion</h3>
+            <p>
+              Existen tres metodos principales para resolver sistemas de ecuaciones de forma analitica. Veremos la explicacion de cada uno resolviendo el sistema:
+            </p>
+            <p class="math-display">
+              &mdash; x &minus; 2y = 1 <br>
+              &mdash; x + y = 4
+            </p>
+
+            <div class="properties-grid" style="grid-template-columns:1fr; gap:var(--space-sm); margin-top:var(--space-md);">
+              
+              <!-- Sustitucion -->
+              <div class="property-card" style="border-left: 3px solid var(--teal-mid);">
+                <h4 class="property-card__title" style="color:var(--teal-deep);">1. Metodo de Sustitucion</h4>
+                <p>Consiste en despejar una de las incognitas en una ecuacion y sustituir su expresion en la otra ecuacion.</p>
+                <div class="note-box" style="background:#fff; margin-top:5px;">
+                  &bull; Despejamos <strong>x</strong> de la segunda ecuacion: &nbsp; <strong>x = 4 &minus; y</strong>
+                  <br>&bull; Sustituimos en la primera ecuacion: &nbsp; <strong>(4 &minus; y) &minus; 2y = 1</strong>
+                  <br>&bull; Resolvemos para <strong>y</strong>: &nbsp; 4 &minus; 3y = 1 &rArr; &minus;3y = &minus;3 &rArr; <strong>y = 1</strong>
+                  <br>&bull; Reemplazamos <strong>y</strong> en el despeje de <strong>x</strong>: &nbsp; x = 4 &minus; 1 &rArr; <strong>x = 3</strong>
+                  <br>Solucion: <strong>S = {(3, 1)}</strong>
+                </div>
+              </div>
+
+              <!-- Igualacion -->
+              <div class="property-card" style="border-left: 3px solid var(--teal-mid);">
+                <h4 class="property-card__title" style="color:var(--teal-deep);">2. Metodo de Igualacion</h4>
+                <p>Consiste en despejar la misma incognita en ambas ecuaciones e igualar las expresiones obtenidas.</p>
+                <div class="note-box" style="background:#fff; margin-top:5px;">
+                  &bull; Despejamos <strong>x</strong> en ambas:
+                  <br>&nbsp;&nbsp; Ecuacion 1: <strong>x = 1 + 2y</strong>
+                  <br>&nbsp;&nbsp; Ecuacion 2: <strong>x = 4 &minus; y</strong>
+                  <br>&bull; Igualamos las expresiones: &nbsp; <strong>1 + 2y = 4 &minus; y</strong>
+                  <br>&bull; Agrupamos y resolvemos: &nbsp; 2y + y = 4 &minus; 1 &rArr; 3y = 3 &rArr; <strong>y = 1</strong>
+                  <br>&bull; Reemplazamos en cualquiera: &nbsp; x = 4 &minus; 1 &rArr; <strong>x = 3</strong>
+                  <br>Solucion: <strong>S = {(3, 1)}</strong>
+                </div>
+              </div>
+
+              <!-- Reduccion (Sumas y Restas) -->
+              <div class="property-card" style="border-left: 3px solid var(--teal-mid);">
+                <h4 class="property-card__title" style="color:var(--teal-deep);">3. Metodo de Reduccion (Sumas y Restas)</h4>
+                <p>Consiste en sumar o restar las ecuaciones miembro a miembro para eliminar una de las incognitas. Si es necesario, se multiplican previamente por constantes.</p>
+                <div class="note-box" style="background:#fff; margin-top:5px;">
+                  &bull; Restamos la primera ecuacion a la segunda para eliminar <strong>x</strong>:
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp; (x + y) &minus; (x &minus; 2y) = 4 &minus; 1
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp; x + y &minus; x + 2y = 3
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp; 3y = 3 &rArr; <strong>y = 1</strong>
+                  <br>&bull; Reemplazamos en la segunda ecuacion: &nbsp; x + 1 = 4 &rArr; <strong>x = 3</strong>
+                  <br>Solucion: <strong>S = {(3, 1)}</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Resolucion Grafica -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Resolucion Grafica: Interseccion en el punto (3, 1)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 20 L 300 20 M 0 40 L 300 40 M 0 60 L 300 60 M 0 80 L 300 80 M 0 100 L 300 100 M 0 120 L 300 120 M 0 140 L 300 140 M 0 160 L 300 160 M 0 180 L 300 180 M 0 200 L 300 200" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 20 0 L 20 220 M 40 0 L 40 220 M 60 0 L 60 220 M 80 0 L 80 220 M 100 0 L 100 220 M 120 0 L 120 220 M 140 0 L 140 220 M 160 0 L 160 220 M 180 0 L 180 220 M 200 0 L 200 220 M 220 0 L 220 220 M 240 0 L 240 220 M 260 0 L 260 220 M 280 0 L 280 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (120, 120), scale 20px/u -->
+                <line x1="20" y1="120" x2="280" y2="120" stroke="#777" stroke-width="1.5"/>
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Recta 1: x - 2y = 1 => y = 0.5x - 0.5 -->
+                <!-- Points: (-3,-2)=>(60,160) to (7,3)=>(260,60) -->
+                <line x1="60" y1="160" x2="260" y2="60" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="50" y="172" font-size="7" font-family="monospace" fill="#1a8a5a">x - 2y = 1</text>
+
+                <!-- Recta 2: x + y = 4 => y = -x + 4 -->
+                <!-- Points: (0,4)=>(120,40) to (5,-1)=>(220,140). Extension: (-1,5)=>(100,20) to (6,-2)=>(240,160) -->
+                <line x1="100" y1="20" x2="240" y2="160" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="215" y="168" font-size="7" font-family="monospace" fill="#7b2d8e">x + y = 4</text>
+
+                <!-- Intersection guides: (3,1) => (180, 100) -->
+                <line x1="180" y1="100" x2="180" y2="120" stroke="#c0392b" stroke-dasharray="2,2"/>
+                <line x1="180" y1="100" x2="120" y2="100" stroke="#c0392b" stroke-dasharray="2,2"/>
+                <circle cx="180" cy="100" r="3.5" fill="#c0392b"/>
+                <text x="188" y="96" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">S(3, 1)</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Analisis con Parametros -->
+          <div class="key-concept" style="border-color:#e0d0b8; background:#fdfbfa;">
+            <h3 class="key-concept__title" style="color:#b5652a;">Sistemas con Parametros (Analisis de K)</h3>
+            <p>
+              Frecuentemente nos enfrentamos a sistemas donde algunos coeficientes dependen de un parametro <strong>K &isin; R</strong>. Analizar el sistema consiste en determinar para que valores de K el sistema es SCD, SCI o SI.
+            </p>
+            <p class="construction-note" style="border-left-color:#b5652a; background:#fff;">
+              <strong>Ejemplo (Ejercicio 60a):</strong> Clasificar el sistema segun el valor de K:
+              <br>&mdash; x + y = 2
+              <br>&mdash; Kx + y = 1
+            </p>
+            <div class="note-box" style="background:#fff;">
+              <strong>Despejamos y en ambas ecuaciones para obtener la ecuacion explicita:</strong>
+              <br>1) <strong>y = &minus;x + 2</strong> &rArr; m<sub>1</sub> = &minus;1, b<sub>1</sub> = 2.
+              <br>2) <strong>y = &minus;Kx + 1</strong> &rArr; m<sub>2</sub> = &minus;K, b<sub>2</sub> = 1.
+              <br><br>
+              <strong>Estudio de casos:</strong>
+              <br>&bull; <strong>Si K &ne; 1:</strong> Las pendientes son distintas (m<sub>1</sub> &ne; m<sub>2</sub>). El sistema es <strong>Compatible Determinado (SCD)</strong> para todo K &ne; 1.
+              <br>&bull; <strong>Si K = 1:</strong> Las pendientes son iguales (m<sub>1</sub> = m<sub>2</sub> = &minus;1) pero las ordenadas son distintas (b<sub>1</sub> = 2 &ne; b<sub>2</sub> = 1). El sistema es <strong>Incompatible (SI)</strong>.
+              <br>&bull; <strong>SCI:</strong> No existe ningun valor de K que haga b<sub>1</sub> = b<sub>2</sub>, por lo que este sistema nunca podra ser SCI.
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
