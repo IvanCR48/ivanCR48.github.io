@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion exponencial: definicion, parametros, desplazamientos, asintotas horizontales, funcion natural e^x y ejemplos analiticos resueltos. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Función Exponencial | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="#definicion" class="navbar__btn">Definición</a>
+      <a href="#parametros" class="navbar__btn">Parámetros</a>
+      <a href="#asintotas" class="navbar__btn">Asíntotas</a>
+      <a href="#ejemplos" class="navbar__btn">Ejemplos</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funcion_exponencial.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo IV &mdash; Seccion 1</p>
+          <h1 class="study__title">Función Exponencial</h1>
+          <p class="study__intro">
+            Definición de función exponencial, análisis de base y coeficientes, función natural e<sup>x</sup>, asíntotas horizontales, simetrías y resolución analítica.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">1.1 Definición de Función Exponencial</a></li>
+              <li><a href="#potencial-vs-exp">1.2 Potencial vs. Exponencial e Exponencial Natural</a></li>
+              <li><a href="#parametros">1.3 Análisis de Parámetros (a y k) y Simetrías</a></li>
+              <li><a href="#asintotas">1.4 Desplazamientos y Asíntotas Horizontales</a></li>
+              <li><a href="#ejemplos">1.5 Ejemplos Analíticos Resueltos</a></li>
+              <li><a href="#ejercicios">1.6 Ejercicios Prácticos de Autoevaluación</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="../capitulo3/propiedades.html" class="nav-link nav-link--prev">&larr; Cap III Secc 3: Propiedades e Inversa</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">definicion_exponencial.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">1.1 Definición</h2>
+            <span class="section__symbol">f(x) = k &middot; a<sup>x</sup></span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Llamamos función exponencial a toda función real donde la variable independiente se encuentra en el exponente.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal</p>
+            <p>
+              Una <strong>función exponencial</strong> es una función de la forma:
+            </p>
+            <p class="math-display">
+              f(x) = k &middot; a<sup>x</sup>
+            </p>
+            <p>
+              Donde:
+              <br>&bull; <strong>a</strong> es la <strong>base</strong>, una constante real positiva distinta de 1: &nbsp;<span class="math-inline">a &gt; 0</span> &nbsp;y&nbsp; <span class="math-inline">a &ne; 1</span>.
+              <br>&bull; <strong>k</strong> es el <strong>coeficiente principal</strong>, una constante real no nula: &nbsp;<span class="math-inline">k &isin; R &setminus; {0}</span>.
+              <br>&bull; <strong>x</strong> es la variable independiente (exponente).
+            </p>
+            <p style="margin-top:10px;">
+              <strong>Dominio:</strong> El dominio de toda función exponencial elemental es el conjunto de los números reales:
+            </p>
+            <p class="math-display">
+              Dom f = R
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POTENCIAL VS EXPONENCIAL ===================== -->
+    <section class="study__section" id="potencial-vs-exp">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">potencial_vs_exponencial.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.2 Función Potencial vs. Exponencial y Exponencial Natural</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Distincion -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#2a6eb5; color:white;">Distinción Conceptual Clave</div>
+              <div class="precaution-card__body">
+                <p>Es muy importante no confundir ambos tipos de funciones:</p>
+                <ul style="list-style:none; padding-left:0; line-height:1.8; margin-top:8px;">
+                  <li>&bull; <strong>Función Potencial:</strong> <span class="math-inline">y = x<sup>n</sup></span> (base variable, exponente constante). Ejemplo: <span class="math-inline">y = x<sup>2</sup></span>.</li>
+                  <li>&bull; <strong>Función Exponencial:</strong> <span class="math-inline">y = a<sup>x</sup></span> (base constante, exponente variable). Ejemplo: <span class="math-inline">y = 2<sup>x</sup></span>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Exponencial Natural -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#7b2d8e; color:white;">La Función Exponencial Natural</div>
+              <div class="precaution-card__body">
+                <p>Existe una función exponencial de notable importancia donde la base es el número irracional <strong>e &asymp; 2,7182818...</strong> (número de Euler):</p>
+                <p class="math-display" style="margin:10px 0;">
+                  f(x) = e<sup>x</sup>
+                </p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  Se utiliza ampliamente como modelo matemático para describir el crecimiento poblacional, desintegración radiactiva, enfriamiento y procesos económicos.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARAMETROS ===================== -->
+    <section class="study__section" id="parametros">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">analisis_parametros.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.3 Análisis de Parámetros y Simetrías</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Analicemos cómo varían las gráficas de la función <span class="math-inline">f(x) = k &middot; a<sup>x</sup></span> según los valores de la base <strong>a</strong> y del coeficiente <strong>k</strong>.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Caso Base: f(x) = a<sup>x</sup> (con k = 1)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>Características Comunes:</strong>
+              <br>&bull; <strong>Ordenada al origen:</strong> Cortan al eje de ordenadas en el punto <strong>(0, 1)</strong> porque <span class="math-inline">a<sup>0</sup> = 1</span>.
+              <br>&bull; <strong>Raíces:</strong> No cortan al eje de abscisas (<span class="math-inline">a<sup>x</sup> &gt; 0</span> para todo x).
+              <br>&bull; <strong>Imagen:</strong> <span class="math-inline">Im f = R<sup>+</sup> = (0; &infin;)</span>.
+              <br>&bull; <strong>Asíntota Horizontal:</strong> Tienen como asíntota al eje x (recta <span class="math-inline">y = 0</span>).
+              <br><br>
+              <strong>Diferencias según la Base a:</strong>
+              <br>&bull; <strong>Si a &gt; 1:</strong> La función es <strong>estrictamente creciente</strong>.
+              <br>&bull; <strong>Si 0 &lt; a &lt; 1:</strong> La función es <strong>estrictamente decreciente</strong>.
+              <br>&bull; <strong>Simetría Especular:</strong> Las curvas de bases recíprocas (ej: <span class="math-inline">y = 2<sup>x</sup></span> e <span class="math-inline">y = (1/2)<sup>x</sup> = 2<sup>&minus;x</sup></span>) son <strong>simétricas respecto al eje y</strong>.
+            </div>
+          </div>
+
+          <!-- SVG 1: Bases reciprocas -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Simetría respecto al eje y: f(x) = 2<sup>x</sup> (azul) y g(x) = (1/2)<sup>x</sup> (violeta)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 200" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 20 L 300 20 M 0 40 L 300 40 M 0 60 L 300 60 M 0 80 L 300 80 M 0 100 L 300 100 M 0 120 L 300 120 M 0 140 L 300 140 M 0 160 L 300 160 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 200 M 60 0 L 60 200 M 90 0 L 90 200 M 120 0 L 120 200 M 150 0 L 150 200 M 180 0 L 180 200 M 210 0 L 210 200 M 240 0 L 240 200 M 270 0 L 270 200" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (150, 160), scale 30px per unit -->
+                <!-- Asymptote y=0 (160px) -->
+                <line x1="10" y1="160" x2="290" y2="160" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="250" y="155" font-size="7" font-family="monospace" fill="#c0392b">A.H. y=0</text>
+
+                <line x1="10" y1="160" x2="290" y2="160" stroke="#777" stroke-width="1.5"/>
+                <line x1="150" y1="10" x2="150" y2="190" stroke="#777" stroke-width="1.5"/>
+
+                <!-- f(x) = 2^x (Blue, Increasing) -->
+                <!-- x=-2 => y=0.25 (152.5), x=-1 => y=0.5 (145), x=0 => y=1 (130), x=1 => y=2 (100), x=2 => y=4 (40) -->
+                <path d="M 30 158 Q 120 150 150 130 Q 180 100 210 40" fill="none" stroke="#2a6eb5" stroke-width="2.2"/>
+                <text x="215" y="45" font-size="8" font-family="monospace" fill="#2a6eb5">2<sup>x</sup></text>
+
+                <!-- g(x) = (1/2)^x (Purple, Decreasing) -->
+                <!-- Symmetric to f(x) wrt y-axis (150px) -->
+                <path d="M 270 158 Q 180 150 150 130 Q 120 100 90 40" fill="none" stroke="#7b2d8e" stroke-width="2.2"/>
+                <text x="65" y="45" font-size="8" font-family="monospace" fill="#7b2d8e">(1/2)<sup>x</sup></text>
+
+                <!-- Point (0,1) => (150, 130) -->
+                <circle cx="150" cy="130" r="4" fill="#1a8a5a"/>
+                <text x="156" y="134" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">(0, 1)</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Efecto del Coeficiente k: f(x) = k &middot; a<sup>x</sup></h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              &bull; <strong>Ordenada al origen:</strong> Corta al eje y en el punto <strong>(0, k)</strong>.
+              <br>&bull; <strong>Si k &gt; 0:</strong> La gráfica está sobre el eje x y su imagen es <span class="math-inline">Im f = R<sup>+</sup> = (0; &infin;)</span>.
+              <br>&bull; <strong>Si k &lt; 0:</strong> La gráfica se invierte verticalmente y su imagen es <span class="math-inline">Im f = R<sup>&minus;</sup> = (&minus;&infin;; 0)</span>.
+              <br>&bull; <strong>Simetría Especular respecto al eje x:</strong> Las curvas con coeficientes opuestos (<span class="math-inline">k</span> y <span class="math-inline">&minus;k</span>) son <strong>simétricas con respecto al eje x</strong>.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ASINTOTAS Y DESPLAZAMIENTOS ===================== -->
+    <section class="study__section" id="asintotas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">desplazamientos_asintotas.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.4 Desplazamientos y Asíntotas Horizontales</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Al sumar o restar una constante a la función exponencial, la curva sufre un desplazamiento vertical que modifica la posición de su asíntota horizontal.
+          </p>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Forma General Transformada</p>
+            <p class="math-display">
+              f(x) = k &middot; a<sup>x &minus; c</sup> + d
+            </p>
+            <p style="line-height:1.6;">
+              &bull; <strong>Asíntota Horizontal (A.H.):</strong> Viene dada por el término independiente <strong>y = d</strong>.
+              <br>&bull; <strong>Desplazamiento Vertical (d):</strong> Mueve la curva d unidades hacia arriba (si d &gt; 0) o hacia abajo (si d &lt; 0).
+              <br>&bull; <strong>Conjunto Imagen:</strong> Depende de d y del signo de k:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Si k &gt; 0 &rArr; <span class="math-inline">Im f = (d; &infin;)</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Si k &lt; 0 &rArr; <span class="math-inline">Im f = (&minus;&infin;; d)</span>.
+              <br>&bull; <strong>Cálculo de Raíces (Eje x):</strong> Para hallar la intersección con el eje x se resuelve la ecuación:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">k &middot; a<sup>x &minus; c</sup> + d = 0 &rArr; a<sup>x &minus; c</sup> = &minus;d / k</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;Tiene raíz real <strong>sólo si (&minus;d / k) &gt; 0</strong>.
+            </p>
+          </div>
+
+          <!-- SVG 2: Desplazamientos y asintotas -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Desplazamientos Verticales: f(x) = 3<sup>x</sup> (azul), g(x) = 3<sup>x</sup> + 1 (verde), h(x) = 3<sup>x</sup> &minus; 1 (rojo)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 220" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150 M 0 180 L 300 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220 M 270 0 L 270 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (120, 150), scale 30px per unit -->
+                <line x1="10" y1="150" x2="290" y2="150" stroke="#777" stroke-width="1.5"/>
+                <line x1="120" y1="10" x2="120" y2="210" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Asymptote y = 1 (120px) [Green] -->
+                <line x1="10" y1="120" x2="290" y2="120" stroke="#1a8a5a" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="240" y="115" font-size="7" font-family="monospace" fill="#1a8a5a">A.H. y=1</text>
+
+                <!-- Asymptote y = 0 (150px) [Blue] -->
+                <line x1="10" y1="150" x2="290" y2="150" stroke="#2a6eb5" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <!-- Asymptote y = -1 (180px) [Red] -->
+                <line x1="10" y1="180" x2="290" y2="180" stroke="#c0392b" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="240" y="193" font-size="7" font-family="monospace" fill="#c0392b">A.H. y=-1</text>
+
+                <!-- Curve g(x) = 3^x + 1 (Green) -->
+                <!-- x=-1=>1.33(110), x=0=>2(90), x=1=>4(30) -->
+                <path d="M 20 118 Q 90 115 120 90 Q 145 60 170 15" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="175" y="20" font-size="7" font-family="monospace" fill="#1a8a5a">3<sup>x</sup>+1</text>
+
+                <!-- Curve f(x) = 3^x (Blue) -->
+                <!-- x=-1=>0.33(140), x=0=>1(120), x=1=>3(60) -->
+                <path d="M 20 148 Q 90 145 120 120 Q 145 90 170 45" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+                <text x="175" y="50" font-size="7" font-family="monospace" fill="#2a6eb5">3<sup>x</sup></text>
+
+                <!-- Curve h(x) = 3^x - 1 (Red) -->
+                <!-- x=-1=>-0.67(170), x=0=>0(150), x=1=>2(90) -->
+                <path d="M 20 178 Q 90 175 120 150 Q 145 120 170 75" fill="none" stroke="#c0392b" stroke-width="2"/>
+                <text x="175" y="80" font-size="7" font-family="monospace" fill="#c0392b">3<sup>x</sup>-1</text>
+
+                <!-- Point (0,0) on h(x) -->
+                <circle cx="120" cy="150" r="3.5" fill="#c0392b"/>
+                <text x="100" y="163" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">(0,0)</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLOS ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ejemplos_resueltos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.5 Ejemplos Analíticos Desarrollados</h2>
+
+          <!-- Ejemplo 1 -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ejemplo 1: Análisis Comparativo de Desplazamientos Verticales</h3>
+            <p>
+              Sean &nbsp;<span class="math-inline">f(x) = 3<sup>x</sup></span>, &nbsp;<span class="math-inline">g(x) = 3<sup>x</sup> + 1</span> &nbsp;y&nbsp; <span class="math-inline">h(x) = 3<sup>x</sup> &minus; 1</span>.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.85rem; line-height:1.5;">
+                <thead>
+                  <tr style="border-bottom:2px solid #ccc; color:var(--teal-deep);">
+                    <th style="padding:6px;">Propiedad</th>
+                    <th style="padding:6px;">f(x) = 3<sup>x</sup></th>
+                    <th style="padding:6px;">g(x) = 3<sup>x</sup> + 1</th>
+                    <th style="padding:6px;">h(x) = 3<sup>x</sup> &minus; 1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Dominio</strong></td>
+                    <td style="padding:6px;">R</td>
+                    <td style="padding:6px;">R</td>
+                    <td style="padding:6px;">R</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Imagen</strong></td>
+                    <td style="padding:6px;">(0; &infin;)</td>
+                    <td style="padding:6px;">(1; &infin;)</td>
+                    <td style="padding:6px;">(&minus;1; &infin;)</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Ordenada (x=0)</strong></td>
+                    <td style="padding:6px;">(0, 1)</td>
+                    <td style="padding:6px;">(0, 2)</td>
+                    <td style="padding:6px;">(0, 0)</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Raíz (y=0)</strong></td>
+                    <td style="padding:6px;">No tiene</td>
+                    <td style="padding:6px;">No tiene</td>
+                    <td style="padding:6px;">x = 0</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px;"><strong>Asíntota Horiz.</strong></td>
+                    <td style="padding:6px;">y = 0</td>
+                    <td style="padding:6px;">y = 1</td>
+                    <td style="padding:6px;">y = &minus;1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Ejemplo 2 -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc; margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo 2: Análisis de Coeficiente Negativo</h3>
+            <p>
+              Sean &nbsp;<span class="math-inline">f(x) = &minus;2<sup>x</sup> + 4</span> &nbsp;y&nbsp; <span class="math-inline">g(x) = &minus;2<sup>x</sup> &minus; 1</span>.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1. Para f(x) = &minus;2<sup>x</sup> + 4:</strong>
+              <br>&bull; <strong>Dominio:</strong> <span class="math-inline">Dom f = R</span>.
+              <br>&bull; <strong>Asíntota Horizontal:</strong> <span class="math-inline">y = 4</span>.
+              <br>&bull; <strong>Imagen:</strong> Debido al signo negativo del coeficiente (<span class="math-inline">k = &minus;1</span>), la curva decrece desde la asíntota hacia &minus;&infin; &rArr; <span class="math-inline">Im f = (&minus;&infin;; 4)</span>.
+              <br>&bull; <strong>Ordenada al origen:</strong> <span class="math-inline">f(0) = &minus;2<sup>0</sup> + 4 = &minus;1 + 4 = 3</span> &rArr; punto <strong>(0, 3)</strong>.
+              <br>&bull; <strong>Cálculo de Raíz (f(x) = 0):</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">&minus;2<sup>x</sup> + 4 = 0 &rArr; 2<sup>x</sup> = 4 &rArr; 2<sup>x</sup> = 2<sup>2</sup> &rArr; x = 2</span>.
+              <br><br>
+              <strong>2. Para g(x) = &minus;2<sup>x</sup> &minus; 1:</strong>
+              <br>&bull; <strong>Dominio:</strong> <span class="math-inline">Dom g = R</span>.
+              <br>&bull; <strong>Asíntota Horizontal:</strong> <span class="math-inline">y = &minus;1</span>.
+              <br>&bull; <strong>Imagen:</strong> <span class="math-inline">Im g = (&minus;&infin;; &minus;1)</span>.
+              <br>&bull; <strong>Ordenada al origen:</strong> <span class="math-inline">g(0) = &minus;2<sup>0</sup> &minus; 1 = &minus;1 &minus; 1 = &minus;2</span> &rArr; punto <strong>(0, &minus;2)</strong>.
+              <br>&bull; <strong>Cálculo de Raíz (g(x) = 0):</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">&minus;2<sup>x</sup> &minus; 1 = 0 &rArr; 2<sup>x</sup> = &minus;1</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;Como <span class="math-inline">2<sup>x</sup> &gt; 0</span> para todo x real, esta ecuación <strong>no tiene solución en R</strong> &rArr; g(x) no tiene raíces.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.6 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 171 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 171: Puntos sobre y = 4<sup>x</sup></div>
+              <div class="precaution-card__body">
+                <p>Dada la función <span class="math-inline">y = 4<sup>x</sup></span>, indicar V o F y justificar:</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Justificaciones</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    <strong>b_1) El punto (1, 0) pertenece a la gráfica:</strong>
+                    <br><span class="math-color--red"><strong>Falso.</strong></span> Para x = 1, y = 4<sup>1</sup> = 4 &ne; 0. El punto que pertenece es (1, 4).
+                    <br><br>
+                    <strong>b_2) El valor de y para (-2, y) es 1/16:</strong>
+                    <br><span class="math-color--green"><strong>Verdadero.</strong></span> Para x = -2, y = 4<sup>-2</sup> = 1 / 4<sup>2</sup> = 1/16.
+                    <br><br>
+                    <strong>b_3) El punto (-1, -4) pertenece a la gráfica:</strong>
+                    <br><span class="math-color--red"><strong>Falso.</strong></span> Para x = -1, y = 4<sup>-1</sup> = 1/4 &ne; -4. Dado que a<sup>x</sup> &gt; 0, ningún punto con ordenada negativa pertenece a y = 4<sup>x</sup>.
+                    <br><br>
+                    <strong>b_4) El valor de x para que (x, 2) pertenezca a la gráfica es 1/2:</strong>
+                    <br><span class="math-color--green"><strong>Verdadero.</strong></span> Resolvemos 4<sup>x</sup> = 2 &rArr; (2<sup>2</sup>)<sup>x</sup> = 2<sup>1</sup> &rArr; 2<sup>2x</sup> = 2<sup>1</sup> &rArr; 2x = 1 &rArr; x = 1/2.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 172 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 172: Simetría de y = (1/3)<sup>x</sup></div>
+              <div class="precaution-card__body">
+                <p>Hallar la fórmula de la función exponencial simétrica a <span class="math-inline">y = (1/3)<sup>x</sup></span> respecto al eje y (x = 0).</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    Para obtener la simétrica respecto al eje y, reemplazamos x por &minus;x:
+                    <br>y = (1/3)<sup>&minus;x</sup> = [(3)<sup>&minus;1</sup>]<sup>&minus;x</sup> = <strong>3<sup>x</sup></strong>.
+                    <br>Por lo tanto, la función simétrica es <strong>y = 3<sup>x</sup></strong> (base recíproca).
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 173 -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 173: Proposiciones Teóricas</div>
+              <div class="precaution-card__body">
+                <p>Analizar la veracidad de las siguientes afirmaciones sobre <span class="math-inline">f(x) = a<sup>x</sup></span>:</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Justificaciones</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    <strong>a) Si a &gt; 0 y a &ne; 1, entonces Dom f = R e Im f = R<sup>+</sup>:</strong>
+                    <br><span class="math-color--green"><strong>Verdadero.</strong></span> El exponente puede tomar cualquier valor real y la potencia de base positiva siempre es estrictamente positiva.
+                    <br><br>
+                    <strong>b) Si 0 &lt; a &lt; 1, la función f(x) = a<sup>x</sup> es creciente:</strong>
+                    <br><span class="math-color--red"><strong>Falso.</strong></span> Cuando la base está entre 0 y 1, a mayor exponente la potencia decrece, por lo que la función es <strong>decreciente</strong>.
+                    <br><br>
+                    <strong>c) Existe algún x real tal que f(x) = 0 para f(x) = a<sup>x</sup>:</strong>
+                    <br><span class="math-color--red"><strong>Falso.</strong></span> La función exponencial elemental posee la recta y = 0 como asíntota horizontal y nunca alcanza el valor cero (<span class="math-inline">a<sup>x</sup> &gt; 0</span> para todo x).
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="../capitulo3/propiedades.html" class="nav-link nav-link--prev">&larr; Cap III: Propiedades e Inversa</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
