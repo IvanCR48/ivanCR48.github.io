@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funcion logaritmica: definicion como inversa de la exponencial, propiedades algebraicas, cambio de base, asintotas verticales y dominios restringidos. Material de estudio para la Facultad de Ingenieria, Universidad Nacional de Mar del Plata.">
+  <title>Matematica — Función Logarítmica | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="exponencial.html" class="navbar__btn">Exponencial</a>
+      <a href="#definicion" class="navbar__btn">Definición</a>
+      <a href="#propiedades" class="navbar__btn">Propiedades</a>
+      <a href="#ejemplos" class="navbar__btn">Ejemplos</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funcion_logaritmica.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo IV &mdash; Seccion 2</p>
+          <h1 class="study__title">Función Logarítmica</h1>
+          <p class="study__intro">
+            Definición formal como función inversa de la exponencial, propiedades operativas del logaritmo, asíntotas verticales, cambio de base y análisis gráfico.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">2.1 La Función Logarítmica (Definición)</a></li>
+              <li><a href="#bases-notables">2.1.1 Logaritmos Decimal y Natural (ln x)</a></li>
+              <li><a href="#propiedades">2.2 Propiedades de los Logaritmos</a></li>
+              <li><a href="#graficos">2.3 Análisis Gráfico y Simetrías</a></li>
+              <li><a href="#ejemplos">2.4 Ejemplos Analíticos Desarrollados</a></li>
+              <li><a href="#ejercicios">2.5 Ejercicios Prácticos de Autoevaluación</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="exponencial.html" class="nav-link nav-link--prev">&larr; Secc 1: Funciones Exponenciales</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">definicion_logaritmo.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.1 La Función Logarítmica</h2>
+            <span class="section__symbol">y = log<sub>a</sub>(x)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La función exponencial elemental <span class="math-inline">f: R &rarr; R<sup>+</sup> / f(x) = a<sup>x</sup></span> (con <span class="math-inline">a &gt; 0</span> y <span class="math-inline">a &ne; 1</span>) es una función <strong>biyectiva</strong>, por lo cual admite función inversa.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal como Función Inversa</p>
+            <p>
+              Se define la <strong>función logarítmica de base a</strong> como la función inversa de la exponencial de base a:
+            </p>
+            <p class="math-display">
+              f<sup>&minus;1</sup>: R<sup>+</sup> &rarr; R &nbsp;/&nbsp; f<sup>&minus;1</sup>(x) = log<sub>a</sub>(x)
+            </p>
+            <p>
+              Por la definición de función inversa, se cumple la equivalencia fundamental:
+            </p>
+            <p class="math-display">
+              y = log<sub>a</sub>(x) &nbsp;&nbsp;&hArr;&nbsp;&nbsp; a<sup>y</sup> = x &nbsp;&nbsp;&nbsp;&nbsp;(con x &gt; 0, &nbsp; a &gt; 0, &nbsp; a &ne; 1)
+            </p>
+            <p style="margin-top:10px;">
+              <strong>Dominio e Imagen:</strong>
+              <br>&bull; <strong>Dominio:</strong> <span class="math-inline">Dom(log<sub>a</sub> x) = R<sup>+</sup> = (0; &infin;)</span>.
+              <br>&bull; <strong>Imagen:</strong> <span class="math-inline">Im(log<sub>a</sub> x) = R</span>.
+              <br>&bull; <strong>Asíntota Vertical:</strong> Posee una asíntota vertical en la recta <strong>x = 0</strong> (el eje y).
+            </p>
+          </div>
+
+          <div class="note-box" style="border-left-color:#c0392b; background:#fdf5f5; margin-top:var(--space-md);">
+            <strong>¡ADVERTENCIA CRUCIAL!</strong>
+            <p style="margin-top:5px; line-height:1.4;">
+              Dado que <span class="math-inline">Dom(log<sub>a</sub> x) = (0; &infin;)</span>, <strong>no existen en R los logaritmos de números negativos ni el logaritmo de cero</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BASES NOTABLES ===================== -->
+    <section class="study__section" id="bases-notables">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">bases_notables.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.1.1 Logaritmos Decimal y Natural</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Log Decimal -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#2a6eb5; color:white;">Logaritmo Decimal (Base 10)</div>
+              <div class="precaution-card__body">
+                <p>Si la base es <strong>a = 10</strong>, se omite el subíndice y se escribe simplemente:</p>
+                <p class="math-display">
+                  log<sub>10</sub>(x) = log(x)
+                </p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  Es el logaritmo estándar de las calculadoras científicas y de las escalas logarítmicas como el pH y los decibelios.
+                </p>
+              </div>
+            </div>
+
+            <!-- Log Natural -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#7b2d8e; color:white;">Logaritmo Natural o Neperiano (Base e)</div>
+              <div class="precaution-card__body">
+                <p>Si la base es el número irracional <strong>a = e &asymp; 2,71828...</strong>, se denota por:</p>
+                <p class="math-display">
+                  log<sub>e</sub>(x) = ln(x)
+                </p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  Es la función inversa de la exponencial natural <span class="math-inline">y = e<sup>x</sup></span> y es fundamental en el cálculo infinitesimal.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPIEDADES ===================== -->
+    <section class="study__section" id="propiedades">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">propiedades_logaritmos.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.2 Propiedades de los Logaritmos</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Para todo <span class="math-inline">a, b &gt; 0</span> (con <span class="math-inline">a, b &ne; 1</span>) y para cualesquiera argumentos positivos <span class="math-inline">x, z &gt; 0</span>, se verifican las siguientes propiedades algebraicas:
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Leyes Operatorias Fundamentales</h3>
+            <ul style="list-style:none; padding-left:0; line-height:1.9; font-size:0.95rem;">
+              <li>&bull; <strong>Logaritmo de 1:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(1) = 0</span> &nbsp;&nbsp;(porque <span class="math-inline">a<sup>0</sup> = 1</span>).</li>
+              <li>&bull; <strong>Logaritmo de la base:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(a) = 1</span> &nbsp;&nbsp;(porque <span class="math-inline">a<sup>1</sup> = a</span>).</li>
+              <li>&bull; <strong>Logaritmo de un Producto:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(x &middot; z) = log<sub>a</sub>(x) + log<sub>a</sub>(z)</span></li>
+              <li>&bull; <strong>Logaritmo de un Cociente:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(x / z) = log<sub>a</sub>(x) &minus; log<sub>a</sub>(z)</span></li>
+              <li>&bull; <strong>Logaritmo de una Potencia:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(x<sup>n</sup>) = n &middot; log<sub>a</sub>(x)</span> &nbsp;(para todo <span class="math-inline">n &isin; R</span>).</li>
+              <li>&bull; <strong>Fórmula de Cambio de Base:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a)</span></li>
+              <li>&bull; <strong>Inyectividad del Logaritmo:</strong> &nbsp;<span class="math-inline">log<sub>a</sub>(x) = log<sub>a</sub>(z) &nbsp;&hArr;&nbsp; x = z</span>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GRAFICOS Y SIMETRIAS ===================== -->
+    <section class="study__section" id="graficos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">analisis_grafico_simetria.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.3 Análisis Gráfico, Asíntotas y Simetría Inversa</h2>
+
+          <!-- SVG 1: Exponencial vs Logaritmica (Simetria y=x) -->
+          <div class="diagram-box" style="margin-bottom:var(--space-md);">
+            <p class="diagram-box__label">Simetría Especular de Inversas respecto a y = x: f(x) = 2<sup>x</sup> (azul) y f<sup>-1</sup>(x) = log<sub>2</sub>(x) (violeta)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 240 240" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 20 L 240 20 M 0 40 L 240 40 M 0 60 L 240 60 M 0 80 L 240 80 M 0 100 L 240 100 M 0 120 L 240 120 M 0 140 L 240 140 M 0 160 L 240 160 M 0 180 L 240 180 M 0 200 L 240 200 M 0 220 L 240 220" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 20 0 L 20 240 M 40 0 L 40 240 M 60 0 L 60 240 M 80 0 L 80 240 M 100 0 L 100 240 M 120 0 L 120 240 M 140 0 L 140 240 M 160 0 L 160 240 M 180 0 L 180 240 M 200 0 L 200 240 M 220 0 L 220 240" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (120, 120), scale 25px per unit -->
+                <!-- Asymptote Vertical x=0 (120px) [Purple dashed] -->
+                <line x1="120" y1="10" x2="120" y2="230" stroke="#7b2d8e" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="123" y="225" font-size="6" font-family="monospace" fill="#7b2d8e">A.V. x=0</text>
+
+                <line x1="10" y1="120" x2="230" y2="120" stroke="#777" stroke-width="1.5"/>
+                <line x1="120" y1="10" x2="120" y2="230" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Identity Line y = x -->
+                <line x1="20" y1="220" x2="220" y2="20" stroke="#999" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="210" y="32" font-size="7" font-family="monospace" fill="#999">y=x</text>
+
+                <!-- f(x) = 2^x (Blue) -->
+                <!-- x=0=>y=1(95px), x=1=>y=2(70px), x=2=>y=4(20px) -->
+                <path d="M 20 115 Q 95 110 120 95 Q 145 70 170 20" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+                <text x="175" y="25" font-size="8" font-family="monospace" fill="#2a6eb5">2<sup>x</sup></text>
+                <circle cx="120" cy="95" r="3.5" fill="#2a6eb5"/>
+                <text x="95" y="95" font-size="6" font-family="monospace" fill="#2a6eb5">(0, 1)</text>
+
+                <!-- f^-1(x) = log2(x) (Purple) -->
+                <!-- x=1=>y=0(145px), x=2=>y=1(170px), x=4=>y=2(220px) -->
+                <!-- screen: x=1(145), y=0(120); x=2(170), y=1(95); x=4(220), y=2(70) -->
+                <path d="M 125 220 Q 130 145 145 120 Q 170 95 220 70" fill="none" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="200" y="60" font-size="8" font-family="monospace" fill="#7b2d8e">log<sub>2</sub>(x)</text>
+                <circle cx="145" cy="120" r="3.5" fill="#7b2d8e"/>
+                <text x="145" y="132" font-size="6" font-family="monospace" fill="#7b2d8e">(1, 0)</text>
+
+                <!-- Connection line between (0,1) and (1,0) -->
+                <line x1="120" y1="95" x2="145" y2="120" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="2,2"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- SVG 2: Bases a > 1 vs 0 < a < 1 -->
+          <div class="diagram-box">
+            <p class="diagram-box__label">Comportamiento según la Base: f(x) = log<sub>3</sub>(x) (creciente, azul) vs g(x) = log<sub>1/3</sub>(x) (decreciente, violeta)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 240 180" class="number-line-svg" style="max-width:260px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 240 30 M 0 60 L 240 60 M 0 90 L 240 90 M 0 120 L 240 120 M 0 150 L 240 150" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 180 M 60 0 L 60 180 M 90 0 L 90 180 M 120 0 L 120 180 M 150 0 L 150 180 M 180 0 L 180 180 M 210 0 L 210 180" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (60, 90), scale 30px per unit -->
+                <line x1="10" y1="90" x2="230" y2="90" stroke="#777" stroke-width="1.5"/>
+                <line x1="60" y1="10" x2="60" y2="170" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Vertical Asymptote x=0 (60px) -->
+                <line x1="60" y1="10" x2="60" y2="170" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="65" y="165" font-size="7" font-family="monospace" fill="#c0392b">A.V. x=0</text>
+
+                <!-- f(x) = log3(x) (Increasing, Blue) -->
+                <!-- x=1=>y=0(90), x=3=>y=1(60), x=9/3=3(150), y=-1(120) -->
+                <path d="M 68 170 Q 75 110 90 90 Q 150 60 220 30" fill="none" stroke="#2a6eb5" stroke-width="2"/>
+                <text x="170" y="25" font-size="8" font-family="monospace" fill="#2a6eb5">log<sub>3</sub>(x) (a &gt; 1)</text>
+
+                <!-- g(x) = log1/3(x) (Decreasing, Purple) -->
+                <path d="M 68 10 Q 75 70 90 90 Q 150 120 220 150" fill="none" stroke="#7b2d8e" stroke-width="2"/>
+                <text x="170" y="165" font-size="8" font-family="monospace" fill="#7b2d8e">log<sub>1/3</sub>(x) (0 &lt; a &lt; 1)</text>
+
+                <!-- Root Point (1,0) => (90, 90) -->
+                <circle cx="90" cy="90" r="4" fill="#1a8a5a"/>
+                <text x="95" y="105" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">(1, 0)</text>
+              </svg>
+            </div>
+            <p class="construction-note" style="text-align:center; font-size:0.8rem; margin:5px 0 0 0;">
+              Las gráficas de <span class="math-inline">y = log<sub>a</sub>(x)</span> e <span class="math-inline">y = log<sub>1/a</sub>(x)</span> son <strong>simétricas respecto al eje x</strong>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLOS ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ejemplos_resueltos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.4 Ejemplos Analíticos Desarrollados</h2>
+
+          <!-- Ejemplo 1 -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ejemplo 1: Cálculo por Definición de Logaritmos</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>a) Resolver &nbsp;<span class="math-inline">log<sub>3</sub>(x) = 2</span>:</strong>
+              <br>Aplicando la definición <span class="math-inline">y = log<sub>a</sub>(x) &hArr; a<sup>y</sup> = x</span>:
+              <br>3<sup>2</sup> = x &nbsp;&rArr;&nbsp; <strong>x = 9</strong>.
+              <br><br>
+              <strong>b) Resolver &nbsp;<span class="math-inline">log<sub>3</sub>(1/27) = y</span>:</strong>
+              <br>Aplicando definición: 3<sup>y</sup> = 1/27 &nbsp;&rArr;&nbsp; 3<sup>y</sup> = 3<sup>&minus;3</sup> &nbsp;&rArr;&nbsp; <strong>y = &minus;3</strong>.
+            </div>
+          </div>
+
+          <!-- Ejemplo 2 -->
+          <div class="key-concept" style="border-color:#d0e0f0; background:#f5f9fc; margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo 2: Análisis Comparativo Completo de f(x) = log<sub>3</sub>(x) y g(x) = log<sub>1/3</sub>(x)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.85rem; line-height:1.5;">
+                <thead>
+                  <tr style="border-bottom:2px solid #ccc; color:var(--teal-deep);">
+                    <th style="padding:6px;">Propiedad</th>
+                    <th style="padding:6px;">f(x) = log<sub>3</sub>(x)</th>
+                    <th style="padding:6px;">g(x) = log<sub>1/3</sub>(x)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Dominio</strong></td>
+                    <td style="padding:6px;">(0; &infin;) = R<sup>+</sup></td>
+                    <td style="padding:6px;">(0; &infin;) = R<sup>+</sup></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Imagen</strong></td>
+                    <td style="padding:6px;">R</td>
+                    <td style="padding:6px;">R</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Raíz (y=0)</strong></td>
+                    <td style="padding:6px;">(1, 0)</td>
+                    <td style="padding:6px;">(1, 0)</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Ordenada (x=0)</strong></td>
+                    <td style="padding:6px;">No tiene (0 &notin; Dom)</td>
+                    <td style="padding:6px;">No tiene (0 &notin; Dom)</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:6px;"><strong>Monotonía</strong></td>
+                    <td style="padding:6px;">Estrictamente Creciente</td>
+                    <td style="padding:6px;">Estrictamente Decreciente</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px;"><strong>Asíntota Vert.</strong></td>
+                    <td style="padding:6px;">x = 0 (eje y)</td>
+                    <td style="padding:6px;">x = 0 (eje y)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Ejemplo 3 -->
+          <div class="key-concept" style="border-color:#e0b8e0; background:#faf5fa; margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Ejemplo 3: Análisis de Dominio y Asíntotas en Logaritmos Desplazados</h3>
+            <p>Dada la función &nbsp;<span class="math-inline">h(x) = ln(2x &minus; 6)</span>:</p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1. Cálculo del Dominio:</strong>
+              <br>Exigimos que el argumento sea estrictamente mayor que cero:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;2x &minus; 6 &gt; 0 &nbsp;&rArr;&nbsp; 2x &gt; 6 &nbsp;&rArr;&nbsp; x &gt; 3.
+              <br>Por lo tanto: &nbsp;<strong>Dom h = (3; &infin;)</strong>.
+              <br><br>
+              <strong>2. Asíntota Vertical:</strong>
+              <br>El valor que anula el argumento genera la asíntota vertical:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;2x &minus; 6 = 0 &nbsp;&rArr;&nbsp; <strong>x = 3</strong> es la Asíntota Vertical.
+              <br><br>
+              <strong>3. Raíz (h(x) = 0):</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;ln(2x &minus; 6) = 0 &nbsp;&rArr;&nbsp; 2x &minus; 6 = e<sup>0</sup> &nbsp;&rArr;&nbsp; 2x &minus; 6 = 1 &nbsp;&rArr;&nbsp; 2x = 7 &nbsp;&rArr;&nbsp; <strong>x = 7/2 = 3.5</strong>.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.5 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 180 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 180: Completamiento Teórico de Logaritmos</div>
+              <div class="precaution-card__body">
+                <p>Completar teniendo en cuenta la función <span class="math-inline">f(x) = log<sub>a</sub>(x)</span>:</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Respuestas</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    <strong>a) Todas las curvas cortan al eje x en el punto:</strong> (1, 0).
+                    <br><br>
+                    <strong>b) Si a &gt; 1, entonces f es una función:</strong> Creciente.
+                    <br><br>
+                    <strong>c) Si 0 &lt; a &lt; 1, entonces f es una función:</strong> Decreciente.
+                    <br><br>
+                    <strong>d) Las gráficas de y = log<sub>a</sub> x e y = log<sub>1/a</sub> x son simétricas con respecto al:</strong> eje x.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 181 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 181: Función Inversa de g(x) = e<sup>x</sup></div>
+              <div class="precaution-card__body">
+                <p>Dada la función exponencial natural <span class="math-inline">g(x) = e<sup>x</sup></span>, obtener por simetría la fórmula funcional de su inversa <span class="math-inline">g<sup>&minus;1</sup>(x)</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Escribimos <span class="math-inline">y = e<sup>x</sup></span>.
+                    <br>2. Intercambiamos variables: <span class="math-inline">x = e<sup>y</sup></span>.
+                    <br>3. Aplicamos definición de logaritmo: <span class="math-inline">y = log<sub>e</sub>(x) = ln(x)</span>.
+                    <br><br>
+                    Por lo tanto: <strong>g<sup>&minus;1</sup>(x) = ln(x)</strong> &nbsp;con <span class="math-inline">Dom = (0; &infin;)</span> e <span class="math-inline">Im = R</span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="exponencial.html" class="nav-link nav-link--prev">&larr; Cap IV Secc 1: Funciones Exponenciales</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
