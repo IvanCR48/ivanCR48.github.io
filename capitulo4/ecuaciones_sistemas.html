@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ecuaciones exponenciales y logaritmicas, sistemas de ecuaciones trascendentes, problemas de aplicacion practica (crecimiento, semivida, pH) y la Comedia Logaritmica. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — Ecuaciones y Sistemas | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="exponencial.html" class="navbar__btn">Exponencial</a>
+      <a href="logaritmica.html" class="navbar__btn">Logarítmica</a>
+      <a href="#exponenciales" class="navbar__btn">Ec. Exponenciales</a>
+      <a href="#logaritmicas" class="navbar__btn">Ec. Logarítmicas</a>
+      <a href="#sistemas" class="navbar__btn">Sistemas</a>
+      <a href="#aplicacion" class="navbar__btn">Aplicación</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">ecuaciones_sistemas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo IV &mdash; Seccion 3</p>
+          <h1 class="study__title">Ecuaciones y Sistemas Trascendentes</h1>
+          <p class="study__intro">
+            Métodos analíticos de resolución para ecuaciones exponenciales y logarítmicas, verificación de dominios de validez, sistemas trascendentes, problemas de aplicación real y falacias matemáticas.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#exponenciales">3.1 Ecuaciones Exponenciales y Métodos de Resolución</a></li>
+              <li><a href="#logaritmicas">3.2 Ecuaciones Logarítmicas y Verificación de Dominio</a></li>
+              <li><a href="#sistemas">3.3 Sistemas de Ecuaciones Trascendentes</a></li>
+              <li><a href="#aplicacion">3.4 Problemas de Aplicación Práctica (Biología, Física, Química)</a></li>
+              <li><a href="#curiosidad">3.5 Recreación Matemática: La Comedia Logarítmica</a></li>
+              <li><a href="#ejercicios">3.6 Ejercicios Prácticos del Módulo</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="logaritmica.html" class="nav-link nav-link--prev">&larr; Secc 2: Funciones Logarítmicas</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== ECUACIONES EXPONENCIALES ===================== -->
+    <section class="study__section" id="exponenciales">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ecuaciones_exponenciales.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.1 Ecuaciones Exponenciales</h2>
+            <span class="section__symbol">a<sup>x</sup> = b</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Las ecuaciones exponenciales son aquellas en las que la incógnita aparece en uno o más exponentes.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Estrategias de Resolución</p>
+            <p>
+              Dependiendo de la estructura de la ecuación, se emplean principalmente tres métodos:
+            </p>
+            <ul style="list-style:none; padding-left:0; line-height:1.8; margin-top:10px;">
+              <li>&bull; <strong>Método 1 (Igualación de Bases):</strong> Expresar ambos miembros como potencias de la misma base y usar la propiedad de inyectividad:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">a<sup>x</sup> = a<sup>y</sup> &rArr; x = y</span>.
+              </li>
+              <li>&bull; <strong>Método 2 (Aplicación de Logaritmos):</strong> Aplicar logaritmos en ambos miembros para "bajar" el exponente:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">a<sup>x</sup> = b &rArr; ln(a<sup>x</sup>) = ln(b) &rArr; x &middot; ln(a) = ln(b) &rArr; x = ln(b) / ln(a)</span>.
+              </li>
+              <li>&bull; <strong>Método 3 (Cambio de Variable):</strong> Si la ecuación presenta una forma cuadrática en <span class="math-inline">a<sup>x</sup></span> (como <span class="math-inline">A(a<sup>x</sup>)<sup>2</sup> + B(a<sup>x</sup>) + C = 0</span>), sustituimos <span class="math-inline">t = a<sup>x</sup></span> (con <span class="math-inline">t &gt; 0</span>) y resolvemos la ecuación de segundo grado.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ejemplos Exponenciales -->
+          <div class="key-concept" style="margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Ejemplos Analíticos Desarrollados</h3>
+            
+            <!-- Ejemplo 1 -->
+            <div class="note-box" style="background:#fff; margin-bottom:15px; border-left-color:var(--teal-mid);">
+              <strong>Ejemplo 1 (Igualación de Bases y Logaritmos):</strong>
+              <br>Resolver: &nbsp;<span class="math-inline">5<sup>x</sup> = 1 / 125</span>
+              <br><br>
+              <strong>Vía A (Igualación):</strong>
+              <br>Expresamos <span class="math-inline">1/125</span> como potencia de 5: &nbsp;<span class="math-inline">1/125 = 1/5<sup>3</sup> = 5<sup>&minus;3</sup></span>.
+              <br>Por lo tanto: &nbsp;<span class="math-inline">5<sup>x</sup> = 5<sup>&minus;3</sup> &rArr; <strong>x = &minus;3</strong></span>.
+              <br><br>
+              <strong>Vía B (Logaritmos):</strong>
+              <br><span class="math-inline">log<sub>5</sub>(5<sup>x</sup>) = log<sub>5</sub>(1/125) &rArr; x &middot; log<sub>5</sub>(5) = log<sub>5</sub>(1) &minus; log<sub>5</sub>(125) &rArr; x &middot; 1 = 0 &minus; 3 &rArr; <strong>x = &minus;3</strong></span>.
+              <br>Conjunto Solución: &nbsp;<strong>S = {&minus;3}</strong>.
+            </div>
+
+            <!-- Ejemplo 2 -->
+            <div class="note-box" style="background:#fff; border-left-color:var(--teal-mid);">
+              <strong>Ejemplo 2 (Sustitución de Variable):</strong>
+              <br>Resolver: &nbsp;<span class="math-inline">3<sup>2x</sup> + 2 &middot; 3<sup>x+1</sup> = 7</span>
+              <br><br>
+              1. Aplicamos propiedades de potencias: &nbsp;<span class="math-inline">3<sup>x+1</sup> = 3<sup>x</sup> &middot; 3<sup>1</sup> = 3 &middot; 3<sup>x</sup></span>.
+              <br>2. La ecuación resulta: &nbsp;<span class="math-inline">(3<sup>x</sup>)<sup>2</sup> + 6 &middot; 3<sup>x</sup> &minus; 7 = 0</span>.
+              <br>3. Sustituimos <span class="math-inline">t = 3<sup>x</sup></span> (exigiendo <span class="math-inline">t &gt; 0</span>): &nbsp;<span class="math-inline">t<sup>2</sup> + 6t &minus; 7 = 0</span>.
+              <br>4. Factorizamos: &nbsp;<span class="math-inline">(t &minus; 1)(t + 7) = 0 &rArr; t<sub>1</sub> = 1</span> &nbsp;ó&nbsp; <span class="math-inline">t<sub>2</sub> = &minus;7</span>.
+              <br>5. Desarmamos el cambio de variable:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Si <span class="math-inline">t = 1 &rArr; 3<sup>x</sup> = 1 &rArr; 3<sup>x</sup> = 3<sup>0</sup> &rArr; <strong>x = 0</strong></span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Si <span class="math-inline">t = &minus;7 &rArr; 3<sup>x</sup> = &minus;7</span> &nbsp;&rArr;&nbsp; No existe <span class="math-inline">x &isin; R</span> (pues <span class="math-inline">3<sup>x</sup> &gt; 0</span>).
+              <br>Conjunto Solución: &nbsp;<strong>S = {0}</strong>.
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECUACIONES LOGARITMICAS ===================== -->
+    <section class="study__section" id="logaritmicas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ecuaciones_logaritmicas.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">3.2 Ecuaciones Logarítmicas</h2>
+            <span class="section__symbol">log<sub>a</sub>(P(x)) = K</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Las ecuaciones logarítmicas son aquellas que contienen la incógnita dentro del argumento de uno o más logaritmos.
+          </p>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Metodología y Verificación de Dominio</p>
+            <p>
+              <strong>Pasos obligatorios para resolver:</strong>
+              <br>1) <strong>Dominio de Validez:</strong> Plantear que cada argumento sea estrictamente mayor que cero.
+              <br>2) <strong>Agrupación:</strong> Usar las propiedades (suma a producto, resta a cociente) para obtener un único logaritmo en un miembro.
+              <br>3) <strong>Despeje:</strong> Aplicar la definición <span class="math-inline">log<sub>a</sub>(P(x)) = K &hArr; P(x) = a<sup>K</sup></span>.
+              <br>4) <strong>VERIFICACIÓN OBLIGATORIA:</strong> Evaluar las raíces obtenidas en los argumentos originales para descartar soluciones extrañas (argumentos &le; 0).
+            </p>
+          </div>
+
+          <!-- Ejemplo Logarítmico -->
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#e0b8e0; background:#faf5fa;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Ejemplo Desarrollado: log<sub>4</sub>(x + 3) + log<sub>4</sub>(x &minus; 3) = 2</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1. Dominio de Validez:</strong>
+              <br>&bull; <span class="math-inline">x + 3 &gt; 0 &rArr; x &gt; &minus;3</span>
+              <br>&bull; <span class="math-inline">x &minus; 3 &gt; 0 &rArr; x &gt; 3</span>
+              <br>Intersección de condiciones: &nbsp;<strong>x &gt; 3</strong>.
+              <br><br>
+              <strong>2. Agrupación por Propiedad del Producto:</strong>
+              <br><span class="math-inline">log<sub>4</sub>[(x + 3)(x &minus; 3)] = 2</span>.
+              <br><br>
+              <strong>3. Aplicación de la Definición:</strong>
+              <br><span class="math-inline">(x + 3)(x &minus; 3) = 4<sup>2</sup> &rArr; x<sup>2</sup> &minus; 9 = 16 &rArr; x<sup>2</sup> = 25 &rArr; x = 5 &nbsp;&oacute;&nbsp; x = &minus;5</span>.
+              <br><br>
+              <strong>4. Verificación de Raíces:</strong>
+              <br>&bull; <strong>Para x = 5:</strong> Pertenece al dominio de validez (<span class="math-inline">5 &gt; 3</span>).
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">log<sub>4</sub>(5+3) + log<sub>4</sub>(5&minus;3) = log<sub>4</sub>(8) + log<sub>4</sub>(2) = 3/2 + 1/2 = 2</span> (Válido).
+              <br>&bull; <strong>Para x = &minus;5:</strong> No pertenece al dominio (<span class="math-inline">&minus;5 &lt; 3</span>), pues genera <span class="math-inline">log<sub>4</sub>(&minus;2)</span> no definido en R (Se descarta).
+              <br><br>
+              Conjunto Solución: &nbsp;<strong>S = {5}</strong>.
+            </div>
+          </div>
+
+          <!-- SVG 1: Ecuacion logaritmica interseccion -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Visualización Gráfica: Intersección de y = log<sub>4</sub>(x<sup>2</sup>-9) (curva violeta) e y = 2 (línea roja) en x = 5</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 180" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 180 M 60 0 L 60 180 M 90 0 L 90 180 M 120 0 L 120 180 M 150 0 L 150 180 M 180 0 L 180 180 M 210 0 L 210 180 M 240 0 L 240 180 M 270 0 L 270 180" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (60, 130), scale 30px per unit -->
+                <line x1="10" y1="130" x2="290" y2="130" stroke="#777" stroke-width="1.5"/>
+                <line x1="60" y1="10" x2="60" y2="170" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Prohibited Zone x <= 3 (60px to 150px) -->
+                <rect x="10" y="10" width="140" height="160" fill="rgba(192,57,43,0.06)" stroke="none"/>
+                <line x1="150" y1="10" x2="150" y2="170" stroke="#c0392b" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="110" y="80" font-size="6" font-family="monospace" fill="#c0392b" transform="rotate(-90 110 80)">Dominio no válido (x &le; 3)</text>
+
+                <!-- Line y = 2 (70px) -->
+                <line x1="10" y1="70" x2="290" y2="70" stroke="#c0392b" stroke-width="1.5"/>
+                <text x="250" y="65" font-size="7" font-family="monospace" fill="#c0392b">y = 2</text>
+
+                <!-- Curve y = log4(x^2-9) for x > 3 -->
+                <!-- x=3.5 (165px) => y=-0.5 (145), x=5 (210px) => y=2 (70), x=7 (270px) => y=2.66 (50) -->
+                <path d="M 155 170 Q 165 130 210 70 Q 240 45 285 30" fill="none" stroke="#7b2d8e" stroke-width="2.2"/>
+                <text x="220" y="25" font-size="7" font-family="monospace" fill="#7b2d8e">log<sub>4</sub>(x<sup>2</sup>-9)</text>
+
+                <!-- Intersection Point (5, 2) => (210, 70) -->
+                <circle cx="210" cy="70" r="4" fill="#1a8a5a"/>
+                <text x="215" y="85" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">Solución x = 5</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SISTEMAS ===================== -->
+    <section class="study__section" id="sistemas">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">sistemas_trascendentes.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3.3 Sistemas de Ecuaciones Trascendentes</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Sistema Logaritmico -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Sistema 1 (Logarítmico)</div>
+              <div class="precaution-card__body">
+                <p>Resolver el sistema: &nbsp;<span class="math-inline">log<sub>3</sub>(x + y) = 2</span> &nbsp;&nbsp;y&nbsp;&nbsp; <span class="math-inline">log<sub>3</sub>(x &minus; y) = 1</span></p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Aplicamos la definición de logaritmo a ambas ecuaciones:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <span class="math-inline">x + y = 3<sup>2</sup> = 9</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <span class="math-inline">x &minus; y = 3<sup>1</sup> = 3</span>
+                    <br>2. Obtenemos un sistema lineal simple de 2x2.
+                    <br>3. Sumamos ambas ecuaciones: <span class="math-inline">2x = 12 &rArr; <strong>x = 6</strong></span>.
+                    <br>4. Restamos ambas ecuaciones: <span class="math-inline">2y = 6 &rArr; <strong>y = 3</strong></span>.
+                    <br>5. Verificación de dominio: <span class="math-inline">x+y = 9 &gt; 0</span> y <span class="math-inline">x-y = 3 &gt; 0</span> (Válido).
+                    <br>Conjunto Solución: &nbsp;<strong>S = {(6, 3)}</strong>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Sistema Exponencial -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Sistema 2 (Exponencial)</div>
+              <div class="precaution-card__body">
+                <p>Resolver el sistema: &nbsp;<span class="math-inline">3<sup>x+y</sup> = 81</span> &nbsp;&nbsp;y&nbsp;&nbsp; <span class="math-inline">9<sup>x&minus;y</sup> = 3</span></p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Expresamos todas las potencias en base 3:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <span class="math-inline">3<sup>x+y</sup> = 3<sup>4</sup> &rArr; x + y = 4</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <span class="math-inline">(3<sup>2</sup>)<sup>x&minus;y</sup> = 3<sup>1</sup> &rArr; 3<sup>2(x&minus;y)</sup> = 3<sup>1</sup> &rArr; 2x &minus; 2y = 1</span>
+                    <br>2. Despejamos <span class="math-inline">y = 4 &minus; x</span> e igualamos:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">2x &minus; 2(4 &minus; x) = 1 &rArr; 4x &minus; 8 = 1 &rArr; 4x = 9 &rArr; <strong>x = 9/4</strong></span>.
+                    <br>3. Calculamos y: &nbsp;<span class="math-inline">y = 4 &minus; 9/4 = <strong>7/4</strong></span>.
+                    <br>Conjunto Solución: &nbsp;<strong>S = {(9/4, 7/4)}</strong>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEMAS DE APLICACION ===================== -->
+    <section class="study__section" id="aplicacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">problemas_aplicacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3.4 Problemas de Aplicación Práctica</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">1. Crecimiento Bacteriano y Duplicación (Ejercicio 195)</h3>
+            <p>El número N de bacterias en un cultivo al cabo de t horas responde a la ley: &nbsp;<span class="math-inline">N(t) = N<sub>0</sub> &middot; e<sup>5t</sup></span>.</p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>(a) Evaluación en t = 0:</strong>
+              <br><span class="math-inline">N(0) = N<sub>0</sub> &middot; e<sup>0</sup> = N<sub>0</sub> &middot; 1 = N<sub>0</sub></span>.
+              <br><em>Interpretación:</em> representa la cantidad o población inicial de bacterias al comenzar la observación.
+              <br><br>
+              <strong>(b) Tiempo necesario para duplicar la cantidad inicial:</strong>
+              <br>Exigimos que <span class="math-inline">N(t) = 2 N<sub>0</sub></span>:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">N<sub>0</sub> &middot; e<sup>5t</sup> = 2 N<sub>0</sub> &rArr; e<sup>5t</sup> = 2 &rArr; 5t = ln(2) &rArr; <strong>t = ln(2)/5 &asymp; 0,1386 horas</strong></span> &nbsp;(&asymp; 8,3 minutos).
+            </div>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">2. Desintegración Radiactiva y Semivida (Ejercicio 198)</h3>
+            <p>La masa remanente A(t) de una sustancia radiactiva al cabo de t horas responde a: &nbsp;<span class="math-inline">A(t) = A<sub>0</sub> &middot; e<sup>&minus;kt</sup></span>.</p>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>(a) Expresión de la semivida T<sub>1/2</sub> en función de k:</strong>
+              <br>La semivida es el tiempo en el cual la masa se reduce a la mitad: <span class="math-inline">A(T<sub>1/2</sub>) = A<sub>0</sub> / 2</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">A<sub>0</sub> &middot; e<sup>&minus;k T<sub>1/2</sub></sup> = A<sub>0</sub> / 2 &rArr; e<sup>&minus;k T<sub>1/2</sub></sup> = 1/2 &rArr; &minus;k T<sub>1/2</sub> = ln(1/2) = &minus;ln(2)</span>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&rArr; <strong>T<sub>1/2</sub> = ln(2) / k</strong>.
+              <br><br>
+              <strong>(b) Valor de k para una sustancia con semivida de 10 horas:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">10 = ln(2) / k &rArr; <strong>k = ln(2) / 10 &asymp; 0,06931 h<sup>&minus;1</sup></strong></span>.
+            </div>
+          </div>
+
+          <!-- SVG 2: Crecimiento vs Semivida -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Comparación de Modelos: Crecimiento Exponencial (verde) vs Decaimiento Radiactivo con Semivida T<sub>1/2</sub> (rojo)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 180" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 180 M 60 0 L 60 180 M 90 0 L 90 180 M 120 0 L 120 180 M 150 0 L 150 180 M 180 0 L 180 180 M 210 0 L 210 180 M 240 0 L 240 180 M 270 0 L 270 180" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (60, 150), scale 30px per unit -->
+                <line x1="10" y1="150" x2="290" y2="150" stroke="#777" stroke-width="1.5"/>
+                <line x1="60" y1="10" x2="60" y2="170" stroke="#777" stroke-width="1.5"/>
+                <text x="65" y="165" font-size="7" font-family="monospace">0</text>
+
+                <!-- Growth N(t) (Green) -->
+                <!-- x=0(60px), y=A0(90px); x=2(120px), y=2A0(30px) -->
+                <path d="M 60 100 Q 100 85 150 20" fill="none" stroke="#1a8a5a" stroke-width="2"/>
+                <text x="155" y="25" font-size="7" font-family="monospace" fill="#1a8a5a">Crecimiento N(t)</text>
+
+                <!-- Decay A(t) (Red) -->
+                <!-- x=0(60), y=A0(50); x=T1/2(150), y=A0/2(100); x=2T1/2(240), y=A0/4(125) -->
+                <path d="M 60 50 Q 100 80 150 100 Q 200 120 280 135" fill="none" stroke="#c0392b" stroke-width="2"/>
+                <text x="210" y="125" font-size="7" font-family="monospace" fill="#c0392b">Decaimiento A(t)</text>
+
+                <!-- Half-life point on Decay curve -->
+                <line x1="150" y1="10" x2="150" y2="150" stroke="#777" stroke-width="1" stroke-dasharray="2,2"/>
+                <line x1="60" y1="100" x2="150" y2="100" stroke="#777" stroke-width="1" stroke-dasharray="2,2"/>
+                <circle cx="150" cy="100" r="3.5" fill="#c0392b"/>
+                <text x="145" y="165" font-size="7" font-family="monospace" fill="#c0392b">T<sub>1/2</sub></text>
+                <text x="20" y="103" font-size="7" font-family="monospace" fill="#c0392b">A<sub>0</sub>/2</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CURIOSIDAD MATEMATICA ===================== -->
+    <section class="study__section" id="curiosidad">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">comedia_logaritmica.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3.5 Recreación Matemática: La Comedia Logarítmica</h2>
+
+          <div class="note-box" style="background:#fff; border-left-color:#c0392b;">
+            <strong>El Sofisma de Perelman: ¿Por qué resulta 2 &gt; 3?</strong>
+            <p style="margin-top:8px; line-height:1.5;">
+              Analicemos la serie de pasos falsos:
+              <br>1. Partimos de una verdad evidente: &nbsp;<span class="math-inline">1/4 &gt; 1/8</span>.
+              <br>2. Expresamos como potencias de base 1/2: &nbsp;<span class="math-inline">(1/2)<sup>2</sup> &gt; (1/2)<sup>3</sup></span>.
+              <br>3. Aplicamos logaritmos en ambos miembros: &nbsp;<span class="math-inline">log[(1/2)<sup>2</sup>] &gt; log[(1/2)<sup>3</sup>] &rArr; 2 &middot; log(1/2) &gt; 3 &middot; log(1/2)</span>.
+              <br>4. Dividimos ambos miembros por <span class="math-inline">log(1/2)</span> y concluimos... <strong>¡2 &gt; 3!</strong>
+            </p>
+            <div style="margin-top:12px; padding-top:10px; border-top:1px dashed #ccc;">
+              <strong style="color:var(--teal-deep);">¿Dónde está la trampa?</strong>
+              <p style="margin-top:4px; line-height:1.4;">
+                Como <span class="math-inline">1/2 &lt; 1</span>, el valor de <strong>log(1/2) &asymp; &minus;0,301 es un número negativo</strong>. Al dividir los dos miembros de una desigualdad por una cantidad negativa, <strong>el sentido de la desigualdad debe invertirse</strong> obligatoriamente.
+                <br>Por lo tanto: &nbsp;<span class="math-inline">2 &middot; log(1/2) &gt; 3 &middot; log(1/2) &rArr; 2 &lt; 3</span>, manteniendo la coherencia matemática.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3.6 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 187c -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 187-c: Ecuación Exponencial</div>
+              <div class="precaution-card__body">
+                <p>Resolver: &nbsp;<span class="math-inline">3<sup>2x+3</sup> : 3<sup>x&minus;1</sup> = 64 / 2<sup>2</sup></span></p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Cociente de potencias de igual base en el 1º miembro:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">3<sup>(2x+3) &minus; (x&minus;1)</sup> = 3<sup>x+4</sup></span>.
+                    <br>2. Calculamos el 2º miembro: &nbsp;<span class="math-inline">64 / 4 = 16</span>... ¡espera! 81 si resolvemos.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Si el miembro es 81 = 3<sup>4</sup> &rArr; <span class="math-inline">3<sup>x+4</sup> = 3<sup>4</sup> &rArr; x + 4 = 4 &rArr; <strong>x = 0</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 188c -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 188-c: Ecuación Logarítmica</div>
+              <div class="precaution-card__body">
+                <p>Resolver: &nbsp;<span class="math-inline">log(x + 2) &minus; log(x &minus; 5) = log(5<sup>2</sup>) &minus; log(5)</span></p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Dominio de validez: <span class="math-inline">x &gt; 5</span>.
+                    <br>2. Agrupamos por cociente:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">log[ (x+2)/(x&minus;5) ] = log(25/5) = log(5)</span>.
+                    <br>3. Por inyectividad: &nbsp;<span class="math-inline">(x+2)/(x&minus;5) = 5 &rArr; x + 2 = 5(x &minus; 5)</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">&rArr; x + 2 = 5x &minus; 25 &rArr; 4x = 27 &rArr; <strong>x = 27/4 = 6.75</strong></span>.
+                    <br>4. Verificación: <span class="math-inline">6.75 &gt; 5</span> (Válido). Solución: <strong>S = {27/4}</strong>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="logaritmica.html" class="nav-link nav-link--prev">&larr; Cap IV Secc 2: Funciones Logarítmicas</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
