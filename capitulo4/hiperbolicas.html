@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Funciones hiperbolicas: seno y coseno hiperbolicos, paridad, tangente e inversas hiperbolicas, identidad cosh^2(x) - sinh^2(x) = 1 y la curva catenaria en ingenieria. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — Funciones Hiperbólicas | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="exponencial.html" class="navbar__btn">Exponencial</a>
+      <a href="logaritmica.html" class="navbar__btn">Logarítmica</a>
+      <a href="ecuaciones_sistemas.html" class="navbar__btn">Ec. y Sistemas</a>
+      <a href="#definicion" class="navbar__btn">Definición</a>
+      <a href="#secundarias" class="navbar__btn">Secundarias</a>
+      <a href="#relacion" class="navbar__btn">Relación Fund.</a>
+      <a href="#catenaria" class="navbar__btn">Catenaria</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">funciones_hiperbolicas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo IV &mdash; Seccion 4</p>
+          <h1 class="study__title">Funciones Hiperbólicas (Básico)</h1>
+          <p class="study__intro">
+            Definiciones de seno y coseno hiperbólicos, propiedades de simetría (paridad), las cuatro funciones secundarias, demostración de cosh<sup>2</sup>(x) &minus; sinh<sup>2</sup>(x) = 1 y la curva Catenaria en ingeniería.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#definicion">4.1 Seno Hiperbólico y Coseno Hiperbólico</a></li>
+              <li><a href="#paridad">4.1.1 Paridad y Gráfica por Suma de Ordenadas</a></li>
+              <li><a href="#secundarias">4.1.2 Las Cuatro Funciones Hiperbólicas Secundarias</a></li>
+              <li><a href="#relacion">4.2 Relación Fundamental Hiperbólica</a></li>
+              <li><a href="#catenaria">4.3 Aplicaciones en Ingeniería: La Catenaria</a></li>
+              <li><a href="#ejercicios">4.4 Ejercicios Prácticos de Autoevaluación</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="ecuaciones_sistemas.html" class="nav-link nav-link--prev">&larr; Secc 3: Ecuaciones y Sistemas</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== DEFINICION ===================== -->
+    <section class="study__section" id="definicion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">definicion_hiperbolicas.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">4.1 Seno y Coseno Hiperbólicos</h2>
+            <span class="section__symbol">sinh(x) y cosh(x)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Ciertas combinaciones de <span class="math-inline">e<sup>x</sup></span> y <span class="math-inline">e<sup>&minus;x</sup></span> aparecen con frecuencia en diversas aplicaciones de la matemática, especialmente en física e ingeniería. Estas combinaciones se denominan <strong>funciones hiperbólicas</strong>.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal</p>
+            <p>
+              La función <strong>seno hiperbólico</strong> (denotada por <span class="math-inline">sinh</span>) y la función <strong>coseno hiperbólico</strong> (denotada por <span class="math-inline">cosh</span>) están definidas para todo <span class="math-inline">x &isin; R</span> por:
+            </p>
+            <p class="math-display">
+              sinh(x) = (e<sup>x</sup> &minus; e<sup>&minus;x</sup>) / 2
+            </p>
+            <p class="math-display">
+              cosh(x) = (e<sup>x</sup> + e<sup>&minus;x</sup>) / 2
+            </p>
+            <p style="margin-top:10px;">
+              <strong>Dominio e Imagen:</strong>
+              <br>&bull; <strong>Seno Hiperbólico:</strong> <span class="math-inline">Dom(sinh) = R</span> &nbsp;&nbsp;e&nbsp;&nbsp; <span class="math-inline">Im(sinh) = R</span>.
+              <br>&bull; <strong>Coseno Hiperbólico:</strong> <span class="math-inline">Dom(cosh) = R</span> &nbsp;&nbsp;e&nbsp;&nbsp; <span class="math-inline">Im(cosh) = [1; &infin;)</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARIDAD Y SUMA DE ORDENADAS ===================== -->
+    <section class="study__section" id="paridad">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">paridad_grafica.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.1.1 Demostración de Paridad y Suma de Ordenadas</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Propiedades de Simetría (Paridad)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <strong>1. Seno Hiperbólico (Función Impar):</strong>
+              <br><span class="math-inline">sinh(&minus;x) = [e<sup>&minus;x</sup> &minus; e<sup>&minus;(&minus;x)</sup>] / 2 = [e<sup>&minus;x</sup> &minus; e<sup>x</sup>] / 2 = &minus;[(e<sup>x</sup> &minus; e<sup>&minus;x</sup>) / 2] = <strong>&minus;sinh(x)</strong></span>.
+              <br>&rArr; Es una <strong>función impar</strong>, su gráfica es simétrica respecto al origen de coordenadas <span class="math-inline">(0,0)</span>.
+              <br><br>
+              <strong>2. Coseno Hiperbólico (Función Par):</strong>
+              <br><span class="math-inline">cosh(&minus;x) = [e<sup>&minus;x</sup> + e<sup>&minus;(&minus;x)</sup>] / 2 = [e<sup>&minus;x</sup> + e<sup>x</sup>] / 2 = [e<sup>x</sup> + e<sup>&minus;x</sup>] / 2 = <strong>cosh(x)</strong></span>.
+              <br>&rArr; Es una <strong>función par</strong>, su gráfica es simétrica respecto al eje y.
+            </div>
+          </div>
+
+          <!-- SVG 1: sinh y cosh -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Gráficas del Seno Hiperbólico sinh(x) (azul) y Coseno Hiperbólico cosh(x) (rojo)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 260 220" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 260 30 M 0 60 L 260 60 M 0 90 L 260 90 M 0 120 L 260 120 M 0 150 L 260 150 M 0 180 L 260 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (130, 150), scale 30px per unit -->
+                <line x1="10" y1="150" x2="250" y2="150" stroke="#777" stroke-width="1.5"/>
+                <line x1="130" y1="10" x2="130" y2="210" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Asymptote Exponentials (1/2 e^x) dashed green -->
+                <path d="M 10 148 Q 110 145 130 135 Q 160 110 200 20" fill="none" stroke="#1a8a5a" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="205" y="25" font-size="6" font-family="monospace" fill="#1a8a5a">(1/2)e<sup>x</sup></text>
+
+                <!-- cosh(x) (Red Curve, Parabola-like above y=1) -->
+                <!-- x=0=>y=1 (120px), x=1=>y=1.54 (104px), x=-1=>y=1.54 (104px), x=2=>y=3.76 (37px) -->
+                <path d="M 40 37 Q 100 115 130 120 Q 160 115 220 37" fill="none" stroke="#c0392b" stroke-width="2.2"/>
+                <text x="225" y="42" font-size="8" font-family="monospace" fill="#c0392b">cosh(x)</text>
+                <circle cx="130" cy="120" r="3.5" fill="#c0392b"/>
+                <text x="135" y="132" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">(0, 1)</text>
+
+                <!-- sinh(x) (Blue Curve, Odd S-shape) -->
+                <!-- x=0=>y=0 (150px), x=1=>y=1.175 (115px), x=-1=>y=-1.175 (185px) -->
+                <path d="M 40 200 Q 100 185 130 150 Q 160 115 220 20" fill="none" stroke="#2a6eb5" stroke-width="2.2"/>
+                <text x="225" y="20" font-size="8" font-family="monospace" fill="#2a6eb5">sinh(x)</text>
+                <circle cx="130" cy="150" r="3.5" fill="#2a6eb5"/>
+                <text x="115" y="163" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">(0, 0)</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUNCIONES SECUNDARIAS ===================== -->
+    <section class="study__section" id="secundarias">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">funciones_secundarias.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.1.2 Las Cuatro Funciones Hiperbólicas Secundarias</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Tangente Hiperbolica -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Tangente Hiperbólica (tanh x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">tanh(x) = sinh(x) / cosh(x) = (e<sup>x</sup> &minus; e<sup>&minus;x</sup>) / (e<sup>x</sup> + e<sup>&minus;x</sup>)</p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  &bull; <strong>Dominio:</strong> <span class="math-inline">R</span>
+                  <br>&bull; <strong>Imagen:</strong> <span class="math-inline">(&minus;1; 1)</span>
+                  <br>&bull; Posee asíntotas horizontales en <span class="math-inline">y = 1</span> (para <span class="math-inline">x &rarr; &infin;</span>) e <span class="math-inline">y = &minus;1</span> (para <span class="math-inline">x &rarr; &minus;&infin;</span>).
+                </p>
+              </div>
+            </div>
+
+            <!-- Cotangente Hiperbolica -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Cotangente Hiperbólica (coth x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">coth(x) = cosh(x) / sinh(x) = (e<sup>x</sup> + e<sup>&minus;x</sup>) / (e<sup>x</sup> &minus; e<sup>&minus;x</sup>)</p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  &bull; <strong>Dominio:</strong> <span class="math-inline">R &setminus; {0}</span>
+                  <br>&bull; <strong>Imagen:</strong> <span class="math-inline">(&minus;&infin;; &minus;1) &cup; (1; &infin;)</span>
+                  <br>&bull; Posee asíntota vertical en <span class="math-inline">x = 0</span>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Secante Hiperbolica -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Secante Hiperbólica (sech x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">sech(x) = 1 / cosh(x) = 2 / (e<sup>x</sup> + e<sup>&minus;x</sup>)</p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  &bull; <strong>Dominio:</strong> <span class="math-inline">R</span>
+                  <br>&bull; <strong>Imagen:</strong> <span class="math-inline">(0; 1]</span>
+                  <br>&bull; Su valor máximo es 1 en <span class="math-inline">x = 0</span>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cosecante Hiperbolica -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Cosecante Hiperbólica (csch x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">csch(x) = 1 / sinh(x) = 2 / (e<sup>x</sup> &minus; e<sup>&minus;x</sup>)</p>
+                <p style="font-size:0.85rem; line-height:1.4;">
+                  &bull; <strong>Dominio:</strong> <span class="math-inline">R &setminus; {0}</span>
+                  <br>&bull; <strong>Imagen:</strong> <span class="math-inline">R &setminus; {0}</span>
+                  <br>&bull; Posee asíntota vertical en <span class="math-inline">x = 0</span>.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RELACION FUNDAMENTAL ===================== -->
+    <section class="study__section" id="relacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">relacion_fundamental.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.2 Relación Fundamental Hiperbólica</h2>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Identidad Fundamental</p>
+            <p>
+              Para todo número real x se verifica la identidad hiperbólica análoga al teorema de Pitágoras:
+            </p>
+            <p class="math-display">
+              cosh<sup>2</sup>(x) &minus; sinh<sup>2</sup>(x) = 1
+            </p>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Demostración Analítica Paso a Paso</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              Reemplazamos ambas funciones por sus definiciones exponenciales:
+              <br><span class="math-inline">cosh<sup>2</sup>(x) &minus; sinh<sup>2</sup>(x) = [(e<sup>x</sup> + e<sup>&minus;x</sup>) / 2]<sup>2</sup> &minus; [(e<sup>x</sup> &minus; e<sup>&minus;x</sup>) / 2]<sup>2</sup></span>
+              <br><br>
+              Desarrollamos los cuadrados del binomio en los numeradores:
+              <br><span class="math-inline">= (e<sup>2x</sup> + 2 &middot; e<sup>x</sup> &middot; e<sup>&minus;x</sup> + e<sup>&minus;2x</sup>) / 4 &minus; (e<sup>2x</sup> &minus; 2 &middot; e<sup>x</sup> &middot; e<sup>&minus;x</sup> + e<sup>&minus;2x</sup>) / 4</span>
+              <br><br>
+              Dado que <span class="math-inline">e<sup>x</sup> &middot; e<sup>&minus;x</sup> = e<sup>0</sup> = 1</span>:
+              <br><span class="math-inline">= [(e<sup>2x</sup> + 2 + e<sup>&minus;2x</sup>) &minus; (e<sup>2x</sup> &minus; 2 + e<sup>&minus;2x</sup>)] / 4</span>
+              <br><br>
+              Cancelamos los términos <span class="math-inline">e<sup>2x</sup></span> y <span class="math-inline">e<sup>&minus;2x</sup></span>:
+              <br><span class="math-inline">= [ 2 &minus; (&minus;2) ] / 4 = 4 / 4 = <strong>1</strong></span>.
+              <br><br>
+              Queda así demostrada la relación fundamental: &nbsp;<strong>cosh<sup>2</sup>(x) &minus; sinh<sup>2</sup>(x) = 1</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATENARIA ===================== -->
+    <section class="study__section" id="catenaria">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">curva_catenaria.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.3 Aplicaciones en Ingeniería: La Catenaria</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            En física e ingeniería, la forma que adopta una cuerda o cable homogéneo y flexible sujeto por sus extremos y sometido exclusivamente a la fuerza de gravedad se denomina <strong>catenaria</strong>.
+          </p>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Ecuación de la Catenaria</p>
+            <p class="math-display">
+              y = a &middot; cosh(x / a)
+            </p>
+            <p style="line-height:1.5;">
+              Donde <strong>a</strong> es una constante física que depende de la tensión del cable y de su densidad por unidad de longitud.
+              <br>&bull; <strong>Ejemplo real:</strong> Los cables de las líneas de alta tensión suspendidos entre torres eléctricas o la forma estructural de los arcos de puentes de contención.
+            </p>
+          </div>
+
+          <!-- SVG 2: Catenaria física -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Representación de un Cable Telefónico Suspendido entre Torres (Curva Catenaria)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 180" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Ground -->
+                <line x1="10" y1="160" x2="290" y2="160" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Tower Left (50px) -->
+                <rect x="45" y="30" width="10" height="130" fill="#666"/>
+                <line x1="35" y1="30" x2="65" y2="30" stroke="#444" stroke-width="2"/>
+
+                <!-- Tower Right (250px) -->
+                <rect x="245" y="30" width="10" height="130" fill="#666"/>
+                <line x1="235" y1="30" x2="265" y2="30" stroke="#444" stroke-width="2"/>
+
+                <!-- Catenary Cable y = a * cosh(x/a) hanging between (50,30) and (250,30) -->
+                <!-- Sag at center (150px) => y=110px -->
+                <path d="M 50 30 Q 150 160 250 30" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+
+                <!-- Labels -->
+                <text x="110" y="140" font-size="8" font-family="monospace" fill="#c0392b" font-weight="bold">y = a &middot; cosh(x/a)</text>
+                <text x="30" y="20" font-size="7" font-family="monospace" fill="#444">Torre A</text>
+                <text x="230" y="20" font-size="7" font-family="monospace" fill="#444">Torre B</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.4 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio Identidad Seno del Doble -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Demostración: sinh(2x) = 2 sinh(x) cosh(x)</div>
+              <div class="precaution-card__body">
+                <p>Demostrar analíticamente la identidad del seno hiperbólico del ángulo doble.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Demostración</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Desarrollamos el miembro derecho:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">2 &middot; sinh(x) &middot; cosh(x) = 2 &middot; [(e<sup>x</sup> &minus; e<sup>&minus;x</sup>) / 2] &middot; [(e<sup>x</sup> + e<sup>&minus;x</sup>) / 2]</span>.
+                    <br>2. Simplificamos un factor 2 y multiplicamos los numeradores (diferencia de cuadrados):
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">= [(e<sup>x</sup> &minus; e<sup>&minus;x</sup>)(e<sup>x</sup> + e<sup>&minus;x</sup>)] / 2 = [(e<sup>x</sup>)<sup>2</sup> &minus; (e<sup>&minus;x</sup>)<sup>2</sup>] / 2</span>.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">= (e<sup>2x</sup> &minus; e<sup>&minus;2x</sup>) / 2 = <strong>sinh(2x)</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio Biyectividad -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Análisis de Biyectividad de cosh(x)</div>
+              <div class="precaution-card__body">
+                <p>¿Es la función <span class="math-inline">f: R &rarr; [1; &infin;) / f(x) = cosh(x)</span> biyectiva?</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Justificación</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    <strong>No es biyectiva en R.</strong>
+                    <br>Dado que <span class="math-inline">cosh(x)</span> es una función par (<span class="math-inline">cosh(&minus;x) = cosh(x)</span>), no es inyectiva en <span class="math-inline">R</span> (por ejemplo <span class="math-inline">cosh(1) = cosh(&minus;1)</span>).
+                    <br>Para hacerla biyectiva y admitir inversa, se debe restringir el dominio a <span class="math-inline">[0; &infin;)</span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="ecuaciones_sistemas.html" class="nav-link nav-link--prev">&larr; Cap IV Secc 3: Ecuaciones y Sistemas</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
