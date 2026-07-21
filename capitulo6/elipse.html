@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Elipse en Conicas: concepto y elementos, valor de la constante 2a, excentricidad e=c/a, ecuacion con centro en el origen C(0,0), ecuaciones principal y general para elipses trasladadas C(h,k), completacion de cuadrados. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — La Elipse | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="../capitulo4/exponencial.html" class="navbar__btn">Cap IV</a>
+      <a href="../capitulo5/triangulos_rectangulos.html" class="navbar__btn">Cap V</a>
+      <a href="circunferencia.html" class="navbar__btn">Circunferencia</a>
+      <a href="#concepto" class="navbar__btn">Concepto</a>
+      <a href="#excentricidad" class="navbar__btn">Excentricidad</a>
+      <a href="#origen" class="navbar__btn">En Origen C(0,0)</a>
+      <a href="#trasladada" class="navbar__btn">Principal y General</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">elipse_conicas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo VI &mdash; Seccion 2</p>
+          <h1 class="study__title">La Elipse</h1>
+          <p class="study__intro">
+            Estudio analítico de la elipse: definición como lugar geométrico, constante 2a, excentricidad e, ecuaciones canónicas con centro en el origen C(0,0) y trasladado C(h,k), ecuación general y completación de cuadrados.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#concepto">2.1 Concepto y Elementos de la Elipse</a></li>
+              <li><a href="#excentricidad">2.2 Valor de la Constante (2a) y Excentricidad (e)</a></li>
+              <li><a href="#origen">2.3 Ecuaciones con Centro en el Origen C(0,0)</a></li>
+              <li><a href="#trasladada">2.4 Ecuaciones Principal y General para C(h,k)</a></li>
+              <li><a href="#ejemplos">2.5 Ejemplo Resuelto de Completación de Cuadrados</a></li>
+              <li><a href="#ejercicios">2.6 Ejercicios Prácticos del Módulo</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="circunferencia.html" class="nav-link nav-link--prev">&larr; Secc 1: La Circunferencia</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CONCEPTO Y ELEMENTOS ===================== -->
+    <section class="study__section" id="concepto">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">concepto_elementos_elipse.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.1 Concepto y Elementos de la Elipse</h2>
+            <span class="section__symbol">d(P,F<sub>1</sub>) + d(P,F<sub>2</sub>) = 2a</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Históricamente se consideraba que las órbitas planetarias eran circulares, pero Kepler descubrió en 1610 que las trayectorias de los planetas son <strong>elípticas</strong> con el Sol en uno de sus focos.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal como Lugar Geométrico</p>
+            <p>
+              La <strong>elipse</strong> es el lugar geométrico de todos los puntos <span class="math-inline">P(x,y)</span> del plano tales que la suma de sus distancias a dos puntos fijos <span class="math-inline">F<sub>1</sub></span> y <span class="math-inline">F<sub>2</sub></span> (llamados <strong>focos</strong>) es constante e igual a <span class="math-inline">2a</span>:
+            </p>
+            <p class="math-display">
+              d(P, F<sub>1</sub>) + d(P, F<sub>2</sub>) = 2a &nbsp;&nbsp;&nbsp;&nbsp;(con 2a &gt; 2c)
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Focos (F<sub>1</sub>, F<sub>2</sub>):</strong> Puntos fijos sobre el eje focal. Distancia entre focos: <span class="math-inline">F<sub>1</sub>F<sub>2</sub> = 2c</span> (semidistancia focal <span class="math-inline">c</span>).
+              <br>&bull; <strong>Centro C(h,k):</strong> Punto medio del segmento focal <span class="math-inline">F<sub>1</sub>F<sub>2</sub></span>.
+              <br>&bull; <strong>Vértices Principales (V<sub>1</sub>, V<sub>2</sub>):</strong> Intersección con la recta focal. Longitud del <strong>Eje Mayor</strong>: <span class="math-inline">V<sub>1</sub>V<sub>2</sub> = 2a</span> (semieje mayor <span class="math-inline">a</span>).
+              <br>&bull; <strong>Vértices Secundarios (B<sub>1</sub>, B<sub>2</sub>):</strong> Intersección con la recta secundaria. Longitud del <strong>Eje Menor</strong>: <span class="math-inline">B<sub>1</sub>B<sub>2</sub> = 2b</span> (semieje menor <span class="math-inline">b</span>).
+              <br>&bull; <strong>Relación Pitagórica Fundamental:</strong>
+            </p>
+            <p class="math-display" style="margin:8px 0;">
+              a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;(donde a &gt; b &nbsp;y&nbsp; a &gt; c)
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Lado Recto (L.R.):</strong> Cuerda focal perpendicular al eje focal. Longitud: <span class="math-inline">L.R. = 2b<sup>2</sup> / a</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXCENTRICIDAD ===================== -->
+    <section class="study__section" id="excentricidad">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">excentricidad_constante.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.2 Valor de la Constante (2a) y Excentricidad (e)</h2>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Excentricidad de la Elipse</p>
+            <p>
+              A toda elipse se le asocia un cociente que mide su grado de "achatamiento" u "ovalado", denominado <strong>excentricidad (e)</strong>:
+            </p>
+            <p class="math-display">
+              e = c / a &nbsp;&nbsp;&nbsp;&nbsp;(con 0 &lt; e &lt; 1)
+            </p>
+            <p style="line-height:1.6; font-size:0.9rem;">
+              &bull; Como <span class="math-inline">c &lt; a</span>, el valor de la excentricidad para cualquier elipse cumple estrictamente: <span class="math-inline">0 &lt; e &lt; 1</span>.
+              <br>&bull; <strong>Si e &rarr; 0:</strong> Los focos se acercan al centro (<span class="math-inline">c &rarr; 0</span>), los semiejes se igualan (<span class="math-inline">a &asymp; b</span>) y la elipse tiende a una <strong>circunferencia</strong>.
+              <br>&bull; <strong>Si e &rarr; 1:</strong> La semidistancia focal se aproxima al semieje mayor (<span class="math-inline">c &rarr; a</span>), haciendo la elipse cada vez más <strong>alargada o achatada</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CENTRO EN EL ORIGEN ===================== -->
+    <section class="study__section" id="origen">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">elipse_origen.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.3 Ecuaciones con Centro en el Origen C(0,0)</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Eje Focal Horizontal -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#2a6eb5; color:white;">Eje Focal Horizontal (sobre eje x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">x<sup>2</sup> / a<sup>2</sup> + y<sup>2</sup> / b<sup>2</sup> = 1 &nbsp;&nbsp;(a &gt; b)</p>
+                <p style="font-size:0.85rem; line-height:1.5;">
+                  &bull; <strong>Focos:</strong> <span class="math-inline">F<sub>1</sub>(c, 0)</span>, <span class="math-inline">F<sub>2</sub>(&minus;c, 0)</span>
+                  <br>&bull; <strong>Vértices Mayores:</strong> <span class="math-inline">V<sub>1</sub>(a, 0)</span>, <span class="math-inline">V<sub>2</sub>(&minus;a, 0)</span>
+                  <br>&bull; <strong>Vértices Menores:</strong> <span class="math-inline">B<sub>1</sub>(0, b)</span>, <span class="math-inline">B<sub>2</sub>(0, &minus;b)</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Eje Focal Vertical -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#7b2d8e; color:white;">Eje Focal Vertical (sobre eje y)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">x<sup>2</sup> / b<sup>2</sup> + y<sup>2</sup> / a<sup>2</sup> = 1 &nbsp;&nbsp;(a &gt; b)</p>
+                <p style="font-size:0.85rem; line-height:1.5;">
+                  &bull; <strong>Focos:</strong> <span class="math-inline">F<sub>1</sub>(0, c)</span>, <span class="math-inline">F<sub>2</sub>(0, &minus;c)</span>
+                  <br>&bull; <strong>Vértices Mayores:</strong> <span class="math-inline">V<sub>1</sub>(0, a)</span>, <span class="math-inline">V<sub>2</sub>(0, &minus;a)</span>
+                  <br>&bull; <strong>Vértices Menores:</strong> <span class="math-inline">B<sub>1</sub>(b, 0)</span>, <span class="math-inline">B<sub>2</sub>(&minus;b, 0)</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SVG 1: Elipse Canonica Horizontal -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Elipse Canónica Horizontal centrada en el Origen C(0,0) con semiejes a y b</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 280 200" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 280 30 M 0 60 L 280 60 M 0 90 L 280 90 M 0 120 L 280 120 M 0 150 L 280 150 M 0 180 L 280 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 40 0 L 40 200 M 80 0 L 80 200 M 120 0 L 120 200 M 160 0 L 160 200 M 200 0 L 200 200 M 240 0 L 240 200" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (140, 100) -->
+                <line x1="10" y1="100" x2="270" y2="100" stroke="#777" stroke-width="1.5"/>
+                <line x1="140" y1="10" x2="140" y2="190" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Ellipse: rx=100 (a), ry=60 (b) -->
+                <ellipse cx="140" cy="100" rx="100" ry="60" fill="rgba(42,110,181,0.06)" stroke="#2a6eb5" stroke-width="2.2"/>
+
+                <!-- Center C(0,0) -->
+                <circle cx="140" cy="100" r="3.5" fill="#2a6eb5"/>
+                <text x="145" y="114" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">C(0,0)</text>
+
+                <!-- Foci: c = sqrt(100^2 - 60^2) = 80px -->
+                <!-- F1 (220, 100), F2 (60, 100) -->
+                <circle cx="220" cy="100" r="3" fill="#c0392b"/>
+                <text x="215" y="92" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">F<sub>1</sub>(c,0)</text>
+                <circle cx="60" cy="100" r="3" fill="#c0392b"/>
+                <text x="45" y="92" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">F<sub>2</sub>(&minus;c,0)</text>
+
+                <!-- Vertices Mayores: V1(240,100), V2(40,100) -->
+                <circle cx="240" cy="100" r="3" fill="#2a6eb5"/>
+                <text x="244" y="112" font-size="7" font-family="monospace" fill="#2a6eb5">V<sub>1</sub>(a,0)</text>
+                <circle cx="40" cy="100" r="3" fill="#2a6eb5"/>
+                <text x="12" y="112" font-size="7" font-family="monospace" fill="#2a6eb5">V<sub>2</sub>(&minus;a,0)</text>
+
+                <!-- Vertices Menores: B1(140,40), B2(140,160) -->
+                <circle cx="140" cy="40" r="3" fill="#1a8a5a"/>
+                <text x="145" y="38" font-size="7" font-family="monospace" fill="#1a8a5a">B<sub>1</sub>(0,b)</text>
+                <circle cx="140" cy="160" r="3" fill="#1a8a5a"/>
+                <text x="145" y="172" font-size="7" font-family="monospace" fill="#1a8a5a">B<sub>2</sub>(0,&minus;b)</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRASLADADA Y GENERAL ===================== -->
+    <section class="study__section" id="trasladada">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">elipse_trasladada_general.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.4 Ecuaciones Principal y General para C(h,k)</h2>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Forma Principal (Canónica Trasladada)</p>
+            <p>Al aplicar una traslación <span class="math-inline">T(h, k)</span> al centro, la ecuación de la elipse resulta:</p>
+            <p class="math-display">
+              (x &minus; h)<sup>2</sup> / a<sup>2</sup> + (y &minus; k)<sup>2</sup> / b<sup>2</sup> = 1 &nbsp;&nbsp;&nbsp;&nbsp;(Eje focal horizontal, a &gt; b)
+            </p>
+            <p class="math-display">
+              (x &minus; h)<sup>2</sup> / b<sup>2</sup> + (y &minus; k)<sup>2</sup> / a<sup>2</sup> = 1 &nbsp;&nbsp;&nbsp;&nbsp;(Eje focal vertical, a &gt; b)
+            </p>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Forma General y Criterio de Identificación</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              Desarrollando los binomios e igualando a cero se obtiene la <strong>Ecuación General</strong>:
+              <p class="math-display" style="margin:10px 0;">
+                A x<sup>2</sup> + B y<sup>2</sup> + C x + D y + F = 0
+              </p>
+              <strong style="color:#c0392b;">Criterio Clave para Identificar una Elipse:</strong>
+              <br>Los coeficientes de los términos cuadráticos <span class="math-inline">A</span> y <span class="math-inline">B</span> deben ser <strong>DISTINTOS pero del MISMO SIGNO</strong> (<span class="math-inline">A &ne; B</span> y <span class="math-inline">A &middot; B &gt; 0</span>).
+              <br>&bull; Si <span class="math-inline">A &lt; B</span> &rArr; El eje focal es <strong>horizontal</strong> (el mayor denominador <span class="math-inline">a<sup>2</sup></span> acompaña a <span class="math-inline">x</span>).
+              <br>&bull; Si <span class="math-inline">A &gt; B</span> &rArr; El eje focal es <strong>vertical</strong> (el mayor denominador <span class="math-inline">a<sup>2</sup></span> acompaña a <span class="math-inline">y</span>).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLO DESARROLLADO ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ejemplo_completacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.5 Ejemplo Resuelto de Completación de Cuadrados</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Dada: 5x<sup>2</sup> + 9y<sup>2</sup> &minus; 80x + 54y + 221 = 0</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              1. <strong>Agrupamos por variables y pasamos el término independiente:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">(5x<sup>2</sup> &minus; 80x) + (9y<sup>2</sup> + 54y) = &minus;221</span>.
+              <br>2. <strong>Extraemos factor común de los coeficientes de x<sup>2</sup> e y<sup>2</sup>:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">5(x<sup>2</sup> &minus; 16x) + 9(y<sup>2</sup> + 6y) = &minus;221</span>.
+              <br>3. <strong>Completamos trinomios dentro de los paréntesis:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">5(x<sup>2</sup> &minus; 16x + 64) + 9(y<sup>2</sup> + 6y + 9) = &minus;221 + 5(64) + 9(9)</span>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">5(x &minus; 8)<sup>2</sup> + 9(y + 3)<sup>2</sup> = &minus;221 + 320 + 81 = 180</span>.
+              <br>4. <strong>Dividimos ambos miembros por 180 para obtener 1 a la derecha:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline"><strong>(x &minus; 8)<sup>2</sup> / 36 + (y + 3)<sup>2</sup> / 20 = 1</strong></span>.
+              <br><br>
+              <strong>Elementos Obtenidos:</strong>
+              <br>&bull; <strong>Centro:</strong> <span class="math-inline">C(8, &minus;3)</span> (h=8, k=-3).
+              <br>&bull; <strong>Semiejes:</strong> <span class="math-inline">a<sup>2</sup> = 36 &rArr; a = 6</span> (mayor, horizontal) &nbsp;|&nbsp; <span class="math-inline">b<sup>2</sup> = 20 &rArr; b = 2&radic;5 &asymp; 4,47</span>.
+              <br>&bull; <strong>Semidistancia focal c:</strong> <span class="math-inline">c<sup>2</sup> = a<sup>2</sup> &minus; b<sup>2</sup> = 36 &minus; 20 = 16 &rArr; c = 4</span>.
+              <br>&bull; <strong>Focos:</strong> <span class="math-inline">F<sub>1</sub>(8+4, &minus;3) = F<sub>1</sub>(12, &minus;3)</span> &nbsp;y&nbsp; <span class="math-inline">F<sub>2</sub>(8&minus;4, &minus;3) = F<sub>2</sub>(4, &minus;3)</span>.
+              <br>&bull; <strong>Vértices Mayores:</strong> <span class="math-inline">V<sub>1</sub>(8+6, &minus;3) = V<sub>1</sub>(14, &minus;3)</span> &nbsp;y&nbsp; <span class="math-inline">V<sub>2</sub>(8&minus;6, &minus;3) = V<sub>2</sub>(2, &minus;3)</span>.
+              <br>&bull; <strong>Lado Recto:</strong> <span class="math-inline">L.R. = 2b<sup>2</sup> / a = 2(20) / 6 = 20/3 &asymp; 6,67</span>.
+              <br>&bull; <strong>Excentricidad:</strong> <span class="math-inline">e = c / a = 4 / 6 = <strong>2/3 &asymp; 0,67</strong></span>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.6 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 250i -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 250-i: x<sup>2</sup>/25 + y<sup>2</sup>/9 = 1</div>
+              <div class="precaution-card__body">
+                <p>Indicar todos los elementos de la elipse <span class="math-inline">x<sup>2</sup>/25 + y<sup>2</sup>/9 = 1</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Elementos</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    &bull; Centro: <span class="math-inline">C(0,0)</span>.
+                    <br>&bull; Semiejes: <span class="math-inline">a = 5</span> (eje x), <span class="math-inline">b = 3</span> (eje y).
+                    <br>&bull; Focal: <span class="math-inline">c = &radic;(25 &minus; 9) = &radic;16 = 4</span>.
+                    <br>&bull; Focos: <span class="math-inline">F<sub>1</sub>(4,0)</span> y <span class="math-inline">F<sub>2</sub>(&minus;4,0)</span>.
+                    <br>&bull; Vértices mayores: <span class="math-inline">V<sub>1</sub>(5,0)</span> y <span class="math-inline">V<sub>2</sub>(&minus;5,0)</span>.
+                    <br>&bull; Excentricidad: <span class="math-inline">e = 4/5 = 0,8</span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 251i -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 251-i: F<sub>1</sub>(0,2), F<sub>2</sub>(0,-2), a=4</div>
+              <div class="precaution-card__body">
+                <p>Determinar la ecuación de la elipse dados sus focos y el semieje mayor <span class="math-inline">a = 4</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Centro en el origen <span class="math-inline">C(0,0)</span> con eje focal vertical (sobre eje y).
+                    <br>2. Distancia focal <span class="math-inline">c = 2</span>.
+                    <br>3. Semieje menor: <span class="math-inline">b<sup>2</sup> = a<sup>2</sup> &minus; c<sup>2</sup> = 16 &minus; 4 = 12</span>.
+                    <br>4. Ecuación Canónica: <span class="math-inline"><strong>x<sup>2</sup>/12 + y<sup>2</sup>/16 = 1</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 253i -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 253-i: C(8, -3), 2a = 12, e = 2/3</div>
+              <div class="precaution-card__body">
+                <p>Hallar la ecuación de la elipse con <span class="math-inline">C(8, &minus;3)</span>, eje mayor <span class="math-inline">2a = 12</span>, excentricidad <span class="math-inline">e = 2/3</span> y eje focal horizontal.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Semieje mayor <span class="math-inline">a = 6 \implies a^2 = 36</span>.
+                    <br>2. Excentricidad: <span class="math-inline">e = c / a = c / 6 = 2/3 \implies c = 4 \implies c^2 = 16</span>.
+                    <br>3. Semieje menor: <span class="math-inline">b^2 = a^2 - c^2 = 36 - 16 = 20</span>.
+                    <br>4. Ecuación Principal: <span class="math-inline"><strong>(x &minus; 8)<sup>2</sup> / 36 + (y + 3)<sup>2</sup> / 20 = 1</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="circunferencia.html" class="nav-link nav-link--prev">&larr; Cap VI Secc 1: La Circunferencia</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
