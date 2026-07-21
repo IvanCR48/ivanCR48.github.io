@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplicaciones y Resolucion de Triangulos Rectangulos: los 4 casos clasicos de resolucion, repaso del Teorema de Pitagoras, problemas practicos en ingenieria, topografia, aviacion, navegacion y arquitectura. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — Aplicaciones y Resolución | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="../capitulo4/exponencial.html" class="navbar__btn">Cap IV</a>
+      <a href="triangulos_rectangulos.html" class="navbar__btn">Triángulos Rect.</a>
+      <a href="#casos" class="navbar__btn">Casos</a>
+      <a href="#pitagoras" class="navbar__btn">Pitágoras</a>
+      <a href="#aplicaciones" class="navbar__btn">Problemas</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">aplicaciones_resolucion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo V &mdash; Seccion 2</p>
+          <h1 class="study__title">Aplicaciones y Resolución de Triángulos</h1>
+          <p class="study__intro">
+            Los 4 casos clásicos de resolución de triángulos rectángulos, repaso ampliado del Teorema de Pitágoras en geometría 2D y 3D, y problemas de aplicación práctica en ingeniería, navegación, aviación y arquitectura.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#casos">2.1 Los Cuatro Casos Clásicos de Resolución</a></li>
+              <li><a href="#pitagoras">2.2 Repaso del Teorema de Pitágoras y Geometría 3D</a></li>
+              <li><a href="#aplicaciones">2.3 Problemas de Aplicación Real (Ingeniería y Aviación)</a></li>
+              <li><a href="#ejercicios">2.4 Ejercicios Prácticos del Módulo</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="triangulos_rectangulos.html" class="nav-link nav-link--prev">&larr; Secc 1: Trigonometría en Triángulos Rectángulos</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CASOS DE RESOLUCION ===================== -->
+    <section class="study__section" id="casos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">casos_resolucion.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">2.1 Los Cuatro Casos Clásicos de Resolución</h2>
+            <span class="section__symbol">A, B, C &bull; b, c</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Dado un triángulo rectángulo con ángulo recto <span class="math-inline">&acirc; = 90&deg;</span>, hipotenusa <span class="math-inline">A</span> y catetos <span class="math-inline">B, C</span>, existen 4 combinaciones posibles de datos para determinar analíticamente los 3 elementos desconocidos:
+          </p>
+
+          <div class="precaution-grid">
+            
+            <!-- Caso 1 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#2a6eb5; color:white;">Caso 1: Conocidos Hipotenusa (A) y un Ángulo Agudo (&bcirc;)</div>
+              <div class="precaution-card__body">
+                <p><strong>Estrategia de cálculo:</strong></p>
+                <ul style="list-style:none; padding-left:0; line-height:1.7;">
+                  <li>1. Ángulo complementario: <span class="math-inline">&ccirc; = 90&deg; &minus; &bcirc;</span>.</li>
+                  <li>2. Cateto opuesto a &bcirc;: <span class="math-inline">B = A &middot; sen(&bcirc;)</span>.</li>
+                  <li>3. Cateto adyacente a &bcirc;: <span class="math-inline">C = A &middot; cos(&bcirc;)</span>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Caso 2 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#7b2d8e; color:white;">Caso 2: Conocidos un Cateto (B) y un Ángulo Agudo (&bcirc;)</div>
+              <div class="precaution-card__body">
+                <p><strong>Estrategia de cálculo:</strong></p>
+                <ul style="list-style:none; padding-left:0; line-height:1.7;">
+                  <li>1. Ángulo complementario: <span class="math-inline">&ccirc; = 90&deg; &minus; &bcirc;</span>.</li>
+                  <li>2. Hipotenusa: <span class="math-inline">A = B / sen(&bcirc;)</span>.</li>
+                  <li>3. Otro cateto: <span class="math-inline">C = B / tg(&bcirc;)</span>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Caso 3 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#1a8a5a; color:white;">Caso 3: Conocidos la Hipotenusa (A) y un Cateto (B)</div>
+              <div class="precaution-card__body">
+                <p><strong>Estrategia de cálculo:</strong></p>
+                <ul style="list-style:none; padding-left:0; line-height:1.7;">
+                  <li>1. Otro cateto por Pitágoras: <span class="math-inline">C = &radic;(A<sup>2</sup> &minus; B<sup>2</sup>)</span>.</li>
+                  <li>2. Ángulo agudo: <span class="math-inline">&bcirc; = arcsen(B / A)</span>.</li>
+                  <li>3. Ángulo complementario: <span class="math-inline">&ccirc; = 90&deg; &minus; &bcirc;</span>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Caso 4 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#c0392b; color:white;">Caso 4: Conocidos los Dos Catetos (B y C)</div>
+              <div class="precaution-card__body">
+                <p><strong>Estrategia de cálculo:</strong></p>
+                <ul style="list-style:none; padding-left:0; line-height:1.7;">
+                  <li>1. Hipotenusa por Pitágoras: <span class="math-inline">A = &radic;(B<sup>2</sup> + C<sup>2</sup>)</span>.</li>
+                  <li>2. Ángulo agudo: <span class="math-inline">&bcirc; = arctg(B / C)</span>.</li>
+                  <li>3. Ángulo complementario: <span class="math-inline">&ccirc; = 90&deg; &minus; &bcirc;</span>.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PITAGORAS Y GEOMETRIA 3D ===================== -->
+    <section class="study__section" id="pitagoras">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">repaso_pitagoras_3d.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.2 Repaso del Teorema de Pitágoras y Geometría 3D</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            El Teorema de Pitágoras es una herramienta fundamental que no solo resuelve lados en 2D, sino que constituye la base del cálculo de diagonales espaciales y geometría tridimensional.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Aplicaciones Notables en Geometría</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              &bull; <strong>Diagonal de un Rectángulo:</strong> Para un rectángulo de base <span class="math-inline">b</span> y altura <span class="math-inline">h</span>, la diagonal es <span class="math-inline">d = &radic;(b<sup>2</sup> + h<sup>2</sup>)</span>.
+              <br>&bull; <strong>Diagonal de la Cara de un Cubo:</strong> En un cubo de arista <span class="math-inline">L</span>, la diagonal de cara es <span class="math-inline">d<sub>c</sub> = L &radic;2</span>.
+              <br>&bull; <strong>Diagonal Espacial del Cubo:</strong> Uniendo dos vértices opuestos que atraviesan el cubo, la diagonal principal mide <span class="math-inline">D = &radic;(d<sub>c</sub><sup>2</sup> + L<sup>2</sup>) = &radic;(2L<sup>2</sup> + L<sup>2</sup>) = <strong>L &radic;3</strong></span>.
+              <br><br>
+              <strong>Ángulo entre Diagonal de Cara y Diagonal Espacial (Ejercicio 228):</strong>
+              <br>El triángulo rectángulo formado por la diagonal de cara <span class="math-inline">d<sub>c</sub> = L &radic;2</span> (adyacente), la arista <span class="math-inline">L</span> (opuesto) y la diagonal espacial <span class="math-inline">D = L &radic;3</span> (hipotenusa) verifica:
+              <p class="math-display" style="margin:8px 0;">
+                cos(&theta;) = (L &radic;2) / (L &radic;3) = &radic;(2/3) &asymp; 0,8165 &nbsp;&rArr;&nbsp; &theta; = arccos(&radic;(2/3)) &asymp; <strong>35,26&deg; &asymp; 35&deg;15'52''</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEMAS DE APLICACION ===================== -->
+    <section class="study__section" id="aplicaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">problemas_aplicacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.3 Problemas de Aplicación Real en Ingeniería</h2>
+
+          <!-- Problema 1: Pista de aterrizaje -->
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">1. Medición de Pista de Aterrizaje por Doble Observación (Ejercicio 237)</h3>
+            <p>
+              Desde un avión que vuela a <span class="math-inline">H = 300\text{ m}</span> de altura en dirección este, se observan las dos cabeceras de una pista recta con ángulos de depresión de <span class="math-inline">&alpha; = 32&deg;</span> y <span class="math-inline">&beta; = 7&deg;</span>. Calcular la longitud de la pista.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              <strong>Análisis Geométrico:</strong>
+              <br>Por congruencia de ángulos alternos internos, las distancias horizontales desde la proyección vertical del avión a cada cabecera son:
+              <br>&bull; Distancia a la cabecera cercana: <span class="math-inline">d<sub>1</sub> = 300 / tg(32&deg;) &asymp; 300 / 0,62487 &asymp; 480,10 m</span>.
+              <br>&bull; Distancia a la cabecera lejana: <span class="math-inline">d<sub>2</sub> = 300 / tg(7&deg;) &asymp; 300 / 0,12278 &asymp; 2443,30 m</span>.
+              <br><br>
+              <strong>Longitud de la Pista (L):</strong>
+              <br><span class="math-inline">L = d<sub>2</sub> &minus; d<sub>1</sub> = 2443,30 &minus; 480,10 = <strong>1963,20 m</strong></span>.
+            </div>
+          </div>
+
+          <!-- SVG 1: Doble observacion pista -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Esquema Topográfico: Doble Ángulo de Depresión en Aviación</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 170" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 300 30 M 0 60 L 300 60 M 0 90 L 300 90 M 0 120 L 300 120 M 0 150 L 300 150" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Flight Horizontal Line at y=30 -->
+                <line x1="20" y1="30" x2="280" y2="30" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+                <!-- Ground Line at y=140 -->
+                <line x1="10" y1="140" x2="290" y2="140" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Plane Position (40,30) -->
+                <circle cx="40" cy="30" r="4" fill="#2a6eb5"/>
+                <text x="25" y="22" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">Avión (300 m)</text>
+                <line x1="40" y1="30" x2="40" y2="140" stroke="#2a6eb5" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <text x="45" y="90" font-size="7" font-family="monospace" fill="#2a6eb5">H = 300m</text>
+
+                <!-- Near Headland (100,140) -->
+                <!-- Sightline to near headland -->
+                <line x1="40" y1="30" x2="100" y2="140" stroke="#c0392b" stroke-width="1.8"/>
+                <circle cx="100" cy="140" r="3" fill="#c0392b"/>
+                <text x="95" y="153" font-size="6" font-family="monospace" fill="#c0392b">Cabecera 1</text>
+
+                <!-- Far Headland (270,140) -->
+                <!-- Sightline to far headland -->
+                <line x1="40" y1="30" x2="270" y2="140" stroke="#1a8a5a" stroke-width="1.8"/>
+                <circle cx="270" cy="140" r="3" fill="#1a8a5a"/>
+                <text x="245" y="153" font-size="6" font-family="monospace" fill="#1a8a5a">Cabecera 2</text>
+
+                <!-- Runway Line (between 100 and 270) -->
+                <line x1="100" y1="140" x2="270" y2="140" stroke="#d35400" stroke-width="3"/>
+                <text x="160" y="133" font-size="7" font-family="monospace" fill="#d35400" font-weight="bold">Pista L = 1963.2 m</text>
+
+                <!-- Angle Indicators -->
+                <text x="65" y="42" font-size="6" font-family="monospace" fill="#c0392b">32&deg;</text>
+                <text x="90" y="38" font-size="6" font-family="monospace" fill="#1a8a5a">7&deg;</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Problema 2: Escalera -->
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">2. Diseño de Escaleras en Arquitectura (Ejercicio 238)</h3>
+            <p>
+              Se requiere construir una escalera interior que apoye a <span class="math-inline">H = 2,70\text{ m}</span> de altura. La huella de cada escalón mide <span class="math-inline">h = 25\text{ cm} = 0,25\text{ m}</span> y la contra-huella <span class="math-inline">ch = 18\text{ cm} = 0,18\text{ m}</span>.
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              <strong>1. Número de Escalones:</strong>
+              <br><span class="math-inline">N = \text{Altura total} / \text{Contra-huella} = 2,70\text{ m} / 0,18\text{ m} = <strong>15 escalones</strong></span>.
+              <br><br>
+              <strong>2. Ángulo de Elevación de la Escalera (&theta;):</strong>
+              <br>El triángulo rectángulo característico de cada escalón (y de la escalera completa) tiene cateto opuesto <span class="math-inline">ch = 18\text{ cm}</span> y cateto adyacente <span class="math-inline">h = 25\text{ cm}</span>:
+              <br><span class="math-inline">tg(&theta;) = ch / h = 18 / 25 = 0,72</span>.
+              <br><span class="math-inline">&theta; = arctg(0,72) &asymp; <strong>35,75&deg; &asymp; 35&deg;45'</strong></span>.
+            </div>
+          </div>
+
+          <!-- SVG 2: Perfil Escalera -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Perfil Técnico de Escalón: Triángulo de Pendiente (Huella vs. Contra-huella)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 260 160" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 260 30 M 0 60 L 260 60 M 0 90 L 260 90 M 0 120 L 260 120" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Steps profile -->
+                <!-- Ground (30,130) -->
+                <!-- Step 1: (30,130) -> (80,130) -> (80,100) -->
+                <!-- Step 2: (80,100) -> (130,100) -> (130,70) -->
+                <!-- Step 3: (130,70) -> (180,70) -> (180,40) -->
+                <path d="M 30 130 L 80 130 L 80 100 L 130 100 L 130 70 L 180 70 L 180 40" fill="none" stroke="#2a6eb5" stroke-width="2.5"/>
+
+                <!-- Slope Line (Hypotenuse) -->
+                <line x1="30" y1="130" x2="180" y2="40" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="3,3"/>
+
+                <!-- Dimension lines for Step 2 -->
+                <!-- Huella = 25 cm -->
+                <line x1="80" y1="112" x2="130" y2="112" stroke="#1a8a5a" stroke-width="1.5"/>
+                <text x="90" y="123" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">Huella = 25 cm</text>
+
+                <!-- Contra-huella = 18 cm -->
+                <line x1="140" y1="100" x2="140" y2="70" stroke="#7b2d8e" stroke-width="1.5"/>
+                <text x="145" y="88" font-size="7" font-family="monospace" fill="#7b2d8e" font-weight="bold">18 cm</text>
+
+                <!-- Angle theta -->
+                <path d="M 50 130 A 20 20 0 0 0 46 120" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+                <text x="55" y="125" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">&theta; = 35.75&deg;</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2.4 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 230 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 230: Octógono Regular</div>
+              <div class="precaution-card__body">
+                <p>Calcular el perímetro de un octógono regular inscripto en una circunferencia de <span class="math-inline">&Oslash; = 10\text{ cm}</span> (<span class="math-inline">R = 5\text{ cm}</span>).</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Ángulo central de cada lado: <span class="math-inline">&alpha; = 360&deg; / 8 = 45&deg;</span>.
+                    <br>2. El radio forma con la mitad del lado un triángulo rectángulo de ángulo central <span class="math-inline">&alpha;/2 = 22,5&deg;</span>.
+                    <br>3. Medio lado: <span class="math-inline">L/2 = R &middot; sen(22,5&deg;) = 5 &middot; sen(22,5&deg;) &asymp; 5 &middot; 0,38268 &asymp; 1,9134 cm</span>.
+                    <br>4. Lado completo: <span class="math-inline">L &asymp; 3,8268 cm</span>.
+                    <br>5. Perímetro: <span class="math-inline">P = 8 &middot; L = 8 &middot; 3,8268 &asymp; <strong>30,61 cm</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 231 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 231: Superficie de Cantero Pentagonal</div>
+              <div class="precaution-card__body">
+                <p>Calcular el área de un pentágono regular inscripto en una circunferencia de longitud <span class="math-inline">C = 12,56\text{ m}</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Radio de la circunferencia: <span class="math-inline">R = C / (2&pi;) &asymp; 12,56 / 6,2832 &asymp; 2 m</span>.
+                    <br>2. Ángulo central del pentágono: <span class="math-inline">&alpha; = 360&deg; / 5 = 72&deg;</span> (<span class="math-inline">&alpha;/2 = 36&deg;</span>).
+                    <br>3. Apotema (cateto adyacente): <span class="math-inline">ap = R &middot; cos(36&deg;) = 2 &middot; 0,8090 &asymp; 1,618 m</span>.
+                    <br>4. Medio lado: <span class="math-inline">L/2 = R &middot; sen(36&deg;) = 2 &middot; 0,5878 &asymp; 1,1756 m &rArr; L &asymp; 2,351 m</span>.
+                    <br>5. Área: <span class="math-inline">Área = (Perímetro &middot; ap) / 2 = (5 &middot; 2,351 &middot; 1,618) / 2 &asymp; <strong>9,51 m<sup>2</sup></strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 236 -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 236: Navegación Marítima de Buque</div>
+              <div class="precaution-card__body">
+                <p>Un buque navega <span class="math-inline">32\text{ km}</span> al Sur y luego un kilometraje <span class="math-inline">X</span> al Oeste. Para regresar directamente al punto de partida toma un rumbo de <span class="math-inline">64&deg;</span>. Hallar la distancia total recorrida en el regreso (dirección Noreste).</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. El trayecto forma un triángulo rectángulo donde el trayecto al Sur (<span class="math-inline">32\text{ km}</span>) es el cateto adyacente al ángulo de rumbo <span class="math-inline">&theta; = 64&deg;</span>.
+                    <br>2. La trayectoria de regreso en línea recta es la hipotenusa <span class="math-inline">D</span> del triángulo.
+                    <br>3. <span class="math-inline">cos(64&deg;) = 32 / D &rArr; D = 32 / cos(64&deg;) &asymp; 32 / 0,43837 &asymp; <strong>73,00 km</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="triangulos_rectangulos.html" class="nav-link nav-link--prev">&larr; Cap V Secc 1: Trigonometría en Triángulos Rectángulos</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
