@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Circunferencia en Conicas: concepto y elementos, ecuacion principal o canonica, ecuacion general, determinacion de centro y radio mediante completacion de cuadrados, recta tangente y normal, e intersecciones. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — La Circunferencia | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="../capitulo4/exponencial.html" class="navbar__btn">Cap IV</a>
+      <a href="../capitulo5/triangulos_rectangulos.html" class="navbar__btn">Cap V</a>
+      <a href="#concepto" class="navbar__btn">Concepto</a>
+      <a href="#principal" class="navbar__btn">Ec. Principal</a>
+      <a href="#general" class="navbar__btn">Ec. General</a>
+      <a href="#completacion" class="navbar__btn">Centro y Radio</a>
+      <a href="#tangente-normal" class="navbar__btn">Tangente y Normal</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">circunferencia_conicas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo VI &mdash; Seccion 1</p>
+          <h1 class="study__title">La Circunferencia</h1>
+          <p class="study__intro">
+            Estudio analítico de la circunferencia como sección cónica: definición como lugar geométrico, ecuación principal o canónica, ecuación general, cálculo del centro y radio mediante completación de cuadrados, y ecuaciones de las rectas tangente y normal.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#concepto">1.1 Concepto y Elementos de la Circunferencia</a></li>
+              <li><a href="#principal">1.2 Ecuación Principal o Canónica</a></li>
+              <li><a href="#general">1.3 Ecuación General de la Circunferencia</a></li>
+              <li><a href="#completacion">1.4 Determinación del Radio y Centro (Completación de Cuadrados)</a></li>
+              <li><a href="#tangente-normal">1.5 Recta Tangente, Recta Normal y Posición Relativa</a></li>
+              <li><a href="#ejercicios">1.6 Ejercicios Prácticos del Módulo</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="../capitulo5/aplicaciones_resolucion.html" class="nav-link nav-link--prev">&larr; Cap V Secc 2: Aplicaciones y Resolución</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CONCEPTO Y ELEMENTOS ===================== -->
+    <section class="study__section" id="concepto">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">concepto_elementos.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">1.1 Concepto y Elementos</h2>
+            <span class="section__symbol">C(h, k) &bull; r</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Las cónicas son curvas obtenidas al cortar un cono circular recto con un plano. La primera y más simétrica de ellas es la <strong>circunferencia</strong>.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal como Lugar Geométrico</p>
+            <p>
+              La <strong>circunferencia</strong> es el lugar geométrico de todos los puntos <span class="math-inline">P(x, y)</span> del plano que equidistan de un punto fijo denominado <strong>centro</strong> <span class="math-inline">C(h, k)</span> a una distancia constante <span class="math-inline">r &gt; 0</span> llamada <strong>radio</strong>.
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Centro C(h, k):</strong> Punto fijo del plano que equidista de todos los puntos de la curva.
+              <br>&bull; <strong>Radio r:</strong> Segmento que une el centro con cualquier punto <span class="math-inline">P(x,y)</span> de la circunferencia (<span class="math-inline">r &gt; 0</span>).
+              <br>&bull; <strong>Diámetro D:</strong> Segmento que une dos puntos de la circunferencia pasando por el centro (<span class="math-inline">D = 2r</span>).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECUACION PRINCIPAL ===================== -->
+    <section class="study__section" id="principal">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ecuacion_principal.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.2 Ecuación Principal o Canónica</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Aplicando la fórmula de distancia entre dos puntos para <span class="math-inline">d(P, C) = r</span>, obtenemos la ecuación analítica principal.
+          </p>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Deducción y Forma Canónica</p>
+            <p class="math-display">
+              d(P, C) = &radic;[ (x &minus; h)<sup>2</sup> + (y &minus; k)<sup>2</sup> ] = r
+            </p>
+            <p>Elevando ambos miembros al cuadrado se obtiene la <strong>Ecuación Principal</strong>:</p>
+            <p class="math-display" style="margin:10px 0;">
+              (x &minus; h)<sup>2</sup> + (y &minus; k)<sup>2</sup> = r<sup>2</sup>
+            </p>
+            <p style="font-size:0.85rem; line-height:1.4;">
+              &bull; <strong>Caso particular (Centro en el origen C(0,0)):</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></span>.
+            </p>
+          </div>
+
+          <!-- SVG 1: Circunferencia Canonica -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Circunferencia Canónica de Centro C(h, k) y Radio r en el Plano Cartesiano</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 260 220" class="number-line-svg" style="max-width:270px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 260 30 M 0 60 L 260 60 M 0 90 L 260 90 M 0 120 L 260 120 M 0 150 L 260 150 M 0 180 L 260 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 30 0 L 30 220 M 60 0 L 60 220 M 90 0 L 90 220 M 120 0 L 120 220 M 150 0 L 150 220 M 180 0 L 180 220 M 210 0 L 210 220 M 240 0 L 240 220" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin (50, 170) -->
+                <line x1="10" y1="170" x2="250" y2="170" stroke="#777" stroke-width="1.5"/>
+                <line x1="50" y1="10" x2="50" y2="210" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Center C(130, 100) -> h=80, k=70 -->
+                <circle cx="130" cy="100" r="55" fill="rgba(42,110,181,0.06)" stroke="#2a6eb5" stroke-width="2"/>
+                <circle cx="130" cy="100" r="3.5" fill="#2a6eb5"/>
+                <text x="100" y="95" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">C(h,k)</text>
+
+                <!-- Point P(174, 66) -->
+                <circle cx="174" cy="66" r="3.5" fill="#c0392b"/>
+                <text x="180" y="60" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">P(x,y)</text>
+
+                <!-- Radius Line C-P -->
+                <line x1="130" y1="100" x2="174" y2="66" stroke="#c0392b" stroke-width="1.8"/>
+                <text x="145" y="78" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">r</text>
+
+                <!-- Distance Triangle Projections -->
+                <line x1="130" y1="100" x2="174" y2="100" stroke="#1a8a5a" stroke-width="1.2" stroke-dasharray="2,2"/>
+                <line x1="174" y1="100" x2="174" y2="66" stroke="#1a8a5a" stroke-width="1.2" stroke-dasharray="2,2"/>
+                <text x="142" y="112" font-size="6" font-family="monospace" fill="#1a8a5a">x &minus; h</text>
+                <text x="178" y="88" font-size="6" font-family="monospace" fill="#1a8a5a">y &minus; k</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECUACION GENERAL ===================== -->
+    <section class="study__section" id="general">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ecuacion_general.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.3 Ecuación General de la Circunferencia</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Desarrollando los binomios al cuadrado de la ecuación principal <span class="math-inline">(x &minus; h)<sup>2</sup> + (y &minus; k)<sup>2</sup> = r<sup>2</sup></span>:
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Desarrollo Algebraico y Coeficientes</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              <span class="math-inline">x<sup>2</sup> &minus; 2hx + h<sup>2</sup> + y<sup>2</sup> &minus; 2ky + k<sup>2</sup> &minus; r<sup>2</sup> = 0</span>
+              <br><br>
+              Reordenando términos se obtiene la <strong>Ecuación General</strong>:
+              <p class="math-display" style="margin:10px 0;">
+                x<sup>2</sup> + y<sup>2</sup> + D x + E y + F = 0
+              </p>
+              Donde:
+              <br>&bull; <span class="math-inline">D = &minus;2h &rArr; h = &minus;D / 2</span>
+              <br>&bull; <span class="math-inline">E = &minus;2k &rArr; k = &minus;E / 2</span>
+              <br>&bull; <span class="math-inline">F = h<sup>2</sup> + k<sup>2</sup> &minus; r<sup>2</sup></span>
+              <br><br>
+              <strong>Si la ecuación posee coeficiente principal A &ne; 1:</strong>
+              <p class="math-display" style="margin:8px 0;">
+                A x<sup>2</sup> + A y<sup>2</sup> + D x + E y + F = 0
+              </p>
+              Dividimos previamente toda la ecuación por <span class="math-inline">A</span> para normalizar los coeficientes de <span class="math-inline">x<sup>2</sup></span> e <span class="math-inline">y<sup>2</sup></span> a 1.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPLETACION DE CUADRADOS ===================== -->
+    <section class="study__section" id="completacion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">completacion_cuadrados.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.4 Determinación del Radio y Centro</h2>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Algoritmo de Completación de Cuadrados y Análisis de Existencia</p>
+            <p>
+              Dada una ecuación cuadrática general <span class="math-inline">x<sup>2</sup> + y<sup>2</sup> + Dx + Ey + F = 0</span>, reordenamos los términos y sumamos en ambos miembros el cuadrado de la mitad de los coeficientes de <span class="math-inline">x</span> e <span class="math-inline">y</span>:
+            </p>
+            <p class="math-display">
+              (x &minus; h)<sup>2</sup> + (y &minus; k)<sup>2</sup> = h<sup>2</sup> + k<sup>2</sup> &minus; F
+            </p>
+            <p>Sea <span class="math-inline">M = h<sup>2</sup> + k<sup>2</sup> &minus; F</span>, se presentan tres casos según el valor de M:</p>
+            <ul style="list-style:none; padding-left:0; line-height:1.7; margin-top:8px;">
+              <li>&bull; <strong>Si M &gt; 0:</strong> Representa una <strong>circunferencia real</strong> de centro <span class="math-inline">C(h, k)</span> y radio <span class="math-inline">r = &radic;M</span>.</li>
+              <li>&bull; <strong>Si M = 0:</strong> Representa un <strong>único punto P(h, k)</strong> (circunferencia de radio nulo).</li>
+              <li>&bull; <strong>Si M &lt; 0:</strong> No representa ningún lugar geométrico real (conjunto vacío <span class="math-inline">&empty;</span>).</li>
+            </ul>
+          </div>
+
+          <!-- Ejemplo Resuelto Completación -->
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#d0e0f0; background:#f5f9fc;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">Ejemplo Resuelto: 2x<sup>2</sup> + 2y<sup>2</sup> &minus; 4x + 6y + 3 = 0</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              1. <strong>Normalizamos:</strong> Dividimos toda la ecuación por 2:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">x<sup>2</sup> + y<sup>2</sup> &minus; 2x + 3y + 3/2 = 0</span>.
+              <br>2. <strong>Agrupamos por variable:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">(x<sup>2</sup> &minus; 2x) + (y<sup>2</sup> + 3y) = &minus;3/2</span>.
+              <br>3. <strong>Completamos trinomios cuadrados perfectos:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Para x: agregamos <span class="math-inline">(&minus;2/2)<sup>2</sup> = 1</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Para y: agregamos <span class="math-inline">(3/2)<sup>2</sup> = 9/4</span>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">(x<sup>2</sup> &minus; 2x + 1) + (y<sup>2</sup> + 3y + 9/4) = &minus;3/2 + 1 + 9/4</span>.
+              <br>4. <strong>Expresamos los cuadrados de binomio:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">(x &minus; 1)<sup>2</sup> + (y + 3/2)<sup>2</sup> = 7/4</span>.
+              <br><br>
+              Por lo tanto: Centro <strong>C(1, &minus;3/2)</strong> &nbsp;y&nbsp; Radio <strong>r = &radic;(7/4) = &radic;7 / 2 &asymp; 1,32</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TANGENTE Y NORMAL ===================== -->
+    <section class="study__section" id="tangente-normal">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">tangente_normal_interseccion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.5 Recta Tangente, Recta Normal y Posición Relativa</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Recta Normal y Tangente en P<sub>1</sub>(x<sub>1</sub>, y<sub>1</sub>)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              Dado un punto de tangencia <span class="math-inline">P<sub>1</sub>(x<sub>1</sub>, y<sub>1</sub>)</span> perteneciente a la circunferencia de centro <span class="math-inline">C(h, k)</span>:
+              <br><br>
+              &bull; <strong>Recta Normal (L<sub>N</sub>):</strong> Es la recta que pasa por el centro <span class="math-inline">C(h, k)</span> y el punto <span class="math-inline">P<sub>1</sub>(x<sub>1</sub>, y<sub>1</sub>)</span> (contiene al radio).
+              <br>Su pendiente es: &nbsp;<span class="math-inline">m<sub>N</sub> = (y<sub>1</sub> &minus; k) / (x<sub>1</sub> &minus; h)</span>.
+              <br>Ecuación: &nbsp;<span class="math-inline">y &minus; y<sub>1</sub> = m<sub>N</sub> (x &minus; x<sub>1</sub>)</span>.
+              <br><br>
+              &bull; <strong>Recta Tangente (L<sub>T</sub>):</strong> Es la recta perpendicular a la recta normal en el punto de tangencia <span class="math-inline">P<sub>1</sub></span>.
+              <br>Su pendiente cumple: &nbsp;<span class="math-inline">m<sub>T</sub> = &minus;1 / m<sub>N</sub> = &minus;(x<sub>1</sub> &minus; h) / (y<sub>1</sub> &minus; k)</span>.
+              <br>Ecuación: &nbsp;<span class="math-inline">y &minus; y<sub>1</sub> = m<sub>T</sub> (x &minus; x<sub>1</sub>)</span>.
+            </div>
+          </div>
+
+          <!-- SVG 2: Tangente y Normal -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Geometría de la Recta Normal L<sub>N</sub> (verde) y Recta Tangente Perpendicular L<sub>T</sub> (rojo)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 270 200" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 270 30 M 0 60 L 270 60 M 0 90 L 270 90 M 0 120 L 270 120 M 0 150 L 270 150 M 0 180 L 270 180" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Circle C(100, 110), r=60 -->
+                <circle cx="100" cy="110" r="60" fill="none" stroke="#2a6eb5" stroke-width="1.8"/>
+                <circle cx="100" cy="110" r="3.5" fill="#2a6eb5"/>
+                <text x="75" y="115" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">C(h,k)</text>
+
+                <!-- Point P1(148, 74) -->
+                <circle cx="148" cy="74" r="4" fill="#c0392b"/>
+                <text x="155" y="70" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">P<sub>1</sub>(x<sub>1</sub>,y<sub>1</sub>)</text>
+
+                <!-- Normal Line L_N (Green) passes through C and P1 -->
+                <line x1="40" y1="155" x2="190" y2="42" stroke="#1a8a5a" stroke-width="1.8"/>
+                <text x="180" y="38" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">L<sub>N</sub> (Normal)</text>
+
+                <!-- Tangent Line L_T (Red) perpendicular at P1 -->
+                <line x1="100" y1="10" x2="196" y2="138" stroke="#c0392b" stroke-width="2"/>
+                <text x="202" y="142" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">L<sub>T</sub> (Tangente)</text>
+
+                <!-- Right angle symbol at P1 -->
+                <path d="M 140 85 L 151 93 L 159 82" fill="none" stroke="#444" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md); border-color:#e0b8e0; background:#faf5fa;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">Posición Relativa entre Recta y Circunferencia</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              Al resolver el sistema entre una recta <span class="math-inline">y = mx + b</span> y una circunferencia <span class="math-inline">(x &minus; h)<sup>2</sup> + (y &minus; k)<sup>2</sup> = r<sup>2</sup></span>:
+              <br>&bull; <strong>2 Soluciones Reales Distintas:</strong> La recta es <strong>secante</strong> (corta en 2 puntos).
+              <br>&bull; <strong>1 Solución Real Doble (&Delta; = 0):</strong> La recta es <strong>tangente</strong> (corta en 1 punto).
+              <br>&bull; <strong>0 Soluciones Reales (&Delta; &lt; 0):</strong> La recta es <strong>exterior</strong> (no corta a la curva).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.6 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 239a -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 239-a: Ecuación Dado C(-3, 1) y r = 4</div>
+              <div class="precaution-card__body">
+                <p>Hallar las ecuaciones principal y general de la circunferencia con <span class="math-inline">C(&minus;3, 1)</span> y <span class="math-inline">r = 4</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Ecuación Principal: <span class="math-inline">[x &minus; (&minus;3)]<sup>2</sup> + (y &minus; 1)<sup>2</sup> = 4<sup>2</sup> &rArr; <strong>(x + 3)<sup>2</sup> + (y &minus; 1)<sup>2</sup> = 16</strong></span>.
+                    <br>2. Desarrollamos: <span class="math-inline">x<sup>2</sup> + 6x + 9 + y<sup>2</sup> &minus; 2y + 1 = 16</span>.
+                    <br>3. Ecuación General: <span class="math-inline"><strong>x<sup>2</sup> + y<sup>2</sup> + 6x &minus; 2y &minus; 6 = 0</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 240a -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 240-a: Centro y Radio por Completación</div>
+              <div class="precaution-card__body">
+                <p>Hallar centro y radio de: &nbsp;<span class="math-inline">x<sup>2</sup> + y<sup>2</sup> &minus; 6x + 2y &minus; 5 = 0</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Agrupamos: <span class="math-inline">(x<sup>2</sup> &minus; 6x + 9) + (y<sup>2</sup> + 2y + 1) = 5 + 9 + 1</span>.
+                    <br>2. Canónica: <span class="math-inline">(x &minus; 3)<sup>2</sup> + (y + 1)<sup>2</sup> = 15</span>.
+                    <br>3. Por lo tanto: Centro <strong>C(3, &minus;1)</strong> y Radio <strong>r = &radic;15 &asymp; 3,87</strong>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 248a -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 248-a: Tangente y Normal en (1, 2)</div>
+              <div class="precaution-card__body">
+                <p>Hallar las rectas tangente y normal a <span class="math-inline">(x &minus; 2)<sup>2</sup> + (y &minus; 2)<sup>2</sup> = 1</span> en el punto <span class="math-inline">P<sub>1</sub>(1, 2)</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Centro de la circunferencia: <span class="math-inline">C(2, 2)</span>.
+                    <br>2. Pendiente de la Normal (pasa por <span class="math-inline">C(2,2)</span> y <span class="math-inline">P<sub>1</sub>(1,2)</span>):
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">m<sub>N</sub> = (2 &minus; 2) / (1 &minus; 2) = 0</span> (Línea horizontal).
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Ecuación de la Recta Normal: <strong>y = 2</strong>.
+                    <br>3. Recta Tangente: Perpendicular a <span class="math-inline">y = 2</span> pasando por <span class="math-inline">P<sub>1</sub>(1,2)</span> (Línea vertical).
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Ecuación de la Recta Tangente: <strong>x = 1</strong>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="../capitulo5/aplicaciones_resolucion.html" class="nav-link nav-link--prev">&larr; Cap V Secc 2: Aplicaciones y Resolución</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
