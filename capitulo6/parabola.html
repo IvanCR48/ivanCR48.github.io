@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Parabola en Conicas: concepto y elementos, foco, directriz, parametro p, ecuacion con vertice en el origen V(0,0), ecuaciones principal y general para parabolas trasladadas V(h,k), completacion de cuadrados y sintesis de excentricidades (e=1). Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — La Parábola | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="../capitulo4/exponencial.html" class="navbar__btn">Cap IV</a>
+      <a href="../capitulo5/triangulos_rectangulos.html" class="navbar__btn">Cap V</a>
+      <a href="circunferencia.html" class="navbar__btn">Circunferencia</a>
+      <a href="elipse.html" class="navbar__btn">Elipse</a>
+      <a href="#concepto" class="navbar__btn">Concepto</a>
+      <a href="#origen" class="navbar__btn">En Origen V(0,0)</a>
+      <a href="#trasladada" class="navbar__btn">Principal y General</a>
+      <a href="#sintesis" class="navbar__btn">Síntesis Cónicas</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">parabola_conicas.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo VI &mdash; Seccion 4</p>
+          <h1 class="study__title">La Parábola</h1>
+          <p class="study__intro">
+            Estudio analítico de la parábola: definición como lugar geométrico por foco y directriz, ecuaciones canónicas con vértice en el origen V(0,0) y trasladado V(h,k), ecuación general, completación de cuadrados y síntesis clasificatoria de cónicas por excentricidad.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#concepto">4.1 Concepto y Elementos de la Parábola</a></li>
+              <li><a href="#origen">4.2 Ecuaciones con Vértice en el Origen V(0,0)</a></li>
+              <li><a href="#trasladada">4.3 Ecuaciones Principal y General para V(h,k)</a></li>
+              <li><a href="#sintesis">4.4 Clasificación de Cónicas según Excentricidad</a></li>
+              <li><a href="#ejemplos">4.5 Ejemplo Resuelto de Completación de Cuadrados</a></li>
+              <li><a href="#ejercicios">4.6 Ejercicios Prácticos del Módulo</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="elipse.html" class="nav-link nav-link--prev">&larr; Secc 2: La Elipse</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== CONCEPTO Y ELEMENTOS ===================== -->
+    <section class="study__section" id="concepto">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">concepto_elementos_parabola.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">4.1 Concepto y Elementos de la Parábola</h2>
+            <span class="section__symbol">d(P, F) = d(P, D)</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            La parábola posee la propiedad reflectora fundamental utilizada en antenas parabólicas, faros de automóvil y reflectores solares, donde todos los rayos paralelos al eje foco convergen exactamente en el foco.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Definición Formal como Lugar Geométrico</p>
+            <p>
+              La <strong>parábola</strong> es el lugar geométrico de todos los puntos <span class="math-inline">P(x,y)</span> del plano cuya distancia a un punto fijo <span class="math-inline">F</span> (llamado <strong>foco</strong>) es igual a su distancia a una recta fija <span class="math-inline">D</span> (llamada <strong>directriz</strong>):
+            </p>
+            <p class="math-display">
+              d(P, F) = d(P, D)
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Foco (F):</strong> Punto fijo de referencia ubicado sobre el eje de simetría.
+              <br>&bull; <strong>Directriz (D):</strong> Recta fija perpendicular al eje de simetría que no contiene al foco.
+              <br>&bull; <strong>Vértice V(h,k):</strong> Punto medio del segmento perpendicular trazado entre el foco y la directriz. Es el punto de inflexión donde la parábola cambia de dirección.
+              <br>&bull; <strong>Parámetro f (distancia focal p):</strong> Distancia desde el vértice al foco, equivalente a la distancia del vértice a la directriz (<span class="math-inline">d(V, F) = d(V, D) = |p|</span>).
+              <br>&bull; <strong>Lado Recto (L.R.):</strong> Cuerda focal perpendicular al eje de simetría. Su longitud mide <span class="math-inline">L.R. = |4p|</span>.
+              <br>&bull; <strong>Excentricidad:</strong> La excentricidad de la parábola es exactamente <span class="math-inline">e = 1</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VERTICE EN EL ORIGEN ===================== -->
+    <section class="study__section" id="origen">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">parabola_origen.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.2 Ecuaciones con Vértice en el Origen V(0,0)</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Parábola Horizontal -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#2a6eb5; color:white;">Parábola Horizontal (Eje focal sobre eje x)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">y<sup>2</sup> = 4p x</p>
+                <p style="font-size:0.85rem; line-height:1.5;">
+                  &bull; <strong>Si p &gt; 0:</strong> Abre hacia la <strong>derecha</strong>. Foco <span class="math-inline">F(p, 0)</span>, Directriz <span class="math-inline">D: x = &minus;p</span>.
+                  <br>&bull; <strong>Si p &lt; 0:</strong> Abre hacia la <strong>izquierda</strong>. Foco <span class="math-inline">F(p, 0)</span>, Directriz <span class="math-inline">D: x = &minus;p</span>.
+                  <br>&bull; <strong>Lado Recto:</strong> <span class="math-inline">L.R. = |4p|</span>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Parábola Vertical -->
+            <div class="precaution-card">
+              <div class="precaution-card__header" style="background:#7b2d8e; color:white;">Parábola Vertical (Eje focal sobre eje y)</div>
+              <div class="precaution-card__body">
+                <p class="math-display" style="margin:5px 0;">x<sup>2</sup> = 4p y</p>
+                <p style="font-size:0.85rem; line-height:1.5;">
+                  &bull; <strong>Si p &gt; 0:</strong> Abre hacia <strong>arriba</strong>. Foco <span class="math-inline">F(0, p)</span>, Directriz <span class="math-inline">D: y = &minus;p</span>.
+                  <br>&bull; <strong>Si p &lt; 0:</strong> Abre hacia <strong>abajo</strong>. Foco <span class="math-inline">F(0, p)</span>, Directriz <span class="math-inline">D: y = &minus;p</span>.
+                  <br>&bull; <strong>Lado Recto:</strong> <span class="math-inline">L.R. = |4p|</span>.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SVG 1: Parabola Canonica Horizontal -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Parábola Canónica Horizontal y<sup>2</sup> = 4px (p &gt; 0) con Foco, Directriz y Lado Recto</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 280 200" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 280 30 M 0 60 L 280 60 M 0 90 L 280 90 M 0 120 L 280 120 M 0 150 L 280 150 M 0 180 L 280 180" stroke="#f0f0f0" stroke-width="1"/>
+                <path d="M 40 0 L 40 200 M 80 0 L 80 200 M 120 0 L 120 200 M 160 0 L 160 200 M 200 0 L 200 200 M 240 0 L 240 200" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Axes: Origin V(80, 100) -->
+                <line x1="10" y1="100" x2="270" y2="100" stroke="#777" stroke-width="1.5"/>
+                <line x1="80" y1="10" x2="80" y2="190" stroke="#777" stroke-width="1.5"/>
+
+                <!-- Parabola Curve: V(80, 100), p=40px -> F(120, 100) -->
+                <!-- Equation y^2 = 4(40)(x-80) = 160(x-80) => x = 80 + y^2/160 -->
+                <path d="M 230 20 Q 80 100 230 180" fill="none" stroke="#2a6eb5" stroke-width="2.2"/>
+
+                <!-- Vertex V(80,100) -->
+                <circle cx="80" cy="100" r="3.5" fill="#2a6eb5"/>
+                <text x="65" y="114" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">V(0,0)</text>
+
+                <!-- Focus F(120, 100) -->
+                <circle cx="120" cy="100" r="3.5" fill="#c0392b"/>
+                <text x="115" y="90" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">F(p,0)</text>
+
+                <!-- Directrix Line D: x = 40 (x = -p) -->
+                <line x1="40" y1="10" x2="40" y2="190" stroke="#1a8a5a" stroke-width="1.8" stroke-dasharray="3,3"/>
+                <text x="15" y="25" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">D: x = &minus;p</text>
+
+                <!-- Lado Recto line through F(120, 100) from (120, 20) to (120, 180) -->
+                <line x1="120" y1="20" x2="120" y2="180" stroke="#7b2d8e" stroke-width="1.2" stroke-dasharray="2,2"/>
+                <text x="125" y="40" font-size="6" font-family="monospace" fill="#7b2d8e">L.R. = 4p</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRASLADADA Y GENERAL ===================== -->
+    <section class="study__section" id="trasladada">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">parabola_trasladada_general.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.3 Ecuaciones Principal y General para V(h,k)</h2>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Forma Principal (Canónica Trasladada con Vértice V(h,k))</p>
+            <p>Al aplicar una traslación <span class="math-inline">T(h,k)</span> al vértice, resultan las ecuaciones principales:</p>
+            <p class="math-display">
+              (y &minus; k)<sup>2</sup> = 4p (x &minus; h) &nbsp;&nbsp;&nbsp;&nbsp;(Eje focal horizontal, paralelo al eje x)
+            </p>
+            <p class="math-display">
+              (x &minus; h)<sup>2</sup> = 4p (y &minus; k) &nbsp;&nbsp;&nbsp;&nbsp;(Eje focal vertical, paralelo al eje y)
+            </p>
+          </div>
+
+          <div class="key-concept" style="margin-top:var(--space-md);">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Forma General y Criterio de Identificación</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              Desarrollando los binomios al cuadrado se obtiene la <strong>Ecuación General</strong>:
+              <br>&bull; Eje focal horizontal: &nbsp;<span class="math-inline">y<sup>2</sup> + D x + E y + F = 0</span>.
+              <br>&bull; Eje focal vertical: &nbsp;<span class="math-inline">x<sup>2</sup> + D x + E y + F = 0</span>.
+              <br><br>
+              <strong style="color:#c0392b;">Criterio Exclusivo para Identificar una Parábola:</strong>
+              <br>A diferencia de la circunferencia y la elipse, en la ecuación general de la parábola <strong>SOLO UNA DE LAS DOS VARIABLES ESTÁ ELEVADA AL CUADRADO</strong> (ya sea <span class="math-inline">x<sup>2</sup></span> o <span class="math-inline">y<sup>2</sup></span>, nunca ambas).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SINTESIS CONICAS ===================== -->
+    <section class="study__section" id="sintesis">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">sintesis_excentricidades.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.4 Clasificación de Cónicas según Excentricidad</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            El parámetro unificador de todas las secciones cónicas es la <strong>excentricidad (e)</strong>:
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Resumen Unificador de Cónicas (Módulo UNMDP)</p>
+            <p class="math-display">
+              e &lt; 1 : Elipse &nbsp;&nbsp;&nbsp;&nbsp;(e = 0 : Circunferencia)
+            </p>
+            <p class="math-display">
+              e = 1 : Parábola
+            </p>
+            <p class="math-display">
+              e &gt; 1 : Hipérbola
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLO DESARROLLADO ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ejemplo_completacion_parabola.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.5 Ejemplo Resuelto de Completación de Cuadrados</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Dada: y<sup>2</sup> &minus; 4y &minus; 8x + 28 = 0</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              1. <strong>Agrupamos la variable cuadrática a la izquierda y el resto a la derecha:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">y<sup>2</sup> &minus; 4y = 8x &minus; 28</span>.
+              <br>2. <strong>Completamos el trinomio cuadrado perfecto en y:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;Sumamos <span class="math-inline">(&minus;4/2)<sup>2</sup> = 4</span> en ambos miembros:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">y<sup>2</sup> &minus; 4y + 4 = 8x &minus; 28 + 4</span>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline">(y &minus; 2)<sup>2</sup> = 8x &minus; 24</span>.
+              <br>3. <strong>Extraemos factor común del coeficiente de x para obtener la forma principal:</strong>
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="math-inline"><strong>(y &minus; 2)<sup>2</sup> = 8 (x &minus; 3)</strong></span>.
+              <br><br>
+              <strong>Elementos Obtenidos:</strong>
+              <br>&bull; <strong>Vértice V(h,k):</strong> <span class="math-inline">V(3, 2)</span>.
+              <br>&bull; <strong>Parámetro p:</strong> <span class="math-inline">4p = 8 &rArr; p = 2</span> (p &gt; 0, abre a la derecha).
+              <br>&bull; <strong>Foco:</strong> <span class="math-inline">F(3 + p, 2) = F(3 + 2, 2) = <strong>F(5, 2)</strong></span>.
+              <br>&bull; <strong>Directriz:</strong> <span class="math-inline">D: x = h &minus; p = 3 &minus; 2 &rArr; <strong>D: x = 1</strong></span>.
+              <br>&bull; <strong>Lado Recto:</strong> <span class="math-inline">L.R. = |4p| = <strong>8</strong></span>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4.6 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 260i -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 260-i: x<sup>2</sup> = &minus;8y</div>
+              <div class="precaution-card__body">
+                <p>Indicar elementos de la parábola <span class="math-inline">x<sup>2</sup> = &minus;8y</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Elementos</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    &bull; Vértice: <span class="math-inline">V(0,0)</span>.
+                    <br>&bull; Parámetro: <span class="math-inline">4p = &minus;8 &rArr; p = &minus;2</span> (abre hacia abajo).
+                    <br>&bull; Foco: <span class="math-inline">F(0, &minus;2)</span>.
+                    <br>&bull; Directriz: <span class="math-inline">D: y = 2</span>.
+                    <br>&bull; Lado Recto: <span class="math-inline">L.R. = 8</span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 261i -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 261-i: F(6,0) y D: x = -6</div>
+              <div class="precaution-card__body">
+                <p>Determinar la ecuación de la parábola dados su foco y directriz.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Punto medio entre <span class="math-inline">F(6,0)</span> y <span class="math-inline">x = &minus;6</span> es el origen <span class="math-inline">V(0,0)</span>.
+                    <br>2. Parámetro <span class="math-inline">p = 6</span>.
+                    <br>3. Forma horizontal: <span class="math-inline">y<sup>2</sup> = 4px = 4(6)x &rArr; <strong>y<sup>2</sup> = 24x</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 263iii -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 263-iii: F(5, 2) y V(3, 2)</div>
+              <div class="precaution-card__body">
+                <p>Hallar la ecuación general de la parábola con foco en <span class="math-inline">(5,2)</span> y vértice en <span class="math-inline">(3,2)</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Eje focal horizontal en <span class="math-inline">y = 2</span>.
+                    <br>2. Distancia focal <span class="math-inline">p = x<sub>F</sub> &minus; x<sub>V</sub> = 5 &minus; 3 = 2</span>.
+                    <br>3. Ecuación Principal: <span class="math-inline">(y &minus; 2)<sup>2</sup> = 4(2)(x &minus; 3) &rArr; (y &minus; 2)<sup>2</sup> = 8(x &minus; 3)</span>.
+                    <br>4. Ecuación General: <span class="math-inline">y<sup>2</sup> &minus; 4y + 4 = 8x &minus; 24 &rArr; <strong>y<sup>2</sup> &minus; 4y &minus; 8x + 28 = 0</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="elipse.html" class="nav-link nav-link--prev">&larr; Cap VI Secc 2: La Elipse</a>
+        <a href="../index.html" class="nav-link">Inicio / Portal Principal &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
