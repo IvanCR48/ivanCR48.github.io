@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trigonometria en Triangulos Rectangulos: razones trigonometricas (seno, coseno, tangente), teorema de Pitagoras, angulos agudos complementarios, angulos de elevacion y depresion. Material de estudio para la Facultad de Ingenieria, UNMDP.">
+  <title>Matematica — Trigonometría en Triángulos Rectángulos | Study Portal</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal</span>
+    <div class="navbar__links">
+      <a href="../index.html" class="navbar__btn">Home</a>
+      <a href="../capitulo1/matematica.html" class="navbar__btn">Cap I</a>
+      <a href="../capitulo2/funciones.html" class="navbar__btn">Cap II</a>
+      <a href="../capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
+      <a href="../capitulo4/exponencial.html" class="navbar__btn">Cap IV</a>
+      <a href="#fundamentos" class="navbar__btn">Fundamentos</a>
+      <a href="#razones" class="navbar__btn">Razones Trig.</a>
+      <a href="#elevacion-depresion" class="navbar__btn">Elevación/Depresión</a>
+      <a href="#ejemplos" class="navbar__btn">Ejemplos</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">triangulos_rectangulos.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Capitulo V &mdash; Seccion 1</p>
+          <h1 class="study__title">Trigonometría en Triángulos Rectángulos</h1>
+          <p class="study__intro">
+            Resolución de triángulos rectángulos, relaciones entre lados y ángulos agudos, razones trigonométricas (seno, coseno, tangente), Teorema de Pitágoras y aplicaciones a ángulos de elevación y depresión.<br>
+            Facultad de Ingenieria &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido</p>
+            <ol class="toc__list">
+              <li><a href="#fundamentos">1.1 Fundamentos y Teorema de Pitágoras</a></li>
+              <li><a href="#razones">1.2 Razones Trigonométricas en el Triángulo Rectángulo</a></li>
+              <li><a href="#elevacion-depresion">1.3 Ángulos de Elevación y Depresión</a></li>
+              <li><a href="#ejemplos">1.4 Ejemplo Analítico Desarrollado (Poste y Tensor)</a></li>
+              <li><a href="#ejercicios">1.5 Ejercicios Prácticos de Autoevaluación</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="../capitulo4/trigonometricas.html" class="nav-link nav-link--prev">&larr; Cap IV Secc 5: Funciones Trigonométricas</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== FUNDAMENTOS ===================== -->
+    <section class="study__section" id="fundamentos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">fundamentos_geometria.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">1.1 Fundamentos y Teorema de Pitágoras</h2>
+            <span class="section__symbol">A<sup>2</sup> = B<sup>2</sup> + C<sup>2</sup></span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            En geometría se establece que para determinar la medida de los 6 elementos de un triángulo (3 lados y 3 ángulos) basta con conocer la medida de al menos 3 de sus elementos (convenientemente elegidos, entre los cuales haya al menos un lado). Este proceso se denomina <strong>resolución de triángulos</strong>.
+          </p>
+
+          <div class="definition-box">
+            <p class="definition-box__label">Propiedades del Triángulo Rectángulo</p>
+            <p>
+              Un <strong>triángulo rectángulo</strong> es aquel que posee un ángulo recto (<span class="math-inline">&acirc; = 90&deg;</span>).
+              <br>Convenimos en designar con letras mayúsculas los lados y con letras minúsculas con sombrero sus ángulos opuestos:
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Hipotenusa (A):</strong> El lado opuesto al ángulo recto <span class="math-inline">&acirc; = 90&deg;</span> (el lado de mayor longitud).
+              <br>&bull; <strong>Catetos (B, C):</strong> Los dos lados que forman el ángulo recto.
+              <br>&bull; <strong>Ángulos Agudos Complementarios:</strong> La suma de los dos ángulos agudos es siempre <span class="math-inline">90&deg;</span>:
+            </p>
+            <p class="math-display">
+              &bcirc; + &ccirc; = 90&deg;
+            </p>
+            <p style="line-height:1.8; margin-top:8px;">
+              &bull; <strong>Teorema de Pitágoras:</strong> El cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos:
+            </p>
+            <p class="math-display">
+              A<sup>2</sup> = B<sup>2</sup> + C<sup>2</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RAZONES TRIGONOMETRICAS ===================== -->
+    <section class="study__section" id="razones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">razones_trigonometricas.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.2 Razones Trigonométricas en el Triángulo Rectángulo</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Para un ángulo agudo <span class="math-inline">&ccirc;</span> en un triángulo rectángulo, las tres razones trigonométricas principales vinculan la longitud de los lados:
+          </p>
+
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">Fórmulas de las Razones Principales</p>
+            <p class="math-display">
+              sen(&ccirc;) = Cateto Opuesto / Hipotenusa = C / A
+            </p>
+            <p class="math-display">
+              cos(&ccirc;) = Cateto Adyacente / Hipotenusa = B / A
+            </p>
+            <p class="math-display">
+              tg(&ccirc;) = Cateto Opuesto / Cateto Adyacente = C / B
+            </p>
+            <p style="font-size:0.85rem; line-height:1.4; margin-top:10px;">
+              <strong>Razones Recíprocas:</strong>
+              <br>&bull; <span class="math-inline">cosec(&ccirc;) = 1 / sen(&ccirc;) = A / C</span>
+              <br>&bull; <span class="math-inline">sec(&ccirc;) = 1 / cos(&ccirc;) = A / B</span>
+              <br>&bull; <span class="math-inline">cotg(&ccirc;) = 1 / tg(&ccirc;) = B / C</span>
+            </p>
+          </div>
+
+          <!-- SVG 1: Triangulo Rectangulo Canónico -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Esquema Canónico del Triángulo Rectángulo (a = 90&deg;)</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 280 180" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 280 30 M 0 60 L 280 60 M 0 90 L 280 90 M 0 120 L 280 120 M 0 150 L 280 150" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Triangle Vertices: a=(40,140), c=(220,140), b=(40,30) -->
+                <!-- Right angle symbol at a (40,140) -->
+                <path d="M 40 125 L 55 125 L 55 140" fill="none" stroke="#777" stroke-width="1.2"/>
+
+                <!-- Triangle Outline -->
+                <polygon points="40,140 220,140 40,30" fill="rgba(42,110,181,0.06)" stroke="#2a6eb5" stroke-width="2.2"/>
+
+                <!-- Side Labels -->
+                <!-- Cateto B (Adyacente a c, base): 40 to 220 = 180px -->
+                <text x="125" y="156" font-size="8" font-family="monospace" fill="#2a6eb5" font-weight="bold">Cateto B (Adyacente a &ccirc;)</text>
+
+                <!-- Cateto C (Opuesto a c, altura): 140 to 30 = 110px -->
+                <text x="5" y="90" font-size="8" font-family="monospace" fill="#1a8a5a" font-weight="bold">Cateto C</text>
+
+                <!-- Hipotenusa A (diagonal) -->
+                <text x="135" y="75" font-size="8" font-family="monospace" fill="#c0392b" font-weight="bold">Hipotenusa A</text>
+
+                <!-- Vertex Labels -->
+                <text x="25" y="150" font-size="8" font-family="monospace" fill="#777" font-weight="bold">a (90&deg;)</text>
+                <text x="228" y="145" font-size="8" font-family="monospace" fill="#777" font-weight="bold">c</text>
+                <text x="35" y="22" font-size="8" font-family="monospace" fill="#777" font-weight="bold">b</text>
+
+                <!-- Angle c arc -->
+                <path d="M 190 140 A 30 30 0 0 0 196 125" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+                <text x="175" y="132" font-size="7" font-family="monospace" fill="#c0392b" font-weight="bold">&ccirc;</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ELEVACION Y DEPRESION ===================== -->
+    <section class="study__section" id="elevacion-depresion">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">elevacion_depresion.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.3 Ángulos de Elevación y Depresión</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            En la resolución de problemas prácticos de medición indirecta (alturas, distancias de vuelo, navegación), se utilizan los ángulos medidos con respecto a la línea horizontal de visión.
+          </p>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Definición y Congruencia por Paralelismo</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px;">
+              &bull; <strong>Ángulo de Elevación:</strong> Ángulo formado entre la horizontal de visión y la línea visual hacia un objeto situado <strong>por encima</strong> de la horizontal.
+              <br>&bull; <strong>Ángulo de Depresión:</strong> Ángulo formado entre la horizontal de visión y la línea visual hacia un objeto situado <strong>por debajo</strong> de la horizontal.
+              <br><br>
+              <strong style="color:#c0392b;">Propiedad Clave:</strong> Puesto que la horizontal superior y la horizontal inferior son paralelas, el <strong>ángulo de elevación del punto inferior es CONGRUENTE (igual) al ángulo de depresión del punto superior</strong> por ser <em>ángulos alternos internos entre paralelas</em>.
+            </div>
+          </div>
+
+          <!-- SVG 2: Elevacion y Depresion -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Congruencia entre Ángulo de Elevación y Ángulo de Depresión</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 290 160" class="number-line-svg" style="max-width:280px;">
+                <!-- Grid -->
+                <path d="M 0 30 L 290 30 M 0 60 L 290 60 M 0 90 L 290 90 M 0 120 L 290 120 M 0 150 L 290 150" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Horizontal Superior (b) at y=30 -->
+                <line x1="40" y1="30" x2="270" y2="30" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="210" y="24" font-size="7" font-family="monospace" fill="#777">Línea Horizontal Superior</text>
+
+                <!-- Horizontal Inferior (c) at y=130 -->
+                <line x1="20" y1="130" x2="250" y2="130" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="30" y="145" font-size="7" font-family="monospace" fill="#777">Línea Horizontal Inferior</text>
+
+                <!-- Line of Sight Diagonal between (40,130) and (200,30) -->
+                <line x1="40" y1="130" x2="200" y2="30" stroke="#c0392b" stroke-width="2"/>
+
+                <!-- Points -->
+                <circle cx="40" cy="130" r="3.5" fill="#2a6eb5"/>
+                <text x="25" y="125" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">c</text>
+
+                <circle cx="200" cy="30" r="3.5" fill="#2a6eb5"/>
+                <text x="205" y="25" font-size="7" font-family="monospace" fill="#2a6eb5" font-weight="bold">b</text>
+
+                <!-- Angle Arc Depresion at b (200,30) towards left -->
+                <path d="M 170 30 A 30 30 0 0 0 176 45" fill="none" stroke="#7b2d8e" stroke-width="1.5"/>
+                <text x="140" y="45" font-size="7" font-family="monospace" fill="#7b2d8e" font-weight="bold">&Aacute;ngulo de Depresi&oacute;n</text>
+
+                <!-- Angle Arc Elevacion at c (40,130) towards right -->
+                <path d="M 70 130 A 30 30 0 0 0 64 115" fill="none" stroke="#1a8a5a" stroke-width="1.5"/>
+                <text x="75" y="122" font-size="7" font-family="monospace" fill="#1a8a5a" font-weight="bold">&Aacute;ngulo de Elevaci&oacute;n</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJEMPLO DESARROLLADO ===================== -->
+    <section class="study__section" id="ejemplos">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">ejemplo_poste_tensor.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.4 Ejemplo Analítico Desarrollado (Módulo UNMDP)</h2>
+
+          <div class="key-concept">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">Problema del Poste y el Tensor de Anclaje</h3>
+            <p>
+              Un tensor de acero sostiene un poste de alumbrado vertical formando un ángulo de <span class="math-inline">50&deg;</span> con el suelo plano. Sabiendo que el tensor está fijado a tierra a una distancia de <span class="math-inline">L = 12\text{ m}</span> de la base del poste, determinar:
+              <br>1) La altura del poste (<span class="math-inline">P</span>).
+              <br>2) La longitud total del tensor (<span class="math-inline">T</span>).
+            </p>
+            <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
+              <strong>Datos:</strong> &nbsp;&alpha; = 50&deg;, &nbsp; Cateto Adyacente <span class="math-inline">L = 12\text{ m}</span>.
+              <br><strong>Incógnitas:</strong> &nbsp;Cateto Opuesto <span class="math-inline">P</span> (altura), &nbsp; Hipotenusa <span class="math-inline">T</span> (longitud).
+              <br><br>
+              <strong>1. Cálculo de la Altura P (usando Tangente):</strong>
+              <br>La razón que vincula el cateto opuesto <span class="math-inline">P</span> con el cateto adyacente <span class="math-inline">L</span> es la tangente:
+              <br><span class="math-inline">tg(&alpha;) = P / L &rArr; tg(50&deg;) = P / 12</span>
+              <br><span class="math-inline">P = 12 &middot; tg(50&deg;) &asymp; 12 &middot; 1,19175 &asymp; <strong>14,30 m</strong></span>.
+              <br><br>
+              <strong>2. Cálculo de la Longitud T (usando Coseno):</strong>
+              <br>La razón que vincula el cateto adyacente <span class="math-inline">L</span> con la hipotenusa <span class="math-inline">T</span> es el coseno:
+              <br><span class="math-inline">cos(&alpha;) = L / T &rArr; cos(50&deg;) = 12 / T &rArr; T = 12 / cos(50&deg;)</span>
+              <br><span class="math-inline">T &asymp; 12 / 0,64279 &asymp; <strong>18,67 m</strong></span>.
+              <br><br>
+              <strong>Respuesta:</strong> La altura del poste es de aproximadamente <strong>14,30 m</strong> y la longitud del tensor es de aproximadamente <strong>18,67 m</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">1.5 Ejercicios Prácticos del Módulo</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 222a -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 222-a: Cálculo de Cateto C</div>
+              <div class="precaution-card__body">
+                <p>En un triángulo rectángulo en &acirc;, hallar C sabiendo que <span class="math-inline">&bcirc; = 78&deg;41'</span> y la hipotenusa es <span class="math-inline">A = 10\text{ cm}</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Ángulo complementario: <span class="math-inline">&ccirc; = 90&deg; &minus; 78&deg;41' = 11&deg;19'</span>.
+                    <br>2. Relación de C con A: <span class="math-inline">sen(&ccirc;) = C / A &rArr; C = A &middot; sen(11&deg;19')</span>.
+                    <br>3. <span class="math-inline">C = 10 &middot; sen(11,3167&deg;) &asymp; 10 &middot; 0,19623 &asymp; <strong>1,96 cm</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 223 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 223: Ángulo Duplo del Otro</div>
+              <div class="precaution-card__body">
+                <p>Un ángulo agudo es el doble del otro y la hipotenusa mide <span class="math-inline">4\text{ cm}</span>. Calcular ángulos y catetos.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. <span class="math-inline">&alpha; + 2&alpha; = 90&deg; &rArr; 3&alpha; = 90&deg; &rArr; <strong>&alpha; = 30&deg;</strong></span> &nbsp;y&nbsp; <span class="math-inline"><strong>&beta; = 60&deg;</strong></span>.
+                    <br>2. Cateto opuesto a 30&deg;: <span class="math-inline">C = 4 &middot; sen(30&deg;) = 4 &middot; 0,5 = <strong>2 cm</strong></span>.
+                    <br>3. Cateto adyacente a 30&deg;: <span class="math-inline">B = 4 &middot; cos(30&deg;) = 4 &middot; (&radic;3 / 2) = <strong>2&radic;3 &asymp; 3,46 cm</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 227 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 227: Cuadrado por su Diagonal</div>
+              <div class="precaution-card__body">
+                <p>Determinar el perímetro de un cuadrado si su diagonal mide <span class="math-inline">5\text{ cm}</span>.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. La diagonal forma un triángulo rectángulo isósceles de ángulos agudos a 45&deg;.
+                    <br>2. <span class="math-inline">L = d &middot; sen(45&deg;) = 5 &middot; (&radic;2 / 2) = 2,5 &radic;2 &asymp; 3,535 cm</span>.
+                    <br>3. Perímetro: <span class="math-inline">P = 4 &middot; L = 4 &middot; 2,5 &radic;2 = <strong>10&radic;2 &asymp; 14,14 cm</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 235 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 235: Ángulo de Descenso de Avioneta</div>
+              <div class="precaution-card__body">
+                <p>Un piloto desea pasar <span class="math-inline">10\text{ m}</span> por encima de una pared de <span class="math-inline">25\text{ m}</span> y tocar tierra <span class="math-inline">200\text{ m}</span> más allá. Hallar el ángulo de descenso.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Altura sobre la pista al pasar por la pared: <span class="math-inline">H = 25\text{ m} + 10\text{ m} = 35\text{ m}</span> (Cateto opuesto).
+                    <br>2. Distancia horizontal hasta tocar tierra: <span class="math-inline">D = 200\text{ m}</span> (Cateto adyacente).
+                    <br>3. <span class="math-inline">tg(&alpha;) = H / D = 35 / 200 = 0,175</span>.
+                    <br>4. <span class="math-inline">&alpha; = arctg(0,175) &asymp; <strong>9,92&deg; &asymp; 9&deg;55'</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="../capitulo4/trigonometricas.html" class="nav-link nav-link--prev">&larr; Cap IV Secc 5: Funciones Trigonométricas</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
