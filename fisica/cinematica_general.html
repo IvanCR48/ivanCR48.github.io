@@ -129,11 +129,11 @@
           <div class="definition-box" style="border-left-color:var(--purple-bright);">
             <p class="definition-box__label">Magnitudes Principales</p>
             <p style="line-height:1.8;">
-              1. <strong>Sistema de Referencia:</strong> Conjunto de ejes coordenados (ej. cartesiano $XY$) con un origen fijado en el espacio y un reloj de medición.
-              <br>2. <strong>Tiempo (t) e Intervalo Temporal (&Delta;t):</strong> El tiempo es una magnitud escalar. El intervalo transcurrido entre un instante inicial <span class="math-inline">t_i</span> y un instante final <span class="math-inline">t_f</span> se define como:
+              1. <strong>Sistema de Referencia:</strong> Conjunto de ejes coordenados (ej. cartesiano XY) con un origen fijado en el espacio y un reloj de medición.
+              <br>2. <strong>Tiempo (t) e Intervalo Temporal (&Delta;t):</strong> El tiempo es una magnitud escalar. El intervalo transcurrido entre un instante inicial <span class="math-inline">t<sub>i</sub></span> y un instante final <span class="math-inline">t<sub>f</sub></span> se define como:
             </p>
             <p class="math-display">
-              &Delta;t = t_f &minus; t_i &nbsp;&nbsp;&nbsp;&nbsp;(&Delta;t &gt; 0)
+              &Delta;t = t<sub>f</sub> &minus; t<sub>i</sub> &nbsp;&nbsp;&nbsp;&nbsp;(&Delta;t &gt; 0)
             </p>
             <p style="line-height:1.8;">
               3. <strong>Vector Posición r(t):</strong> Vector que une el origen del sistema de referencia con la ubicación de la partícula en el instante <span class="math-inline">t</span>. Sus componentes cartesianas son:
@@ -145,7 +145,7 @@
               4. <strong>Vector Desplazamiento / Incremento de Posición (&Delta;r):</strong> Diferencia vectorial entre la posición final y la posición inicial durante un intervalo <span class="math-inline">&Delta;t</span>:
             </p>
             <p class="math-display">
-              &Delta;r = r(t_f) &minus; r(t_i) = (x(t_f) &minus; x(t_i), y(t_f) &minus; y(t_i)) &nbsp;&nbsp;[m]
+              &Delta;r = r(t<sub>f</sub>) &minus; r(t<sub>i</sub>) = (x(t<sub>f</sub>) &minus; x(t<sub>i</sub>), y(t<sub>f</sub>) &minus; y(t<sub>i</sub>)) &nbsp;&nbsp;[m]
             </p>
             <p style="font-size:0.85rem; line-height:1.5;">
               <strong style="color:#c0392b;">Diferencia Clave:</strong> El <strong>desplazamiento</strong> es una magnitud vectorial secante a la trayectoria (une en línea recta la posición inicial y final). El <strong>camino recorrido (s)</strong> es una magnitud escalar que mide la longitud total del trayecto recorrido sobre la curva.
@@ -330,27 +330,27 @@
           <div class="key-concept">
             <h3 class="key-concept__title" style="color:var(--teal-deep);">Problema del Movimiento de la Cucaracha sobre Cuadrícula</h3>
             <p>
-              Una cucaracha camina sobre un piso de cerámicos cuadrados de <span class="math-inline">0,6\text{ m} \times 0,6\text{ m}</span>. Se registra su vector posición <span class="math-inline">\mathbf{r}(t)</span> en diferentes instantes de tiempo:
-              <br>&bull; <span class="math-inline">r(0\text{s}) = (0 ; 0)\text{ m}</span>
-              <br>&bull; <span class="math-inline">r(1\text{s}) = (0,3 ; 1,2)\text{ m}</span>
-              <br>&bull; <span class="math-inline">r(2\text{s}) = (0,6 ; 1,2)\text{ m}</span>
-              <br>&bull; <span class="math-inline">r(4\text{s}) = (0,6 ; 0,6)\text{ m}</span>
-              <br>&bull; <span class="math-inline">r(6\text{s}) = (1,2 ; 0,6)\text{ m}</span>
-              <br>&bull; <span class="math-inline">r(8\text{s}) = (1,2 ; 0)\text{ m}</span>
+              Una cucaracha camina sobre un piso de cerámicos cuadrados de <span class="math-inline">0,6 m &times; 0,6 m</span>. Se registra su vector posición <span class="math-inline">r(t)</span> en diferentes instantes de tiempo:
+              <br>&bull; <span class="math-inline">r(0s) = (0 ; 0) m</span>
+              <br>&bull; <span class="math-inline">r(1s) = (0,3 ; 1,2) m</span>
+              <br>&bull; <span class="math-inline">r(2s) = (0,6 ; 1,2) m</span>
+              <br>&bull; <span class="math-inline">r(4s) = (0,6 ; 0,6) m</span>
+              <br>&bull; <span class="math-inline">r(6s) = (1,2 ; 0,6) m</span>
+              <br>&bull; <span class="math-inline">r(8s) = (1,2 ; 0) m</span>
             </p>
 
             <div class="note-box" style="background:#fff; margin-top:10px; font-size:0.9rem; line-height:1.7;">
               <strong>1. Vectores Desplazamiento (&Delta;r):</strong>
               <br>Restando analíticamente las componentes extremas menos las iniciales:
-              <br>&bull; Entre <span class="math-inline">0\text{s}</span> y <span class="math-inline">2\text{s}</span>: &nbsp;<span class="math-inline">&Delta;r_{0&rarr;2} = r(2) &minus; r(0) = (0,6 &minus; 0 ; 1,2 &minus; 0) = <strong>(0,6 ; 1,2) m</strong></span>.
-              <br>&bull; Entre <span class="math-inline">1\text{s}</span> y <span class="math-inline">4\text{s}</span>: &nbsp;<span class="math-inline">&Delta;r_{1&rarr;4} = r(4) &minus; r(1) = (0,6 &minus; 0,3 ; 0,6 &minus; 1,2) = <strong>(0,3 ; &minus;0,6) m</strong></span>.
-              <br>&bull; Entre <span class="math-inline">6\text{s}</span> y <span class="math-inline">8\text{s}</span>: &nbsp;<span class="math-inline">&Delta;r_{6&rarr;8} = r(8) &minus; r(6) = (1,2 &minus; 1,2 ; 0 &minus; 0,6) = <strong>(0 ; &minus;0,6) m</strong></span>.
+              <br>&bull; Entre <span class="math-inline">0s</span> y <span class="math-inline">2s</span>: &nbsp;<span class="math-inline">&Delta;r<sub>0&rarr;2</sub> = r(2) &minus; r(0) = (0,6 &minus; 0 ; 1,2 &minus; 0) = <strong>(0,6 ; 1,2) m</strong></span>.
+              <br>&bull; Entre <span class="math-inline">1s</span> y <span class="math-inline">4s</span>: &nbsp;<span class="math-inline">&Delta;r<sub>1&rarr;4</sub> = r(4) &minus; r(1) = (0,6 &minus; 0,3 ; 0,6 &minus; 1,2) = <strong>(0,3 ; &minus;0,6) m</strong></span>.
+              <br>&bull; Entre <span class="math-inline">6s</span> y <span class="math-inline">8s</span>: &nbsp;<span class="math-inline">&Delta;r<sub>6&rarr;8</sub> = r(8) &minus; r(6) = (1,2 &minus; 1,2 ; 0 &minus; 0,6) = <strong>(0 ; &minus;0,6) m</strong></span>.
               <br><br>
               <strong>2. Vectores Velocidad Media (v<sub>m</sub>):</strong>
               <br>Dividiendo cada vector desplazamiento por su respectivo intervalo de tiempo <span class="math-inline">&Delta;t</span>:
-              <br>&bull; Entre <span class="math-inline">0\text{s}</span> y <span class="math-inline">2\text{s}</span> (<span class="math-inline">&Delta;t = 2\text{s}</span>): &nbsp;<span class="math-inline">v_m = (0,6 / 2 ; 1,2 / 2) = <strong>(0,3 ; 0,6) m/s</strong></span>.
-              <br>&bull; Entre <span class="math-inline">1\text{s}</span> y <span class="math-inline">4\text{s}</span> (<span class="math-inline">&Delta;t = 3\text{s}</span>): &nbsp;<span class="math-inline">v_m = (0,3 / 3 ; &minus;0,6 / 3) = <strong>(0,1 ; &minus;0,2) m/s</strong></span>.
-              <br>&bull; Entre <span class="math-inline">6\text{s}</span> y <span class="math-inline">8\text{s}</span> (<span class="math-inline">&Delta;t = 2\text{s}</span>): &nbsp;<span class="math-inline">v_m = (0 / 2 ; &minus;0,6 / 2) = <strong>(0 ; &minus;0,3) m/s</strong></span>.
+              <br>&bull; Entre <span class="math-inline">0s</span> y <span class="math-inline">2s</span> (<span class="math-inline">&Delta;t = 2s</span>): &nbsp;<span class="math-inline">v<sub>m</sub> = (0,6 / 2 ; 1,2 / 2) = <strong>(0,3 ; 0,6) m/s</strong></span>.
+              <br>&bull; Entre <span class="math-inline">1s</span> y <span class="math-inline">4s</span> (<span class="math-inline">&Delta;t = 3s</span>): &nbsp;<span class="math-inline">v<sub>m</sub> = (0,3 / 3 ; &minus;0,6 / 3) = <strong>(0,1 ; &minus;0,2) m/s</strong></span>.
+              <br>&bull; Entre <span class="math-inline">6s</span> y <span class="math-inline">8s</span> (<span class="math-inline">&Delta;t = 2s</span>): &nbsp;<span class="math-inline">v<sub>m</sub> = (0 / 2 ; &minus;0,6 / 2) = <strong>(0 ; &minus;0,3) m/s</strong></span>.
             </div>
           </div>
         </div>
@@ -377,7 +377,7 @@
             <div class="precaution-card">
               <div class="precaution-card__header">Ejercicio 1: Cálculo de Desplazamiento Vectorial</div>
               <div class="precaution-card__body">
-                <p>Un objeto se encuentra en <span class="math-inline">r(1\text{s}) = (2, 5)\text{ m}</span> y a los <span class="math-inline">t = 5\text{s}</span> alcanza la posición <span class="math-inline">r(5\text{s}) = (14, &minus;1)\text{ m}</span>. Hallar el vector desplazamiento <span class="math-inline">&Delta;\mathbf{r}</span> y su módulo.</p>
+                <p>Un objeto se encuentra en <span class="math-inline">r(1s) = (2 ; 5) m</span> y a los <span class="math-inline">t = 5s</span> alcanza la posición <span class="math-inline">r(5s) = (14 ; &minus;1) m</span>. Hallar el vector desplazamiento <span class="math-inline">&Delta;r</span> y su módulo.</p>
                 <details class="note-box" style="margin-top:10px; cursor:pointer;">
                   <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
                   <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
@@ -392,13 +392,13 @@
             <div class="precaution-card">
               <div class="precaution-card__header">Ejercicio 2: Velocidad Media Vectorial</div>
               <div class="precaution-card__body">
-                <p>Con los datos del Ejercicio 1, determinar las componentes del vector velocidad media <span class="math-inline">\mathbf{v}_m</span> y su rapidez media.</p>
+                <p>Con los datos del Ejercicio 1, determinar las componentes del vector velocidad media <span class="math-inline">v<sub>m</sub></span> y su rapidez media.</p>
                 <details class="note-box" style="margin-top:10px; cursor:pointer;">
                   <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
                   <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
-                    1. Intervalo temporal: <span class="math-inline">&Delta;t = 5\text{s} &minus; 1\text{s} = 4\text{s}</span>.
-                    <br>2. <span class="math-inline">v_m = &Delta;r / &Delta;t = (12 / 4 ; &minus;6 / 4) = <strong>(3 ; &minus;1,5) m/s</strong></span>.
-                    <br>3. Módulo de velocidad media: <span class="math-inline">|v_m| = 13,42 / 4 &asymp; <strong>3,35 m/s</strong></span>.
+                    1. Intervalo temporal: <span class="math-inline">&Delta;t = 5s &minus; 1s = 4s</span>.
+                    <br>2. <span class="math-inline">v<sub>m</sub> = &Delta;r / &Delta;t = (12 / 4 ; &minus;6 / 4) = <strong>(3 ; &minus;1,5) m/s</strong></span>.
+                    <br>3. Módulo de velocidad media: <span class="math-inline">|v<sub>m</sub>| = 13,42 / 4 &asymp; <strong>3,35 m/s</strong></span>.
                   </p>
                 </details>
               </div>
@@ -408,13 +408,13 @@
             <div class="precaution-card" style="grid-column: 1 / -1;">
               <div class="precaution-card__header">Ejercicio 3: Aceleración Media por Cambio de Dirección</div>
               <div class="precaution-card__body">
-                <p>Un vehículo viaja hacia el Este a <span class="math-inline">v_1 = (20, 0)\text{ m/s}</span> y al cabo de <span class="math-inline">t = 2\text{s}</span> gira hacia el Norte manteniendo rapidez constante, teniendo <span class="math-inline">v_2 = (0, 20)\text{ m/s}</span>. Calcular el vector aceleración media <span class="math-inline">\mathbf{a}_m</span>.</p>
+                <p>Un vehículo viaja hacia el Este a <span class="math-inline">v<sub>1</sub> = (20 ; 0) m/s</span> y al cabo de <span class="math-inline">t = 2s</span> gira hacia el Norte manteniendo rapidez constante, teniendo <span class="math-inline">v<sub>2</sub> = (0 ; 20) m/s</span>. Calcular el vector aceleración media <span class="math-inline">a<sub>m</sub></span>.</p>
                 <details class="note-box" style="margin-top:10px; cursor:pointer;">
                   <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución</summary>
                   <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
-                    1. Variación de velocidad: <span class="math-inline">&Delta;v = v_2 &minus; v_1 = (0 &minus; 20 ; 20 &minus; 0) = (&minus;20 ; 20) m/s</span>.
-                    <br>2. Aceleración media: <span class="math-inline">a_m = &Delta;v / &Delta;t = (&minus;20 / 2 ; 20 / 2) = <strong>(&minus;10 ; 10) m/s<sup>2</sup></strong></span>.
-                    <br>3. Módulo: <span class="math-inline">|a_m| = &radic;((&minus;10)<sup>2</sup> + 10<sup>2</sup>) = &radic;200 &asymp; <strong>14,14 m/s<sup>2</sup></strong></span>.
+                    1. Variación de velocidad: <span class="math-inline">&Delta;v = v<sub>2</sub> &minus; v<sub>1</sub> = (0 &minus; 20 ; 20 &minus; 0) = (&minus;20 ; 20) m/s</span>.
+                    <br>2. Aceleración media: <span class="math-inline">a<sub>m</sub> = &Delta;v / &Delta;t = (&minus;20 / 2 ; 20 / 2) = <strong>(&minus;10 ; 10) m/s<sup>2</sup></strong></span>.
+                    <br>3. Módulo: <span class="math-inline">|a<sub>m</sub>| = &radic;((&minus;10)<sup>2</sup> + 10<sup>2</sup>) = &radic;200 &asymp; <strong>14,14 m/s<sup>2</sup></strong></span>.
                   </p>
                 </details>
               </div>
