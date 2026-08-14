@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Algebra desde Cero y Anotaciones: importancia del algebra, productos notables, factorizacion y resolucion paso a paso de ecuaciones lineales, cuadraticas, racionales, irracionales, exponenciales y logaritmicas.">
+  <title>Matemática desde cero / Anotaciones — Álgebra Fundamental | Study Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matematica.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__title">Study Portal — Álgebra desde Cero</span>
+    <div class="navbar__links">
+      <a href="index.html" class="navbar__btn">Home</a>
+      <a href="#importancia" class="navbar__btn">Importancia</a>
+      <a href="#productos-notables" class="navbar__btn">Productos Notables</a>
+      <a href="#ecuaciones" class="navbar__btn">Tipos de Ecuaciones</a>
+      <a href="#ejercicios" class="navbar__btn">Ejercicios</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="study">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="study__header">
+      <div class="window">
+        <div class="window__titlebar">
+          <span class="window__titlebar-text">algebra_desde_cero.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="window__body study__hero">
+          <p class="study__chapter">Matemática desde Cero / Anotaciones</p>
+          <h1 class="study__title">Álgebra Fundamental</h1>
+          <p class="study__intro">
+            Guía completa de iniciación y nivelación algebraicas: del lenguaje abstracto a la resolución de todo tipo de ecuaciones.<br>
+            Facultad de Ingeniería &mdash; Universidad Nacional de Mar del Plata
+          </p>
+          <div class="study__toc">
+            <p class="toc__label">Contenido de la Guía</p>
+            <ol class="toc__list">
+              <li><a href="#importancia">1. ¿Por qué el Álgebra es Fundamental?</a></li>
+              <li><a href="#productos-notables">2. Productos Notables y Demostraciones Geométricas</a></li>
+              <li><a href="#ecuaciones-lineales">3.1 Ecuaciones de Primer Grado (Lineales)</a></li>
+              <li><a href="#ecuaciones-cuadraticas">3.2 Ecuaciones de Segundo Grado (Cuadráticas, Bhaskara y Ruffini)</a></li>
+              <li><a href="#ecuaciones-racionales">3.3 Ecuaciones Racionales y Restricciones de Dominio</a></li>
+              <li><a href="#ecuaciones-irracionales">3.4 Ecuaciones Irracionales (Radicales)</a></li>
+              <li><a href="#ecuaciones-exponenciales">3.5 Ecuaciones Exponenciales</a></li>
+              <li><a href="#ecuaciones-logaritmicas">3.6 Ecuaciones Logarítmicas</a></li>
+              <li><a href="#ejercicios">4. Ejercicios Prácticos de Autoevaluación</a></li>
+            </ol>
+          </div>
+          <div class="study__nav-links">
+            <a href="index.html" class="nav-link nav-link--prev">&larr; Inicio / Portal Principal</a>
+            <a href="capitulo1/matematica.html" class="nav-link">Capítulo I: Números Reales &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== IMPORTANCIA DEL ALGEBRA ===================== -->
+    <section class="study__section" id="importancia">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--blue">
+          <span class="window__titlebar-text">importancia_algebra.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="section__header-row">
+            <h2 class="section__title">1. ¿Por qué el Álgebra es Fundamental?</h2>
+            <span class="section__symbol">f(x) = ax + b</span>
+          </div>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.6;">
+            El <strong>álgebra</strong> es la herramienta matemática que permite pasar de la aritmética básica (operaciones con números concretos) a un <strong>nivel de abstracción superior</strong> mediante el uso de símbolos y variables.
+          </p>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <h4 class="property-card__title" style="color:var(--teal-deep);">1. Resolución de Problemas Complejos</h4>
+              <p class="property-card__desc" style="font-size:0.9rem; line-height:1.6;">
+                Permite manejar incógnitas (representadas habitualmente por letras como <strong>x</strong>, <strong>y</strong>, <strong>z</strong>) para plantear y encontrar soluciones exactas en situaciones donde los números por sí solos no bastan.
+              </p>
+            </div>
+
+            <div class="property-card">
+              <h4 class="property-card__title" style="color:#2a6eb5;">2. Base para Otras Ciencias e Ingenierías</h4>
+              <p class="property-card__desc" style="font-size:0.9rem; line-height:1.6;">
+                Comprender álgebra es indispensable para aplicar leyes de la Física (ej. <span class="math-inline">F = m &middot; a</span>, <span class="math-inline">v = v_0 + a &middot; t</span>), Química, Economía, Computación e Ingeniería.
+              </p>
+            </div>
+
+            <div class="property-card">
+              <h4 class="property-card__title" style="color:#7b2d8e;">3. Estructura Lógica y Razonamiento</h4>
+              <p class="property-card__desc" style="font-size:0.9rem; line-height:1.6;">
+                Desarrolla el pensamiento analítico necesario para manipular expresiones mediante reglas específicas, como operaciones con monomios, polinomios, factorización y productos notables.
+              </p>
+            </div>
+
+            <div class="property-card">
+              <h4 class="property-card__title" style="color:#c0392b;">4. Métodos para Resolver Ecuaciones</h4>
+              <p class="property-card__desc" style="font-size:0.9rem; line-height:1.6;">
+                Proporciona los métodos para despejar variables en ecuaciones lineales, cuadráticas, racionales, irracionales, exponenciales y logarítmicas, siendo el pilar de todo el cálculo universitario.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTOS NOTABLES ===================== -->
+    <section class="study__section" id="productos-notables">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">productos_notables.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">2. Productos Notables y Demostraciones Geométricas</h2>
+
+          <p style="font-family:var(--font-terminal);font-size:1.05rem;color:var(--text-mid);margin-bottom:var(--space-lg);line-height:1.5;">
+            Los <strong>productos notables</strong> son multiplicaciones algebraicas cuyos resultados pueden escribirse directamente mediante fórmulas fijas sin necesidad de realizar toda la distribución paso a paso.
+          </p>
+
+          <!-- Binomio Suma al Cuadrado -->
+          <div class="definition-box" style="border-left-color:var(--purple-bright);">
+            <p class="definition-box__label">1. Binomio Suma al Cuadrado</p>
+            <p class="math-display" style="font-size:1.3rem;">
+              (a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup>
+            </p>
+            <p style="line-height:1.7;">
+              <strong>Demostración Algebraica:</strong>
+              <br><span class="math-inline">(a + b)<sup>2</sup> = (a + b)(a + b) = a &middot; a + a &middot; b + b &middot; a + b &middot; b = a<sup>2</sup> + ab + ab + b<sup>2</sup> = <strong>a<sup>2</sup> + 2ab + b<sup>2</sup></strong></span>.
+            </p>
+          </div>
+
+          <!-- SVG 1: Geometria de (a+b)^2 -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Demostración Geométrica del Cuadrado de un Binomio (a + b)<sup>2</sup> = a<sup>2</sup> + ab + ab + b<sup>2</sup></p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 320 280" class="number-line-svg" style="max-width:320px;">
+                <!-- Large Outer Square (a+b) x (a+b) -->
+                <rect x="40" y="30" width="220" height="220" fill="#fdfdfd" stroke="#333" stroke-width="2"/>
+
+                <!-- Region a^2 (Top-Left) -->
+                <rect x="40" y="30" width="140" height="140" fill="rgba(42,110,181,0.15)" stroke="#2a6eb5" stroke-width="1.5"/>
+                <text x="110" y="105" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2a6eb5">a<sup>2</sup></text>
+
+                <!-- Region ab (Top-Right) -->
+                <rect x="180" y="30" width="80" height="140" fill="rgba(26,138,90,0.15)" stroke="#1a8a5a" stroke-width="1.5"/>
+                <text x="220" y="105" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1a8a5a">a &middot; b</text>
+
+                <!-- Region ab (Bottom-Left) -->
+                <rect x="40" y="170" width="140" height="80" fill="rgba(26,138,90,0.15)" stroke="#1a8a5a" stroke-width="1.5"/>
+                <text x="110" y="215" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1a8a5a">a &middot; b</text>
+
+                <!-- Region b^2 (Bottom-Right) -->
+                <rect x="180" y="170" width="80" height="80" fill="rgba(192,57,43,0.15)" stroke="#c0392b" stroke-width="1.5"/>
+                <text x="220" y="215" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#c0392b">b<sup>2</sup></text>
+
+                <!-- Dimension Labels -->
+                <text x="110" y="22" text-anchor="middle" font-family="monospace" font-size="11" fill="#2a6eb5">a</text>
+                <text x="220" y="22" text-anchor="middle" font-family="monospace" font-size="11" fill="#1a8a5a">b</text>
+                <text x="30" y="105" text-anchor="middle" font-family="monospace" font-size="11" fill="#2a6eb5">a</text>
+                <text x="30" y="215" text-anchor="middle" font-family="monospace" font-size="11" fill="#1a8a5a">b</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Binomio Resta al Cuadrado -->
+          <div class="definition-box" style="margin-top:var(--space-md); border-left-color:#2a6eb5;">
+            <p class="definition-box__label">2. Binomio Resta al Cuadrado</p>
+            <p class="math-display" style="font-size:1.3rem;">
+              (a &minus; b)<sup>2</sup> = a<sup>2</sup> &minus; 2ab + b<sup>2</sup>
+            </p>
+            <p style="line-height:1.7;">
+              <strong>Demostración Algebraica:</strong>
+              <br><span class="math-inline">(a &minus; b)<sup>2</sup> = (a &minus; b)(a &minus; b) = a<sup>2</sup> &minus; ab &minus; ba + b<sup>2</sup> = <strong>a<sup>2</sup> &minus; 2ab + b<sup>2</sup></strong></span>.
+            </p>
+          </div>
+
+          <!-- Producto de Binomios Conjugados (Diferencia de Cuadrados) -->
+          <div class="definition-box" style="margin-top:var(--space-md); border-left-color:#c0392b;">
+            <p class="definition-box__label">3. Producto de Binomios Conjugados (Diferencia de Cuadrados)</p>
+            <p class="math-display" style="font-size:1.3rem;">
+              (a + b)(a &minus; b) = a<sup>2</sup> &minus; b<sup>2</sup>
+            </p>
+            <p style="line-height:1.7;">
+              <strong>Demostración Algebraica:</strong>
+              <br><span class="math-inline">(a + b)(a &minus; b) = a<sup>2</sup> &minus; ab + ba &minus; b<sup>2</sup> = a<sup>2</sup> &minus; b<sup>2</sup></span> (los términos cruzados <span class="math-inline">&minus;ab</span> y <span class="math-inline">+ab</span> se cancelan).
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TIPOS DE ECUACIONES ===================== -->
+    <section class="study__section" id="ecuaciones">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--green">
+          <span class="window__titlebar-text">metodos_resolucion_ecuaciones.sys</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">3. Tipos de Ecuaciones y Métodos de Resolución</h2>
+
+          <!-- 3.1 Ecuaciones Lineales -->
+          <div class="key-concept" id="ecuaciones-lineales" style="border-left-color:var(--teal-deep);">
+            <h3 class="key-concept__title" style="color:var(--teal-deep);">3.1 Ecuaciones de Primer Grado (Lineales)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Tienen la forma general <span class="math-inline">ax + b = 0</span> (con <span class="math-inline">a &ne; 0</span>).
+              <br><br>
+              <strong>Método de Resolución (Balanza de Igualdad):</strong>
+              <br>Se aplican las mismas operaciones matemáticas a ambos miembros de la ecuación para mantener el equilibrio y despejar la incógnita <span class="math-inline">x</span>.
+              <br><br>
+              <strong>Ejemplo Resuelto Paso a Paso:</strong>
+              <br>Resolver <span class="math-inline">5x &minus; 8 = 2x + 7</span>:
+              <br>1. Restamos <span class="math-inline">2x</span> a ambos miembros: <span class="math-inline">5x &minus; 2x &minus; 8 = 7 &rArr; 3x &minus; 8 = 7</span>.
+              <br>2. Sumamos <span class="math-inline">8</span> a ambos miembros: <span class="math-inline">3x = 7 + 8 &rArr; 3x = 15</span>.
+              <br>3. Dividimos por <span class="math-inline">3</span>: <span class="math-inline">x = 15 / 3 &rArr; <strong>x = 5</strong></span>.
+            </div>
+          </div>
+
+          <!-- 3.2 Ecuaciones Cuadraticas -->
+          <div class="key-concept" id="ecuaciones-cuadraticas" style="margin-top:var(--space-md); border-left-color:#2a6eb5;">
+            <h3 class="key-concept__title" style="color:#2a6eb5;">3.2 Ecuaciones de Segundo Grado (Cuadráticas, Bhaskara y Ruffini)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Forma general: <span class="math-inline">ax<sup>2</sup> + bx + c = 0</span> (con <span class="math-inline">a &ne; 0</span>).
+              <br><br>
+              <strong>1. Fórmula General Resolvente (Fórmula de Bhaskara):</strong>
+              <p class="math-display">
+                x = [ &minus;b &plusmn; &radic;(b<sup>2</sup> &minus; 4ac) ] / (2a)
+              </p>
+              &bull; El término dentro de la raíz <span class="math-inline">&Delta; = b<sup>2</sup> &minus; 4ac</span> se llama <strong>Discriminante</strong>:
+              <br>&nbsp;&nbsp;&ndash; Si <span class="math-inline">&Delta; &gt; 0</span>: Dos soluciones reales distintas.
+              <br>&nbsp;&nbsp;&ndash; Si <span class="math-inline">&Delta; = 0</span>: Una solución real doble (<span class="math-inline">x_1 = x_2 = &minus;b/(2a)</span>).
+              <br>&nbsp;&nbsp;&ndash; Si <span class="math-inline">&Delta; &lt; 0</span>: No existen soluciones reales (dos raíces complejas conjugadas).
+              <br><br>
+              <strong>2. Método de Ruffini (División Sintética):</strong>
+              <br>Se utiliza para encontrar raíces enteras de un polinomio evaluando los divisores del término independiente <span class="math-inline">c</span>. Si al evaluar el polinomio en un candidato <span class="math-inline">x = r</span> se obtiene cero (<span class="math-inline">P(r) = 0</span>), entonces <span class="math-inline">(x &minus; r)</span> es un factor del polinomio.
+              <br><br>
+              <strong>3. Factorización Sacando Factor Común:</strong>
+              <br>Si la ecuación no tiene término independiente (<span class="math-inline">c = 0</span>): <span class="math-inline">ax<sup>2</sup> + bx = 0 &rArr; x &middot; (ax + b) = 0</span>.
+              <br>Por la propiedad del producto nulo: <span class="math-inline"><strong>x<sub>1</sub> = 0</strong></span> o bien <span class="math-inline">ax + b = 0 &rArr; <strong>x<sub>2</sub> = &minus;b / a</strong></span>.
+            </div>
+          </div>
+
+          <!-- SVG 2: Parabola Cuadratica -->
+          <div class="diagram-box" style="margin-top:var(--space-md);">
+            <p class="diagram-box__label">Gráfica de una Función Cuadrática: Vértice V(h,k) y Raíces x_1, x_2 en el Eje X</p>
+            <div class="number-line-container">
+              <svg viewBox="0 0 300 200" class="number-line-svg" style="max-width:300px;">
+                <!-- Grid -->
+                <path d="M 0 40 L 300 40 M 0 80 L 300 80 M 0 120 L 300 120 M 0 160 L 300 160" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- Cartesian Axes: Origin O(150, 140) -->
+                <line x1="20" y1="140" x2="280" y2="140" stroke="#777" stroke-width="1.5"/>
+                <line x1="150" y1="15" x2="150" y2="185" stroke="#777" stroke-width="1.5"/>
+                <text x="270" y="155" font-family="monospace" font-size="8" fill="#777">X</text>
+                <text x="135" y="25" font-family="monospace" font-size="8" fill="#777">Y</text>
+
+                <!-- Parabola f(x) = a(x - h)^2 + k -->
+                <path d="M 60 25 Q 150 210 240 25" fill="none" stroke="#2a6eb5" stroke-width="2.5"/>
+
+                <!-- Roots x1, x2 -->
+                <circle cx="95" cy="140" r="4" fill="#c0392b"/>
+                <text x="85" y="130" font-family="monospace" font-size="8" font-weight="bold" fill="#c0392b">x<sub>1</sub></text>
+
+                <circle cx="205" cy="140" r="4" fill="#c0392b"/>
+                <text x="210" y="130" font-family="monospace" font-size="8" font-weight="bold" fill="#c0392b">x<sub>2</sub></text>
+
+                <!-- Vertex V(150, 168) -->
+                <circle cx="150" cy="168" r="4" fill="#1a8a5a"/>
+                <text x="160" y="175" font-family="monospace" font-size="8" font-weight="bold" fill="#1a8a5a">Vértice V(h,k)</text>
+
+                <!-- Axis of Symmetry -->
+                <line x1="150" y1="20" x2="150" y2="180" stroke="#1a8a5a" stroke-width="1" stroke-dasharray="3,3"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- 3.3 Ecuaciones Racionales -->
+          <div class="key-concept" id="ecuaciones-racionales" style="margin-top:var(--space-md); border-left-color:#7b2d8e;">
+            <h3 class="key-concept__title" style="color:#7b2d8e;">3.3 Ecuaciones Racionales (Incógnita en el Denominador)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Son aquellas donde la incógnita <span class="math-inline">x</span> aparece en el denominador de alguna fracción algebraicas.
+              <br><br>
+              <strong style="color:#c0392b;">PASO OBLIGATORIO - Restricciones de Dominio:</strong>
+              <br>Dado que la división por cero no está definida en los reales, se debe establecer antes de operar que <strong>ningún denominador sea igual a cero</strong> (<span class="math-inline">Q(x) &ne; 0</span>).
+              <br><br>
+              <strong>Método de Resolución (Linealización):</strong>
+              <br>Se multiplican ambos miembros por el Mínimo Común Denominador (MCD) para eliminar las fracciones y obtener una ecuación lineal o cuadrática equivalente.
+              <br><br>
+              <strong>Ejemplo Resuelto Paso a Paso:</strong>
+              <br>Resolver <span class="math-inline">3 / (x &minus; 2) = 5 / (x + 4)</span>:
+              <br>1. Restricciones: <span class="math-inline">x &minus; 2 &ne; 0 &rArr; x &ne; 2</span> &nbsp;y&nbsp; <span class="math-inline">x + 4 &ne; 0 &rArr; x &ne; &minus;4</span>.
+              <br>2. Multiplicamos cruzado: <span class="math-inline">3(x + 4) = 5(x &minus; 2)</span>.
+              <br>3. Aplicamos distributiva: <span class="math-inline">3x + 12 = 5x &minus; 10</span>.
+              <br>4. Agrupamos términos: <span class="math-inline">12 + 10 = 5x &minus; 3x &rArr; 22 = 2x &rArr; <strong>x = 11</strong></span>.
+              <br>5. Verificamos con las restricciones: Como <span class="math-inline">11 &ne; 2</span> y <span class="math-inline">11 &ne; &minus;4</span>, la solución es <strong>válida</strong>.
+            </div>
+          </div>
+
+          <!-- 3.4 Ecuaciones Irracionales -->
+          <div class="key-concept" id="ecuaciones-irracionales" style="margin-top:var(--space-md); border-left-color:#c0392b;">
+            <h3 class="key-concept__title" style="color:#c0392b;">3.4 Ecuaciones Irracionales (Radicales)</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Son aquellas donde la incógnita <span class="math-inline">x</span> se encuentra dentro del radicado de una raíz (ej. <span class="math-inline">&radic;P(x)</span>).
+              <br><br>
+              <strong>Método de Resolución:</strong>
+              <br>1. Aislamos el término que contiene la raíz en uno de los miembros de la igualdad.
+              <br>2. Elevamos ambos miembros al cuadrado (o a la potencia según el índice del radical) para eliminar la raíz.
+              <br>3. Resolvemos la ecuación resultante.
+              <br><br>
+              <strong style="color:#c0392b;">PASO OBLIGATORIO - Verificación de Soluciones Extrañas:</strong>
+              <br>Elevar ambos lados al cuadrado puede introducir "soluciones falsas" o extrañas (ya que <span class="math-inline">A<sup>2</sup> = B<sup>2</sup></span> no garantiza que <span class="math-inline">A = B</span>, pudendo ser <span class="math-inline">A = &minus;B</span>). Por lo tanto, <strong>es imprescindible reemplazar cada solución obtenida en la ecuación original</strong> para confirmar su validez.
+              <br><br>
+              <strong>Ejemplo Resuelto Paso a Paso:</strong>
+              <br>Resolver <span class="math-inline">&radic;(x + 5) = x &minus; 1</span>:
+              <br>1. Elevamos al cuadrado: <span class="math-inline">[&radic;(x + 5)]<sup>2</sup> = (x &minus; 1)<sup>2</sup> &rArr; x + 5 = x<sup>2</sup> &minus; 2x + 1</span>.
+              <br>2. Igualamos a cero: <span class="math-inline">x<sup>2</sup> &minus; 3x &minus; 4 = 0</span>.
+              <br>3. Aplicamos Bhaskara: <span class="math-inline">x = [3 &plusmn; &radic;(9 &minus; 4(1)(&minus;4))] / 2 = [3 &plusmn; 5] / 2 &rArr; <strong>x<sub>1</sub> = 4</strong>, <strong>x<sub>2</sub> = &minus;1</strong></span>.
+              <br>4. <strong>Verificación:</strong>
+              <br>&nbsp;&nbsp;&bull; Para <span class="math-inline">x = 4</span>: <span class="math-inline">&radic;(4 + 5) = 4 &minus; 1 &rArr; &radic;9 = 3 &rArr; 3 = 3</span> (¡VÁLIDA!).
+              <br>&nbsp;&nbsp;&bull; Para <span class="math-inline">x = &minus;1</span>: <span class="math-inline">&radic;(&minus;1 + 5) = &minus;1 &minus; 1 &rArr; &radic;4 = &minus;2 &rArr; 2 &ne; &minus;2</span> (¡FALSA / EXTRAÑA!).
+              <br><em>Resultado final:</em> La única solución real es <strong>x = 4</strong>.
+            </div>
+          </div>
+
+          <!-- 3.5 Ecuaciones Exponenciales -->
+          <div class="key-concept" id="ecuaciones-exponenciales" style="margin-top:var(--space-md); border-left-color:#1a8a5a;">
+            <h3 class="key-concept__title" style="color:#1a8a5a;">3.5 Ecuaciones Exponenciales</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Son aquellas donde la incógnita <span class="math-inline">x</span> forma parte del exponente de una potencia (ej. <span class="math-inline">a<sup>f(x)</sup> = c</span>).
+              <br><br>
+              <strong>Métodos de Resolución:</strong>
+              <br><strong>Caso A (Igualación de Bases):</strong> Se busca expresar ambos miembros como potencias de una misma base <span class="math-inline">a</span>. Utilizando la propiedad de inyectividad:
+              <p class="math-display">
+                a<sup>f(x)</sup> = a<sup>g(x)</sup> &rArr; f(x) = g(x)
+              </p>
+              <em>Ejemplo:</em> <span class="math-inline">2<sup>3x &minus; 1</sup> = 16 &rArr; 2<sup>3x &minus; 1</sup> = 2<sup>4</sup> &rArr; 3x &minus; 1 = 4 &rArr; 3x = 5 &rArr; <strong>x = 5/3</strong></span>.
+              <br><br>
+              <strong>Caso B (Uso de Logaritmos):</strong> Cuando las bases no pueden reducirse a una común, se aplican logaritmos en ambos miembros:
+              <br><em>Ejemplo:</em> <span class="math-inline">3<sup>x</sup> = 7 &rArr; ln(3<sup>x</sup>) = ln(7) &rArr; x &middot; ln(3) = ln(7) &rArr; <strong>x = ln(7) / ln(3) &asymp; 1,771</strong></span>.
+            </div>
+          </div>
+
+          <!-- 3.6 Ecuaciones Logaritmicas -->
+          <div class="key-concept" id="ecuaciones-logaritmicas" style="margin-top:var(--space-md); border-left-color:#0a7b8f;">
+            <h3 class="key-concept__title" style="color:#0a7b8f;">3.6 Ecuaciones Logarítmicas</h3>
+            <div class="note-box" style="background:#fff; margin-top:10px; line-height:1.7;">
+              Están íntimamente relacionadas con las exponenciales. La incógnita <span class="math-inline">x</span> aparece dentro del argumento de un logaritmo (ej. <span class="math-inline">log_b(f(x)) = c</span>).
+              <br><br>
+              <strong>Definición de Logaritmo:</strong> El logaritmo en base <span class="math-inline">b</span> de un número es el exponente al cual se debe elevar la base <span class="math-inline">b</span> para obtener dicho número:
+              <p class="math-display">
+                log<sub>b</sub>(A) = c &hArr; b<sup>c</sup> = A &nbsp;&nbsp;&nbsp;&nbsp;(con A &gt; 0, b &gt; 0, b &ne; 1)
+              </p>
+              <strong>Propiedades Clave para Agrupar Logaritmos:</strong>
+              <br>&bull; <span class="math-inline">log_b(A) + log_b(B) = log_b(A &middot; B)</span>.
+              <br>&bull; <span class="math-inline">log_b(A) &minus; log_b(B) = log_b(A / B)</span>.
+              <br>&bull; <span class="math-inline">n &middot; log_b(A) = log_b(A<sup>n</sup>)</span>.
+              <br><br>
+              <strong>Ejemplo Resuelto Paso a Paso:</strong>
+              <br>Resolver <span class="math-inline">log_2(x + 3) + log_2(x &minus; 3) = 4</span>:
+              <br>1. Agrupamos con el producto de argumentos: <span class="math-inline">log_2[(x + 3)(x &minus; 3)] = 4</span>.
+              <br>2. Aplicamos la definición de logaritmo: <span class="math-inline">(x + 3)(x &minus; 3) = 2<sup>4</sup> = 16</span>.
+              <br>3. Por diferencia de cuadrados: <span class="math-inline">x<sup>2</sup> &minus; 9 = 16 &rArr; x<sup>2</sup> = 25 &rArr; x = &plusmn;5</span>.
+              <br>4. <strong>Verificación del dominio (Argumento &gt; 0):</strong>
+              <br>&nbsp;&nbsp;&bull; Para <span class="math-inline">x = 5</span>: <span class="math-inline">5 + 3 = 8 &gt; 0</span> y <span class="math-inline">5 &minus; 3 = 2 &gt; 0</span> (¡VÁLIDO!).
+              <br>&nbsp;&nbsp;&bull; Para <span class="math-inline">x = &minus;5</span>: <span class="math-inline">&minus;5 + 3 = &minus;2 &lt; 0</span> (¡INVÁLIDO, no existen logaritmos de números negativos!).
+              <br><em>Resultado final:</em> <strong>x = 5</strong>.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EJERCICIOS DE AUTOEVALUACION ===================== -->
+    <section class="study__section" id="ejercicios">
+      <div class="section__window">
+        <div class="window__titlebar window__titlebar--purple">
+          <span class="window__titlebar-text">ejercicios_autoevaluacion.exe</span>
+          <div class="window__titlebar-buttons">
+            <span class="window__titlebar-btn">-</span>
+            <span class="window__titlebar-btn">o</span>
+            <span class="window__titlebar-btn">x</span>
+          </div>
+        </div>
+        <div class="section__content">
+          <h2 class="section__title">4. Ejercicios Prácticos de Autoevaluación</h2>
+
+          <div class="precaution-grid">
+            
+            <!-- Ejercicio 1 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 1: Aplicación de Productos Notables</div>
+              <div class="precaution-card__body">
+                <p>Desarrollar la expresión <span class="math-inline">(3x &minus; 4)<sup>2</sup></span> utilizando la fórmula del binomio resta al cuadrado.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución Paso a Paso</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Aplicamos <span class="math-inline">(a &minus; b)<sup>2</sup> = a<sup>2</sup> &minus; 2ab + b<sup>2</sup></span> con <span class="math-inline">a = 3x</span> y <span class="math-inline">b = 4</span>.
+                    <br>2. <span class="math-inline">(3x)<sup>2</sup> &minus; 2(3x)(4) + 4<sup>2</sup> = <strong>9x<sup>2</sup> &minus; 24x + 16</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 2 -->
+            <div class="precaution-card">
+              <div class="precaution-card__header">Ejercicio 2: Ecuación Racional con Restricción</div>
+              <div class="precaution-card__body">
+                <p>Resolver la ecuación <span class="math-inline">(2x + 1) / (x &minus; 3) = 5</span> y verificar su validez en el dominio.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución Paso a Paso</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Restricción: <span class="math-inline">x &minus; 3 &ne; 0 &rArr; x &ne; 3</span>.
+                    <br>2. Multiplicamos por el denominador: <span class="math-inline">2x + 1 = 5(x &minus; 3)</span>.
+                    <br>3. Distributiva: <span class="math-inline">2x + 1 = 5x &minus; 15 &rArr; 16 = 3x &rArr; <strong>x = 16/3</strong></span>.
+                    <br>4. Como <span class="math-inline">16/3 &ne; 3</span>, la solución es válida.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Ejercicio 3 -->
+            <div class="precaution-card" style="grid-column: 1 / -1;">
+              <div class="precaution-card__header">Ejercicio 3: Ecuación Exponencial con Cambio de Base</div>
+              <div class="precaution-card__body">
+                <p>Hallar la solución de la ecuación exponencial <span class="math-inline">9<sup>x &minus; 1</sup> = 27<sup>x + 2</sup></span> reduciendo ambos miembros a potencias de base 3.</p>
+                <details class="note-box" style="margin-top:10px; cursor:pointer;">
+                  <summary style="font-weight:bold; color:var(--teal-deep);">Ver Resolución Paso a Paso</summary>
+                  <p style="margin-top:5px; font-size:0.85rem; line-height:1.5;">
+                    1. Expresamos como base 3: <span class="math-inline">9 = 3<sup>2</sup></span> y <span class="math-inline">27 = 3<sup>3</sup></span>.
+                    <br>2. Sustituimos: <span class="math-inline">(3<sup>2</sup>)<sup>x &minus; 1</sup> = (3<sup>3</sup>)<sup>x + 2</sup> &rArr; 3<sup>2x &minus; 2</sup> = 3<sup>3x + 6</sup></span>.
+                    <br>3. Igualamos exponentes: <span class="math-inline">2x &minus; 2 = 3x + 6 &rArr; &minus;2 &minus; 6 = 3x &minus; 2x &rArr; <strong>x = &minus;8</strong></span>.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="study__section" style="text-align:center;">
+      <div class="study__nav-links" style="justify-content:center;">
+        <a href="index.html" class="nav-link nav-link--prev">&larr; Inicio / Portal Principal</a>
+        <a href="capitulo1/matematica.html" class="nav-link">Ir a Capítulo I: Números Reales &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__name">Iván Ismael Cardozo</p>
+    <p class="footer__year">&copy; <span id="year"></span></p>
+    <p class="footer__decoration">&middot; &middot; &middot; &#9734; &middot; &middot; &middot;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
