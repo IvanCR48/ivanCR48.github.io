@@ -1,267 +1,526 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Portal de estudio para la Facultad de Ingeniería — Mar del Plata. Case of Study por Iván Ismael Cardozo.">
-  <title>Study Portal — Iván Ismael Cardozo</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  <title>小蓝道 - Iván Ismael Cardozo (@IvanCR48) :: Portfolio</title>
+  <meta name="description" content="Iván Ismael Cardozo (@IvanCR48) - Y2K / Frutiger Aero Desktop Portfolio">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" type="image/gif">
 </head>
+<body>
 
-<body class="body--argentine">
+  <!-- Desktop Workspace Area -->
+  <div class="desktop-workspace" id="desktop-workspace">
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar">
-    <span class="navbar__title">Study Portal</span>
-    <div class="navbar__links">
-      <a href="#" class="navbar__btn">Home</a>
-      <a href="capitulo1/matematica.html" class="navbar__btn">Cap I</a>
-      <a href="capitulo2/funciones.html" class="navbar__btn">Cap II</a>
-      <a href="capitulo3/operaciones.html" class="navbar__btn">Cap III</a>
-      <a href="#about" class="navbar__btn">About</a>
+    <!-- Desktop Shortcut Icons -->
+    <div class="desktop-shortcuts">
+      <div class="desktop-icon-btn" id="icon-mycomputer" title="My Computer">
+        <svg class="desktop-icon-img" viewBox="0 0 48 48" fill="none">
+          <rect x="6" y="8" width="36" height="26" rx="2" fill="#E6F2FF" stroke="#0C4A8A" stroke-width="2"/>
+          <rect x="10" y="12" width="28" height="18" fill="#1864B4"/>
+          <path d="M12 14L36 30M12 30L36 14" stroke="#4AA4FF" stroke-width="0.5" opacity="0.4"/>
+          <rect x="18" y="34" width="12" height="4" fill="#99C2EC" stroke="#0C4A8A" stroke-width="1.5"/>
+          <rect x="14" y="38" width="20" height="3" rx="1" fill="#CADDF4" stroke="#0C4A8A" stroke-width="1.5"/>
+        </svg>
+        <span>我的电脑</span>
+      </div>
+
+      <div class="desktop-icon-btn" id="icon-portfolio" title="Open Portfolio Window">
+        <svg class="desktop-icon-img" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="18" fill="url(#blueBubble)" stroke="#FFFFFF" stroke-width="2"/>
+          <defs>
+            <radialGradient id="blueBubble" cx="35%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#9AD3FF"/>
+              <stop offset="60%" stop-color="#0066CC"/>
+              <stop offset="100%" stop-color="#002966"/>
+            </radialGradient>
+          </defs>
+          <text x="24" y="31" font-size="20" font-family="serif" font-weight="bold" font-style="italic" fill="#FFFFFF" text-anchor="middle">i</text>
+        </svg>
+        <span>小蓝道</span>
+      </div>
+
+      <a href="https://github.com/IvanCR48" target="_blank" rel="noopener noreferrer" class="desktop-icon-btn" title="Visit GitHub Profile">
+        <svg class="desktop-icon-img" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="19" fill="#1E2327" stroke="#60A5FA" stroke-width="1.5"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M24 10C16.27 10 10 16.27 10 24C10 30.19 14.02 35.43 19.59 37.28C20.29 37.41 20.54 36.98 20.54 36.61C20.54 36.28 20.53 35.19 20.52 34.03C16.63 34.88 15.81 32.36 15.81 32.36C15.17 30.74 14.25 30.31 14.25 30.31C12.98 29.44 14.35 29.46 14.35 29.46C15.75 29.56 16.49 30.9 16.49 30.9C17.74 33.04 19.77 32.42 20.57 32.06C20.7 31.15 21.06 30.53 21.46 30.18C18.35 29.83 15.09 28.62 15.09 23.25C15.09 21.72 15.63 20.47 16.53 19.49C16.38 19.14 15.9 17.71 16.67 15.78C16.67 15.78 17.84 15.41 20.52 17.22C21.64 16.91 22.82 16.75 24 16.75C25.18 16.75 26.36 16.91 27.48 17.22C30.15 15.41 31.32 15.78 31.32 15.78C32.1 17.71 31.62 19.14 31.47 19.49C32.37 20.47 32.91 21.72 32.91 23.25C32.91 28.64 29.64 29.82 26.52 30.17C27.02 30.6 27.47 31.46 27.47 32.78C27.47 34.67 27.45 36.19 27.45 36.61C27.45 36.98 27.7 37.42 28.42 37.28C33.98 35.43 38 30.19 38 24C38 16.27 31.73 10 24 10Z" fill="#FFFFFF"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+
+      <div class="desktop-icon-btn" id="icon-recyclebin" title="Recycle Bin">
+        <svg class="desktop-icon-img" viewBox="0 0 48 48" fill="none">
+          <path d="M14 16L17 40H31L34 16" fill="#CBE0F8" stroke="#0D4685" stroke-width="2"/>
+          <path d="M11 14H37M20 10H28" stroke="#0D4685" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 20V36M24 20V36M28 20V36" stroke="#4F8AC9" stroke-width="1.5"/>
+        </svg>
+        <span>回收站</span>
+      </div>
     </div>
-  </nav>
 
-  <!-- ===== TICKER ===== -->
-  <div class="ticker" aria-hidden="true">
-    <span class="ticker__inner">
-      ★ Welcome to the Study Portal ★ Facultad de Ingeniería — Mar del Plata ★ Matemática ★ Preparing for the future ★
-      Hand-coded with love ★ Y2K vibes ★ Keep studying ★
-    </span>
+    <!-- MAIN Y2K RETRO MESSENGER WINDOW -->
+    <div class="messenger-window" id="messenger-window">
+
+      <!-- Window Title Bar -->
+      <div class="window-titlebar" id="window-titlebar">
+        <div class="titlebar-left">
+          <div class="title-icon-bubble">i</div>
+          <span class="window-title-text">小蓝道 - IvanCR48.exe</span>
+        </div>
+        <div class="titlebar-controls">
+          <button class="win-btn minimize" id="btn-minimize" title="Minimize">_</button>
+          <button class="win-btn maximize" id="btn-maximize" title="Maximize">🗖</button>
+          <button class="win-btn close" id="btn-close" title="Close">✕</button>
+        </div>
+      </div>
+
+      <!-- Window Menu Bar -->
+      <div class="window-menubar">
+        <div class="menubar-menus">
+          <!-- File Menu -->
+          <div class="menu-item-wrapper">
+            <button class="menu-item-btn" id="menu-file">文件(<u>F</u>)</button>
+            <div class="dropdown-menu" id="dropdown-file">
+              <a href="https://github.com/IvanCR48" target="_blank" rel="noopener"><span>🌐 Open GitHub Profile</span><kbd>Alt+G</kbd></a>
+              <a href="https://github.com/IvanCR48?tab=repositories" target="_blank" rel="noopener"><span>📂 Browse Repositories</span><kbd>Alt+R</kbd></a>
+              <div class="dropdown-divider"></div>
+              <button id="menu-sound-toggle"><span>🔊 Toggle Sound FX</span><kbd>ON</kbd></button>
+              <button id="menu-save-profile"><span>💾 Bookmark Page</span><kbd>Ctrl+D</kbd></button>
+              <div class="dropdown-divider"></div>
+              <button id="menu-exit"><span>✕ Minimize Window</span><kbd>Alt+F4</kbd></button>
+            </div>
+          </div>
+
+          <!-- Friends Menu -->
+          <div class="menu-item-wrapper">
+            <button class="menu-item-btn" id="menu-friends">朋友(<u>B</u>)</button>
+            <div class="dropdown-menu" id="dropdown-friends">
+              <button id="menu-add-friend-action"><span>⭐ Add Friend (Follow)</span></button>
+              <button id="menu-quick-shout"><span>💬 Jump to Shoutbox</span></button>
+              <div class="dropdown-divider"></div>
+              <a href="https://github.com/IvanCR48" target="_blank"><span>👤 Contact: @IvanCR48</span></a>
+            </div>
+          </div>
+
+          <!-- Tools Menu -->
+          <div class="menu-item-wrapper">
+            <button class="menu-item-btn" id="menu-tools">功能(<u>A</u>)</button>
+            <div class="dropdown-menu" id="dropdown-tools">
+              <button id="menu-play-music"><span>▶ Play/Pause City Pop</span></button>
+              <button id="menu-next-track"><span>⏭ Next Track</span></button>
+              <div class="dropdown-divider"></div>
+              <button id="menu-clear-chat"><span>🧹 Clear Local Chat</span></button>
+            </div>
+          </div>
+
+          <!-- Settings Menu -->
+          <div class="menu-item-wrapper">
+            <button class="menu-item-btn" id="menu-settings">设置(<u>T</u>)</button>
+            <div class="dropdown-menu" id="dropdown-settings">
+              <button id="menu-toggle-wallpaper"><span>🖼️ Toggle Wallpaper</span></button>
+              <button id="menu-info-dialog"><span>ⓘ About Portfolio v2.0</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menubar Right Controls: Select filter & Search -->
+        <div class="menubar-controls">
+          <select class="menu-select" id="category-filter" title="Filter section">
+            <option value="all">全部的 (All)</option>
+            <option value="bio">个人简介 (About)</option>
+            <option value="projects">项目库 (Projects)</option>
+            <option value="shoutbox">留言板 (Guestbook)</option>
+            <option value="music">音乐 (City Pop)</option>
+          </select>
+          <div class="menu-search-wrap">
+            <input type="text" class="menu-search-input" id="quick-search" placeholder="搜索... / Search">
+            <button class="retro-btn" id="btn-search-go">选择</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Window Inner Body Layout -->
+      <div class="window-content">
+
+        <!-- ================= LEFT COLUMN ================= -->
+        <div class="col-left">
+
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <div class="profile-header-row">
+              <!-- Avatar with animated GIF -->
+              <div class="avatar-frame" title="Iván Ismael Cardozo">
+                <img src="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" alt="IvanCR48 Avatar" id="user-avatar-img">
+                <div class="avatar-online-dot" title="Online now"></div>
+              </div>
+
+              <!-- Profile Details -->
+              <div class="profile-details">
+                <div class="profile-name-row">
+                  <span class="star-badge" id="star-badge" title="Click to favorite / give star">☆</span>
+                  <span class="profile-display-name" title="Iván Ismael Cardozo">Iván Ismael Cardozo</span>
+                </div>
+                <div class="profile-username">@IvanCR48</div>
+              </div>
+
+              <!-- Quick Status Badges -->
+              <div class="profile-badge-row">
+                <div class="badge-mini-btn" id="badge-pc" title="Status: Online & Coding">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="#1D4E89">
+                    <path d="M4 4h16v11H4V4zm-2 13h20v2H2v-2zM9 19h6v1H9v-1z"/>
+                  </svg>
+                </div>
+                <div class="badge-mini-btn" id="badge-chat" title="Activity: Building Tools & Frontends">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="#D9534F">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                  </svg>
+                </div>
+                <div class="badge-mini-btn" id="badge-globe" title="Location: Argentina 🇦🇷">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="#2E7D32">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Glossy Navigation Tabs -->
+            <div class="nav-tab-row">
+              <button class="tab-btn active" data-tab="tab-notes">笔记</button>
+              <button class="tab-btn" data-tab="tab-chat">对话</button>
+              <button class="tab-btn" data-tab="tab-info">信息</button>
+              <button class="tab-btn" data-tab="tab-media">媒体</button>
+            </div>
+          </div>
+
+          <!-- Lower Wrap: Toolbar + User Database Card -->
+          <div class="left-lower-wrap">
+
+            <!-- Vertical Icon Toolbar (XP icons) -->
+            <div class="vertical-icon-bar">
+              <!-- Globe -->
+              <button class="v-tool-btn active" id="tool-globe" title="GitHub Web Links">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="16" r="14" fill="url(#globeGrad)" stroke="#19529B" stroke-width="1.5"/>
+                  <ellipse cx="16" cy="16" rx="7" ry="14" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+                  <line x1="2" y1="16" x2="30" y2="16" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+                  <line x1="5" y1="9" x2="27" y2="9" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+                  <line x1="5" y1="23" x2="27" y2="23" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+                  <defs>
+                    <linearGradient id="globeGrad" x1="0" y1="0" x2="32" y2="32">
+                      <stop offset="0%" stop-color="#4AA8FF"/>
+                      <stop offset="100%" stop-color="#094A9E"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </button>
+
+              <!-- iPod / MP3 Player -->
+              <button class="v-tool-btn" id="tool-ipod" title="Music & City Pop Player">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <rect x="7" y="3" width="18" height="26" rx="4" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.5"/>
+                  <rect x="10" y="6" width="12" height="10" rx="1" fill="#4B95E2" stroke="#2562A2" stroke-width="1"/>
+                  <circle cx="16" cy="22" r="5" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="1"/>
+                  <circle cx="16" cy="22" r="2" fill="#FFFFFF"/>
+                </svg>
+              </button>
+
+              <!-- Calendar / Desk Organizer -->
+              <button class="v-tool-btn" id="tool-calendar" title="Activity & Milestones">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <rect x="5" y="7" width="22" height="20" rx="2" fill="#FFFFFF" stroke="#1D538F" stroke-width="1.5"/>
+                  <rect x="5" y="7" width="22" height="6" fill="#D32F2F"/>
+                  <line x1="10" y1="4" x2="10" y2="8" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="22" y1="4" x2="22" y2="8" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="10" cy="18" r="1.5" fill="#1D538F"/>
+                  <circle cx="16" cy="18" r="1.5" fill="#1D538F"/>
+                  <circle cx="22" cy="18" r="1.5" fill="#1D538F"/>
+                  <circle cx="10" cy="23" r="1.5" fill="#1D538F"/>
+                  <circle cx="16" cy="23" r="1.5" fill="#1D538F"/>
+                </svg>
+              </button>
+
+              <!-- Recycle Bin -->
+              <button class="v-tool-btn" id="tool-trash" title="Recycle Bin (Easter Egg)">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M9 11L11 27H21L23 11" fill="#D3E5F9" stroke="#19529B" stroke-width="1.5"/>
+                  <path d="M7 10H25M13 7H19" stroke="#19529B" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="13" y1="14" x2="13" y2="24" stroke="#6096CF" stroke-width="1.2"/>
+                  <line x1="16" y1="14" x2="16" y2="24" stroke="#6096CF" stroke-width="1.2"/>
+                  <line x1="19" y1="14" x2="19" y2="24" stroke="#6096CF" stroke-width="1.2"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- User Database Card -->
+            <div class="user-database-card">
+              <div class="db-card-header">
+                <div class="db-header-title">
+                  <span class="fold-arrow">⌵</span>
+                  <span>我的账户!</span>
+                </div>
+                <div class="db-badge-sub">
+                  <span>ⓘ —user database...</span>
+                </div>
+              </div>
+
+              <!-- Database Body Content -->
+              <div class="db-card-body" id="db-content-area">
+                <div class="db-bio-text">
+                  <strong>Iván Ismael Cardozo</strong> — Developer based in Argentina 🇦🇷.
+                  Specialized in web development, QML desktop interfaces, system utilities, and nostalgic Y2K/Frutiger Aero aesthetic craft.
+                </div>
+
+                <div class="linked-webs-section">
+                  <div class="linked-webs-title">
+                    <span>🌐</span>
+                    <span>@linked webs...</span>
+                  </div>
+                  <div class="tree-links">
+                    <a href="https://github.com/IvanCR48" target="_blank" rel="noopener" class="tree-link-item">
+                      <span class="tree-branch">↳</span>
+                      <span>github.com/IvanCR48</span>
+                    </a>
+                    <a href="https://github.com/IvanCR48/Pocket-AntiGravityIDE" target="_blank" rel="noopener" class="tree-link-item">
+                      <span class="tree-branch">↳</span>
+                      <span>Pocket-AntiGravityIDE</span>
+                    </a>
+                    <a href="https://github.com/IvanCR48/RathonWare" target="_blank" rel="noopener" class="tree-link-item">
+                      <span class="tree-branch">↳</span>
+                      <span>RathonWare (QML)</span>
+                    </a>
+                    <a href="https://github.com/IvanCR48/RobosMDP-Remix" target="_blank" rel="noopener" class="tree-link-item">
+                      <span class="tree-branch">↳</span>
+                      <span>RobosMDP-Remix (JS)</span>
+                    </a>
+                    <a href="https://github.com/IvanCR48/AdvancedMonitor" target="_blank" rel="noopener" class="tree-link-item">
+                      <span class="tree-branch">↳</span>
+                      <span>AdvancedMonitor & ERP</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Bottom Action Buttons -->
+              <div class="db-card-footer">
+                <button class="db-action-btn" id="btn-add-friend">
+                  <span>⭐</span>
+                  <span>加好友</span>
+                </button>
+                <button class="db-action-btn" id="btn-search-friend">
+                  <span>☆</span>
+                  <span>搜索好友</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= RIGHT COLUMN ================= -->
+        <div class="col-right">
+
+          <!-- Top Media & City Pop Player Card -->
+          <div class="media-top-card">
+            <!-- Anime Banner with CRT scanlines -->
+            <div class="anime-banner-box" title="Y2K Digital World">
+              <img src="assets/miku_banner.jpg" alt="Cyber Anime Banner" class="anime-banner-img">
+              <div class="scanline-overlay"></div>
+              <div class="banner-glass-gloss"></div>
+            </div>
+
+            <!-- Audio Player Widget -->
+            <div class="audio-player-widget">
+              <div class="audio-header-pills">
+                <button class="pill-btn active" id="btn-recent-play">最近播放...</button>
+                <button class="pill-btn" id="btn-recommend">你的推荐..</button>
+              </div>
+
+              <!-- Track rows with play buttons -->
+              <div class="audio-track-list">
+                <!-- Track 1: Toshiki Kadomatsu -->
+                <div class="audio-track-row playing" id="track-1" data-track="0">
+                  <div class="track-left">
+                    <div class="play-circle-btn">▶</div>
+                    <span class="track-name-text">- 角松敏生 ... Secret Lover</span>
+                  </div>
+                  <div class="equalizer-bars">
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                  </div>
+                </div>
+
+                <!-- Track 2: Tatsuro Yamashita -->
+                <div class="audio-track-row" id="track-2" data-track="1">
+                  <div class="track-left">
+                    <div class="play-circle-btn">▶</div>
+                    <span class="track-name-text">風圧 - 山下達郎 ... Kokoro (Sparkle)</span>
+                  </div>
+                  <div class="equalizer-bars">
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lower Split: Feed (Left) & Chat (Right) -->
+          <div class="lower-split-grid">
+
+            <!-- Center Panel: Ruled Notebook Feed / Updates -->
+            <div class="feed-panel">
+              <div class="feed-header">
+                <div class="feed-header-title">
+                  <span>▼</span>
+                  <span>我的订阅源</span>
+                </div>
+                <div class="feed-date-tag" id="feed-date">3月21日2005年</div>
+              </div>
+
+              <!-- Ruled Notepad Body -->
+              <div class="notebook-body" id="feed-notebook">
+                <div class="feed-item">
+                  <span class="feed-item-title">BYI...</span>
+                  <p class="feed-item-desc">
+                    Hola! Bienvenido a mi rincón web inspirado en la era dorada de Windows XP y MSN.
+                    Programador enfocado en interfaces elegantes y software funcional.
+                  </p>
+                </div>
+
+                <div class="feed-item">
+                  <span class="feed-item-title">TECH STACK...</span>
+                  <p class="feed-item-desc">
+                    JavaScript, TypeScript, QML, Python, C++, HTML5/CSS3, Git & GitHub Actions.
+                  </p>
+                </div>
+
+                <div class="feed-item">
+                  <span class="feed-item-title">DNI...</span>
+                  <p class="feed-item-desc">
+                    No dudes en explorar mis proyectos destacados y clonar lo que te sirva:
+                  </p>
+                  <div class="repo-mini-card">
+                    <a href="https://github.com/IvanCR48/Pocket-AntiGravityIDE" target="_blank">Pocket-AntiGravityIDE</a>
+                    <span class="repo-tag">Tool</span>
+                    <div style="font-size: 10px; color: #517196;">Agentic developer tools and IDE enhancements.</div>
+                  </div>
+                  <div class="repo-mini-card">
+                    <a href="https://github.com/IvanCR48/RathonWare" target="_blank">RathonWare</a>
+                    <span class="repo-tag">QML</span>
+                    <div style="font-size: 10px; color: #517196;">High-performance desktop user interface.</div>
+                  </div>
+                  <div class="repo-mini-card">
+                    <a href="https://github.com/IvanCR48/RobosMDP-Remix" target="_blank">RobosMDP-Remix</a>
+                    <span class="repo-tag">JS</span>
+                    <div style="font-size: 10px; color: #517196;">Interactive web application & logic engine.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Panel: Live MSN Chat / Guestbook -->
+            <div class="chat-panel">
+              <div class="chat-user-header">
+                <img src="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" alt="IvanCR48" class="chat-header-avatar">
+                <div class="chat-header-info">
+                  <div class="chat-header-name">IvanCR48</div>
+                  <div class="chat-header-handle">@username (Online)</div>
+                </div>
+              </div>
+
+              <!-- Messages scroll area with Kaomojis -->
+              <div class="chat-messages-scroll" id="chat-messages-box">
+                <!-- Message 1 -->
+                <div class="chat-bubble-row">
+                  <img src="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" class="chat-bubble-avatar">
+                  <div class="chat-bubble-content">
+                    <div class="chat-bubble-meta">
+                      <span>IvanCR48</span>
+                      <span class="chat-bubble-time">18:05</span>
+                    </div>
+                    <div class="chat-bubble-text">
+                      <span class="kaomoji">٩( 'ω' )و</span>
+                      <span>Donec vehicula lacus eget dui facilisis, sit amet... Bienvenido a mi portfolio estilo Y2K!</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="chat-bubble-row">
+                  <img src="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" class="chat-bubble-avatar">
+                  <div class="chat-bubble-content">
+                    <div class="chat-bubble-meta">
+                      <span>IvanCR48</span>
+                      <span class="chat-bubble-time">18:10</span>
+                    </div>
+                    <div class="chat-bubble-text">
+                      <span class="kaomoji">(-ω-、)</span>
+                      <span>Curabitur arcu lectus, faucibus... Puedes dejarme un mensaje en el recuadro de abajo!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chat Input Bar -->
+              <div class="chat-input-bar">
+                <input type="text" class="chat-text-input" id="chat-input" placeholder="输入信息... / Type a note...">
+                <button class="chat-send-btn" id="chat-send-btn">发送</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Window Status Bar -->
+      <div class="window-statusbar">
+        <div class="statusbar-left">
+          <input type="text" class="statusbar-input" id="statusbar-query" placeholder="搜索... / Ready">
+          <button class="statusbar-done-btn" id="statusbar-done-btn">完成</button>
+        </div>
+        <div class="statusbar-credits">
+          cr: @juhua on es | IvanCR48 Portfolio
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- ===== MAIN ===== -->
-  <main class="main-content">
+  <!-- Windows XP Desktop Taskbar -->
+  <div class="xp-taskbar">
+    <div class="start-btn" id="start-btn" title="Click to open menu">
+      <svg class="start-flag" viewBox="0 0 20 20" fill="none">
+        <path d="M2 3C6 1 8 5 11 3C14 1 17 4 19 3V14C17 15 14 12 11 14C8 16 6 12 2 14V3Z" fill="#F25022"/>
+        <path d="M2 3C6 1 8 5 11 3V14C8 16 6 12 2 14V3Z" fill="#00A4EF"/>
+        <path d="M11 3C14 1 17 4 19 3V14C17 15 14 12 11 14V3Z" fill="#7FBA00"/>
+        <path d="M2 8.5C6 6.5 8 10.5 11 8.5V14C8 16 6 12 2 14V8.5Z" fill="#FFB900"/>
+      </svg>
+      <span>start</span>
+    </div>
 
-    <!-- Portal Window -->
-    <div class="window">
-      <div class="window__titlebar">
-        <span class="window__titlebar-text">study_portal.exe</span>
-        <div class="window__titlebar-buttons">
-          <span class="window__titlebar-btn">─</span>
-          <span class="window__titlebar-btn">□</span>
-          <span class="window__titlebar-btn">✕</span>
-        </div>
-      </div>
-
-      <div class="window__body">
-        <span class="hero__badge">📡 Portal Activo</span>
-
-        <h1 class="hero__title">Case of Study</h1>
-
-        <p class="hero__subtitle">
-          Material interactivo para preparar el ingreso a la<br>
-          Facultad de Ingeniería — Mar del Plata
-        </p>
-
-        <div class="hero__divider"></div>
-
-
-
-        <!-- Study Link Grid -->
-        <div class="study-grid">
-
-          <!-- Zero to Hero Algebra Card -->
-          <div class="study-card" style="border-color: var(--teal-deep); background: linear-gradient(135deg, rgba(10,123,143,0.05) 0%, rgba(255,255,255,1) 100%);">
-            <span class="study-card__icon">🧮</span>
-            <span class="study-card__title">Matemática desde cero / Anotaciones</span>
-            <p class="study-card__desc">
-              Importancia del álgebra, productos notables con demostración geométrica y métodos de resolución de ecuaciones.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="algebra_desde_cero.html" style="font-weight:bold; color:var(--teal-deep);">0. Guía Completa: Álgebra Fundamental &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 1 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">📐</span>
-            <span class="study-card__title">Capítulo I: Álgebra y Reales</span>
-            <p class="study-card__desc">
-              Conjuntos numéricos, operaciones, desigualdades y ecuaciones.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo1/matematica.html">1. Conjuntos Numéricos &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo1/potenciacion.html">2. Potenciación y Radicación &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo1/valor_absoluto.html">3. Valor Absoluto y Distancia &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo1/ecuaciones.html">4. Ecuaciones en R &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo1/desigualdades.html">5. Desigualdades e Intervalos &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 2 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">📈</span>
-            <span class="study-card__title">Capítulo II: Funciones Algebraicas</span>
-            <p class="study-card__desc">
-              Concepto de función, funciones lineales, cuadráticas, polinómicas, racionales e irracionales.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo2/funciones.html">1. Concepto de Función, Dom e Im &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo2/funcion_lineal.html">2. Función Lineal y Ecuación de la Recta &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo2/otras_funciones.html">3. Sistemas Lineales y Tramos &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo2/funcion_cuadratica.html">4. Función Cuadrática (Parábola) &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo2/funcion_polinomica.html">5. Función Polinómica y Factoreo &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo2/funcion_racional_irracional.html">6. Racionales e Irracionales &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 3 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">⚙️</span>
-            <span class="study-card__title">Capítulo III: Operaciones y Simetría</span>
-            <p class="study-card__desc">
-              Operaciones aritméticas entre funciones, dominio resultante, función compuesta y simetría.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo3/operaciones.html">1. Operaciones con Funciones &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo3/composicion.html">2. Función Compuesta &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo3/propiedades.html">3. Propiedades e Inversa &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 4 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">🧪</span>
-            <span class="study-card__title">Capítulo IV: Funciones Trascendentes</span>
-            <p class="study-card__desc">
-              Funciones exponenciales, logarítmicas y trigonométricas, ecuaciones trascendentes y modelos de crecimiento.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo4/exponencial.html">1. Funciones Exponenciales &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo4/logaritmica.html">2. Funciones Logarítmicas &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo4/ecuaciones_sistemas.html">3. Ecuaciones y Sistemas &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo4/hiperbolicas.html">4. Funciones Hiperbólicas &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo4/trigonometricas.html">5. Funciones y Ecuaciones Trigonométricas &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 5 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">📐</span>
-            <span class="study-card__title">Capítulo V: Triángulos Rectángulos</span>
-            <p class="study-card__desc">
-              Resolución de triángulos rectángulos, razones trigonométricas, Teorema de Pitágoras y ángulos de elevación y depresión.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo5/triangulos_rectangulos.html">1. Trigonometría en Triángulos Rectángulos &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo5/aplicaciones_resolucion.html">2. Aplicaciones y Resolución &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Chapter 6 Card -->
-          <div class="study-card">
-            <span class="study-card__icon">⭕</span>
-            <span class="study-card__title">Capítulo VI: Cónicas</span>
-            <p class="study-card__desc">
-              Estudio analítico de las secciones cónicas: circunferencia, elipse, parábola e hipérbola.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="capitulo6/circunferencia.html">1. La Circunferencia &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo6/elipse.html">2. La Elipse &rarr;</a>
-              </li>
-              <li class="study-card__index-item">
-                <a href="capitulo6/parabola.html">4. La Parábola &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Physics Chapter 1 Card -->
-          <div class="study-card" style="border-color: var(--purple-bright);">
-            <span class="study-card__icon">⚡</span>
-            <span class="study-card__title">Física I: Cinemática</span>
-            <p class="study-card__desc">
-              Cinemática de la partícula, vectores posición y desplazamiento, velocidad media e instantánea y aceleración.
-            </p>
-            <ul class="study-card__index-list">
-              <li class="study-card__index-item">
-                <a href="fisica/cinematica_general.html">1. Movimientos en General &rarr;</a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="window__statusbar">
-        <div class="statusbar__section">
-          <span class="statusbar__indicator"></span>
-          <span>Online</span>
-        </div>
-        <span id="clock">--:--:--</span>
+    <div class="taskbar-tasks">
+      <div class="taskbar-item active" id="taskbar-app-btn">
+        <div class="title-icon-bubble" style="width: 14px; height: 14px; font-size: 9px;">i</div>
+        <span>小蓝道 - IvanCR48</span>
       </div>
     </div>
 
-    <!-- Retro Badges -->
-    <div class="badges">
-      <span class="badge">HTML5</span>
-      <span class="badge">CSS3</span>
-      <span class="badge">GitHub Pages</span>
-      <span class="badge">800×600</span>
-      <span class="badge">Best viewed in any browser</span>
+    <!-- System Tray -->
+    <div class="system-tray">
+      <span id="tray-sound-icon" title="Sound: ON">🔊</span>
+      <span id="tray-network-icon" title="Connected: 100 Mbps">🖧</span>
+      <span id="tray-time">18:15 PM</span>
     </div>
+  </div>
 
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer" id="about">
-    <p class="footer__name">Iván Ismael Cardozo</p>
-    <p class="footer__year">© <span id="year"></span></p>
-    <p class="footer__decoration">· · · ☆ · · ·</p>
-  </footer>
+  <!-- Retro Toast Notification -->
+  <div class="retro-toast" id="retro-toast">
+    <span id="toast-icon">ℹ️</span>
+    <span id="toast-text">Message</span>
+  </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
