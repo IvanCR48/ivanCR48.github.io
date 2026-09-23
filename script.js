@@ -1,6 +1,6 @@
 /**
  * Y2K / Frutiger Aero Portfolio Scripts
- * Created for Iván Ismael Cardozo (@IvanCR48)
+ * Created for Iván Ismael Cardozo (@ismaelUML)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="pfp/2967b03acaab18c50c1518d110d6b7a1.gif" class="chat-bubble-avatar">
         <div class="chat-bubble-content">
           <div class="chat-bubble-meta">
-            <span>IvanCR48</span>
+            <span>ismaelUML</span>
             <span class="chat-bubble-time">18:00</span>
           </div>
           <div class="chat-bubble-text">
@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('menu-info-dialog').addEventListener('click', () => {
-    showToast('小蓝道 v2.0 - Creado para Iván Ismael Cardozo (@IvanCR48)');
+    showToast('小蓝道 v2.0 - Creado para Iván Ismael Cardozo (@ismaelUML)');
   });
 
   // --- Tab Switching Logic ---
@@ -501,23 +501,23 @@ document.addEventListener('DOMContentLoaded', () => {
           <span>@linked webs...</span>
         </div>
         <div class="tree-links">
-          <a href="https://github.com/IvanCR48" target="_blank" rel="noopener" class="tree-link-item">
+          <a href="https://github.com/ismaelUML" target="_blank" rel="noopener" class="tree-link-item">
             <span class="tree-branch">↳</span>
-            <span>github.com/IvanCR48</span>
+            <span>github.com/ismaelUML</span>
           </a>
-          <a href="https://github.com/IvanCR48/Pocket-AntiGravityIDE" target="_blank" rel="noopener" class="tree-link-item">
+          <a href="https://github.com/ismaelUML/Pocket-AntiGravityIDE" target="_blank" rel="noopener" class="tree-link-item">
             <span class="tree-branch">↳</span>
             <span>Pocket-AntiGravityIDE</span>
           </a>
-          <a href="https://github.com/IvanCR48/RathonWare" target="_blank" rel="noopener" class="tree-link-item">
+          <a href="https://github.com/ismaelUML/RathonWare" target="_blank" rel="noopener" class="tree-link-item">
             <span class="tree-branch">↳</span>
             <span>RathonWare (QML)</span>
           </a>
-          <a href="https://github.com/IvanCR48/RobosMDP-Remix" target="_blank" rel="noopener" class="tree-link-item">
+          <a href="https://github.com/ismaelUML/RobosMDP-Remix" target="_blank" rel="noopener" class="tree-link-item">
             <span class="tree-branch">↳</span>
             <span>RobosMDP-Remix (JS)</span>
           </a>
-          <a href="https://github.com/IvanCR48/AdvancedMonitor" target="_blank" rel="noopener" class="tree-link-item">
+          <a href="https://github.com/ismaelUML/AdvancedMonitor" target="_blank" rel="noopener" class="tree-link-item">
             <span class="tree-branch">↳</span>
             <span>AdvancedMonitor & ERP</span>
           </a>
@@ -602,10 +602,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Add Friend (Copy link) ---
   function copyGitHubLink() {
     playNotificationChime();
-    const url = 'https://github.com/IvanCR48';
+    const url = 'https://github.com/ismaelUML';
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url).then(() => {
-        showToast('⭐ ¡Enlace copiado! Sígueme en GitHub @IvanCR48');
+        showToast('⭐ ¡Enlace copiado! Sígueme en GitHub @ismaelUML');
       }).catch(() => {
         window.open(url, '_blank');
       });
